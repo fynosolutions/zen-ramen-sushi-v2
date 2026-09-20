@@ -1,0 +1,67 @@
+{
+  "date": "2026-09-20T16:45:57.917Z",
+  "origin": "https://zen-ramen-sushi-v2.vercel.app",
+  "checks": [
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "selector": ".menu-card[href=\"/menu/#happy-hour\"] img",
+      "source": "/images/photo-5.webp",
+      "loaded": true,
+      "displayWidth": 401,
+      "displayHeight": 371
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "selector": ".catering-image img",
+      "source": "/images/shared-table-original.jpg",
+      "loaded": true,
+      "displayWidth": 622,
+      "displayHeight": 622
+    },
+    {
+      "width": 1440,
+      "route": "/events-catering/",
+      "status": 200,
+      "selector": ".events-banner img",
+      "source": "/images/shared-table-original.jpg",
+      "loaded": true,
+      "displayWidth": 1253,
+      "displayHeight": 400
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "selector": ".menu-card[href=\"/menu/#happy-hour\"] img",
+      "source": "/images/photo-5.webp",
+      "loaded": true,
+      "displayWidth": 335,
+      "displayHeight": 248
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "selector": ".catering-image img",
+      "source": "/images/shared-table-original.jpg",
+      "loaded": true,
+      "displayWidth": 335,
+      "displayHeight": 305
+    },
+    {
+      "width": 390,
+      "route": "/events-catering/",
+      "status": 200,
+      "selector": ".events-banner img",
+      "source": "/images/shared-table-original.jpg",
+      "loaded": true,
+      "displayWidth": 335,
+      "displayHeight": 280
+    }
+  ],
+  "errors": []
+}

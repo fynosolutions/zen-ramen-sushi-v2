@@ -1,0 +1,322 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/menu/#lunch",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/events-catering/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-12.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/gallery/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-9.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-13.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/about/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/menu/#lunch",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/events-catering/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-12.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/gallery/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-0.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-9.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-13.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/about/",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/brand/logo.jpg",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/photo-4.webp",
+        "loaded": true
+      }
+    ],
+    "errors": []
+  }
+]

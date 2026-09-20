@@ -1,0 +1,11 @@
+'use client';
+import {useEffect,useRef,useState} from 'react';
+import {gallery,galleryVideo} from '@/content/media';
+export default function Gallery(){
+ const [selected,setSelected]=useState<number|null>(null);
+ const dialog=useRef<HTMLDialogElement>(null);
+ const trigger=useRef<HTMLButtonElement|null>(null);
+ useEffect(()=>{if(selected===null)return;dialog.current?.showModal();const original=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{document.body.style.overflow=original;};},[selected]);
+ const close=()=>{dialog.current?.close();setSelected(null);trigger.current?.focus();};
+ return <><div className="gallery-grid container">{gallery.map((p,i)=><button className={p.wide?'gallery-tile wide':'gallery-tile'} key={p.src} onClick={e=>{trigger.current=e.currentTarget;setSelected(i);}} aria-label={'Enlarge: '+p.alt}><img src={p.src} alt={p.alt} width="1000" height="800" loading={i>1?'lazy':'eager'}/><span className="gallery-caption">{p.label}<span aria-hidden="true">↗</span></span></button>)}</div>{galleryVideo&&<section className="gallery-video container"><h2>{galleryVideo.title}</h2><video controls playsInline preload="none" poster={galleryVideo.poster} aria-label={galleryVideo.title}><source src={galleryVideo.src} type="video/mp4"/>Your browser does not support embedded video.</video></section>}<dialog ref={dialog} className="lightbox" aria-label="Image gallery" onCancel={e=>{e.preventDefault();close();}} onClick={e=>{if(e.target===e.currentTarget)close();}} onKeyDown={e=>{if(e.key==='ArrowRight'){e.preventDefault();setSelected(i=>i===null?0:(i+1)%gallery.length);}if(e.key==='ArrowLeft'){e.preventDefault();setSelected(i=>i===null?0:(i+gallery.length-1)%gallery.length);}}}>{selected!==null&&<div className="lightbox-content"><button className="lightbox-close" aria-label="Close image" onClick={close}>CLOSE ×</button><img src={gallery[selected].src} alt={gallery[selected].alt}/><div className="lightbox-controls"><button onClick={()=>setSelected((selected+gallery.length-1)%gallery.length)} aria-label="Previous image">←</button><p>{gallery[selected].label} <span>{selected+1} / {gallery.length}</span></p><button onClick={()=>setSelected((selected+1)%gallery.length)} aria-label="Next image">→</button></div></div>}</dialog></>;
+}

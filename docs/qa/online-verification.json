@@ -1,0 +1,156 @@
+{
+  "date": "2026-09-20T16:35:05.044Z",
+  "origin": "https://zen-ramen-sushi-v2.vercel.app",
+  "robots": "noindex, nofollow",
+  "lunchActive": "true",
+  "results": [
+    {
+      "route": "/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/",
+      "title": "ZEN RAMEN & SUSHI | Midtown Manhattan"
+    },
+    {
+      "route": "/menu/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/about/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/about/",
+      "title": "About Zen | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/events-catering/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/events-catering/",
+      "title": "Events & Catering | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/gallery/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/gallery/",
+      "title": "Gallery | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/privacy-policy/",
+      "title": "Privacy Policy | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/terms-conditions/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/terms-conditions/",
+      "title": "Terms & Conditions | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/about-us/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/about/",
+      "title": "About Zen | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/location/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/#hours-location",
+      "title": "ZEN RAMEN & SUSHI | Midtown Manhattan"
+    },
+    {
+      "route": "/contact/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/events-catering/",
+      "title": "Events & Catering | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/zen-ramen-contact/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/events-catering/",
+      "title": "Events & Catering | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/appetizers/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#dinner--appetizers",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/main-course/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#dinner--ramen-noodles",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/desserts/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#dinner--dessert",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/lunch-specials-2/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#lunch",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/happy-hour/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#happy-hour",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/drinks/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/#dinner--sake",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/privacy-policies-3/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/privacy-policy/",
+      "title": "Privacy Policy | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/zrm-menu/?menu=catering",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/events-catering/?menu=catering",
+      "title": "Events & Catering | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/zrm-menu/?menu=lunch-specials",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/?menu=lunch-specials#lunch",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/zrm-menu/?menu=happy-hour",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/?menu=happy-hour#happy-hour",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/zrm-menu/",
+      "status": 200,
+      "finalUrl": "https://zen-ramen-sushi-v2.vercel.app/menu/",
+      "title": "Our Menu | ZEN RAMEN & SUSHI"
+    },
+    {
+      "route": "/menus/dinner.pdf",
+      "status": 200,
+      "type": "application/pdf"
+    },
+    {
+      "route": "/menus/lunch.pdf",
+      "status": 200,
+      "type": "application/pdf"
+    },
+    {
+      "route": "/menus/happy-hour.pdf",
+      "status": 200,
+      "type": "application/pdf"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "trailingSlash": true,
+  "redirects": [
+    {"source":"/about-us/","destination":"/about/","permanent":true},
+    {"source":"/location/","destination":"/#hours-location","permanent":true},
+    {"source":"/contact/","destination":"/events-catering/","permanent":true},
+    {"source":"/zen-ramen-contact/","destination":"/events-catering/","permanent":true},
+    {"source":"/appetizers/","destination":"/menu/#dinner--appetizers","permanent":true},
+    {"source":"/main-course/","destination":"/menu/#dinner--ramen-noodles","permanent":true},
+    {"source":"/desserts/","destination":"/menu/#dinner--dessert","permanent":true},
+    {"source":"/lunch-specials-2/","destination":"/menu/#lunch","permanent":true},
+    {"source":"/happy-hour/","destination":"/menu/#happy-hour","permanent":true},
+    {"source":"/drinks/","destination":"/menu/#dinner--sake","permanent":true},
+    {"source":"/privacy-policies-3/","destination":"/privacy-policy/","permanent":true},
+    {"source":"/zrm-menu/","has":[{"type":"query","key":"menu","value":"catering"}],"destination":"/events-catering/","permanent":true},
+    {"source":"/zrm-menu/","has":[{"type":"query","key":"menu","value":"lunch-specials"}],"destination":"/menu/#lunch","permanent":true},
+    {"source":"/zrm-menu/","has":[{"type":"query","key":"menu","value":"happy-hour"}],"destination":"/menu/#happy-hour","permanent":true},
+    {"source":"/zrm-menu/","destination":"/menu/","permanent":true}
+  ]
+}

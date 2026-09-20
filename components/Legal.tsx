@@ -1,0 +1,1 @@
+export default function Legal({blocks}:{blocks:{type:string;text:string}[]}){return <div className="container legal-content">{blocks.map((b,i)=>b.type==='heading'?<h2 key={i}>{b.text}</h2>:<p key={i}>{b.type==='bullet'?'• ':''}{b.text}</p>)}</div>;}

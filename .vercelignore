@@ -1,0 +1,13 @@
+docs/
+tests/
+test-results/
+playwright-report/
+/*.pdf
+/*.jpg
+/*.md
+out/
+.next/
+node_modules/
+scripts/build-menu-data.py
+scripts/capture-preview.mjs
+playwright.config.ts

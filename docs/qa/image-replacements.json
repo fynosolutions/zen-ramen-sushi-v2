@@ -1,0 +1,82 @@
+[
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "target": ".menu-card[href=\"/menu/#happy-hour\"]",
+    "src": "http://127.0.0.1:3001/images/photo-5.webp",
+    "width": 1024,
+    "loaded": true,
+    "crop": "50% 43%",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "viewport": "desktop",
+    "route": "/",
+    "target": ".catering-image",
+    "src": "http://127.0.0.1:3001/images/photo-4.webp",
+    "width": 633,
+    "loaded": true,
+    "crop": "50% 42%",
+    "overflow": false,
+    "errors": [],
+    "bounds": {
+      "x": 724.546875,
+      "y": 189.375,
+      "width": 621.84375,
+      "height": 621.84375
+    },
+    "aspectRatioVerified": true
+  },
+  {
+    "viewport": "desktop",
+    "route": "/events-catering/",
+    "target": ".events-banner",
+    "src": "http://127.0.0.1:3001/images/shared-table-original.jpg",
+    "width": 1252,
+    "loaded": true,
+    "crop": "50% 37%",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "target": ".menu-card[href=\"/menu/#happy-hour\"]",
+    "src": "http://127.0.0.1:3001/images/photo-5.webp",
+    "width": 1024,
+    "loaded": true,
+    "crop": "50% 43%",
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "viewport": "mobile",
+    "route": "/",
+    "target": ".catering-image",
+    "src": "http://127.0.0.1:3001/images/photo-4.webp",
+    "width": 339,
+    "loaded": true,
+    "crop": "50% 35%",
+    "overflow": false,
+    "errors": [],
+    "bounds": {
+      "x": 27.296875,
+      "y": 269.078125,
+      "width": 335.390625,
+      "height": 304.890625
+    },
+    "aspectRatioVerified": true
+  },
+  {
+    "viewport": "mobile",
+    "route": "/events-catering/",
+    "target": ".events-banner",
+    "src": "http://127.0.0.1:3001/images/photo-4.webp",
+    "width": 339,
+    "loaded": true,
+    "crop": "50% 32%",
+    "overflow": false,
+    "errors": []
+  }
+]

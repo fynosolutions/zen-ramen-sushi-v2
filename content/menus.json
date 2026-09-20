@@ -1,0 +1,5893 @@
+[
+  {
+    "id": "dinner",
+    "label": "Dinner",
+    "pdf": "/menus/dinner.pdf",
+    "sections": [
+      {
+        "id": "appetizers",
+        "title": "Appetizers",
+        "notes": [
+          "Substitution politely declined. Any changes will be a minimum of $2.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "dinner-0-0",
+            "name": "Fried Oyster (4 pcs)",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-1",
+            "name": "Reg. Edamame",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Steamed young soy bean with sea salt.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-2",
+            "name": "Garlic Edamame",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "Sriracha, garlic and sugar. Spicy.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-3",
+            "name": "Shishito Pepper",
+            "cashCents": 1399,
+            "cardCents": 1455,
+            "description": "Charred Japanese peppers with orange zest & sweet miso.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-4",
+            "name": "Steam Bun (1 pc)",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Choice of grilled chicken or pork belly, with romaine lettuce, scallions, seaweed salad, Kewpie mayo.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-5",
+            "name": "Takoyaki",
+            "cashCents": 1199,
+            "cardCents": 1247,
+            "description": "Octopus ball made with Kewpie mayo, bonito flakes & scallions.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-6",
+            "name": "Shumai (6 pcs)",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "Fried shrimp shumai.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-7",
+            "name": "Gyoza (6 pcs)",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "Pan fried pork dumpling.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-8",
+            "name": "Karaage with Sesame Seed",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "Japanese style fried boneless dark meat chicken, spicy mayo dip.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-9",
+            "name": "Rock Shrimp",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "Crispy fried shrimp with spicy mayo.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-10",
+            "name": "Crispy Wings",
+            "cashCents": 1399,
+            "cardCents": 1455,
+            "description": "Deep fried chicken wings.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-11",
+            "name": "69 Shrimp (5 pcs)",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "Deep fried shrimp with pops.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-12",
+            "name": "Potato Shrimp",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "Crispy fried with Kewpie dipping.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-13",
+            "name": "Ika Yaki",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Grilled whole squid.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-14",
+            "name": "Vegetable Gyoza (6 pcs)",
+            "cashCents": 1199,
+            "cardCents": 1247,
+            "description": "Pan fried vegetable dumpling.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "appetizers-from-sushi-bar",
+        "title": "Appetizers from Sushi Bar",
+        "notes": [
+          "Substitution politely declined. Any changes will be a minimum of $2.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "dinner-1-0",
+            "name": "Cucumbers Salad",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "Marinated cucumbers in wasabi yuzu sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-1",
+            "name": "Seaweed Salad",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Green Japanese seaweed with sesame seeds.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-2",
+            "name": "Spicy Tuna Cracker",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Wasabi crackers with spicy tuna, tobiko, jalapeño on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-3",
+            "name": "Seared Trio",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Seared pepper tuna with yuzu, seared salmon with yuzu, seared white tuna with ponzu.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-4",
+            "name": "Kani Salad",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Japanese crab stick, cucumber, Kewpie mayo, sesame seeds.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-5",
+            "name": "Trio Tartare",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Freshly diced tuna, salmon & yellowtail with avocado, yuzu sauce & mango sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-6",
+            "name": "Salmon Carpaccio",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Thin slice salmon with truffle lime dressing.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-7",
+            "name": "Yellow Tail Serrano",
+            "cashCents": 1799,
+            "cardCents": 1871,
+            "description": "Thin slice yellowtail with serrano peppers & ponzu sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-8",
+            "name": "Garden Green Salad",
+            "cashCents": 999,
+            "cardCents": 1039,
+            "description": "Organic mesclun, tomatoes with romaine lettuce, roasted sesame dressing.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "hot-soup",
+        "title": "Hot Soup",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-2-0",
+            "name": "Miso Soup",
+            "cashCents": 399,
+            "cardCents": 413,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-2-1",
+            "name": "Tom Yum Soup",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sides",
+        "title": "Sides",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-3-0",
+            "name": "White Rice",
+            "cashCents": 299,
+            "cardCents": 311,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-1",
+            "name": "Brown Rice",
+            "cashCents": 299,
+            "cardCents": 311,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-2",
+            "name": "Sushi Rice",
+            "cashCents": 399,
+            "cardCents": 415,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-3",
+            "name": "Spicy Mayo",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-4",
+            "name": "Eel Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-5",
+            "name": "Teriyaki Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-6",
+            "name": "Ginger Dressing",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-7",
+            "name": "Mango Sauce",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-3-8",
+            "name": "Home Made Spicy Paste",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sushi-rolls",
+        "title": "Sushi Rolls",
+        "notes": [
+          "Brown rice addition $1 (based on cash price)."
+        ],
+        "items": [
+          {
+            "id": "dinner-4-0",
+            "name": "AAC",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "Avocado, cucumber, asparagus.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-1",
+            "name": "Alaska Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Salmon, avocado, cucumber.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-2",
+            "name": "Amazing Tuna",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy tuna & white tuna tempura topped with seared black pepper tuna.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-3",
+            "name": "Boston Roll",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "Shrimp, lettuce, mayo.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-4",
+            "name": "Black Dragon",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Shrimp tempura inside, topped with eel & avocado.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-5",
+            "name": "California",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-6",
+            "name": "Dragon",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Eel cucumber inside, avocado on top with sesame seeds.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-7",
+            "name": "Rainbow",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Crab stick, avocado & cucumber inside, topped with tuna, salmon, yellowtail & white fish.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-8",
+            "name": "Salmon Roll",
+            "cashCents": 749,
+            "cardCents": 779,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-9",
+            "name": "Salmon Avocado Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-10",
+            "name": "Salmon Cucumber Roll",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-11",
+            "name": "Spicy Tuna (Crunch) Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-12",
+            "name": "Spicy Salmon (Crunch) Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-13",
+            "name": "Spicy Yellow Tail (Crunch) Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-14",
+            "name": "Shrimp Cucumber Roll",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-15",
+            "name": "Shiitake Mushroom Roll",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-16",
+            "name": "Shrimp & Avocado Roll",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-17",
+            "name": "Sweet Potato Roll",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-18",
+            "name": "Shrimp Tempura Roll",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-19",
+            "name": "Spider Roll",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Soft shell crab, cucumber, avocado, tobiko.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-20",
+            "name": "Tempura Purple Yam Roll",
+            "cashCents": 799,
+            "cardCents": 831,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-21",
+            "name": "Triple Crab",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Soft shell crab, cucumber & avocado topped with stone crab & spicy snow crab.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-22",
+            "name": "Tuna Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-23",
+            "name": "Tuna Avocado Roll",
+            "cashCents": 949,
+            "cardCents": 987,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-24",
+            "name": "Tuna Cucumber Roll",
+            "cashCents": 949,
+            "cardCents": 987,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-25",
+            "name": "Volcano",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Salmon, white tuna inside then fried, topped with spicy tuna.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-26",
+            "name": "Yellow Tail Scallion Roll",
+            "cashCents": 749,
+            "cardCents": 779,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-27",
+            "name": "Yellowtail Jalapeno Roll",
+            "cashCents": 749,
+            "cardCents": 779,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-28",
+            "name": "Eel Roll",
+            "cashCents": 849,
+            "cardCents": 883,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-29",
+            "name": "Eel Cucumber Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-30",
+            "name": "Eel Avocado Roll",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-31",
+            "name": "Golden Buddha",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Shrimp tempura topped with lobster salad & mango.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-32",
+            "name": "Manhattan Roll",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Shrimp tempura inside, topped with spicy crunchy tuna.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-33",
+            "name": "Oshiko Roll",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-4-34",
+            "name": "Philadelphia",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "special-roll",
+        "title": "Special Roll",
+        "notes": [
+          "All rolls can be made with brown rice or soybean paper by request. Additional $1 (based on cash price) for each item."
+        ],
+        "items": [
+          {
+            "id": "dinner-5-0",
+            "name": "Crazy Yellowtail Roll",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Avocado, cucumber, masago, topped with yellowtail, jalapeño & chili sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-1",
+            "name": "Dancing Rock Shrimp Roll",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Rock shrimp tempura topped with lobster salad, caviar & eel sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-2",
+            "name": "Dynamite Roll",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Tuna, salmon, avocado, cucumber, mango inside, spicy crab meat & tobiko on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-3",
+            "name": "Fantasy Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy tuna crunch, avocado inside, topped with spicy crab.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-4",
+            "name": "King Kong Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Shrimp tempura, spicy tuna, lobster salad, topped with avocado, wrapped with soybean paper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-5",
+            "name": "Lady Gaga",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Shrimp tempura, eel, avocado, topped with spicy tuna, tobiko, crunchy, soybean paper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-6",
+            "name": "Lobster Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Lobster salad, tobiko, cucumber, avocado, wrapped by soybean paper seaweed.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-7",
+            "name": "Magical Roll",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Lobster mango salad, topped with spicy salmon, tempura flakes & Thai special mayo sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-8",
+            "name": "Mango Dragon Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Eel & cucumber topped with avocado, mango, caviar & tobiko.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-9",
+            "name": "Napoleon Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Inside spicy tuna, soft shell crab, mango & avocado; topped with lobster salad & jalapeño.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-10",
+            "name": "Spicy Grill Roll (No Rice)",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Crunchy spicy tuna & spicy yellowtail, salmon, avocado, crab meat, cucumber, wrapped in soybean paper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-11",
+            "name": "Spicy Mama",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Tuna, spicy tuna, spicy yellowtail, spicy salmon, crunch & asparagus.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-12",
+            "name": "Viking Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Eel, avocado, crunchy inside; tuna, salmon, yellowtail on top with spicy sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-5-13",
+            "name": "Zen Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy crunchy salmon, mango, topped with black pepper tuna, shrimp, eel, avocado & tobiko with mango sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 3
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "chef-special-rolls",
+        "title": "Chef Special Rolls",
+        "notes": [
+          "All rolls can be made with brown rice or soybean paper by request. Additional $1 (based on cash price) for each item."
+        ],
+        "items": [
+          {
+            "id": "dinner-6-0",
+            "name": "Big Mac",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy tuna, tobiko & avocado, spicy snow crab inside, topped with bonito flakes, tobiko, soybean wrap.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-1",
+            "name": "Bonzai Tree",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tuna, salmon, whitefish, avocado & tobiko rolled with cucumber.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-2",
+            "name": "Crazy Roll",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Shrimp tempura, spicy tuna, tobiko, avocado, white seaweed.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-3",
+            "name": "Crazy Salmon Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Salmon, avocado inside, spicy salmon, crunch on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-4",
+            "name": "Coconut Shrimp Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tempura coconut shrimp, avocado & lettuce inside with soybean wrap; shrimp, mayo, tobiko served with mango sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-5",
+            "name": "Crunchy Roll",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Shrimp tempura inside, mild spicy & crab meat on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-6",
+            "name": "Delta",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Spicy crunch salmon inside, tuna & white tuna on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-7",
+            "name": "Fashion",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Salmon, avocado inside; tuna, white tuna & salmon on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-8",
+            "name": "Fire Mountain",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy tuna with crunch inside, surrounded by crab stick & red tobiko on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-9",
+            "name": "Godzilla Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tempura whole roll with shrimp tempura, cream cheese, avocado, topped with spicy mayo.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-10",
+            "name": "M16",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tempura whole roll with spicy salmon, spicy tuna, spicy yellowtail & cream cheese inside, spicy mayo & eel sauce on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-11",
+            "name": "New York Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Avocado, cream cheese, kani, lobster salad on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-12",
+            "name": "Out of Control Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Eel, cream cheese & kani inside; tuna, salmon & avocado outside.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-13",
+            "name": "Outstanding Roll",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tempura eel with spicy tuna; avocado outside, spicy mayo & eel sauce, soybean wrap.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-14",
+            "name": "Pink Lady",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Spicy tuna, shrimp tempura, avocado.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-15",
+            "name": "Pyramid",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Shrimp tempura, cucumber, spicy tuna with crunch, made triangle.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-16",
+            "name": "Red Phoenix",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Eel, avocado inside, spicy salmon with red tobiko on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-17",
+            "name": "Scorpion",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Soft shell crab, spicy tuna, cucumber with color tobiko on top.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-18",
+            "name": "Sweetheart Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Tuna outside, salmon & avocado with red & black tobiko inside, soybean paper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-19",
+            "name": "Tiger Roll",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Salmon, cucumber inside, seared salmon on top with spicy mayo.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-6-20",
+            "name": "Under Control",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Spicy tuna & shrimp tempura inside, topped with tobiko & bonito flakes.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 4
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sushi-entree",
+        "title": "Sushi Entree",
+        "notes": [
+          "With miso soup or salad or edamame. Any changes $3 (based on cash price) & up extra."
+        ],
+        "items": [
+          {
+            "id": "dinner-7-0",
+            "name": "Edomae Style",
+            "cashCents": 3499,
+            "cardCents": 3639,
+            "description": "7 pieces sushi & 1 tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-1",
+            "name": "Chef’s Inspiration Sashimi",
+            "cashCents": 4599,
+            "cardCents": 4783,
+            "description": "12 pieces of the chef’s selection.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-2",
+            "name": "Sushi & Sashimi Omakase",
+            "cashCents": 4999,
+            "cardCents": 5198,
+            "description": "4 pieces sushi, 8 pieces sashimi & 1 spicy tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-3",
+            "name": "Vegetarian Style Sushi",
+            "cashCents": 4099,
+            "cardCents": 4263,
+            "description": "10 pieces sushi & 1 vegetable roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-4",
+            "name": "Zen Don",
+            "cashCents": 2999,
+            "cardCents": 3119,
+            "description": "10 pieces assorted fish over a bed of sushi rice.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-5",
+            "name": "Salmon Don",
+            "cashCents": 2399,
+            "cardCents": 2495,
+            "description": "Seasonal sushi rice with small pieces salmon sashimi, ikura, spicy salmon, salt kombu, small pieces avocado, bonito.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-6",
+            "name": "Tuna Lover",
+            "cashCents": 3699,
+            "cardCents": 3847,
+            "description": "3 pieces sushi, 4 pieces sashimi, 1 spicy tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-7",
+            "name": "Salmon Lover",
+            "cashCents": 3499,
+            "cardCents": 3639,
+            "description": "3 pieces sushi, 4 pieces sashimi, 1 spicy salmon roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-7-8",
+            "name": "Super Super",
+            "cashCents": 4299,
+            "cardCents": 4471,
+            "description": "Sushi or sashimi: 2 pieces tuna, 3 pieces salmon, 3 pieces yellowtail, 2 pieces eel & 1 spicy crunch tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sushi-or-sashimi-la-carte",
+        "title": "Sushi or Sashimi À La Carte",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-8-0",
+            "name": "White Tuna (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-1",
+            "name": "Fluke (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-2",
+            "name": "Smoked Salmon (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-3",
+            "name": "Salmon Roe (1 pc)",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-4",
+            "name": "Bluefin Tuna (1 pc)",
+            "cashCents": 599,
+            "cardCents": 623,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-5",
+            "name": "Scottish Salmon (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-6",
+            "name": "Yellow Tail (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-7",
+            "name": "Crab Stick (1 pc)",
+            "cashCents": 299,
+            "cardCents": 311,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-8",
+            "name": "Spanish Mackwrel (1 pc)",
+            "cashCents": 399,
+            "cardCents": 415,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-9",
+            "name": "Sweet Shrimp (1 pc)",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-10",
+            "name": "Tobiko (1 pc)",
+            "cashCents": 399,
+            "cardCents": 415,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-11",
+            "name": "Stripe Bass (1 pc)",
+            "cashCents": 399,
+            "cardCents": 415,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-12",
+            "name": "Octopus (1 pc)",
+            "cashCents": 499,
+            "cardCents": 519,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-13",
+            "name": "Smoked Eel (1 pc)",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-8-14",
+            "name": "Shrimp (1 pc)",
+            "cashCents": 399,
+            "cardCents": 415,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "roll-combo",
+        "title": "Roll Combo",
+        "notes": [
+          "With miso soup or salad or edamame. Any changes $3 (based on cash price) & up extra."
+        ],
+        "items": [
+          {
+            "id": "dinner-9-0",
+            "name": "Roll Combo A",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Spicy tuna crunch roll, spicy salmon crunch roll, salmon avocado.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-9-1",
+            "name": "Roll Combo B",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "California roll, shrimp tempura, eel & avocado.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-9-2",
+            "name": "Roll Combo C",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Yellowtail jalapeño roll, tuna avocado roll, spicy yellowtail crunch roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-9-3",
+            "name": "Roll Combo D",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Salmon avocado roll, spicy tuna crunch roll, spicy white tuna crunch roll.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-9-4",
+            "name": "Roll Combo E",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Spicy crunch kani, spicy white tuna crunch, salmon & avocado.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 5
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "bento-box",
+        "title": "Bento Box",
+        "notes": [
+          "Served with miso soup or salad, California roll, fried shrimp shumai, rice.",
+          "Choose one entree. Brown rice $1 extra (based on cash price).",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "dinner-10-0",
+            "name": "A. Teriyaki Chicken",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-1",
+            "name": "B. Teriyaki Salmon",
+            "cashCents": 2599,
+            "cardCents": 2703,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-2",
+            "name": "C. Sushi (7 pcs)",
+            "cashCents": 2499,
+            "cardCents": 2599,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-3",
+            "name": "D. Sashimi (7 pcs)",
+            "cashCents": 2499,
+            "cardCents": 2599,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-4",
+            "name": "E. Chicken Katsu",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-5",
+            "name": "F. Pork Katsu",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-6",
+            "name": "G. Shrimp Tempura",
+            "cashCents": 2599,
+            "cardCents": 2703,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-7",
+            "name": "H. Vegetable Tempura",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-10-8",
+            "name": "I. Shrimp Teriyaki",
+            "cashCents": 2599,
+            "cardCents": 2703,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "rice-dishes",
+        "title": "Rice Dishes",
+        "notes": [
+          "With salad or miso soup or edamame. Brown rice $1 extra (based on cash price).",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "dinner-11-0",
+            "name": "Japanese Curry",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Choice of pork or chicken katsu over white rice.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-11-1",
+            "name": "Shrimp or Salmon Teriyaki",
+            "cashCents": 2599,
+            "cardCents": 2703,
+            "description": "Grilled shrimp or salmon over white rice.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-11-2",
+            "name": "Chicken Teriyaki",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Grilled chicken breast over white rice.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-11-3",
+            "name": "Unagi Don",
+            "cashCents": 2499,
+            "cardCents": 2599,
+            "description": "7 pieces smoked eel over sushi rice with pickles & greens.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-11-4",
+            "name": "Gyu Don",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Marinated sliced beef with bell peppers & onions over white rice.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-11-5",
+            "name": "Katsu",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Choice of pork or chicken, deep fried with tonkatsu sauce.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "dessert",
+        "title": "Dessert",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-12-0",
+            "name": "Green Tea Tempura Ice Cream",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-12-1",
+            "name": "Mochi Ice Cream",
+            "cashCents": 1399,
+            "cardCents": 1455,
+            "description": "1 piece green tea, 1 mango, 1 black sesame, 1 red bean. $2 extra for any changes.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-12-2",
+            "name": "2 Scoops Ice Cream",
+            "cashCents": 999,
+            "cardCents": 1039,
+            "description": "Green tea.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 6
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "ramen-noodles",
+        "title": "Ramen Noodles",
+        "notes": [
+          "Substitution politely declined. Any changes will be a minimum of $2.00 (based on cash price) and up.",
+          "Choose one noodle: thin ramen (Tokyo straight), thick ramen (Tokyo wavy), spinach ramen (Tokyo wavy, vegetable), udon, curly ramen (Tokyo curly), skinny rice noodle."
+        ],
+        "items": [
+          {
+            "id": "dinner-13-0",
+            "name": "Tonkotsu Shoyu",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Pork broth, roasted pork belly, green cabbage, kikurage, menma bamboo (lacto fermented bamboo shoots), spinach, arugula, scallion, black garlic oil.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-1",
+            "name": "Spicy Tonkotsu Shoyu",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Pork broth, roasted pork belly, green cabbage, kikurage, menma bamboo, takana, spinach, arugula, scallion, black garlic oil, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-2",
+            "name": "Tonkotsu",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Pork broth, roasted pork belly, green cabbage, kikurage, sweet corn, scallions, menma bamboo, arugula, seasoned soft egg & black garlic oil.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-3",
+            "name": "Spicy Tonkotsu",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Pork broth, roasted pork belly, green cabbage, kikurage, sweet corn, scallions, menma bamboo, arugula, seasoned soft egg, black garlic oil, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-4",
+            "name": "Beef Ramen",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Beef broth, roasted chashu beef, green cabbage, menma bamboo, sweet corn, scallion, arugula.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-5",
+            "name": "Spicy Beef Ramen",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Beef broth, roasted chashu beef, green cabbage, menma bamboo, sweet corn, scallion, arugula, spicy bean sprouts, takana, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-6",
+            "name": "Shoyu Ramen (No Meat)",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Bonito broth, green cabbage, kikurage, menma bamboo, sweet corn, seasoned soft egg, nori, scallions.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-7",
+            "name": "Spicy Shoyu Ramen (No Meat)",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Bonito broth, green cabbage, kikurage, menma bamboo, sweet corn, seasoned soft egg, nori, takana, scallions, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-8",
+            "name": "Seafood Ramen",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Pork broth, green cabbage, kikurage, menma bamboo, wakame, bean sprouts, shrimp, squid, scallops, scallions.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-9",
+            "name": "Spicy Seafood Ramen",
+            "cashCents": 2399,
+            "cardCents": 2495,
+            "description": "Pork broth, green cabbage, kikurage, menma bamboo, wakame, spicy bean sprouts, shrimp, squid, scallops, takana, scallions, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-10",
+            "name": "Karaage Udon Noodles",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Bonito broth, fried boneless dark meat chicken, wakame, scallions & narutomaki.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-11",
+            "name": "Vegetables Ramen",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Vegetable broth, green cabbage, bok choy, spinach, shiitake mushrooms, kikurage, asparagus, glazed tofu, scallions.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-12",
+            "name": "Spicy Vegetable Ramen",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Vegetable broth, green cabbage, bok choy, spinach, shiitake mushrooms, kikurage, asparagus, glazed tofu, takana, scallions, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-13",
+            "name": "Tomato Seafood Ramen",
+            "cashCents": 2299,
+            "cardCents": 2391,
+            "description": "Tomato broth, green cabbage, kikurage, menma bamboo, wakame, bean sprouts, shrimp, squid, scallops, scallion.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-14",
+            "name": "Spicy Tomato Seafood Ramen",
+            "cashCents": 2399,
+            "cardCents": 2495,
+            "description": "Tomato broth, green cabbage, kikurage, menma bamboo, wakame, spicy bean sprouts, shrimp, squid, scallops, takana, scallions, homemade spicy paste & shredded red hot pepper.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-15",
+            "name": "Curry Udon Noodle",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Choice of deep fried chicken or pork.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-16",
+            "name": "Grill Chicken Yuzu Ramen",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Vegetable broth, grilled chicken with green cabbage, bok choy, kikurage, seasoned soft egg.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-17",
+            "name": "Dan Dan Ramen in Soup Broth",
+            "cashCents": 2099,
+            "cardCents": 2183,
+            "description": "Vegetable broth, grilled chicken with green cabbage, bok choy, kikurage, seasoned soft egg; contains soy milk.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-18",
+            "name": "Shrimp TomYum Rice Noodle Soup",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "Spicy lemongrass broth with shrimp, straw mushrooms, spicy bean sprouts, takana, cilantro & chili pepper. Spicy.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-19",
+            "name": "Seafood TomYum Rice Noodle Soup",
+            "cashCents": 2399,
+            "cardCents": 2495,
+            "description": "Spicy lemongrass broth with shrimp, squid, scallops, straw mushrooms, takana, spicy bean sprouts, cilantro & chili pepper. Spicy.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-20",
+            "name": "Hawaii Breeze (Cold)",
+            "cashCents": 2199,
+            "cardCents": 2287,
+            "description": "Tokyo wavy cold ramen noodle with shredded egg, crab meat, cucumbers, carrots, corn, avocado, seaweed salad, shrimp & shredded seaweed. House special sauce, sesame oil & sesame seeds.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-13-21",
+            "name": "Chicken Yaki Udon (Dry)",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Sautéed udon with chicken, onion, bell pepper, scallion, broccoli.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "ramen-topping",
+        "title": "Ramen Topping",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-14-0",
+            "name": "Asparagus",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-1",
+            "name": "Avocado",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-2",
+            "name": "Arugula",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-3",
+            "name": "Bean Sprouts",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-4",
+            "name": "Bok Choy",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-5",
+            "name": "Glazed Tofu",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-6",
+            "name": "Green Cabbage",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-7",
+            "name": "Grill or Fried Chicken / Fried Pork",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-8",
+            "name": "Homemade Spicy Paste",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-9",
+            "name": "Kikurage",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-10",
+            "name": "Naruomaki (Fish Cake)",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-11",
+            "name": "Nori",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-12",
+            "name": "Steam Firm Tofu",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-13",
+            "name": "Shiitake Mushrooms",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-14",
+            "name": "Spicy Bean Sprouts",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-15",
+            "name": "Spinach",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-16",
+            "name": "Sweet Corn",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-17",
+            "name": "Steam Broccoli",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-18",
+            "name": "Tempura Shrimp (2 pcs)",
+            "cashCents": 700,
+            "cardCents": 728,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-19",
+            "name": "Wakame",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-20",
+            "name": "Extra Soup",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-21",
+            "name": "Extra Noodles",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-22",
+            "name": "Kakuni Slow Roasted Pork Belly (2 pcs)",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-23",
+            "name": "Roasted Chashu Beef (2 pcs)",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-24",
+            "name": "Steam Shrimp (4 pcs)",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-25",
+            "name": "Nitamago Seasoned Soft Boiled Egg",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-26",
+            "name": "Menma Seasoned Bamboo Shoots",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-14-27",
+            "name": "Takana (Pickled Mustard Leaf)",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 7
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sake",
+        "title": "Sake",
+        "notes": [
+          "Sake prices are listed as a single price in the supplied menu."
+        ],
+        "items": [
+          {
+            "id": "dinner-15-0",
+            "name": "Hot Sake — Small",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1000
+          },
+          {
+            "id": "dinner-15-1",
+            "name": "Hot Sake — Large",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1700
+          },
+          {
+            "id": "dinner-15-2",
+            "name": "Sho Chiku Bai Nigori",
+            "cardCents": null,
+            "description": "Junmai · 375 ml. Fruity aromas and flavors of ripe banana, vanilla, melon, strawberry, and creamy sweet rice custard.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-3",
+            "name": "Umakara Migaki Hashiwari",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Stronger personality and boldness of umami that can be enjoyed at a variety of temperatures.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-4",
+            "name": "Itteki Nyuukon",
+            "cardCents": null,
+            "description": "Junmai Ginjo · 300 ml. Mild aromatics, full-to-medium body and slightly dry. Easy and enjoyable to drink.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-5",
+            "name": "Kubota",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Elegant nose with notes of pear and melon, harmonious acidity and pleasant mouthfeel.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "dinner-15-6",
+            "name": "Kiku Masamune Silver",
+            "cardCents": null,
+            "description": "Sparkling sake · 300 ml. Semi-dry with lush floral and fruity aromas, a refreshing character and crisp fruity finish.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-7",
+            "name": "Hana White Peach",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Aromas and flavors of just-ripe white peaches in cream with a sweet full-bodied palate.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "dinner-15-8",
+            "name": "Sho Chiku Bai Organic",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Rich and savory with comforting aromas and flavors of corn flakes, banana bread, nuts and mild spices.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-9",
+            "name": "Suigei “Drunken Whale”",
+            "cardCents": null,
+            "description": "Tokubetsu Junmai · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-10",
+            "name": "Tengumai 50",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "dinner-15-11",
+            "name": "Born Junsui",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Refreshing Ginjo aroma with a rounded flavor and a clean finish that pairs well with Japanese dishes.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "dinner-15-12",
+            "name": "Nihonsakari “Sakari” Yuzu",
+            "cardCents": null,
+            "description": "Sake liqueur · 300 ml. Refined umami and moderate sweetness of Junmai-shu sake with flavors of Japanese Yuzu.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "dinner-15-13",
+            "name": "Hana Lychee",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Lychee aromatics and a sweet, full-bodied palate of lychee, yellow peach and lemon-lime.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          }
+        ]
+      },
+      {
+        "id": "beer",
+        "title": "Beer",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-16-0",
+            "name": "Echigo IPA",
+            "cashCents": 800,
+            "cardCents": 832,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-1",
+            "name": "Echigo Stout",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-2",
+            "name": "Matcha IPA",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-3",
+            "name": "White Yuzu",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-4",
+            "name": "Orion",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Okinawa, Japan.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-5",
+            "name": "Sapporo",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-6",
+            "name": "Kirin Ichiban",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-7",
+            "name": "Kirin Light",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-8",
+            "name": "Heineken",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-9",
+            "name": "Stella Artois",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-16-10",
+            "name": "Bud Light",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "wine",
+        "title": "Wine",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-17-0",
+            "name": "Chardonnay",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-17-1",
+            "name": "Pinot Grigio",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-17-2",
+            "name": "Cabernet",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-17-3",
+            "name": "Pinot Noir",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-17-4",
+            "name": "White Zinfandel",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Rosé.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-17-5",
+            "name": "Plum Wine",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Umeshu.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "cocktails",
+        "title": "Cocktails",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-18-0",
+            "name": "Cosmopolitan",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-1",
+            "name": "Rum Coke",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-2",
+            "name": "Mango Sunrise",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-3",
+            "name": "Long Island Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-4",
+            "name": "Tokyo Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-5",
+            "name": "Yuzu Matcha Aid",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-6",
+            "name": "Martini",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-7",
+            "name": "Margarita",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-8",
+            "name": "Mojito",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-18-9",
+            "name": "Vodka Juice",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Soda / Orange / Cranberry.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "chu-hi",
+        "title": "Chu-Hi",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-19-0",
+            "name": "Yuzu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-19-1",
+            "name": "White Peach",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-19-2",
+            "name": "Lychee",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-19-3",
+            "name": "Kyoho Grape",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese grapes. Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-19-4",
+            "name": "Kabosu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese citrus. Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "japanese-drinks",
+        "title": "Japanese Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-20-0",
+            "name": "Calpico Soft Drink",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "White Peach / Lychee / Mango.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-20-1",
+            "name": "Creamy Soda",
+            "cashCents": 700,
+            "cardCents": 728,
+            "description": "Melon / Mango.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-20-2",
+            "name": "Aloe",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Exposed Original & Honey.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-20-3",
+            "name": "Unsweetened Tea",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Green Tea / Jasmine.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-20-4",
+            "name": "Ramune",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "Original / Strawberry / Peach / Melon / Orange.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "soft-drinks",
+        "title": "Soft Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-21-0",
+            "name": "Soda / Tea",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "Coke / Diet Coke / Sprite / Ginger Ale / Club Soda / Ice Tea.",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-21-1",
+            "name": "Poland Spring",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-21-2",
+            "name": "San Pellegrino",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE DINNER MENU-01.pdf",
+              "page": 8
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      }
+    ],
+    "availability": "Ramen, sushi & Japanese favorites",
+    "notice": "Please let us know if you have any food allergies, so we may accommodate you better. Consuming raw or undercooked meats, seafood, shellfish, poultry, or eggs may increase your risk of foodborne illness.",
+    "photoNotice": "Photos are visual representations of food."
+  },
+  {
+    "id": "lunch",
+    "label": "Lunch",
+    "pdf": "/menus/lunch.pdf",
+    "sections": [
+      {
+        "id": "sushi-bar",
+        "title": "Sushi Bar",
+        "notes": [
+          "Miso soup or salad or edamame.",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "lunch-0-0",
+            "name": "Sushi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "5 pieces sushi & 1 California roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-1",
+            "name": "Sashimi",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "7 pieces sashimi & 1 bowl of sushi rice.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-2",
+            "name": "Sushi & Sashimi Combo",
+            "cashCents": 1999,
+            "cardCents": 2079,
+            "description": "3 pieces sushi, 4 pieces sashimi & 1 California roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-3",
+            "name": "Tuna Lunch — Sushi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "4 pieces sushi & 1 tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-4",
+            "name": "Tuna Lunch — Sashimi",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "4 pieces sashimi & 1 tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-5",
+            "name": "Salmon Lunch — Sushi",
+            "cashCents": 1599,
+            "cardCents": 1663,
+            "description": "4 pieces sushi & 1 salmon roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-6",
+            "name": "Salmon Lunch — Sashimi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "4 pieces sashimi & 1 salmon roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-7",
+            "name": "Yellow Tail Lunch — Sushi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "4 pieces sushi & 1 yellowtail roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-8",
+            "name": "Yellow Tail Lunch — Sashimi",
+            "cashCents": 1799,
+            "cardCents": 1871,
+            "description": "4 pieces sashimi & 1 yellowtail roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-9",
+            "name": "Eel Lunch — Sushi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "4 pieces sushi & 1 eel roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-10",
+            "name": "Eel Lunch — Sashimi",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "4 pieces sashimi & 1 eel roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-11",
+            "name": "White Tuna Lunch — Sushi",
+            "cashCents": 1599,
+            "cardCents": 1663,
+            "description": "4 pieces sushi & 1 white tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-0-12",
+            "name": "White Tuna Lunch — Sashimi",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "4 pieces sashimi & 1 white tuna roll.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "rice-dishes",
+        "title": "Rice Dishes",
+        "notes": [
+          "With salad or miso soup or edamame. Brown rice $1 extra (based on cash price).",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "lunch-1-0",
+            "name": "Japanese Curry (Deep Fried)",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Choice of pork or chicken katsu over white rice.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-1-1",
+            "name": "Shrimp or Salmon Teriyaki",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "Grilled shrimp or salmon over white rice.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-1-2",
+            "name": "Chicken Teriyaki",
+            "cashCents": 1499,
+            "cardCents": 1559,
+            "description": "Grilled chicken breast over white rice.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-1-3",
+            "name": "Unagi Don",
+            "cashCents": 1899,
+            "cardCents": 1975,
+            "description": "5 pieces smoked eel over sushi rice with pickles & greens.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-1-4",
+            "name": "Gyu Don",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "Marinated sliced beef with bell peppers & onions over white rice.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-1-5",
+            "name": "Katsu",
+            "cashCents": 1599,
+            "cardCents": 1663,
+            "description": "Choice of pork or chicken, deep fried with tonkatsu sauce.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "bento-box",
+        "title": "Bento Box",
+        "notes": [
+          "Served with miso soup or salad, California roll, fried shrimp shumai, rice.",
+          "Choose one entree. Brown rice $1 extra (based on cash price).",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "lunch-2-0",
+            "name": "A. Teriyaki Chicken",
+            "cashCents": 1399,
+            "cardCents": 1455,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-1",
+            "name": "B. Teriyaki Salmon",
+            "cashCents": 1499,
+            "cardCents": 1563,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-2",
+            "name": "C. Sushi (5 pcs)",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-3",
+            "name": "D. Sashimi (5 pcs)",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-4",
+            "name": "E. Chicken Katsu",
+            "cashCents": 1399,
+            "cardCents": 1459,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-5",
+            "name": "F. Poke Katsu",
+            "cashCents": 1399,
+            "cardCents": 1459,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-6",
+            "name": "G. Shrimp Tempura",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-7",
+            "name": "H. Vegetable Tempura",
+            "cashCents": 1399,
+            "cardCents": 1459,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-2-8",
+            "name": "I. Shrimp Teriyaki",
+            "cashCents": 1699,
+            "cardCents": 1767,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "lunch-roll",
+        "title": "Lunch Roll",
+        "notes": [
+          "Served with miso soup or salad.",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up.",
+          "Hand roll or request for no rice: $1 extra (based on cash price) per roll.",
+          "Choose from: Avocado Asparagus Cucumber, Alaska, Avocado, Avocado & Cucumber, Boston, California, Cucumber, Eel Roll, Eel Avocado, Eel Cucumber, Mango & Avocado, Mix Vegetable, Philadelphia, Salmon, Salmon & Avocado, Salmon & Cucumber, Salmon Mango, Shrimp & Avocado, Shrimp & Cucumber, Shrimp Tempura, Spicy California Roll, Spicy Crunch Kani, Spicy Salmon (Crunch), Spicy Tuna (Crunch), Spicy White Tuna Roll (Crunch), Spicy Yellow Tail (Crunch), Sweet Potato (Tempura), Tempura Purple Yam, Tuna, Tuna & Avocado, Tuna & Cucumber, Tuna Mango, White Tuna & Avocado, White Tuna Cucumber, Yellow Tail Scallion, Yellowtail Jalapeno."
+        ],
+        "items": [
+          {
+            "id": "lunch-3-0",
+            "name": "Lunch Roll — 2 Rolls",
+            "cashCents": 1099,
+            "cardCents": 1143,
+            "description": "Choose two rolls from the selection below.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-3-1",
+            "name": "Lunch Roll — 3 Rolls",
+            "cashCents": 1299,
+            "cardCents": 1351,
+            "description": "Choose three rolls from the selection below.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "extra-topping",
+        "title": "Extra Topping",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-4-0",
+            "name": "Brown Rice (each roll)",
+            "cashCents": 100,
+            "cardCents": 104,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-1",
+            "name": "Spicy Mayo",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-2",
+            "name": "Eel Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-3",
+            "name": "Teriyaki Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-4",
+            "name": "Ginger Dressing",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-5",
+            "name": "Cucumber",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-6",
+            "name": "Tobiko",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-7",
+            "name": "Cream Cheese",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-8",
+            "name": "Jalapeno",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-9",
+            "name": "Avocado",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-4-10",
+            "name": "Mango",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sake",
+        "title": "Sake",
+        "notes": [
+          "Sake prices are listed as a single price in the supplied menu."
+        ],
+        "items": [
+          {
+            "id": "lunch-sake-0",
+            "name": "Hot Sake — Small",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1000
+          },
+          {
+            "id": "lunch-sake-1",
+            "name": "Hot Sake — Large",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1700
+          },
+          {
+            "id": "lunch-sake-2",
+            "name": "Sho Chiku Bai Nigori",
+            "cardCents": null,
+            "description": "Junmai · 375 ml. Fruity aromas and flavors of ripe banana, vanilla, melon, strawberry, and creamy sweet rice custard.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-3",
+            "name": "Umakara Migaki Hashiwari",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Stronger personality and boldness of umami that can be enjoyed at a variety of temperatures.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-4",
+            "name": "Itteki Nyuukon",
+            "cardCents": null,
+            "description": "Junmai Ginjo · 300 ml. Mild aromatics, full-to-medium body and slightly dry. Easy and enjoyable to drink.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-5",
+            "name": "Kubota",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Elegant nose with notes of pear and melon, harmonious acidity and pleasant mouthfeel.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "lunch-sake-6",
+            "name": "Kiku Masamune Silver",
+            "cardCents": null,
+            "description": "Sparkling sake · 300 ml. Semi-dry with lush floral and fruity aromas, a refreshing character and crisp fruity finish.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-7",
+            "name": "Hana White Peach",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Aromas and flavors of just-ripe white peaches in cream with a sweet full-bodied palate.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "lunch-sake-8",
+            "name": "Sho Chiku Bai Organic",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Rich and savory with comforting aromas and flavors of corn flakes, banana bread, nuts and mild spices.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-9",
+            "name": "Suigei “Drunken Whale”",
+            "cardCents": null,
+            "description": "Tokubetsu Junmai · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-10",
+            "name": "Tengumai 50",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "lunch-sake-11",
+            "name": "Born Junsui",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Refreshing Ginjo aroma with a rounded flavor and a clean finish that pairs well with Japanese dishes.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "lunch-sake-12",
+            "name": "Nihonsakari “Sakari” Yuzu",
+            "cardCents": null,
+            "description": "Sake liqueur · 300 ml. Refined umami and moderate sweetness of Junmai-shu sake with flavors of Japanese Yuzu.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "lunch-sake-13",
+            "name": "Hana Lychee",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Lychee aromatics and a sweet, full-bodied palate of lychee, yellow peach and lemon-lime.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          }
+        ]
+      },
+      {
+        "id": "beer",
+        "title": "Beer",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-beer-0",
+            "name": "Echigo IPA",
+            "cashCents": 800,
+            "cardCents": 832,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-1",
+            "name": "Echigo Stout",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-2",
+            "name": "Matcha IPA",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-3",
+            "name": "White Yuzu",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-4",
+            "name": "Orion",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Okinawa, Japan.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-5",
+            "name": "Sapporo",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-6",
+            "name": "Kirin Ichiban",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-7",
+            "name": "Kirin Light",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-8",
+            "name": "Heineken",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-9",
+            "name": "Stella Artois",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-beer-10",
+            "name": "Bud Light",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "wine",
+        "title": "Wine",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-wine-0",
+            "name": "Chardonnay",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-wine-1",
+            "name": "Pinot Grigio",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-wine-2",
+            "name": "Cabernet",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-wine-3",
+            "name": "Pinot Noir",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-wine-4",
+            "name": "White Zinfandel",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Rosé.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-wine-5",
+            "name": "Plum Wine",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Umeshu.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "cocktails",
+        "title": "Cocktails",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-cocktails-0",
+            "name": "Cosmopolitan",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-1",
+            "name": "Rum Coke",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-2",
+            "name": "Mango Sunrise",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-3",
+            "name": "Long Island Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-4",
+            "name": "Tokyo Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-5",
+            "name": "Yuzu Matcha Aid",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-6",
+            "name": "Martini",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-7",
+            "name": "Margarita",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-8",
+            "name": "Mojito",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-cocktails-9",
+            "name": "Vodka Juice",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Soda / Orange / Cranberry.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "chu-hi",
+        "title": "Chu-Hi",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-chu-hi-0",
+            "name": "Yuzu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-chu-hi-1",
+            "name": "White Peach",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-chu-hi-2",
+            "name": "Lychee",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-chu-hi-3",
+            "name": "Kyoho Grape",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese grapes. Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-chu-hi-4",
+            "name": "Kabosu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese citrus. Japanese sparkling cocktail.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "japanese-drinks",
+        "title": "Japanese Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-japanese-drinks-0",
+            "name": "Calpico Soft Drink",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "White Peach / Lychee / Mango.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-japanese-drinks-1",
+            "name": "Creamy Soda",
+            "cashCents": 700,
+            "cardCents": 728,
+            "description": "Melon / Mango.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-japanese-drinks-2",
+            "name": "Aloe",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Exposed Original & Honey.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-japanese-drinks-3",
+            "name": "Unsweetened Tea",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Green Tea / Jasmine.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-japanese-drinks-4",
+            "name": "Ramune",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "Original / Strawberry / Peach / Melon / Orange.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "soft-drinks",
+        "title": "Soft Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-soft-drinks-0",
+            "name": "Soda / Tea",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "Coke / Diet Coke / Sprite / Ginger Ale / Club Soda / Ice Tea.",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-soft-drinks-1",
+            "name": "Poland Spring",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-soft-drinks-2",
+            "name": "San Pellegrino",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      }
+    ],
+    "availability": "Monday–Friday · 11:30 AM–4:00 PM · Except holidays",
+    "notice": "Please let us know if you have any food allergies, so we may accommodate you better. Consuming raw or undercooked meats, seafood, shellfish, poultry, or eggs may increase your risk of foodborne illness.",
+    "photoNotice": "Photos are visual representations of food."
+  },
+  {
+    "id": "happy-hour",
+    "label": "Happy Hour",
+    "pdf": "/menus/happy-hour.pdf",
+    "sections": [
+      {
+        "id": "appetizers",
+        "title": "Appetizers",
+        "notes": [],
+        "items": [
+          {
+            "id": "happy-hour-0-0",
+            "name": "Cucumber Salad",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-1",
+            "name": "Crispy Wings",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-2",
+            "name": "Edamame",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-3",
+            "name": "Fried Shrimp Shumai",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-4",
+            "name": "Garden Green Salad",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-5",
+            "name": "Gyoza (Pork)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-6",
+            "name": "Kani Salad",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-7",
+            "name": "Karaage (with Sesame Seed)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-8",
+            "name": "Purple Sweet Potato Tempura",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-0-9",
+            "name": "Seaweed Salad",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sushi-rolls",
+        "title": "Sushi Rolls",
+        "notes": [
+          "Hand roll, brown rice or soy paper: $1 extra (based on cash price) per roll.",
+          "Substitution politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-1-0",
+            "name": "Avocado Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-1",
+            "name": "Cucumber Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-2",
+            "name": "California",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-3",
+            "name": "Eel Cucumber",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-4",
+            "name": "Eel Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-5",
+            "name": "Mango & Avocado Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-6",
+            "name": "Mix Vegetable Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-7",
+            "name": "Spicy Tuna (Crunch)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-8",
+            "name": "Spicy Salmon (Crunch)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-9",
+            "name": "Spicy California Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-10",
+            "name": "Spicy Yellow Tail Roll (Crunch)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-11",
+            "name": "Spicy White Tuna Roll (Crunch)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-12",
+            "name": "Salmon Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-13",
+            "name": "Salmon Mango Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-14",
+            "name": "Salmon Cucumber Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-15",
+            "name": "Shrimp Cucumber Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-16",
+            "name": "Shrimp Tempura Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-17",
+            "name": "Sweet Potato Roll (with Eel Sauce on Top)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-18",
+            "name": "Tuna Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-19",
+            "name": "Tuna Mango Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-20",
+            "name": "Tuna & Cucumber Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-21",
+            "name": "Tempura Purple Yam Roll (with Eel Sauce on Top)",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-22",
+            "name": "White Tuna & Mango Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-23",
+            "name": "Yellow Tail Scallion Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-1-24",
+            "name": "Yellow Tail Jalapeno Roll",
+            "cashCents": 649,
+            "cardCents": 675,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "extra-topping",
+        "title": "Extra Topping",
+        "notes": [],
+        "items": [
+          {
+            "id": "happy-hour-2-0",
+            "name": "Avocado",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-1",
+            "name": "Cream Cheese",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-2",
+            "name": "Cucumber",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-3",
+            "name": "Eel Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-4",
+            "name": "Ginger Dressing",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-5",
+            "name": "Jalapeno",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-6",
+            "name": "Mango",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-7",
+            "name": "Mango Sauce",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-8",
+            "name": "Spicy Mayo",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-9",
+            "name": "Teriyaki Sauce",
+            "cashCents": 200,
+            "cardCents": 208,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-2-10",
+            "name": "Tobiko",
+            "cashCents": 300,
+            "cardCents": 312,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "sake",
+        "title": "Sake",
+        "notes": [
+          "Sake prices are listed as a single price in the supplied menu.",
+          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-sake-0",
+            "name": "Hot Sake — Small",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1000
+          },
+          {
+            "id": "happy-hour-sake-1",
+            "name": "Hot Sake — Large",
+            "cardCents": null,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1700
+          },
+          {
+            "id": "happy-hour-sake-2",
+            "name": "Sho Chiku Bai Nigori",
+            "cardCents": null,
+            "description": "Junmai · 375 ml. Fruity aromas and flavors of ripe banana, vanilla, melon, strawberry, and creamy sweet rice custard.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-3",
+            "name": "Umakara Migaki Hashiwari",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Stronger personality and boldness of umami that can be enjoyed at a variety of temperatures.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-4",
+            "name": "Itteki Nyuukon",
+            "cardCents": null,
+            "description": "Junmai Ginjo · 300 ml. Mild aromatics, full-to-medium body and slightly dry. Easy and enjoyable to drink.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-5",
+            "name": "Kubota",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Elegant nose with notes of pear and melon, harmonious acidity and pleasant mouthfeel.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "happy-hour-sake-6",
+            "name": "Kiku Masamune Silver",
+            "cardCents": null,
+            "description": "Sparkling sake · 300 ml. Semi-dry with lush floral and fruity aromas, a refreshing character and crisp fruity finish.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-7",
+            "name": "Hana White Peach",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Aromas and flavors of just-ripe white peaches in cream with a sweet full-bodied palate.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "happy-hour-sake-8",
+            "name": "Sho Chiku Bai Organic",
+            "cardCents": null,
+            "description": "Junmai · 300 ml. Rich and savory with comforting aromas and flavors of corn flakes, banana bread, nuts and mild spices.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-9",
+            "name": "Suigei “Drunken Whale”",
+            "cardCents": null,
+            "description": "Tokubetsu Junmai · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-10",
+            "name": "Tengumai 50",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. A reserved aroma, gentle rice notes, perfect acidity and a clean finish combine to create a unique flavor.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "happy-hour-sake-11",
+            "name": "Born Junsui",
+            "cardCents": null,
+            "description": "Junmai Daiginjo · 300 ml. Refreshing Ginjo aroma with a rounded flavor and a clean finish that pairs well with Japanese dishes.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          },
+          {
+            "id": "happy-hour-sake-12",
+            "name": "Nihonsakari “Sakari” Yuzu",
+            "cardCents": null,
+            "description": "Sake liqueur · 300 ml. Refined umami and moderate sweetness of Junmai-shu sake with flavors of Japanese Yuzu.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1900
+          },
+          {
+            "id": "happy-hour-sake-13",
+            "name": "Hana Lychee",
+            "cardCents": null,
+            "description": "Flavored sake · 375 ml. Lychee aromatics and a sweet, full-bodied palate of lychee, yellow peach and lemon-lime.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "listedCents": 1600
+          }
+        ]
+      },
+      {
+        "id": "beer",
+        "title": "Beer",
+        "notes": [
+          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-beer-0",
+            "name": "Echigo IPA",
+            "cashCents": 800,
+            "cardCents": 832,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-beer-1",
+            "name": "Echigo Stout",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Niigata, Japan.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-2",
+            "name": "Matcha IPA",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-beer-3",
+            "name": "White Yuzu",
+            "cashCents": 1400,
+            "cardCents": 1456,
+            "description": "Kyoto, Japan.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-beer-4",
+            "name": "Orion",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Okinawa, Japan.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-5",
+            "name": "Sapporo",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-6",
+            "name": "Kirin Ichiban",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-7",
+            "name": "Kirin Light",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-8",
+            "name": "Heineken",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-9",
+            "name": "Stella Artois",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-beer-10",
+            "name": "Bud Light",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "wine",
+        "title": "Wine",
+        "notes": [
+          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-wine-0",
+            "name": "Chardonnay",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-wine-1",
+            "name": "Pinot Grigio",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "White.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-wine-2",
+            "name": "Cabernet",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-wine-3",
+            "name": "Pinot Noir",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Red.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-wine-4",
+            "name": "White Zinfandel",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Rosé.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-wine-5",
+            "name": "Plum Wine",
+            "cashCents": 900,
+            "cardCents": 936,
+            "description": "Umeshu.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "cocktails",
+        "title": "Cocktails",
+        "notes": [
+          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-cocktails-0",
+            "name": "Cosmopolitan",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-1",
+            "name": "Rum Coke",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-2",
+            "name": "Mango Sunrise",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-3",
+            "name": "Long Island Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-4",
+            "name": "Tokyo Ice Tea",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-5",
+            "name": "Yuzu Matcha Aid",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-6",
+            "name": "Martini",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-7",
+            "name": "Margarita",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-8",
+            "name": "Mojito",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Lychee / Mango / Pineapple.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-cocktails-9",
+            "name": "Vodka Juice",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Soda / Orange / Cranberry.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "chu-hi",
+        "title": "Chu-Hi",
+        "notes": [
+          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+        ],
+        "items": [
+          {
+            "id": "happy-hour-chu-hi-0",
+            "name": "Yuzu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-chu-hi-1",
+            "name": "White Peach",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-chu-hi-2",
+            "name": "Lychee",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese sparkling cocktail.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-chu-hi-3",
+            "name": "Kyoho Grape",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese grapes. Japanese sparkling cocktail.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          },
+          {
+            "id": "happy-hour-chu-hi-4",
+            "name": "Kabosu",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "Japanese citrus. Japanese sparkling cocktail.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed",
+            "markers": [
+              "Happy Hour selection"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "japanese-drinks",
+        "title": "Japanese Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "happy-hour-japanese-drinks-0",
+            "name": "Calpico Soft Drink",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "White Peach / Lychee / Mango.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-japanese-drinks-1",
+            "name": "Creamy Soda",
+            "cashCents": 700,
+            "cardCents": 728,
+            "description": "Melon / Mango.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-japanese-drinks-2",
+            "name": "Aloe",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Exposed Original & Honey.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-japanese-drinks-3",
+            "name": "Unsweetened Tea",
+            "cashCents": 600,
+            "cardCents": 624,
+            "description": "Green Tea / Jasmine.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-japanese-drinks-4",
+            "name": "Ramune",
+            "cashCents": 500,
+            "cardCents": 520,
+            "description": "Original / Strawberry / Peach / Melon / Orange.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "soft-drinks",
+        "title": "Soft Drinks",
+        "notes": [],
+        "items": [
+          {
+            "id": "happy-hour-soft-drinks-0",
+            "name": "Soda / Tea",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "Coke / Diet Coke / Sprite / Ginger Ale / Club Soda / Ice Tea.",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-soft-drinks-1",
+            "name": "Poland Spring",
+            "cashCents": 350,
+            "cardCents": 364,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "happy-hour-soft-drinks-2",
+            "name": "San Pellegrino",
+            "cashCents": 1000,
+            "cardCents": 1040,
+            "description": "",
+            "source": {
+              "file": "zen noodle happy hour menu final print-02.pdf",
+              "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      }
+    ],
+    "availability": "4:00 PM–8:00 PM",
+    "notice": "Please let us know if you have any food allergies, so we may accommodate you better. Consuming raw or undercooked meats, seafood, shellfish, poultry, or eggs may increase your risk of foodborne illness.",
+    "photoNotice": "Photos are visual representations of food."
+  }
+]

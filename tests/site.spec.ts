@@ -29,7 +29,7 @@ test('mobile navigation, delivery menu and Escape',async({page})=>{
 });
 test('gallery dialog keyboard controls and focus restoration',async({page})=>{
  await page.goto('/gallery/');const first=page.getByRole('button',{name:/Enlarge:/}).first();await first.click();
- await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('ArrowRight');await expect(page.locator('.lightbox-controls')).toContainText('2 / 8');
+ await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('ArrowRight');await expect(page.locator('.lightbox-controls')).toContainText('2 / 9');
  await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible();await expect(first).toBeFocused();
 });
 test('map loads on request and directions remain available',async({page})=>{

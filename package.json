@@ -2,7 +2,30 @@
   "name": "zen-ramen-sushi-v2",
   "version": "2.0.0",
   "private": true,
-  "scripts": {"dev": "next dev --hostname 127.0.0.1", "build": "next build", "typecheck": "tsc --noEmit", "lint": "eslint .", "test": "playwright test", "preview": "node scripts/serve.mjs"},
-  "dependencies": {"next": "latest", "react": "latest", "react-dom": "latest", "gsap": "latest", "@fontsource/nunito-sans": "latest"},
-  "devDependencies": {"typescript": "latest", "@types/node": "latest", "@types/react": "latest", "@types/react-dom": "latest", "eslint": "latest", "eslint-config-next": "latest", "@playwright/test": "latest"}
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "playwright test",
+    "preview": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "gsap": "^3.15.0",
+    "@fontsource/nunito-sans": "^5.3.0",
+    "@fontsource/zen-kaku-gothic-new": "^5.2.0",
+    "@fontsource/zen-old-mincho": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.5",
+    "@playwright/test": "^1.63.0"
+  }
 }

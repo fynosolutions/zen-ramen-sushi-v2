@@ -35,13 +35,13 @@ export default function Intro() {
       setActive(false);
     };
     finish.current = done;
-    const timeout = window.setTimeout(done, 3800);
+    const timeout = window.setTimeout(done, 2200);
     const timeline = gsap.timeline({ onComplete: done });
     const assetsReady = Promise.allSettled([document.fonts.ready, root.current.querySelector('img')?.decode()]);
-    timeline.fromTo(root.current.querySelectorAll('.intro-tile'), { scale: 1 }, { scale: 0, stagger: { each: .009, from: 'random' }, duration: .45, ease: 'power2.inOut' })
-      .fromTo(root.current.querySelector('.intro-caption'), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .3 }, .4)
-      .addPause(1.0,()=>{void assetsReady.then(()=>{if(!complete)timeline.resume();});})
-      .to(root.current, { yPercent: -100, duration: .65, ease: 'power3.inOut' }, 1.1);
+    timeline.fromTo(root.current.querySelectorAll('.intro-tile'), { scale: 1 }, { scale: 0, stagger: { each: .006, from: 'random' }, duration: .32, ease: 'power2.inOut' })
+      .fromTo(root.current.querySelector('.intro-caption'), { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: .25 }, .28)
+      .addPause(0.62,()=>{void assetsReady.then(()=>{if(!complete)timeline.resume();});})
+      .to(root.current, { yPercent: -100, duration: .5, ease: 'power3.inOut' }, 0.68);
     const escape = (e: KeyboardEvent) => { if (e.key === 'Escape') done(); };
     window.addEventListener('keydown', escape);
     return () => { clearTimeout(timeout); timeline.kill(); document.body.style.overflow = previous; background.forEach((element,i)=>{element.inert=originalInert[i];}); window.removeEventListener('keydown', escape); };

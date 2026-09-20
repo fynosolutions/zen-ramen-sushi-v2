@@ -4,10 +4,10 @@
 
 本轮图片版在线预览：[zen-ramen-sushi-v2.vercel.app](https://zen-ramen-sushi-v2.vercel.app)。这是独立的 V2 评审站点，已启用 noindex；尚未切换现有官网域名。用户已确认视频后补，本轮按图片版交付。
 
-公开源码仓库：[wzh152/zen-ramen-sushi-v2](https://github.com/wzh152/zen-ramen-sushi-v2)，默认分支 `main`。仓库包含源代码、品牌与菜单素材、执行计划及验证记录；不包含本地凭据、依赖目录与构建缓存。
+公开源码仓库：[fynosolutions/zen-ramen-sushi-v2](https://github.com/fynosolutions/zen-ramen-sushi-v2)，默认分支 `main`。仓库包含源代码、品牌与菜单素材、执行计划及验证记录；不包含本地凭据、依赖目录与构建缓存。
 
 ```powershell
-git clone https://github.com/wzh152/zen-ramen-sushi-v2.git
+git clone https://github.com/fynosolutions/zen-ramen-sushi-v2.git
 cd zen-ramen-sushi-v2
 ```
 
@@ -105,7 +105,7 @@ Google Maps 按需加载。初始街区示意是原创、明确标注不按比�
 | C07 | 待核实 | 两张旧站环境图真实拍摄来源未确认，暂标为 Dining Inspiration；部分旧站图有 AI / 图库来源线索 |
 | C08 | 不阻塞 | 当前 JPG Logo 已使用，矢量稿为可选后续优化 |
 | C09 | 沿用旧站 | 上线前再次核对营业时间 |
-| C10 | 独立预览与 GitHub 仓库已建立 | Vercel 项目已关联并发布，GitHub 公开仓库为 `wzh152/zen-ramen-sushi-v2`；自动部署与原官网正式域名仍待接入 |
+| C10 | 独立预览与 GitHub 仓库已建立 | Vercel 项目已关联并发布，GitHub 公开仓库为 `fynosolutions/zen-ramen-sushi-v2`；自动部署与原官网正式域名仍待接入 |
 
 ## 当前验证结果
 

@@ -18,6 +18,7 @@ export default function NearMSG() {
         <h2>Eat well before the Garden, without the wait</h2>
         <p>Madison Square Garden is a six-minute walk from our door: straight down 7th Avenue from 36th to 33rd Street. That makes us the easy answer to the eternal pre-game question — somewhere you can sit down, eat real food, and still make tip-off or the opening act.</p>
         <p>Speed is the point. Our kitchen is famous with regulars for how fast plates land — most orders are on your table within minutes. Arrive 45 minutes before doors open and you have time for a bowl of tonkotsu shoyu, a couple of rolls, and a beer, without watching the clock in a panic.</p>
+        <p><a className="text-link" href={site.reserve} target="_blank" rel="noopener noreferrer">RESERVE BEFORE THE SHOW <Arrow /></a></p>
         <h2>Doors at 7? Come at happy hour</h2>
         <p>Most MSG events line up perfectly with our <Link href="/happy-hour/">daily happy hour, 4–8 PM</Link> — twenty-five sushi rolls and ten appetizers at $6.49 each (cash). Feed two people well for the price of one arena hot dog and a soda… almost.</p>
         <h2>After the buzzer</h2>

@@ -21,8 +21,8 @@ export default function HappyHour() {
         <img src="/images/zen-happy-hour.webp" alt="Cold draft beer and izakaya small plates during happy hour at Zen" width="1536" height="1024" />
         <div className="hh-deal-card">
           <p className="eyebrow">THE DEAL</p>
-          <p className="hh-price"><strong>$6.49</strong><span>per roll · cash<br />($6.75 card)</span></p>
-          <p className="hh-price"><strong>$6.49</strong><span>per appetizer too —<br />everything one price</span></p>
+          <p className="hh-price"><strong>$6.49</strong><span>per item · cash ($6.75 card)<br />rolls &amp; appetizers alike</span></p>
+          <p className="hh-oneprice">25 sushi rolls + 10 appetizers.<br />One price. No asterisks.</p>
           <p className="hh-hours-line">Every day · 4:00 PM – 8:00 PM<br />Walk-ins welcome, upstairs &amp; down.</p>
           <div className="hh-ctas"><Link className="button button-red" href="/menu/#happy-hour">SEE THE FULL HAPPY HOUR MENU <Arrow /></Link><a className="button button-dark" href={site.reserve} target="_blank" rel="noopener noreferrer">RESERVE A TABLE <Arrow /></a></div>
         </div>

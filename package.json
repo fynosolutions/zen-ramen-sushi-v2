@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "playwright test",
-    "preview": "node scripts/serve.mjs"
+    "preview": "node scripts/serve.mjs",
+    "seo": "node seo/check-mapping.mjs && node seo/check-meta.mjs && node seo/check-alt.mjs && node seo/check-pages.mjs"
   },
   "dependencies": {
     "next": "^16.3.5",

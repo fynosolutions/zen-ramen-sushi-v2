@@ -23,7 +23,7 @@ test('menu links, prices, keyboard tabs and browser history',async({page})=>{
 test('mobile navigation, delivery menu and Escape',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');
  await page.getByRole('button',{name:'Open navigation'}).click();await page.getByRole('button',{name:'ORDER DELIVERY/PICKUP'}).click();
- await expect(page.getByText('Coming soon')).toBeVisible();await expect(page.getByRole('link',{name:'TOAST ONLINE'})).toHaveAttribute('href',/toasttab/);
+ await expect(page.getByRole('link',{name:/UBER EATS/})).toHaveAttribute('href',/ubereats/);await expect(page.getByRole('link',{name:'TOAST ONLINE'})).toHaveAttribute('href',/toasttab/);
  await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'ORDER DELIVERY/PICKUP'})).toHaveAttribute('aria-expanded','false');
  await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Open navigation'})).toHaveAttribute('aria-expanded','false');
 });

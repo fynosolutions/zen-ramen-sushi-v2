@@ -8,10 +8,10 @@
   CHECK: node -e "const d=JSON.parse(require('fs').readFileSync('seo/ranked-before-2026-09-20.json','utf8')); const n=d.tasks[0].result[0].items.length; console.log(n>=400?'PASS '+n:'FAIL '+n)"
   EXPECT: PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=d722a4864d2dc8f4d879aeec1cf4d0eb846737d97150c459de58301d52ae69f5; output-bytes=9
-- [x] G3: 分层承接——有排名的旧 URL 一条不丢且不倒向首页；零排名薄内容与写错城市的故意下线；博客流量保全率 ≥99%
+- [x] G3: 分层承接（真相源=GSC 真实点击，非估算工具）——有点击的旧 URL 一条不丢且不倒向首页；零点击薄内容与写错城市的故意下线；点击保全率 100%
   CHECK: node seo/check-mapping.mjs
   EXPECT: MAPPING PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=49811dc5e45030dee893b78c40794db48478c8c116b498176c75637b09e080c1; output-bytes=129
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=dc56851cecd1ebbc655e99d7247800124ada2b74e09864aa3d87754d6e3a5fdc; output-bytes=135
 - [x] G4: Restaurant JSON-LD 含 geo/priceRange/sameAs(IG+TikTok+FB)/acceptsReservations/image/servesCuisine/openingHours/hasMenu
   CHECK: node -e "const h=require('fs').readFileSync('out/index.html','utf8'); const m=h.match(/<script type=\"application\/ld\+json\">(.*?)<\/script>/s); const j=JSON.parse(m[1].replace(/\\u003c/g,'<')); const need=['geo','priceRange','sameAs','acceptsReservations','image','servesCuisine','openingHoursSpecification','hasMenu']; const miss=need.filter(k=>!(k in j)); const tik=(j.sameAs||[]).some(u=>u.includes('zen.ramen.sushi')); console.log(miss.length===0&&tik&&(j.sameAs||[]).length>=3?'LD PASS':'LD FAIL '+miss+' tiktok:'+tik)"
   EXPECT: LD PASS
@@ -35,7 +35,7 @@
 - [x] G9: 构建 + Playwright 全绿
   CHECK: npm test 2>&1 | tail -1
   EXPECT: 8 passed
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=bd4cdb35a83b6568972581572302d5f02fba791fdb135f0096d8b0c4cd67e20b; output-bytes=18
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=9134b3f26a9659e9899cad7ad2beaf6847c91d5cb41567441d0fa425d8b68d2c; output-bytes=18
 - [x] G10: 20 项 SEO 体检对本地产物跑通且无 FAIL 级问题（体检器自身输出为准）
   CHECK: node seo/run-verify.mjs
   EXPECT: VERIFY PASS

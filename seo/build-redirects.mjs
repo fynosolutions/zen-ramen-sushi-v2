@@ -21,11 +21,13 @@ const structural = {
   '/aboutus/':'/about/', '/contact-theme/':'/events-catering/', '/location-theme/':'/about/',
   '/full-width-theme/':'/about/', '/error-404-page/':'/about/',
 };
-const etvMap = JSON.parse(fs.readFileSync('seo/blog-etv-2026-09-23.json','utf8'));
+const gsc = JSON.parse(fs.readFileSync('seo/gsc-clicks-2026-09-23.json','utf8'));  // GSC 真实点击 = 唯一真相源
 const WRONG_CITY = /gainesville|dahlonega|greenville|noblesville/i;
-// 薄内容策略(2026-09-23,两套工具交叉校准):博客只 301 有排名的;
-// 零排名与写错城市的让它 404 —— 把 100+ 篇薄文全收口到两个锚点会被判软404
-const worthRedirect = p => !/^\/\d{4}\/\d{2}\/\d{2}\//.test(p) || ((etvMap[p]?.etv ?? 0) >= 1 && !WRONG_CITY.test(p));
+// 薄内容策略(2026-09-23,以 GSC 真实点击为准):博客只 301 有真实点击的;
+// 零点击与写错城市的让它 404。估算工具(DataForSEO etv / SE Ranking)高估一个数量级,
+// 实测 etv 180 的页面真实点击为 0 —— 永远用 GSC 裁决
+const clicksOf = p => gsc[p.endsWith('/')?p:p+'/']?.clicks ?? 0;
+const worthRedirect = p => !/^\/\d{4}\/\d{2}\/\d{2}\//.test(p) || (clicksOf(p) >= 1 && !WRONG_CITY.test(p));
 const redirects=[]; const report=[];
 for(const p of old){
   if(exists(p)){report.push([p,'PAGE','(同URL保留)']);continue;}

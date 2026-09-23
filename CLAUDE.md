@@ -36,9 +36,15 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 
 `seo/gsc-clicks-2026-09-23.json` 是 Search Console 的**真实点击**，逐 URL。DataForSEO 的 etv 和 SE Ranking 的估算都高估约一个数量级——实测有页面 etv 180 而真实点击为 0。**任何"这页值不值得保"的判断以 GSC 为准**，估算工具只用于看趋势。Search Console 资源已验证在 jaye.mao@fynosolutions.com 名下，可直接登 search.google.com/search-console 查。
 
-## 跳转的真相源是 vercel.json
+## 跳转的真相源是 vercel.json（分层承接，不是全量 301）
 
-153 条 301 承接旧站全部 URL（`seo/old-urls-2026-09-20.txt` 是实测存档，`seo/redirect-map-report.tsv` 是映射报告）。`npm run host-configs` 从它生成 Apache/IIS/Netlify/nginx 四份等效配置——真 Apache 实测 156/156 与 Vercel 行为一致，所以这个站搬去任何主机都不丢跳转。改跳转只改 vercel.json，然后重新生成。
+153 条旧 URL 里，`vercel.json` 只 301 承接**有真实点击**的 66 条；零点击的薄内容（107 篇 AI 博客）和写错城市的文章（Gainesville/Noblesville 等，供应商弄错的）故意不跳转、让它自然 404——全量收口到几个锚点会被 Google 判"软 404"，伤新站更多。`seo/build-redirects.mjs` 是生成器，`seo/check-mapping.mjs` 是验收门，`seo/old-urls-2026-09-20.txt` 是 153 条旧 URL 的存档。
+
+`npm run host-configs` 从 vercel.json 生成 Apache/IIS/Netlify/nginx 四份等效配置——真 Apache 实测 156/156 与 Vercel 行为一致，所以这个站搬去任何主机都不丢跳转。改跳转只改 vercel.json 的生成逻辑，然后重新生成，别手改产物。
+
+## 另一条 session 在并行处理旧站
+
+Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress 的 SEO/评论/广告——**两边数据要交叉验证，不能互相直接采信**。这条规矩不是客套：这轮返工两次都是因为直接信了对方的估算工具（先是我的 etv 判断被更准的 GSC 推翻，中途还各自的正则/口径都出过错，靠交叉验证抓出来的）。跨 session 消息用 `SendMessage`，对方名字是 `restaurant-e7`。
 
 ## 已知坑
 
@@ -51,6 +57,6 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 ## 卡在客户侧的事
 
 1. ~~Delegate Access 授权~~ —— 2026-09-23 已接受。但实测 **GoDaddy 的 API 令牌不认委托授权**（授权后读客户域名仍 403），切换日改 DNS 走网页端，详见 `seo/GODADDY-PLAN.md`
-2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。**GA4 已建**——资源在 Fyno Restaurants 账号(401363907)下，Measurement ID `G-JZD3SQCWMP`，已配进 Vercel 生产环境变量并线上生效
+2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。~~GA4~~ —— 已建在 Fyno Restaurants 账号(401363907)下，ID `G-JZD3SQCWMP`，已接进 Vercel 生产环境变量并线上生效。建号步骤与坑见 memory `ref_ga4_property_setup`（跨项目通用，以后给别的店建 GA4 直接抄）
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
 4. **客户实拍照片与视频** —— 到货后替换全部占位素材

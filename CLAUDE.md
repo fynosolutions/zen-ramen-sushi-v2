@@ -51,6 +51,6 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 ## 卡在客户侧的事
 
 1. ~~Delegate Access 授权~~ —— 2026-09-23 已接受。但实测 **GoDaddy 的 API 令牌不认委托授权**（授权后读客户域名仍 403），切换日改 DNS 走网页端，详见 `seo/GODADDY-PLAN.md`
-2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。**GA4 已建**——资源在 Fyno Restaurants 账号(401363907)下，Measurement ID ，已配进 Vercel 生产环境变量并线上生效
+2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。**GA4 已建**——资源在 Fyno Restaurants 账号(401363907)下，Measurement ID `G-JZD3SQCWMP`，已配进 Vercel 生产环境变量并线上生效
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
 4. **客户实拍照片与视频** —— 到货后替换全部占位素材

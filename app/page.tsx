@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { site, copy } from '@/content/site';
 import { Arrow, GalleryStrip } from '@/components/Shared';
 import LocationMap from '@/components/LocationMap';
+import IgReels from '@/components/IgReels';
 export const metadata: Metadata = {alternates:{canonical:'/'},openGraph:{title:'Zen Ramen & Sushi',description:copy.hero,url:'/',images:['/images/photo-10.webp']}};
 export default function Home(){return <><Intro/><main id="main">
   <section className="hero">
@@ -16,4 +17,5 @@ export default function Home(){return <><Intro/><main id="main">
   <section className="about-preview"><div className="about-image"><img src="/images/photo-0.webp" alt="Japanese ramen with pork, noodles and a rich broth" width="1024" height="683" loading="lazy"/><span aria-hidden="true">いただきます</span></div><div className="about-copy"><p className="eyebrow">ABOUT ZEN</p><h2>Japanese roots.<br/>New York soul.</h2><p>{copy.about}</p><Link className="button button-cream" href="/about/">GET TO KNOW US <Arrow/></Link></div></section>
   <section className="catering-preview container"><div className="catering-copy"><p className="eyebrow red">EVENTS & CATERING</p><h2>Good things<br/>are better{' '}<br/><span className="red">shared.</span></h2><p>{copy.catering}</p><Link className="button button-dark" href="/events-catering/">PLAN YOUR EVENT <Arrow/></Link></div><div className="catering-image"><img src="/images/shared-table-original.jpg" srcSet="/images/photo-4.webp 819w, /images/shared-table-original.jpg 2665w" sizes="(max-width: 650px) 87vw, (max-width: 1655px) 44vw, 730px" alt="Japanese dishes arranged around a shared table, with chopsticks reaching for a bite" width="2665" height="3331" loading="lazy"/><span className="catering-tag">FOR YOUR NEXT GET-TOGETHER ✳</span></div></section>
   <GalleryStrip/>
+  <IgReels/>
 </main></>;}

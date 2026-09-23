@@ -18,7 +18,12 @@
   权限**仅 Domains & DNS(11/11)**,商务/订单/客户全部 0。存于 `~/Desktop/.env.secrets`(600)。
 - 实测：认证 ✅ HTTP 200 / 该账号名下域名 **0 个** / 读 zenramensushiny.com **403**。
 - **结论：域名在客户自己的 GoDaddy 账号里。** 我们的令牌有效但够不着。
-- **要动 DNS,需客户做一次 Delegate Access 授权**(不给账号密码,可随时撤销)。授权后现有令牌立即可用,无需重发。
+- **Delegate Access 已于 2026-09-23 接受**(Celina Lin → jaye.mao,级别 Products/Domains/Purchase)。
+  🔴 **但实测:网页端授权 ≠ API 可用。** PAT 只对令牌所有者自己名下的域名生效:
+  授权后 `/v1/domains/{域名}/records` 仍 403、`/v1/domains` 仍返回 0 个、
+  `X-Shopper-Id` 代理调用(746584231 / 749378374)双双 403、`/v1/shoppers/subaccount` 401。
+  **→ 切换日改 DNS 走网页端**(已有授权可登入客户账号操作),或给客户步骤单让他自己改两条。
+  别再花时间试 API 代理调用。
 - ⚠️ 该令牌明文经过聊天记录,切换完成后建议吊销重发。
 
 ## 三、🔑 搬家可行性：实测过了,能搬

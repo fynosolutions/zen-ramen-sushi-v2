@@ -46,7 +46,7 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 
 ## 卡在客户侧的事
 
-1. **Delegate Access 授权**给 jaye.mao@fynosolutions.com —— GoDaddy API 令牌已生成且有效（存 `~/Desktop/.env.secrets`，仅 DNS 权限），但域名在客户自己账号下，读记录返回 403
+1. ~~Delegate Access 授权~~ —— 2026-09-23 已接受。但实测 **GoDaddy 的 API 令牌不认委托授权**（授权后读客户域名仍 403），切换日改 DNS 走网页端，详见 `seo/GODADDY-PLAN.md`
 2. **Google Search Console / GA4 权限** —— 迁移后掉词的唯一观测手段
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
 4. **客户实拍照片与视频** —— 到货后替换全部占位素材

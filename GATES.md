@@ -8,10 +8,10 @@
   CHECK: node -e "const d=JSON.parse(require('fs').readFileSync('seo/ranked-before-2026-09-20.json','utf8')); const n=d.tasks[0].result[0].items.length; console.log(n>=400?'PASS '+n:'FAIL '+n)"
   EXPECT: PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=d722a4864d2dc8f4d879aeec1cf4d0eb846737d97150c459de58301d52ae69f5; output-bytes=9
-- [x] G3: 149 旧 URL 100% 有去处：0 个 404；映射到首页的仅允许首页自身
+- [x] G3: 分层承接——有排名的旧 URL 一条不丢且不倒向首页；零排名薄内容与写错城市的故意下线；博客流量保全率 ≥99%
   CHECK: node seo/check-mapping.mjs
   EXPECT: MAPPING PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=488c783654c16106665c70dd50523b3bde9cac37c760539876721abc2a22579f; output-bytes=13
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=49811dc5e45030dee893b78c40794db48478c8c116b498176c75637b09e080c1; output-bytes=129
 - [x] G4: Restaurant JSON-LD 含 geo/priceRange/sameAs(IG+TikTok+FB)/acceptsReservations/image/servesCuisine/openingHours/hasMenu
   CHECK: node -e "const h=require('fs').readFileSync('out/index.html','utf8'); const m=h.match(/<script type=\"application\/ld\+json\">(.*?)<\/script>/s); const j=JSON.parse(m[1].replace(/\\u003c/g,'<')); const need=['geo','priceRange','sameAs','acceptsReservations','image','servesCuisine','openingHoursSpecification','hasMenu']; const miss=need.filter(k=>!(k in j)); const tik=(j.sameAs||[]).some(u=>u.includes('zen.ramen.sushi')); console.log(miss.length===0&&tik&&(j.sameAs||[]).length>=3?'LD PASS':'LD FAIL '+miss+' tiktok:'+tik)"
   EXPECT: LD PASS
@@ -27,7 +27,7 @@
 - [x] G7: 三个钱页建成：/happy-hour/ ≥800 词；/near-madison-square-garden/ 与 /near-penn-station/ 各 ≥350 词；三页均有 tel: 链接与导航
   CHECK: node seo/check-pages.mjs
   EXPECT: PAGES PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=a9384093a9524a714a2626b5a6cf8df431266427133b1dc0212282586033e59b; output-bytes=190
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=d3f21689a459ed84a6671d51464d8fb4d7999b5ade75f328ec4d9835f3741239; output-bytes=190
 - [x] G8: sitemap.xml 收录三个新页
   CHECK: node -e "const s=require('fs').readFileSync('public/sitemap.xml','utf8'); const ok=['happy-hour','near-madison-square-garden','near-penn-station'].every(u=>s.includes(u)); console.log(ok?'SITEMAP PASS':'SITEMAP FAIL')"
   EXPECT: SITEMAP PASS
@@ -35,7 +35,7 @@
 - [x] G9: 构建 + Playwright 全绿
   CHECK: npm test 2>&1 | tail -1
   EXPECT: 8 passed
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=47156ab5a27ccfad2bcbef11bfe23426058dcc99a48415ea99dacceb7122dbfc; output-bytes=18
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=bd4cdb35a83b6568972581572302d5f02fba791fdb135f0096d8b0c4cd67e20b; output-bytes=18
 - [x] G10: 20 项 SEO 体检对本地产物跑通且无 FAIL 级问题（体检器自身输出为准）
   CHECK: node seo/run-verify.mjs
   EXPECT: VERIFY PASS

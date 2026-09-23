@@ -18,22 +18,30 @@ const T = [ // [正则, 目的地] 按序命中
 ];
 const structural = {
   '/blog/':'/about/', '/news/':'/about/', '/zen-ramen-sushi-blog/':'/about/',
-  '/aboutus/':'/about/', '/contact-theme/':'/events-catering/', '/location-theme/':'/#hours-location',
+  '/aboutus/':'/about/', '/contact-theme/':'/events-catering/', '/location-theme/':'/about/',
   '/full-width-theme/':'/about/', '/error-404-page/':'/about/',
 };
+const etvMap = JSON.parse(fs.readFileSync('seo/blog-etv-2026-09-23.json','utf8'));
+const WRONG_CITY = /gainesville|dahlonega|greenville|noblesville/i;
+// 薄内容策略(2026-09-23,两套工具交叉校准):博客只 301 有排名的;
+// 零排名与写错城市的让它 404 —— 把 100+ 篇薄文全收口到两个锚点会被判软404
+const worthRedirect = p => !/^\/\d{4}\/\d{2}\/\d{2}\//.test(p) || ((etvMap[p]?.etv ?? 0) >= 1 && !WRONG_CITY.test(p));
 const redirects=[]; const report=[];
 for(const p of old){
   if(exists(p)){report.push([p,'PAGE','(同URL保留)']);continue;}
   let dest = structural[p];
   if(!dest) for(const [re,d] of T){ if(re.test(p)){dest=d;break;} }
-  if(!dest) dest = /^\/\d{4}\//.test(p) ? '/about/' : '/about/';
+  if(!dest) dest = '/about/';
+  if(!worthRedirect(p)){ report.push([p,'RETIRE', WRONG_CITY.test(p)?'(写错城市)':'(零排名薄内容)']); continue; }
   redirects.push({source:p.replace(/\/$/,'')+'/',destination:dest,permanent:true});
   report.push([p,'301',dest]);
 }
 // 合并进 vercel.json:保留原有 query 规则,去掉与新映射重复/与真实页面冲突的
 const v = JSON.parse(fs.readFileSync('vercel.json','utf8'));
 const keepQuery = v.redirects.filter(r=>r.has); // zrm-menu query 规则
-const oldPlain = v.redirects.filter(r=>!r.has && !redirects.some(n=>n.source===r.source) && !exists(r.source));
+// 只保留本次仍在映射内的旧规则;被判 RETIRE 的旧规则一并清除
+const retired = new Set(report.filter(r=>r[1]==='RETIRE').map(r=>r[0].replace(/\/$/,'')+'/'));
+const oldPlain = v.redirects.filter(r=>!r.has && !redirects.some(n=>n.source===r.source) && !exists(r.source) && !retired.has(r.source));
 v.redirects=[...keepQuery,...oldPlain,...redirects];
 fs.writeFileSync('vercel.json',JSON.stringify(v,null,2));
 fs.writeFileSync('seo/redirect-map-report.tsv',report.map(r=>r.join('\t')).join('\n'));

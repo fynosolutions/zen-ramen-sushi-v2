@@ -44,3 +44,8 @@
   CHECK: npm test 2>&1 | tail -1
   EXPECT: 8 passed
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=9134b3f26a9659e9899cad7ad2beaf6847c91d5cb41567441d0fa425d8b68d2c; output-bytes=18
+
+- [x] V12: 搬家可行性——.htaccess 在真 Apache 上与 vercel.json 行为一致
+  CHECK: node seo/check-portability.mjs
+  EXPECT: PORTABILITY PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=08a09681b1f4/35 entries; EXPECT=matched; output-sha256=4724931fb16bc52d90380c67291aa18711bd3ed946a04acc150ee3837236d690; output-bytes=82

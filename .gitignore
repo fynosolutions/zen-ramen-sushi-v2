@@ -15,3 +15,4 @@ playwright-report/
 
 .vercel
 ig-src/
+dist-host-configs/

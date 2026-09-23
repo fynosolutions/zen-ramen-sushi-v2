@@ -10,6 +10,10 @@
 - [ ] 供应商四问有答案：是谁 / 月费 / 到期日 / cytd.ai 内容归属
 - [ ] 新站已在 Vercel 生产项目部署且 `npm run seo` 全绿（CI 常态红绿灯）
 - [ ] 摘除 noindex：部署环境变量 `NEXT_PUBLIC_SITE_INDEXABLE=true`
+- [ ] 🔴 **新站先自证 GSC 所有权,再动 DNS**：旧站的验证靠 WordPress 后台那段 meta 标签,
+      域名一旦指向新站,旧站标签就够不着了 → 新站 `app/layout.tsx` 先加同一段
+      `google-site-verification` meta 并部署,GSC 确认仍为已验证,才允许改 DNS。
+      **旧站那段标签在旧站彻底下线前不要删**(删了资源失效,迁移期就瞎了)
 
 ## 切换日 T
 > ⚠️ **DNS 具体改法见 `seo/DNS-PLAN.md`——红线：只改 A 和 CNAME 两条,绝不改 Nameserver

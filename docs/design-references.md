@@ -31,17 +31,9 @@
 | 9 | SILVERLAKE RAMEN | 午市 combo 要推，但不做弹窗 | 💡 建议做首页午市 banner（非弹窗） |
 | 10 | KINBOSHI | 礼品卡/周边=官网第二条腿；改域名留跳转 | 📦 远期；域名切换时保留旧站跳转已在计划 |
 
-## 三、本站图片台账（当前版本）
+## 三、本站图片台账（2026-09-24 起：全站实拍）
 
-| 文件 | 用在哪 | 来源 |
-|---|---|---|
-| photo-0/3/9/10/13 | hero/菜单卡/图库 | 旧站真图 |
-| photo-4 (+原图) | 首页 catering / events banner | 旧站真图 |
-| photo-11 | Dinner 菜单卡 / 图库 FROM THE KITCHEN | 旧站真图（暗调棚拍） |
-| zen-catering-a/b | Events 侧图 | gpt-2.5 生成（开席状态） |
-| zen-sharing | 图库 FOR SHARING + 首页/About 图库条 | gpt-2.5 生成（ugc 负向清单版） |
-| zen-happy-hour | 图库 HAPPY HOUR | gpt-2.5 生成 |
-| zen-happy-hour-card | 首页 HH 菜单卡 | 上图裁切（同批质感） |
-| zen-at-the-table | 图库 AT THE TABLE | photo-4 暖调压暗版 |
-
-⚠️ 所有生成图仍属「占位素材」——店方实拍一到，同名替换即可，代码零改动。
+所有图 = `public/images/real-*.webp`，来源飞书 `024 Zen Ramen Penn/图片/0924新图`（2026-09-22 店内拍摄）。旧站图（photo-*）与 gpt-image 占位图（dish-* / zen-*）已全部删除。
+- 能对上菜单的菜：Tonkotsu、Grill Chicken Yuzu Ramen（菜单精选卡）
+- 对不上具体菜单条目的（炙烤卷、刺身木盒、马天尼、分层饮品、乌冬挑面）：只作场景图，alt 描述画面、不写菜名
+- 缺的：前菜/便当/午市/更多卷的单品图 → 下次补拍清单

@@ -10,7 +10,8 @@
     "test": "playwright test",
     "preview": "node scripts/serve.mjs",
     "seo": "node seo/check-mapping.mjs && node seo/check-meta.mjs && node seo/check-alt.mjs && node seo/check-pages.mjs",
-    "host-configs": "node scripts/gen-host-configs.mjs"
+    "host-configs": "node scripts/gen-host-configs.mjs",
+    "photos": "node scripts/photo-gate.mjs"
   },
   "dependencies": {
     "next": "^16.3.5",

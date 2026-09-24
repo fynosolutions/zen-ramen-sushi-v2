@@ -16,9 +16,13 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **换图片/视频时换文件名。** 同名替换会被浏览器缓存挡住，看起来"没换"。新图起新名、改引用、删旧文件。
 
-## 素材现状：全是占位图
+## 素材现状：全站图片 = 2026-09-22 店内实拍（AI 占位图已全部删除）
 
-`public/images/dish-*.webp`（24 张菜品卡）、`zen-*.webp`（场景图）都是 gpt-image 按菜单描述生成的**占位图**，等客户实拍到货后替换。台账与出图铁律：`docs/design-references.md`。
+`public/images/shot-*.webp` 全部取自飞书云盘 `024 Zen Ramen Penn/图片/0924新图`（140 张 Canon 原片）。原片没进仓，重出图从飞书下原片再裁。
+**菜单精选卡只放能对上菜单条目的实拍**：Tonkotsu（dinner-13-2）、Grill Chicken Yuzu Ramen（dinner-13-16）。其余菜没拍到、或拍了但对不上具体条目（炙烤卷、刺身木盒、粉色马天尼、分层饮品）→ 只当场景图用、alt 不写菜名。Rainbow 卷全组虚焦（焦点在后面的酒），已撤下精选卡。
+**台账与出图铁律**：`docs/design-references.md`；换图仍要换文件名。
+**亮度闸（毛 2026-09-24 定）**：这组实拍整体欠曝、废片多。选图只用原片平均亮度 ≥85 且近黑像素 ≤18% 的（140 张里 47 张过），出图再统一提亮到 ≈118；上线前跑 `npm run photos`，任何图平均亮度 <100 就红。已用毛指出的暗图做过反向验证（全红）。
+**视频**：原片 61 条在飞书 `视频/0924 新视频/{横屏,竖屏}`，官网横版混剪（40–50s）由剪辑同事出；到货后放 `public/` 并填 `content/media.ts` 的 `galleryVideo`，编码按 memory `ref_web_video_mobile_contract`。
 
 `public/ig/*.mp4` 是 @zenramen_sushi 公开 reels 的自托管副本（已去黑边与片头水印、转 H.264 Main L4.0 yuv420p faststart）。新增一条 = 在 `content/ig.ts` 加一行，视频与封面放进 `public/ig/`。
 
@@ -59,4 +63,4 @@ Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress �
 1. ~~Delegate Access 授权~~ —— 2026-09-23 已接受。但实测 **GoDaddy 的 API 令牌不认委托授权**（授权后读客户域名仍 403），切换日改 DNS 走网页端，详见 `seo/GODADDY-PLAN.md`
 2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。~~GA4~~ —— 已建在 Fyno Restaurants 账号(401363907)下，ID `G-JZD3SQCWMP`，已接进 Vercel 生产环境变量并线上生效。建号步骤与坑见 memory `ref_ga4_property_setup`（跨项目通用，以后给别的店建 GA4 直接抄）
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
-4. **客户实拍照片与视频** —— 到货后替换全部占位素材
+4. ~~客户实拍照片~~ —— 2026-09-24 已全站替换；**官网横版视频**待剪辑同事交付

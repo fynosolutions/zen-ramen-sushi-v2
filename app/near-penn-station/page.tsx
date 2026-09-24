@@ -13,7 +13,7 @@ export default function NearPenn() {
   return <main id="main">
     <PageHeading label="5 MINUTES FROM YOUR TRAIN" title="Near Penn Station" description="A real sit-down meal between trains: five minutes on foot from Penn Station and Moynihan Train Hall, with a kitchen fast enough for a tight schedule." />
     <section className="container scene-page">
-      <img className="scene-photo" src="/images/zen-sharing-bright.webp" alt="A bright lunch platter of sushi rolls and salmon nigiri by the window" width="1536" height="1024" />
+      <img className="scene-photo" src="/images/shot-scene-penn-room-up.webp" alt="A bright dining room with a large shared table by the windows" width="2000" height="1000" />
       <div className="scene-body">
         <h2>Better than eating at the station</h2>
         <p>Penn Station and Moynihan Train Hall are a five-minute walk away — up 7th or 8th Avenue to 36th Street. Instead of a rushed sandwich under fluorescent lights, sit down to a slow-simmered bowl of ramen or a plate of fresh-cut sushi, and still make your track announcement.</p>

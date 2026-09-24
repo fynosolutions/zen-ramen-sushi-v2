@@ -13,7 +13,7 @@ export default function NearMSG() {
   return <main id="main">
     <PageHeading label="6 MINUTES ON FOOT" title="Near Madison Square Garden" description="Game night, concert night, or just passing through — we are the warm bowl of ramen six minutes from the Garden, at 150 W 36th Street." />
     <section className="container scene-page">
-      <img className="scene-photo" src="/images/zen-storefront.webp" alt="Diners at wooden tables seen through the Zen storefront at dusk" width="1536" height="1024" />
+      <img className="scene-photo" src="/images/shot-scene-msg-room-warm.webp" alt="Long wooden tables under paper lanterns and Japanese banners in the Zen dining room" width="2000" height="1000" />
       <div className="scene-body">
         <h2>Eat well before the Garden, without the wait</h2>
         <p>Madison Square Garden is a six-minute walk from our door: straight down 7th Avenue from 36th to 33rd Street. That makes us the easy answer to the eternal pre-game question — somewhere you can sit down, eat real food, and still make tip-off or the opening act.</p>

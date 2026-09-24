@@ -18,7 +18,7 @@ export default function HappyHour() {
     <PageHeading label="EVERY DAY · 4–8 PM" title="Happy Hour" description="Twenty-five sushi rolls and ten appetizers, one happy little price: $6.49 cash ($6.75 card) per item. Every single day, 4 to 8 PM, at 150 W 36th Street in Midtown Manhattan." />
     <section className="container hh-page">
       <div className="hh-hero-grid">
-        <img src="/images/zen-happy-hour.webp" alt="Cold draft beer and izakaya small plates during happy hour at Zen" width="1536" height="1024" />
+        <img src="/images/shot-hh-roll-martini.webp" alt="A seared sushi roll and a pink martini on the Zen happy hour menu" width="1536" height="1024" />
         <div className="hh-deal-card">
           <p className="eyebrow">THE DEAL</p>
           <p className="hh-price"><strong>$6.49</strong><span>per item · cash ($6.75 card)<br />rolls &amp; appetizers alike</span></p>
@@ -60,9 +60,9 @@ export default function HappyHour() {
           </ul>
         </div>
         <aside className="hh-aside">
-          <img src="/images/dish-crispy-wings.webp" alt="Crispy fried chicken wings with a lemon wedge" width="1024" height="1024" loading="lazy" />
-          <img src="/images/dish-salmon-mango.webp" alt="Salmon mango roll with thin mango slices on top" width="1024" height="1024" loading="lazy" />
-          <img src="/images/dish-purple-yam-tempura.webp" alt="Purple sweet potato tempura with dipping sauce" width="1024" height="1024" loading="lazy" />
+          <img src="/images/shot-hh-martini.webp" alt="A pink martini on the wooden bar" width="1024" height="1024" loading="lazy" />
+          <img src="/images/shot-hh-layered-drink.webp" alt="A layered iced drink" width="1024" height="1024" loading="lazy" />
+          <img src="/images/shot-hh-seared-roll.webp" alt="A seared special roll with spicy mayo, eel sauce and an orchid" width="1024" height="1024" loading="lazy" />
         </aside>
       </div>
     </section>

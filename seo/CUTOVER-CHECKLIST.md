@@ -66,6 +66,7 @@
 
 ## 5. T-1（切换前一天）
 
+0. **（提前，待毛授权，建议 9/28）域名认领 + 预签证书**：该域名已挂在一个我们看不到的 Vercel 账号下 → Vercel 项目加根域+www（`--scope fynosolutions`）→ GoDaddy **新增** `_vercel` TXT 完成认领 → `vercel certs issue zenramensushiny.com www.zenramensushiny.com --challenge-only --scope fynosolutions` + GoDaddy **新增** `_acme-challenge` TXT → `curl --resolve zenramensushiny.com:443:<Vercel IP>` 返回 200 且证书有效。**不做完这步禁止改 A/CNAME**：旧站下发过 HSTS，浏览器只认 https，没证书 = 直接连不上
 1. GoDaddy：把 A `@`、CNAME `www` 的 TTL 从 1 小时调到 **600 秒**（让切换和回滚都在 10 分钟内生效）。只改 TTL，不改值
 2. GSC：存基线——近 28 天总点击、前 20 页点击、「已编入索引」页数，截图进 `seo/baseline-T-1/`
 3. 把旧站 sitemap 存档：`curl -s https://zenramensushiny.com/sitemap.xml > seo/baseline-T-1/old-sitemap.xml`
@@ -80,11 +81,11 @@
 |---|---|---|
 | 1 | Vercel 项目 zen-ramen 添加 `zenramensushiny.com` + `www.zenramensushiny.com`（www 设为跳到不带 www） | Vercel 显示待配置 |
 | 2 | Vercel 环境变量 `NEXT_PUBLIC_SITE_INDEXABLE=true`，重新部署 | 临时地址页面上 noindex 消失 |
-| 3 | GoDaddy：A `@` 192.0.78.24 → **76.76.21.21**；删除 A `@` 192.0.78.25；CNAME `www` → **cname.vercel-dns.com** | `dig` 回读到新值 |
+| 3 | GoDaddy：A `@` 与 CNAME `www` 改成 **Vercel 域名卡片当天显示的值**（2026-09-27 首选为 A 216.150.1.1 + 216.150.16.1、项目专属 CNAME；76.76.21.21 / cname.vercel-dns.com 仍有效）；删掉多余的旧 A | `dig` 回读到新值 |
 | 4 | 🔴 **不碰**：NS、全部 MX（outlook + titan）、全部 TXT、autodiscover / email / lyncdiscover / msoid / sip / pay / _domainconnect / SRV | 改后 `dig MX/TXT` 与 §8 存档逐字一致 |
 | 5 | 等 SSL 签发（通常 1–10 分钟） | `https://zenramensushiny.com/` 返回 200 且是新站 |
 | 6 | 跑 `node seo/watch.mjs --live` | 110 条 301 + 5 个同网址页全过 |
-| 7 | `zen-ramen.vercel.app` 设 301 → 正式域名 | curl 回读 |
+| 7 | Vercel Domains 页：`www` → Redirect to 根域（308）；正式域名 https 通了之后，`zen-ramen.vercel.app` → Redirect to 正式域名（308）。随后把 `GATES-cutover.md` 里查临时地址的检查改查正式域名 | curl 回读 |
 | 8 | GSC：提交新 sitemap + 旧网址 sitemap；4 个主页面请求编入索引 | GSC 显示「已提交」 |
 | 8b | 开 Bing Webmaster Tools（从 GSC 导入）并提交 sitemap | Bing 显示已验证 |
 | 9 | 按 §4 逐个点各平台链接 | 记录到本文件 §10 |
@@ -100,9 +101,9 @@ GoDaddy 把两条记录改回原值：A `@` = **192.0.78.24** 和 **192.0.78.25*
 
 | 类型 | 名称 | 值 | 切换时 |
 |---|---|---|---|
-| A | @ | 192.0.78.24 | **改** → 76.76.21.21 |
+| A | @ | 192.0.78.24 | **改** → Vercel 卡片值 |
 | A | @ | 192.0.78.25 | **删** |
-| CNAME | www | zenramensushiny.com. | **改** → cname.vercel-dns.com |
+| CNAME | www | zenramensushiny.com. | **改** → Vercel 卡片值 |
 | NS | @ | ns19 / ns20.domaincontrol.com. | 不碰 |
 | MX | @ | zenramensushiny-com.mail.protection.outlook.com.（0） | 不碰 |
 | MX | @ | mx1.titan.email.（10）· mx2.titan.email.（20） | 不碰 |
@@ -122,7 +123,7 @@ GoDaddy 把两条记录改回原值：A `@` = **192.0.78.24** 和 **192.0.78.25*
 | D4 | T 后 4 周，每周一推毛飞书三行报告（本周点击 / 对比基线 / 正常还是要处理） |
 | — | 旧站保留多久、cytd 停约：之后再谈（≥T+45，排名稳定后） |
 
-仍在调研、会改动本计划的三件事（结论出来后回写本节）：WordPress.com 在域名移走后会怎样 · 还有谁能改这个域名的 DNS · Vercel 接入域名要什么。
+调研结论已回写：WordPress.com 后台什么都不改（§7）；Vercel 须提前认领域名+预签证书（§5 第 0 步，**待毛授权**）。仍在查：还有谁能改这个域名的 DNS。
 
 ## 10. T 之后
 

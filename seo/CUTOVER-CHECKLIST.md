@@ -7,7 +7,7 @@
 - [x] GA4 已建并上线（G-JZD3SQCWMP）
 - [x] 注册商已查明 = **GoDaddy**（NS 也在 GoDaddy,ns19/ns20.domaincontrol.com）
 - [x] GoDaddy Delegate Access 已接受（2026-09-23）;API 不认委托,切换日走网页端
-- [ ] 老板已看过新站并同意切换 ✅(2026-09-27 毛确认)
+- [x] 老板已看过新站并同意切换(2026-09-27 毛确认)
 - [ ] 供应商四问有答案(毛:cytd 之后再说;不挡切换,停约须 ≥T+45 天)：是谁 / 月费 / 到期日 / cytd.ai 内容归属
 - [ ] 新站已在 Vercel 生产项目部署且 `npm run seo` 全绿（CI 常态红绿灯）
 - [ ] 摘除 noindex：部署环境变量 `NEXT_PUBLIC_SITE_INDEXABLE=true`

@@ -74,7 +74,7 @@
 6. 通知旧站线 session（`restaurant-e7`）：切换后旧站后台改走 WordPress.com 地址、对旧站的 SEO 改动全部作废，停止投入
 7. 跑 `GATES-cutover.md` 的 T-1 门，全绿才进 T
 
-## 6. 切换日 T（推荐工作日上午 10 点 ET，约 30 分钟，我执行）
+## 6. 切换日 T（2026-09-30 周三 10:00 ET，约 30 分钟，agent 执行）
 
 | 步 | 动作 | 验证 |
 |---|---|---|
@@ -86,6 +86,7 @@
 | 6 | 跑 `node seo/watch.mjs --live` | 110 条 301 + 5 个同网址页全过 |
 | 7 | `zen-ramen.vercel.app` 设 301 → 正式域名 | curl 回读 |
 | 8 | GSC：提交新 sitemap + 旧网址 sitemap；4 个主页面请求编入索引 | GSC 显示「已提交」 |
+| 8b | 开 Bing Webmaster Tools（从 GSC 导入）并提交 sitemap | Bing 显示已验证 |
 | 9 | 按 §4 逐个点各平台链接 | 记录到本文件 §10 |
 | 10 | 发一封测试邮件到店里邮箱 | 能收到（证明邮箱没受影响） |
 
@@ -110,13 +111,17 @@ GoDaddy 把两条记录改回原值：A `@` = **192.0.78.24** 和 **192.0.78.25*
 | CNAME | autodiscover / email / lyncdiscover / msoid / sip / pay / _domainconnect | （Microsoft 365 / GoDaddy 各项） | 不碰 |
 | SRV | _sip._tls / _sipfederationtls._tcp | lync | 不碰 |
 
-## 9. 待毛拍板
+## 9. 已拍板（2026-09-27 毛）
 
-| # | 决定 | 推荐 |
-|---|---|---|
-| D1 | 切换日 | **周二 9/29 或周三 9/30 上午 10 点 ET**；T-1 前一天做 §5 |
-| D2 | 旧站 WordPress.com 保留多久 | **至少到 T+45 且排名连续两周稳定**，和 cytd 停约一起决定（cytd 之后再谈） |
-| D3 | 开 Bing Webmaster Tools | **开**：5 分钟，免费；ChatGPT 搜索用 Bing 的索引，而店里正在投 OpenAI 广告 |
+| # | 决定 |
+|---|---|
+| D1 | **T = 2026-09-30 周三 10:00 ET**；T-1 = 9/29 周二（§5） |
+| D2 | 出事（打不开 / 跳转大面积出错）agent **可直接回滚**，事后立即告知毛 |
+| D3 | 开 Bing Webmaster Tools（T 当天，jaye.mao，从 GSC 导入） |
+| D4 | T 后 4 周，每周一推毛飞书三行报告（本周点击 / 对比基线 / 正常还是要处理） |
+| — | 旧站保留多久、cytd 停约：之后再谈（≥T+45，排名稳定后） |
+
+仍在调研、会改动本计划的三件事（结论出来后回写本节）：WordPress.com 在域名移走后会怎样 · 还有谁能改这个域名的 DNS · Vercel 接入域名要什么。
 
 ## 10. T 之后
 

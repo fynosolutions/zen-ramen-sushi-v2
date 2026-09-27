@@ -1,8 +1,9 @@
 // 读旧站 URL 全量清单,分类生成 301 映射,合并进 vercel.json
 import fs from 'fs';
-const old = fs.readFileSync('seo/old-urls-2026-09-20.txt','utf8').trim().split('\n').map(u=>u.replace('https://zenramensushiny.com',''));
+import { oldUrls as old, clicksOf } from './sources.mjs';
 const exists = p => fs.existsSync('out'+p.replace(/\/$/,'')+'/index.html') || p==='/';
 const T = [ // [正则, 目的地] 按序命中
+  [/^\/zrm-menu-item\/.*catering/i, '/events-catering/'],
   [/ramen|noodle|broth|tonkotsu|udon/i, '/menu/#dinner--ramen-noodles'],
   [/sushi|sashimi|nigiri|maki|temaki|omakase|roll|fish|salmon|tuna/i, '/menu/#dinner--sushi-rolls'],
   [/gyoza|appetizer|takoyaki|edamame|tempura|karaage|snack|shumai/i, '/menu/#dinner--appetizers'],
@@ -20,20 +21,19 @@ const structural = {
   '/blog/':'/about/', '/news/':'/about/', '/zen-ramen-sushi-blog/':'/about/',
   '/aboutus/':'/about/', '/contact-theme/':'/events-catering/', '/location-theme/':'/about/',
   '/full-width-theme/':'/about/', '/error-404-page/':'/about/',
+  '/zrm-menu/':'/menu/', '/zrm-category/bento-box/':'/menu/#lunch',
 };
-const gsc = JSON.parse(fs.readFileSync('seo/gsc-clicks-2026-09-23.json','utf8'));  // GSC 真实点击 = 唯一真相源
 const WRONG_CITY = /gainesville|dahlonega|greenville|noblesville/i;
 // 薄内容策略(2026-09-23,以 GSC 真实点击为准):博客只 301 有真实点击的;
 // 零点击与写错城市的让它 404。估算工具(DataForSEO etv / SE Ranking)高估一个数量级,
 // 实测 etv 180 的页面真实点击为 0 —— 永远用 GSC 裁决
-const clicksOf = p => gsc[p.endsWith('/')?p:p+'/']?.clicks ?? 0;
 const worthRedirect = p => !/^\/\d{4}\/\d{2}\/\d{2}\//.test(p) || (clicksOf(p) >= 1 && !WRONG_CITY.test(p));
 const redirects=[]; const report=[];
 for(const p of old){
   if(exists(p)){report.push([p,'PAGE','(同URL保留)']);continue;}
   let dest = structural[p];
   if(!dest) for(const [re,d] of T){ if(re.test(p)){dest=d;break;} }
-  if(!dest) dest = '/about/';
+  if(!dest) dest = /^\/(zrm-menu-item|zrm-category|mftype)\//.test(p) ? '/menu/' : '/about/';
   if(!worthRedirect(p)){ report.push([p,'RETIRE', WRONG_CITY.test(p)?'(写错城市)':'(零排名薄内容)']); continue; }
   redirects.push({source:p.replace(/\/$/,'')+'/',destination:dest,permanent:true});
   report.push([p,'301',dest]);

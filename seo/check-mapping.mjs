@@ -1,8 +1,6 @@
 import fs from 'fs';
-const old = fs.readFileSync('seo/old-urls-2026-09-20.txt','utf8').trim().split('\n').map(u=>u.replace('https://zenramensushiny.com',''));
+import { oldUrls as old, clicksOf } from './sources.mjs';
 const v = JSON.parse(fs.readFileSync('vercel.json','utf8'));
-const gsc = JSON.parse(fs.readFileSync('seo/gsc-clicks-2026-09-23.json','utf8'));
-const clicksOf = p => gsc[p.endsWith('/')?p:p+'/']?.clicks ?? 0;
 const WRONG = /gainesville|dahlonega|greenville|noblesville/i;
 const exists = p => p==='/' || fs.existsSync('out'+p.replace(/\/$/,'')+'/index.html');
 const isBlog = p => /^\/\d{4}\/\d{2}\/\d{2}\//.test(p);

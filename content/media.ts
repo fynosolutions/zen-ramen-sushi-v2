@@ -9,5 +9,6 @@ export const gallery = [
  {src:'/images/shot-gallery-lantern.webp',alt:'A paper lantern and hanging banners in the dining room',label:'THE DETAILS',wide:false},
  {src:'/images/shot-dining-room-bright.webp',alt:'A bright dining room with a large shared table by the windows',label:'THE DINING ROOM',wide:true},
 ];
-// Supply an approved landscape video and poster to enable the planned video section.
-export const galleryVideo: {src:string;poster:string;title:string}|null = null;
+// 靳晓宇 0925 横版混剪(毛 09-26 过审),720p H.264 Main L4.0 faststart;换片务必换文件名
+export const homeFilm = {src:'/video/zen-film-0925.mp4',poster:'/video/zen-film-0925.webp',title:'A look inside Zen Ramen & Sushi'};
+export const galleryVideo: {src:string;poster:string;title:string}|null = homeFilm;

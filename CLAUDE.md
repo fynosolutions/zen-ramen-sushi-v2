@@ -42,7 +42,7 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 
 ## 跳转的真相源是 vercel.json（分层承接，不是全量 301）
 
-153 条旧 URL 里，`vercel.json` 只 301 承接**有真实点击**的 66 条；零点击的薄内容（107 篇 AI 博客）和写错城市的文章（Gainesville/Noblesville 等，供应商弄错的）故意不跳转、让它自然 404——全量收口到几个锚点会被 Google 判"软 404"，伤新站更多。`seo/build-redirects.mjs` 是生成器，`seo/check-mapping.mjs` 是验收门，`seo/old-urls-2026-09-20.txt` 是 153 条旧 URL 的存档。
+旧 URL 清单（153 条存档 + GSC 里有点击但不在清单的）共 179 条，`vercel.json` 只 301 承接**近 3 个月有真实点击**的 114 条；零点击的薄内容和写错城市的文章（Gainesville/Noblesville 等，供应商弄错的）故意不跳转、让它自然 404——全量收口到几个锚点会被 Google 判"软 404"，伤新站更多。`seo/sources.mjs` 是旧 URL 与点击数据的唯一入口（两份 GSC 导出取较大值；**2026-09-27 实测 09-23 那份窗口太短，漏了 49 个有点击的页面**——重算映射前先从 GSC 重新导出近 3 个月「网页」表），`seo/build-redirects.mjs` 是生成器，`seo/check-mapping.mjs` 是验收门。
 
 `npm run host-configs` 从 vercel.json 生成 Apache/IIS/Netlify/nginx 四份等效配置——真 Apache 实测 156/156 与 Vercel 行为一致，所以这个站搬去任何主机都不丢跳转。改跳转只改 vercel.json 的生成逻辑，然后重新生成，别手改产物。
 

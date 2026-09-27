@@ -10,7 +10,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import { Footer, MobileActionBar } from '@/components/Shared';
 import { site } from '@/content/site';
-export const metadata: Metadata = { title: {default:'Zen Ramen & Sushi | Midtown Manhattan',template:'%s | Zen Ramen & Sushi'}, description:'Authentic Japanese ramen and fresh sushi in Midtown Manhattan at 150 W 36th St. Daily happy hour 4–8 PM, weekday lunch specials, catering and delivery.', metadataBase: new URL('https://zenramensushiny.com'), robots: {index:process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true',follow:process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true'}, icons:{icon:'/favicon.svg'}, openGraph:{images:['/images/shot-og.webp']} };
+export const metadata: Metadata = { title: {default:'Zen Ramen & Sushi | Midtown Manhattan',template:'%s | Zen Ramen & Sushi'}, description:'Authentic Japanese ramen and fresh sushi in Midtown Manhattan at 150 W 36th St. Daily happy hour 4–8 PM, weekday lunch specials, catering and delivery.', metadataBase: new URL('https://zenramensushiny.com'), robots: {index:process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true',follow:process.env.NEXT_PUBLIC_SITE_INDEXABLE === 'true'}, icons:{icon:'/favicon.svg'}, verification:{google:['NxdE6Sf6t_Sp2Gn7sKCHCN4KUvnSLJLUVlnSON7U_Rg','-xc2nhXkIUAZeP6QnPFK7WmYcMoVfWVfW21__KcaWx0']}, openGraph:{images:['/images/shot-og.webp']} };
 function Analytics(){
   const id = process.env.NEXT_PUBLIC_GA4_ID;
   if(!id) return null;   // 没配 ID 就一行脚本都不加载

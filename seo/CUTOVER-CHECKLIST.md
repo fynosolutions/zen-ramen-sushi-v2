@@ -3,14 +3,15 @@
 > 规矩：本清单按序执行,**第 0 步没绿,后面所有步骤禁止执行**。执行人在每步后填日期。
 
 ## 第 0 步 · 前置条件（全绿才许定切换日 T）
-- [ ] Google Search Console 已验证、能看到旧站数据（现状:无权限,卡在毛向客户索取）
-- [ ] GA4 访问权已到手
+- [x] Google Search Console 已验证、能看到旧站数据（2026-09-23,jaye.mao 名下）
+- [x] GA4 已建并上线（G-JZD3SQCWMP）
 - [x] 注册商已查明 = **GoDaddy**（NS 也在 GoDaddy,ns19/ns20.domaincontrol.com）
-- [ ] GoDaddy 登录凭据或 API Key 到手（**推荐要 API Key,不必交账号密码**——见 DNS-PLAN.md §6）
-- [ ] 供应商四问有答案：是谁 / 月费 / 到期日 / cytd.ai 内容归属
+- [x] GoDaddy Delegate Access 已接受（2026-09-23）;API 不认委托,切换日走网页端
+- [ ] 老板已看过新站并同意切换 ✅(2026-09-27 毛确认)
+- [ ] 供应商四问有答案(毛:cytd 之后再说;不挡切换,停约须 ≥T+45 天)：是谁 / 月费 / 到期日 / cytd.ai 内容归属
 - [ ] 新站已在 Vercel 生产项目部署且 `npm run seo` 全绿（CI 常态红绿灯）
 - [ ] 摘除 noindex：部署环境变量 `NEXT_PUBLIC_SITE_INDEXABLE=true`
-- [ ] 🔴 **新站先自证 GSC 所有权,再动 DNS**：旧站的验证靠 WordPress 后台那段 meta 标签,
+- [x] 🔴 **新站先自证 GSC 所有权,再动 DNS**（2026-09-27 旧站两段标签已原样加进 app/layout.tsx）：旧站的验证靠 WordPress 后台那段 meta 标签,
       域名一旦指向新站,旧站标签就够不着了 → 新站 `app/layout.tsx` 先加同一段
       `google-site-verification` meta 并部署,GSC 确认仍为已验证,才允许改 DNS。
       **旧站那段标签在旧站彻底下线前不要删**(删了资源失效,迁移期就瞎了)

@@ -8,6 +8,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 客户的正式域名：zenramensushiny.com（**仍指向旧站，尚未切换**）
 - 本地预览：`npm run preview` → 127.0.0.1:3001（先 `npm run build`）
 
+**协作**：`main` 已上锁（2026-09-28）——非管理员只能走 PR，需 1 个批准 + CI `build-and-seo` 绿灯；管理员（jayemaoFYNO、mingzhoujin）可直推。设计同事 wzh152 按 `CONTRIBUTING.md` 走 PR。
+
 ## 红线（违反 = 事故）
 
 **域名和邮箱是客户的，Vercel 是我们的。** 切换只改 A 和 CNAME 两条记录；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**。完整方案与回滚：`seo/GODADDY-PLAN.md`、`seo/DNS-PLAN.md`、`seo/CUTOVER-CHECKLIST.md`。

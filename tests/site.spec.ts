@@ -32,9 +32,37 @@ test('gallery dialog keyboard controls and focus restoration',async({page})=>{
  await expect(page.getByRole('dialog')).toBeVisible();await page.keyboard.press('ArrowRight');await expect(page.locator('.lightbox-controls')).toContainText('2 / 9');
  await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).not.toBeVisible();await expect(first).toBeFocused();
 });
-test('map loads on request and directions remain available',async({page})=>{
- await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');await expect(page.locator('iframe')).toHaveCount(0);
- await page.getByRole('button',{name:'EXPLORE GOOGLE MAPS'}).click();await expect(page.locator('iframe')).toHaveAttribute('src',/150.*36th/);
+test('map loads only on request and can switch back without shifting the card',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});
+ let mapRequests=0;
+ await page.route('https://maps.google.com/**',async route=>{
+  mapRequests++;
+  await route.fulfill({contentType:'text/html',body:'<html><body>Map provider test response</body></html>'});
+ });
+ await page.goto('/');
+ expect(mapRequests).toBe(0);
+ const frame=page.locator('.map-frame');
+ const guide=page.getByRole('button',{name:'STREET GUIDE',exact:true});
+ const live=page.getByRole('button',{name:'LIVE MAP',exact:true});
+ for(const width of [390,768,1440]){
+  await page.setViewportSize({width,height:950});
+  await frame.scrollIntoViewIfNeeded();
+  await expect(frame.locator('iframe')).toHaveCount(0);
+  await expect(guide).toHaveAttribute('aria-pressed','true');
+  await expect(frame.getByRole('img')).toHaveAccessibleName('Midtown street guide to Zen Ramen & Sushi');
+  const before=await frame.boundingBox();
+  await live.focus();await page.keyboard.press('Enter');
+  await expect(live).toHaveAttribute('aria-pressed','true');
+  await expect(frame.locator('iframe')).toHaveAttribute('src',/150.*36th/);
+  await expect.poll(()=>mapRequests).toBeGreaterThan(0);
+  const after=await frame.boundingBox();
+  expect(Math.abs(after!.height-before!.height)).toBeLessThan(1);
+  await guide.focus();await page.keyboard.press('Space');
+  await expect(guide).toHaveAttribute('aria-pressed','true');
+  await expect(frame.locator('iframe')).toHaveCount(0);
+  await expect(frame.getByRole('img')).toBeVisible();
+  await expect(frame.getByRole('link',{name:/SEE YOU ON 36TH STREET/})).toHaveAttribute('href',/destination=Zen/);
+ }
  await expect(page.getByRole('link',{name:'GET DIRECTIONS'})).toHaveAttribute('href',/destination=Zen/);
 });
 test('inquiry validates before preparing a mailto message',async({page})=>{

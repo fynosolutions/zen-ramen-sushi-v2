@@ -22,9 +22,9 @@ test('menu links, prices, keyboard tabs and browser history',async({page})=>{
 });
 test('mobile navigation, delivery menu and Escape',async({page})=>{
  await page.setViewportSize({width:390,height:844});await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');
- await page.getByRole('button',{name:'Open navigation'}).click();await page.getByRole('button',{name:'ORDER DELIVERY/PICKUP'}).click();
- await expect(page.getByRole('link',{name:/UBER EATS/})).toHaveAttribute('href',/ubereats/);await expect(page.getByRole('link',{name:'TOAST ONLINE'})).toHaveAttribute('href',/toasttab/);
- await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'ORDER DELIVERY/PICKUP'})).toHaveAttribute('aria-expanded','false');
+ await page.getByRole('button',{name:'Open navigation'}).click();await page.getByRole('button',{name:'ORDER ONLINE'}).click();
+ await expect(page.getByRole('link',{name:/UBER EATS/})).toHaveAttribute('href',/ubereats/);await expect(page.getByRole('link',{name:'ORDER DIRECT'})).toHaveAttribute('href',/toasttab/);
+ await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'ORDER ONLINE'})).toHaveAttribute('aria-expanded','false');
  await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'Open navigation'})).toHaveAttribute('aria-expanded','false');
 });
 test('gallery dialog keyboard controls and focus restoration',async({page})=>{
@@ -63,7 +63,7 @@ test('map loads only on request and can switch back without shifting the card',a
   await expect(frame.getByRole('img')).toBeVisible();
   await expect(frame.getByRole('link',{name:/SEE YOU ON 36TH STREET/})).toHaveAttribute('href',/destination=Zen/);
  }
- await expect(page.getByRole('link',{name:'GET DIRECTIONS'})).toHaveAttribute('href',/destination=Zen/);
+ await expect(page.locator('.location-card').getByRole('link',{name:'GET DIRECTIONS'})).toHaveAttribute('href',/destination=Zen/);   // 首屏与页尾也有「GET DIRECTIONS」,限定在地图卡里
 });
 test('inquiry validates before preparing a mailto message',async({page})=>{
  await page.goto('/events-catering/');await page.getByRole('button',{name:'OPEN EMAIL APP'}).click();await expect(page.locator('#inquiry-name')).toBeFocused();await expect(page.locator('.field-error')).toHaveCount(8);

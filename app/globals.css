@@ -128,3 +128,6 @@ main[tabindex="-1"]:focus{outline:none}
 }
 @media(min-width:360px) and (max-width:650px){.hero .h1-kicker{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){.open-status[data-state=open] .open-dot{animation:none}}
+
+/* 页头缩放会改变 sticky 页头高度,浏览器的滚动锚定会把 scrollY 拨回阈值之下 → 来回切换(2026-10-01 毛反馈抖动)。关掉锚定 + JS 滞回 */
+html{overflow-anchor:none}

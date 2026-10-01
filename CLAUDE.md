@@ -8,6 +8,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 客户的正式域名：zenramensushiny.com（**仍指向旧站，尚未切换**）
 - 本地预览：`npm run preview` → 127.0.0.1:3001（先 `npm run build`）
 
+**转化/CTA（2026-10-01）**：所有「ORDER ONLINE」都指 `content/site.ts` 的 `site.order`（Toast 直订，店家不付第三方佣金）；链接加 `data-cta="位置-动作"` 就会被 `components/CtaTracker.tsx` 记进 GA4（cta_click/click_to_call/get_directions/order_click/reserve_click）；营业状态在 `lib/open-status.ts`（按纽约时间、按常规营业时间，不含节假日）；验收 `GATES-cta.md`，`node seo/check-cta.mjs <mode>` 可对本地或线上（`CTA_BASE=网址`）跑。
+
 **协作**：`main` 已上锁（2026-09-28）——非管理员只能走 PR，需 1 个批准 + CI `build-and-seo` 绿灯；管理员（jayemaoFYNO、mingzhoujin）可直推。设计同事 wzh152 按 `CONTRIBUTING.md` 走 PR。
 
 ## 红线（违反 = 事故）

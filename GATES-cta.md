@@ -54,5 +54,5 @@ Scope: 把「订餐/订位/打电话/导航」做成全站显眼、可测量的 
   EXPECT: TYPECHECK PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=17bf6131bbbef7fdab68acaa8c1fce8ebb81f3b1f2cc8c9fce5c38f05621300a; output-bytes=15
 
-- [ ] C11: 上线后回读:线上首页桌面/手机截图里首屏能看到 ORDER ONLINE 主按钮;线上点击记录正常;并核对 CI 与 Playwright 8 条测试
-  EVIDENCE: pending
+- [x] C11: 上线后回读:线上首页桌面/手机截图里首屏能看到 ORDER ONLINE 主按钮;线上点击记录正常;并核对 CI 与 Playwright 8 条测试
+  EVIDENCE: 2026-10-01 PR #2 合并(b84c896)后约 40 秒线上更新;对 https://zen-ramen.vercel.app 用同一套 check-cta.mjs 重跑 hero-desktop/hero-mobile/status/tracking/overflow 全部 PASS;线上 window.gtag=function(GA4 已装);线上截图(桌面 1440×900、iPhone 13 390×664)肉眼复核:首屏 ORDER ONLINE 红色主按钮可见,手机顶部有面条照片,营业状态按纽约当前时间显示 CLOSED · OPENS 11:30 AM TODAY(周四,正确);合并前 CI build-and-seo 绿灯,npm test 8 条通过;负向对照:对改前线上版 hero-desktop 报 FAIL、拆掉 band-order 的副本 pages 报 FAIL

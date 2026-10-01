@@ -12,7 +12,7 @@ Scope: 午市/晚市菜单页补上 15 张真实菜品照片(顾客在 Google Ma
 - [x] M2: 渲染对:电脑与手机上,午市页有 ≥6 张、晚市页有 ≥14 张图真的显示(已加载、宽度≥1000)、图注正确(Katsu Bento Box / I. Shrimp Teriyaki / Gyu Don)、无横向溢出
   CHECK: node seo/check-menu-photos.mjs render
   EXPECT: MENU-PHOTOS-RENDER PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=05e613cc7343ac285a50b49a2a167c57b8d83773b777b624bed3a451b69a8e30; output-bytes=493
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=1bdf1b22a3ab7bc48a1ac2329ded33ff94419576a1a380aeb5f16749a81052fa; output-bytes=493
 
 - [x] M3: 全站图片亮度闸通过(平均亮度≥100、近黑≤18%)
   CHECK: npm run photos 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(s.includes('PHOTO GATE PASS')?'MENU PHOTO GATE PASS':'PHOTO GATE FAIL\n'+s))"
@@ -24,5 +24,5 @@ Scope: 午市/晚市菜单页补上 15 张真实菜品照片(顾客在 Google Ma
   EXPECT: REGRESSION SEO PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=a65dce097bbcd0c418bfe200a600da772466b6dc53f228dbb2530391ea6a0f4b; output-bytes=20
 
-- [ ] M5: 上线后回读:线上午市页/晚市页肉眼检查配图与菜名一一对得上,线上版同一套 render 检查通过
-  EVIDENCE: pending
+- [x] M5: 上线后回读:线上午市页/晚市页肉眼检查配图与菜名一一对得上,线上版同一套 render 检查通过
+  EVIDENCE: 2026-10-01 PR #5 合并(b3a00f3)后约 24 秒线上更新;对 https://zen-ramen.vercel.app 跑 check-menu-photos.mjs render=PASS(电脑+手机,午市≥6/晚市≥14 张已加载、图注正确、无溢出);线上跑 hero-desktop/hero-mobile/overflow/header-stable 均 PASS;线上午市页肉眼复核 Sushi Bar 刺身午餐图与菜名一致;负向对照:改前线上版 render 检查 FAIL(无顾客图)、把 Takoyaki 图挂到 Karaage 上 data 检查 FAIL

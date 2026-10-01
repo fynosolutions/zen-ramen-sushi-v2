@@ -35,7 +35,7 @@ export default function LocationMap(){
             <path className="map-36th-center" d="M0 310H640"/>
             <rect className="map-park" x="463" y="79" width="144" height="62" rx="2"/>
             <path className="map-park-path" d="M472 89H598V131H472ZM479 89L590 131M590 89L479 131"/>
-            <path className="map-park" d="M458 403L470 424H458Z"/>
+            <path className="map-park" d="M433 358H442V381Z"/>
             <rect className="map-station" x="83" y="442" width="144" height="57" rx="2"/>
             <g className="map-street-labels">
               {streets.filter(street=>[42,40,38,34].includes(street.number)).map(street=><text key={street.number} x="101" y={street.y+5}>W {street.number}{street.number===42 ? 'ND' : 'TH'} ST</text>)}
@@ -49,8 +49,8 @@ export default function LocationMap(){
             <g className="map-landmarks">
               <text x="535" y="117" textAnchor="middle">Bryant Park</text>
               <text x="155" y="477" textAnchor="middle">Penn Station</text>
-              <path className="map-landmark-leader" d="M465 414H487"/>
-              <text x="494" y="410"><tspan x="494">Herald</tspan><tspan x="494" dy="22">Square</tspan></text>
+              <path className="map-landmark-leader" d="M443 372H458"/>
+              <text x="462" y="378">Herald Square</text>
             </g>
             {/* The pin tip marks the south side of W 36th, between 7th and Broadway. */}
             <g className="map-restaurant">

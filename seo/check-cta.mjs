@@ -8,6 +8,11 @@ const TOAST = 'toasttab.com/local/order/zen-ramen-sushi-takeout-150-w-36th-stree
 const fail = []; const ok = (c, m) => { if(!c) fail.push(m); };
 const done = name => { console.log(fail.length ? `${name} FAIL: ${fail.join(' | ')}` : `${name} PASS`); process.exit(fail.length ? 1 : 0); };
 
+if (mode === 'about-image') {   // 首页 About 区块与 /about/ 页用猪骨 Tonkotsu 实拍,不再是鸡排拉面
+  for (const [f,n,want] of [[OUT+'/index.html','首页','shot-about-tonkotsu.webp'],[OUT+'/about/index.html','/about/','shot-about-tonkotsu-square.webp']]) { const h = fs.readFileSync(f,'utf8'); ok(h.includes(want),`${n}: 没用 ${want}`); ok(!h.includes('shot-about-chicken-ramen'),`${n}: 还在引用鸡排拉面旧图`); }
+  for (const x of ['shot-about-tonkotsu.webp','shot-about-tonkotsu-square.webp']) ok(fs.existsSync('public/images/'+x),'缺 '+x); ok(!fs.existsSync('public/images/shot-about-chicken-ramen.webp'),'旧图文件还在(应删)');
+  done('CTA-ABOUT-IMAGE');
+}
 if (mode === 'pages' || mode === 'perf') {
   if (mode === 'perf') {
     const files = []; const walk = d => fs.readdirSync(d,{withFileTypes:true}).forEach(e => e.isDirectory() ? walk(path.join(d,e.name)) : /\.(js|css)$/.test(e.name) && files.push(path.join(d,e.name)));
@@ -38,6 +43,24 @@ for (let i=0;i<40;i++){ try{ const r=await fetch(BASE+'/'); if(r.ok) break; }cat
 const skipIntro = ctx => ctx.addInitScript(() => { try{ sessionStorage.setItem('zen-intro-v2','1'); }catch{} });
 const b = await chromium.launch();
 try {
+  if (mode === 'header-stable') {   // 慢慢往下滚过阈值:页头只能切换一次、scrollY 不能被拨回(2026-10-01 抖动回归)
+    const {webkit} = await import('playwright');
+    for (const [name,eng] of [['chromium',chromium],['webkit',webkit]]) {
+      const bb = name==='chromium' ? b : await eng.launch(); const ctx = await bb.newContext({viewport:{width:1440,height:900}}); await skipIntro(ctx); const p = await ctx.newPage();
+      for (const u of ['/','/menu/']) {
+        await p.goto(BASE+u,{waitUntil:'networkidle'}); await p.waitForTimeout(400);
+        await p.evaluate(()=>{window.__log=[];let last=null;const rec=()=>{const s=document.documentElement.hasAttribute('data-scrolled');const y=Math.round(scrollY);if(s!==last){window.__log.push(['s',s,y]);last=s}window.__ys=(window.__ys||[]);window.__ys.push(y);requestAnimationFrame(rec)};rec();});
+        await p.mouse.move(700,500);
+        for (let i=0;i<16;i++){ await p.mouse.wheel(0,12); await p.waitForTimeout(90); }
+        await p.waitForTimeout(800);
+        const r = await p.evaluate(()=>({sw:window.__log.length-1,ys:window.__ys}));
+        let backs=0; for(let i=1;i<r.ys.length;i++) if(r.ys[i] < r.ys[i-1]-2) backs++;
+        ok(r.sw<=1,`${name} ${u}: 页头状态切换了 ${r.sw} 次(>1)`); ok(backs===0,`${name} ${u}: 向下滚时 scrollY 被拨回 ${backs} 次`);
+      }
+      await ctx.close(); if(name!=='chromium') await bb.close();
+    }
+    done('CTA-HEADER-STABLE');
+  }
   if (mode === 'hero-desktop') {
     const ctx = await b.newContext({viewport:{width:1440,height:900}}); await skipIntro(ctx); const p = await ctx.newPage();
     await p.goto(BASE+'/',{waitUntil:'networkidle'}); await p.waitForTimeout(600);

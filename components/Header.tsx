@@ -19,7 +19,7 @@ export default function Header() {
   },[mobile,delivery]);
   useEffect(() => {
     let ticking = false;
-    const onScroll = () => { if(ticking) return; ticking = true; requestAnimationFrame(()=>{document.documentElement.toggleAttribute('data-scrolled', window.scrollY > 40); ticking = false;}); };
+    const onScroll = () => { if(ticking) return; ticking = true; requestAnimationFrame(()=>{const el = document.documentElement; const y = window.scrollY; const on = el.hasAttribute('data-scrolled'); if(!on && y > 80) el.setAttribute('data-scrolled',''); else if(on && y < 20) el.removeAttribute('data-scrolled'); /* 滞回(80 收/20 放),避免页头缩放引起的来回跳 */ ticking = false;}); };
     onScroll();
     window.addEventListener('scroll', onScroll, {passive:true});
     return () => window.removeEventListener('scroll', onScroll);

@@ -1,6 +1,6 @@
 # Gates: 首页与全站转化(CTA)优化 · 对比旧站后的改造(2026-10-01)
 
-OWNS: components/HomeFilm.tsx, components/OpenStatus.tsx, components/CtaBand.tsx, components/CtaTracker.tsx, components/Header.tsx, components/Shared.tsx, components/Intro.tsx, lib/open-status.ts, app/page.tsx, app/menu/page.tsx, app/layout.tsx, app/globals.css, seo/check-cta.mjs, scripts/test-open-status.mjs, GATES-cta.md
+OWNS: public/images/shot-about-tonkotsu.webp, app/about/page.tsx, components/HomeFilm.tsx, components/OpenStatus.tsx, components/CtaBand.tsx, components/CtaTracker.tsx, components/Header.tsx, components/Shared.tsx, components/Intro.tsx, lib/open-status.ts, app/page.tsx, app/menu/page.tsx, app/layout.tsx, app/globals.css, seo/check-cta.mjs, scripts/test-open-status.mjs, GATES-cta.md
 
 Scope: 把「订餐/订位/打电话/导航」做成全站显眼、可测量的 CTA:首屏主按钮改为 ORDER ONLINE(直连 Toast)、手机首屏露出菜品照片、页尾 CTA 条、菜单页顶部订餐入口、营业状态、GA4 点击事件;不拖慢站点、不破坏已有门。
 
@@ -56,3 +56,13 @@ Scope: 把「订餐/订位/打电话/导航」做成全站显眼、可测量的 
 
 - [x] C11: 上线后回读:线上首页桌面/手机截图里首屏能看到 ORDER ONLINE 主按钮;线上点击记录正常;并核对 CI 与 Playwright 8 条测试
   EVIDENCE: 2026-10-01 PR #2 合并(b84c896)后约 40 秒线上更新;对 https://zen-ramen.vercel.app 用同一套 check-cta.mjs 重跑 hero-desktop/hero-mobile/status/tracking/overflow 全部 PASS;线上 window.gtag=function(GA4 已装);线上截图(桌面 1440×900、iPhone 13 390×664)肉眼复核:首屏 ORDER ONLINE 红色主按钮可见,手机顶部有面条照片,营业状态按纽约当前时间显示 CLOSED · OPENS 11:30 AM TODAY(周四,正确);合并前 CI build-and-seo 绿灯,npm test 8 条通过;负向对照:对改前线上版 hero-desktop 报 FAIL、拆掉 band-order 的副本 pages 报 FAIL
+
+- [x] C12: 页头不抖:慢速向下滚过收缩阈值,页头状态只切换 1 次、scrollY 不被拨回(Chromium 与 WebKit,首页与菜单页)
+  CHECK: node seo/check-cta.mjs header-stable
+  EXPECT: CTA-HEADER-STABLE PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=3c63a3d421e6a7f385f67eb9946baf5af3536070e5fbb8e7029b65f37303e9aa; output-bytes=23
+
+- [x] C13: 首页 About 区块与 /about/ 页改用猪骨 Tonkotsu 实拍(新文件名、旧图已删),且全站图片亮度闸仍通过
+  CHECK: node seo/check-cta.mjs about-image && npm run photos 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(s.includes('PHOTO GATE PASS')?'ABOUT PHOTO GATE PASS':'PHOTO GATE FAIL'))"
+  EXPECT: ABOUT PHOTO GATE PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=b883b63ad3463b512d806e5fdf19f84addd8f625d558d986ef4ad270beb90574; output-bytes=43

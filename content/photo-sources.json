@@ -1,0 +1,20 @@
+{
+  "note": "Customer photos from Google Maps (Zen Ramen & Sushi listing, retrieved 2026-10-01). Real dishes, cropped to a square and lightly corrected (white balance, exposure, +6% contrast/saturation, sharpen). No AI generation, no retouching of the food. Replace with restaurant shots when available.",
+  "photos": [
+    {"file":"guest-bento-shrimp-teriyaki.webp","items":["lunch-2-8","dinner-10-8"],"depicts":"I. Shrimp Teriyaki bento (shrimp & vegetables, California roll, rice, fried shumai)","googleTag":"Teriyaki Salmon Bento Box (Google's tag is wrong: the photo shows shrimp)"},
+    {"file":"guest-bento-katsu.webp","items":["lunch-2-4","lunch-2-5","dinner-10-4","dinner-10-5"],"depicts":"Katsu bento (cutlet, rice, California roll, shumai); same price for chicken and pork katsu, so shown as 'Katsu Bento Box'","googleTag":"Bento"},
+    {"file":"guest-chicken-teriyaki.webp","items":["lunch-1-2","dinner-11-2"],"depicts":"Chicken Teriyaki over white rice with broccoli","googleTag":"Food & drink"},
+    {"file":"guest-katsu-rice.webp","items":["lunch-1-5","dinner-11-5"],"depicts":"Katsu (breaded cutlet over rice with broccoli, tonkatsu sauce on the side)","googleTag":"Chicken katsu"},
+    {"file":"guest-gyu-don.webp","items":["lunch-1-4","dinner-11-4"],"depicts":"Gyu Don (sliced beef with bell peppers and onions)","googleTag":"Food & drink"},
+    {"file":"guest-lunch-sashimi.webp","items":["lunch-0-1"],"depicts":"Sashimi lunch (sashimi with sushi rice and tuna tartare)","googleTag":"Food & drink"},
+    {"file":"guest-takoyaki.webp","items":["dinner-0-5"],"depicts":"Takoyaki with Kewpie mayo and bonito flakes","googleTag":"Food & drink"},
+    {"file":"guest-gyoza.webp","items":["dinner-0-7"],"depicts":"Pan fried pork gyoza (6)","googleTag":"Food & drink"},
+    {"file":"guest-vegetable-gyoza.webp","items":["dinner-0-14"],"depicts":"Pan fried vegetable gyoza (green wrappers)","googleTag":"Vegetable Gyoza"},
+    {"file":"guest-shumai.webp","items":["dinner-0-6"],"depicts":"Fried shrimp shumai","googleTag":"Food & drink"},
+    {"file":"guest-ika-yaki.webp","items":["dinner-0-13"],"depicts":"Ika Yaki (grilled whole squid)","googleTag":"Godzilla Roll (Google's tag is wrong: the photo shows grilled squid)"},
+    {"file":"guest-edamame.webp","items":["dinner-0-1"],"depicts":"Reg. Edamame","googleTag":"Reg Edamame"},
+    {"file":"guest-zen-don.webp","items":["dinner-7-4"],"depicts":"Zen Don (assorted fish over sushi rice)","googleTag":"Food & drink"},
+    {"file":"guest-salmon-don.webp","items":["dinner-7-5"],"depicts":"Salmon Don (salmon over seasoned rice, bonito flakes)","googleTag":"Food & drink"},
+    {"file":"guest-salmon-lover.webp","items":["dinner-7-7"],"depicts":"Salmon Lover (salmon sushi, sashimi, spicy salmon roll)","googleTag":"Salmon Lover"}
+  ]
+}

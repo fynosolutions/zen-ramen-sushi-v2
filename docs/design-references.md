@@ -37,3 +37,12 @@
 - 能对上菜单的菜：Tonkotsu、Grill Chicken Yuzu Ramen（菜单精选卡）
 - 对不上具体菜单条目的（炙烤卷、刺身木盒、马天尼、分层饮品、乌冬挑面）：只作场景图，alt 描述画面、不写菜名
 - 缺的：前菜/便当/午市/更多卷的单品图 → 下次补拍清单
+
+### 菜单单品图：顾客实拍（2026-10-01）
+毛 10-01 定：菜单展示页的菜图**必须和实物几乎一样**，AI 生成的不用；缺的单品图改用 Google Maps 上顾客拍的真实照片（不好看但就是店里的出品）。
+- 来源：Google Maps「Zen Ramen & Sushi」的 Menu/Photos 标签页（含 Bento、Chicken katsu 等分类）。共收集约 130 张，挑 15 张：清楚、像店里出品、没有人脸/个人物品、能对上**一条具体菜单条目**。
+- 处理：只裁成方图 + 轻度校色（灰世界白平衡 40%、曝光、对比/饱和 +6%、锐化）。**不生成、不改菜**。文件 `public/images/guest-*.webp`，全部过亮度闸。
+- 对应关系与来源标签：`content/photo-sources.json`（每张 → 允许出现的 menu 条目）；`node seo/check-menu-photos.mjs data` 保证一张图只出现在它拍的那道菜上。
+- ⚠️ Google 自己给的标签有错（鱿鱼被标成 Godzilla Roll、虾仁照烧便当被标成 Teriyaki Salmon Bento），以**照片内容对菜单描述**为准，不照搬 Google 标签。
+- ⚠️ 版权在原拍摄者；这是过渡方案，**有店内实拍后替换**（见上「缺的」清单）。
+- 菜单自身的笔误（午市 `F. Poke Katsu`，晚市是 `F. Pork Katsu`）未改，待店里确认。

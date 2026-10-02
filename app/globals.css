@@ -237,3 +237,10 @@ a[href^="tel:"]{white-space:nowrap}
 .ig-plays,.ig-link,.hero-stamp span,.footer-bottom,.gallery-caption,.map-district,.map-switch button{font-size:11px}
 .featured-badge,.map-guide-caption{font-size:10px}
 }
+
+/* ===== 手机截图冷审第 3 轮 2026-10-02 ===== */
+.legal-content p{white-space:pre-line}
+@media(max-width:650px){
+/* 标题折行时左右平衡,不留「Square」「together.」这种单词孤行(电脑版不动) */
+h1,h2{text-wrap:balance}
+}

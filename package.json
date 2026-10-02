@@ -12,7 +12,8 @@
     "seo": "node seo/check-mapping.mjs && node seo/check-meta.mjs && node seo/check-alt.mjs && node seo/check-pages.mjs",
     "host-configs": "node scripts/gen-host-configs.mjs",
     "photos": "node scripts/photo-gate.mjs",
-    "links": "node seo/check-links.mjs"
+    "links": "node seo/check-links.mjs",
+    "mobile": "node seo/check-mobile.mjs"
   },
   "dependencies": {
     "next": "^16.3.5",

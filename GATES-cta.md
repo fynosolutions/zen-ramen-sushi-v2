@@ -9,7 +9,7 @@ Scope: 把「订餐/订位/打电话/导航」做成全站显眼、可测量的 
   EXPECT: CTA-HERO-DESKTOP PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=279368e5a39657334dae4074b05a1505c5f8ee1200a706ccdaf06a72d15d1490; output-bytes=22
 
-- [x] C2: 手机首屏(390×844 与 360×740):菜品照片露出 ≥140px,且 ORDER ONLINE 与 RESERVE 都在底部固定栏之上(不被挡)
+- [x] C2: 手机首屏(390×844 / 360×740 / 390×664):菜品照片露出 ≥180px,ORDER ONLINE 在底部固定栏之上(不被挡),RESERVE 由底部固定栏提供(首屏不再重复一个)
   CHECK: node seo/check-cta.mjs hero-mobile
   EXPECT: CTA-HERO-MOBILE PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=d6729538c65a652351526c9cd581df8f02e0c3baaed9ebd142ade442e13ad19a; output-bytes=21

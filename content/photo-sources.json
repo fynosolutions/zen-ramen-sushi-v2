@@ -169,6 +169,16 @@
       "depicts": "Vegetables Ramen (glazed tofu, shiitake, bok choy, spinach, kikurage, sprouts)",
       "googleTag": "Miso Soup (Google's tag is wrong: the photo shows vegetable ramen)",
       "reference": "Google Maps customer photo"
+    },
+    {
+      "file": "dish-bento-sashimi.webp",
+      "items": [
+        "lunch-2-3",
+        "dinner-10-3"
+      ],
+      "depicts": "Sashimi bento (tuna, salmon and white-fish sashimi with shiso, carrot, cucumber and orchid; sesame rice ball; pickled salad; California rolls; fried chicken). Shown on D. Sashimi (the photo has sashimi, not nigiri). Camera raised from low side view to a high three-quarter view.",
+      "googleTag": "n/a (photo supplied by Jaye from Google Maps, 2026-10-02)",
+      "reference": "Google Maps customer photo, supplied by Jaye 2026-10-02"
     }
   ]
 }

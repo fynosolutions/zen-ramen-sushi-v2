@@ -21,7 +21,7 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 **换图片/视频时换文件名。** 同名替换会被浏览器缓存挡住，看起来"没换"。新图起新名、改引用、删旧文件。
 
 ## 素材现状：全站图片 = 2026-09-22 店内实拍（AI 占位图已全部删除）
-**菜单单品图（2026-10-01）**：缺单品图的菜用 Google Maps 顾客实拍（`guest-*.webp`，15 张，裁方图+轻度校色，不生成不改菜）。一张图只挂在它拍的那道菜上，对应关系在 `content/photo-sources.json`，`node seo/check-menu-photos.mjs data|render` 验收。Google 的菜名标签有错，以照片内容对菜单描述为准。
+**菜单单品图（2026-10-02）**：缺单品图的菜用 `dish-*.webp`——以真实顾客照片为参考、gpt-image-2.5 重拍成透明背景（「同一道菜只改拍摄质量」），prompt 与对应关系见 `docs/menu-dish-images.md`、`content/photo-sources.json`；一张图只挂在它拍的那道菜上，`node seo/check-menu-photos.mjs data|render` 验收；轻微动效（悬浮/移上放大 7%）在 globals.css 末尾「菜品图动效」，`node seo/check-menu-motion.mjs` 验收。Google 的菜名标签有错，以照片内容对菜单描述为准。
 
 `public/images/shot-*.webp` 全部取自飞书云盘 `024 Zen Ramen Penn/图片/0924新图/正常高亮`（47 张过亮度闸；同目录 `较暗` 放其余 93 张，不选用）。原片没进仓，重出图从飞书下原片再裁。
 **菜单精选卡只放能对上菜单条目的实拍**：Tonkotsu（dinner-13-2）、Grill Chicken Yuzu Ramen（dinner-13-16）。其余菜没拍到、或拍了但对不上具体条目（炙烤卷、刺身木盒、粉色马天尼、分层饮品）→ 只当场景图用、alt 不写菜名。Rainbow 卷全组虚焦（焦点在后面的酒），已撤下精选卡。

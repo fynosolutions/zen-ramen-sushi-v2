@@ -1,10 +1,10 @@
-# Gates: 菜单单品图换成顾客实拍(2026-10-01)
+# Gates: 菜单单品图 = 真实参考重拍的透明菜品图 + 轻微动效(2026-10-01 起,10-02 改版)
 
-OWNS: content/featured.ts, content/photo-sources.json, components/MenuBrowser.tsx, public/images/guest-*.webp, seo/check-menu-photos.mjs, docs/design-references.md, GATES-menu-photos.md
+OWNS: content/featured.ts, content/photo-sources.json, components/MenuBrowser.tsx, components/DishMotion.tsx, app/menu/page.tsx, app/globals.css, public/images/dish-*.webp, seo/check-menu-photos.mjs, seo/check-menu-motion.mjs, docs/design-references.md, docs/menu-dish-images.md, GATES-menu-photos.md
 
-Scope: 午市/晚市菜单页补上 15 张真实菜品照片(顾客在 Google Maps 拍的,裁方图+轻度校色),每张只出现在它拍的那道菜上;不生成、不改菜。
+Scope: 午市/晚市菜单页的 15 张菜品图 = 以真实顾客照片为参考、「同一道菜只改拍摄质量」重拍的透明背景图,每张只出现在它拍的那道菜上;图上加轻微动效(悬浮、移上放大),不改结构、不遮挡文字与下单。
 
-- [x] M1: 数据对:每个配图条目的分区/菜品都存在;每张顾客实拍图有来源台账、只挂在台账允许的菜品上;文件是 ≥1000 的方图;共 15 张都被使用
+- [x] M1: 数据对:每个配图条目的分区/菜品都存在;每张菜品透明图有来源台账、只挂在台账允许的菜品上;文件是 ≥1000 的方图、有透明通道、菜离画布边 ≥5%、≤250KB;共 15 张都被使用
   CHECK: node seo/check-menu-photos.mjs data 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(s.includes('MENU-PHOTOS-DATA PASS')?'MENU-PHOTOS-DATA PASS':s))"
   EXPECT: MENU-PHOTOS-DATA PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=69962908fed6cfb69f211cdca41fd56dcca43ff11b10c8dc001b7b2fe850554a; output-bytes=22
@@ -24,5 +24,13 @@ Scope: 午市/晚市菜单页补上 15 张真实菜品照片(顾客在 Google Ma
   EXPECT: REGRESSION SEO PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=a65dce097bbcd0c418bfe200a600da772466b6dc53f228dbb2530391ea6a0f4b; output-bytes=20
 
-- [x] M5: 上线后回读:线上午市页/晚市页肉眼检查配图与菜名一一对得上,线上版同一套 render 检查通过
-  EVIDENCE: 2026-10-01 PR #5 合并(b3a00f3)后约 24 秒线上更新;对 https://zen-ramen.vercel.app 跑 check-menu-photos.mjs render=PASS(电脑+手机,午市≥6/晚市≥14 张已加载、图注正确、无溢出);线上跑 hero-desktop/hero-mobile/overflow/header-stable 均 PASS;线上午市页肉眼复核 Sushi Bar 刺身午餐图与菜名一致;负向对照:改前线上版 render 检查 FAIL(无顾客图)、把 Takoyaki 图挂到 Karaage 上 data 检查 FAIL
+- [ ] M5: 上线后回读:线上午市页/晚市页肉眼检查配图与菜名一一对得上,线上版同一套 render 检查通过
+  EVIDENCE: pending
+
+- [x] M6: 动效不扰人:看得见的菜品图才悬浮(屏幕外的不跑、同时 ≤12 个);鼠标移上放大 7% 且仍在格子内、图注没被盖、版面不跳;移开恢复;开了「减少动态效果」全停;触屏不触发悬停放大、无溢出;菜单页顶部 ORDER ONLINE 没被挡
+  CHECK: node seo/check-menu-motion.mjs
+  EXPECT: MENU-MOTION PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=d19f9eeb04bf61604214a8763847c39ff3f2016b2cfc5fff4adeb31a1956cfad; output-bytes=17
+
+- [ ] M7: 上线后回读:线上菜单页菜品图与动效检查通过(渲染+动效),肉眼看午市/晚市几排
+  EVIDENCE: pending

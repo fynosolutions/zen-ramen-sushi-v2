@@ -131,3 +131,18 @@ main[tabindex="-1"]:focus{outline:none}
 
 /* 页头缩放会改变 sticky 页头高度,浏览器的滚动锚定会把 scrollY 拨回阈值之下 → 来回切换(2026-10-01 毛反馈抖动)。关掉锚定 + JS 滞回 */
 html{overflow-anchor:none}
+
+/* ===== 菜品图动效(2026-10-02):透明抠图 + 轻微悬浮 + 鼠标移上放大 =====
+   只动 translate/scale/rotate(不触发布局);全部限制在图片格子里(overflow:hidden),
+   不盖文字、不挡下单;看得见才动(.is-in);开了「减少动态效果」就全停。 */
+.featured-photo{background:radial-gradient(circle at 50% 44%,#faf9f4 0%,#f1f0e9 70%)}
+.featured-photo img{object-fit:contain;padding:2%;scale:var(--rest,1);rotate:var(--tilt,0deg);translate:0 0;transition:scale .22s var(--ease-out);transform:none}
+.featured-dish:hover .featured-photo img{transform:none}
+.featured-dish:nth-child(3n+1){--rest:1.04;--tilt:-2deg;--float-dur:6.8s;--float-delay:0s}
+.featured-dish:nth-child(3n+2){--rest:.94;--tilt:1.5deg;--float-dur:7.6s;--float-delay:-2.4s}
+.featured-dish:nth-child(3n+3){--rest:1;--tilt:-.8deg;--float-dur:6.2s;--float-delay:-4.1s}
+@keyframes dish-float{0%,100%{translate:0 0}50%{translate:0 -4px}}
+@media(prefers-reduced-motion:no-preference){.featured-dish.is-in .featured-photo img{animation:dish-float var(--float-dur,7s) ease-in-out var(--float-delay,0s) infinite}}
+@media(hover:hover) and (pointer:fine){.featured-dish:hover .featured-photo img{scale:calc(var(--rest,1)*1.07)}}
+.featured-dish:active .featured-photo img{scale:calc(var(--rest,1)*.98)}
+@media(prefers-reduced-motion:reduce){.featured-photo img{transition:none}}

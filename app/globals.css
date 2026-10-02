@@ -207,3 +207,19 @@ body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
 .ico-down{transition:transform .18s var(--ease-out)}
 button[aria-expanded="true"] .ico-down{transform:rotate(180deg)}
 .home-film-play .ico{width:1.25em;height:1.25em}
+
+/* ===== 手机截图冷审后的修正 2026-10-02(phone-check 第一次全站跑出来的;都是手机宽度下才有) ===== */
+/* 下拉框:系统原生样式在 iPhone 上又矮又白,和其他输入框不一样 → 去掉原生外观,自己画箭头 */
+.form-field select{appearance:none;-webkit-appearance:none;padding-right:38px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23171817' stroke-width='1.8'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:16px}
+@media(max-width:650px){
+/* 菜单页顶部:说明文字和「VIEW ORIGINAL PDF」原来被限在 175px/95px 里,链接折成三行、箭头单独一行 */
+.menu-meta p{max-width:none}
+.menu-meta a{max-width:none;text-align:left;white-space:nowrap}
+/* 相册页尾「Hungry yet?」和按钮原来并排,两边都折行 → 上下排,按钮占满 */
+.gallery-cta{flex-direction:column;align-items:flex-start;gap:18px}
+.gallery-cta .button{width:100%}
+/* 页脚的 Privacy / Terms 两个小链接手指不好点 → 加高点按区域 */
+.footer-bottom a{display:inline-block;padding:9px 0}
+/* 首页「Something for every craving.」标题和下面的按钮贴在一起 */
+.menu-preview .section-actions{margin-top:22px}
+}

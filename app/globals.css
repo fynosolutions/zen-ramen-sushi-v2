@@ -233,6 +233,7 @@ a[href^="tel:"]{white-space:nowrap}
 /* 车站页的信息卡:两列时「miles」「PM」单独掉一行 → 手机上一列 */
 .scene-facts{grid-template-columns:1fr;gap:14px}
 /* 最小字号:手机上不低于 11px(原来有 8–10px 的) */
-.ig-plays,.ig-link,.h1-kicker,.hero .h1-kicker,.hero-stamp span,.footer-bottom,.gallery-caption,.map-district,.map-switch button{font-size:11px}
+/* 首屏那行小标题(.h1-kicker)不在内:它是一行不换行的大写字,调到 11px 在 360 宽的手机上会超出屏幕 6px(测试拦下来的) */
+.ig-plays,.ig-link,.hero-stamp span,.footer-bottom,.gallery-caption,.map-district,.map-switch button{font-size:11px}
 .featured-badge,.map-guide-caption{font-size:10px}
 }

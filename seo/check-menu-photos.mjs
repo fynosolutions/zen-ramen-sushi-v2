@@ -12,13 +12,14 @@ if (mode === 'data') {
     for (const f of list) {
       const it = sec?.items.find(x=>x.id===f.itemId); ok(!!it, `${key}: 菜品 ${f.itemId} 不在该分区`);
       const file = f.img.replace('/images/',''); ok(fs.existsSync('public'+f.img), `${f.img} 文件不存在`);
-      if (file.startsWith('guest-')) { guestUsed.add(file); const rec = src.photos.find(p=>p.file===file); ok(!!rec, `${file}: 台账里没有来源记录`); ok(rec?.items.includes(f.itemId), `${file}: 台账没有允许它出现在 ${f.itemId}(${it?.name}) 上`); }
-      if (fs.existsSync('public'+f.img)) { const md = await sharp('public'+f.img).metadata(); ok(md.width===md.height && md.width>=1000, `${file}: 不是 ≥1000 的方图(${md.width}x${md.height})`); }
+      if (file.startsWith('dish-')) { guestUsed.add(file); const rec = src.photos.find(p=>p.file===file); ok(!!rec, `${file}: 台账里没有来源记录`); ok(rec?.items.includes(f.itemId), `${file}: 台账没有允许它出现在 ${f.itemId}(${it?.name}) 上`); }
+      if (fs.existsSync('public'+f.img)) { const md = await sharp('public'+f.img).metadata(); ok(md.width===md.height && md.width>=1000 || /^shot-/.test(file), `${file}: 不是 ≥1000 的方图(${md.width}x${md.height})`);
+        if (file.startsWith('dish-')) { ok(md.hasAlpha, `${file}: 没有透明通道`); const {data,info} = await sharp('public'+f.img).ensureAlpha().raw().toBuffer({resolveWithObject:true}); let x0=1e9,y0=1e9,x1=-1,y1=-1; for(let y=0;y<info.height;y++)for(let x=0;x<info.width;x++){ if(data[(y*info.width+x)*4+3]>8){x0=Math.min(x0,x);x1=Math.max(x1,x);y0=Math.min(y0,y);y1=Math.max(y1,y);} } const m=Math.min(x0,y0,info.width-1-x1,info.height-1-y1)/info.width; ok(m>=0.05, `${file}: 菜离画布边太近(最小边距 ${(m*100).toFixed(1)}% <5%)`); ok(fs.statSync('public'+f.img).size<=250*1024, `${file}: 超过 250KB`); } }
     }
   }
   for (const p of src.photos) { ok(guestUsed.has(p.file), `${p.file}: 台账里有但没被使用`); ok(!!p.depicts && !!p.googleTag, `${p.file}: 台账缺 depicts/googleTag`); }
-  ok(guestUsed.size >= 15, `顾客实拍图只用了 ${guestUsed.size} 张(<15)`);
-  console.log(`  featured 分区 ${Object.keys(featured).length} 个,顾客实拍图 ${guestUsed.size} 张`); done('MENU-PHOTOS-DATA');
+  ok(guestUsed.size >= 15, `菜品透明图只用了 ${guestUsed.size} 张(<15)`);
+  console.log(`  featured 分区 ${Object.keys(featured).length} 个,菜品透明图 ${guestUsed.size} 张`); done('MENU-PHOTOS-DATA');
 }
 if (mode === 'render') {
   const {chromium, devices} = await import('playwright'); const PORT = 3072; const BASE = process.env.CTA_BASE || `http://127.0.0.1:${PORT}`;
@@ -34,7 +35,7 @@ if (mode === 'render') {
         for (const s of sections) { const loc = p.locator(`#${s} .featured-dish img`); const n = await loc.count(); ok(n>0, `${name} ${tab} ${s}: 没有配图`); for (let i=0;i<n;i++){ await loc.nth(i).scrollIntoViewIfNeeded(); await p.waitForTimeout(350); } }
         await p.waitForTimeout(600);
         const r = await p.evaluate(()=>({imgs:[...document.querySelectorAll('.featured-dish img')].filter(i=>!i.closest('[hidden]')).map(i=>({src:i.getAttribute('src'),ok:i.complete&&i.naturalWidth>=1000})), caps:[...document.querySelectorAll('.featured-dish')].filter(d=>!d.closest('[hidden]')).map(d=>d.querySelector('figcaption strong')).map(e=>e.textContent), sw:document.documentElement.scrollWidth, iw:innerWidth}));
-        const guest = r.imgs.filter(i=>i.src.includes('guest-')); ok(guest.length>=want, `${name} ${tab}: 顾客实拍图 ${guest.length} 张(<${want})`); ok(r.imgs.every(i=>i.ok), `${name} ${tab}: 有图没加载成功`); ok(r.sw<=r.iw, `${name} ${tab}: 横向溢出`);
+        const guest = r.imgs.filter(i=>i.src.includes('dish-')); ok(guest.length>=want, `${name} ${tab}: 菜品透明图 ${guest.length} 张(<${want})`); ok(r.imgs.every(i=>i.ok), `${name} ${tab}: 有图没加载成功`); ok(r.sw<=r.iw, `${name} ${tab}: 横向溢出`);
         if (tab==='Lunch') ok(r.caps.includes('Katsu Bento Box') && r.caps.includes('I. Shrimp Teriyaki') && r.caps.includes('Gyu Don'), `${name} Lunch: 图注不对 ${r.caps.join(',')}`);
       }
       await ctx.close();

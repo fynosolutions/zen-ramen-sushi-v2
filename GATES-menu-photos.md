@@ -2,14 +2,14 @@
 
 OWNS: content/featured.ts, content/photo-sources.json, components/MenuBrowser.tsx, components/DishMotion.tsx, app/menu/page.tsx, app/globals.css, public/images/dish-*.webp, seo/check-menu-photos.mjs, seo/check-menu-motion.mjs, docs/design-references.md, docs/menu-dish-images.md, GATES-menu-photos.md
 
-Scope: 午市/晚市菜单页的 15 张菜品图 = 以真实顾客照片为参考、「同一道菜只改拍摄质量」重拍的透明背景图,每张只出现在它拍的那道菜上;图上加轻微动效(悬浮、移上放大),不改结构、不遮挡文字与下单。
+Scope: 午市/晚市菜单页的 18 张菜品图 = 以真实顾客照片为参考、「同一道菜只改拍摄质量」重拍的透明背景图,每张只出现在它拍的那道菜上;图上加轻微动效(悬浮、移上放大),不改结构、不遮挡文字与下单。
 
-- [x] M1: 数据对:每个配图条目的分区/菜品都存在;每张菜品透明图有来源台账、只挂在台账允许的菜品上;文件是 ≥1000 的方图、有透明通道、菜离画布边 ≥5%、≤250KB;共 15 张都被使用
+- [x] M1: 数据对:每个配图条目的分区/菜品都存在;每张菜品透明图有来源台账、只挂在台账允许的菜品上;文件是 ≥1000 的方图、有透明通道、菜离画布边 ≥5%、≤250KB;共 18 张都被使用
   CHECK: node seo/check-menu-photos.mjs data 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(s.includes('MENU-PHOTOS-DATA PASS')?'MENU-PHOTOS-DATA PASS':s))"
   EXPECT: MENU-PHOTOS-DATA PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=69962908fed6cfb69f211cdca41fd56dcca43ff11b10c8dc001b7b2fe850554a; output-bytes=22
 
-- [x] M2: 渲染对:电脑与手机上,午市页有 ≥6 张、晚市页有 ≥14 张图真的显示(已加载、宽度≥1000)、图注正确(Katsu Bento Box / I. Shrimp Teriyaki / Gyu Don)、无横向溢出
+- [x] M2: 渲染对:电脑与手机上,午市页有 ≥6 张、晚市页有 ≥17 张图真的显示(已加载、宽度≥1000)、图注正确(Katsu Bento Box / I. Shrimp Teriyaki / Gyu Don)、无横向溢出
   CHECK: node seo/check-menu-photos.mjs render
   EXPECT: MENU-PHOTOS-RENDER PASS
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=1bdf1b22a3ab7bc48a1ac2329ded33ff94419576a1a380aeb5f16749a81052fa; output-bytes=493

@@ -142,6 +142,33 @@
       "depicts": "Salmon Lover (salmon sushi, sashimi, spicy salmon roll)",
       "googleTag": "Salmon Lover",
       "reference": "Google Maps customer photo (see googleTag)"
+    },
+    {
+      "file": "dish-tonkotsu.webp",
+      "items": [
+        "dinner-13-2"
+      ],
+      "depicts": "Tonkotsu ramen (pork belly, soft eggs, corn, arugula, scallions) — background-removed re-render of the restaurant's own 2026-09-22 shot (shot-dish-tonkotsu)",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant shoot 2026-09-22"
+    },
+    {
+      "file": "dish-chicken-yuzu.webp",
+      "items": [
+        "dinner-13-16"
+      ],
+      "depicts": "Grilled Chicken Yuzu Ramen (chicken breast, soft eggs, lime, bok choy) — re-render of the restaurant's own shot (shot-dish-chicken-yuzu)",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant shoot 2026-09-22"
+    },
+    {
+      "file": "dish-vegetable-ramen.webp",
+      "items": [
+        "dinner-13-11"
+      ],
+      "depicts": "Vegetables Ramen (glazed tofu, shiitake, bok choy, spinach, kikurage, sprouts)",
+      "googleTag": "Miso Soup (Google's tag is wrong: the photo shows vegetable ramen)",
+      "reference": "Google Maps customer photo"
     }
   ]
 }

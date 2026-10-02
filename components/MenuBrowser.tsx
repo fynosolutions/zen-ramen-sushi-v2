@@ -11,7 +11,13 @@ export default function MenuBrowser(){
   const [current,setCurrent]=useState('dinner');
   const [activeSection,setActiveSection]=useState('');
   const tabs=useRef<(HTMLButtonElement|null)[]>([]);
-  useEffect(()=>{const read=()=>{const hash=window.location.hash.slice(1);const found=menus.find(m=>hash===m.id||hash.startsWith(m.id+'--'));if(found)setCurrent(found.id);};read();window.addEventListener('hashchange',read);window.addEventListener('popstate',read);return()=>{window.removeEventListener('hashchange',read);window.removeEventListener('popstate',read);};},[]);
+  useEffect(()=>{const read=(initial=false)=>{const hash=window.location.hash.slice(1);const found=menus.find(m=>hash===m.id||hash.startsWith(m.id+'--'));if(!found)return;const hidden=!!document.getElementById('panel-'+found.id)?.hidden;setCurrent(found.id);if(!initial&&hidden&&hash.includes('--'))requestAnimationFrame(()=>requestAnimationFrame(()=>document.getElementById(hash)?.scrollIntoView({block:'start',behavior:'instant' as ScrollBehavior})));};read(true);
+    // 带分区锚点直接打开(如 /menu/#lunch--bento-box):浏览器在页签还没切换/图片还没占位时就算过位置,会落偏。切好页签后补一次滚动(用户没动手才补第二次)。
+    const first=window.location.hash.slice(1);
+    if(first.includes('--')){let touched=false;const mark=()=>{touched=true;};const opts={once:true,passive:true} as const;window.addEventListener('wheel',mark,opts);window.addEventListener('touchstart',mark,opts);window.addEventListener('keydown',mark,{once:true});
+      const go=()=>document.getElementById(first)?.scrollIntoView({block:'start',behavior:'instant' as ScrollBehavior});
+      requestAnimationFrame(()=>requestAnimationFrame(go));const t=window.setTimeout(()=>{if(!touched)go();},700);}
+const onHash=()=>read();window.addEventListener('hashchange',onHash);window.addEventListener('popstate',onHash);return()=>{window.removeEventListener('hashchange',onHash);window.removeEventListener('popstate',onHash);};},[]);
   useEffect(()=>{ // scrollspy: highlight the category currently in view
     const sections=Array.from(document.querySelectorAll(`#panel-${current} .food-section`));
     if(!sections.length)return;

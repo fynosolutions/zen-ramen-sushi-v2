@@ -15,7 +15,8 @@ export default function CtaTracker(){
       const base = {cta_id: raw.replace(/-/g,'_'), cta_location: el.dataset.cta ? raw.split('-')[0] : 'site', link_url: href};
       gtag('event','cta_click',base);
       if(href.startsWith('tel:')) gtag('event','click_to_call',base);
-      else if(/google\.com\/maps/.test(href)) gtag('event','get_directions',base);
+      else if(/google\.com\/maps\/dir/.test(href)) gtag('event','get_directions',base);
+      else if(/google\.com\/maps/.test(href)) gtag('event','reviews_click',base);
       else if(/toasttab|ubereats|doordash|grubhub/.test(href)) gtag('event','order_click',{...base, platform:(href.match(/toasttab|ubereats|doordash|grubhub/)||[''])[0]});
       else if(/resy\.com/.test(href)) gtag('event','reserve_click',base);
     };

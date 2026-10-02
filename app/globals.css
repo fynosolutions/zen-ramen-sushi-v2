@@ -152,9 +152,11 @@ html{overflow-anchor:none}
 /* ===== 手机版复核 2026-10-02(独立审稿后的修正;只动手机端细节,不改结构) ===== */
 .cta-band .eyebrow{color:#fff}
 .cta-band-note span{white-space:nowrap}
-.lightbox::backdrop{background:#0e100efa}
-.lightbox-close{padding:16px 2px 16px 14px}
-.lightbox-close:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.lightbox::backdrop{background:#0e100e}
+.lightbox-close{padding:14px 12px;margin-bottom:8px}
+/* 大图窗口按照片宽度收紧:CLOSE 与左右箭头都对齐照片边缘(原来固定 1100px,竖图时按钮悬在照片外) */
+.lightbox{width:fit-content;min-width:min(92vw,420px)}
+.lightbox-close:focus-visible{outline:1px solid #fff8;outline-offset:-1px}
 .footer-bottom .nowrap{white-space:nowrap}
 @media(max-width:1000px){
 /* 展开的导航可以在面板内滚动:ORDER ONLINE 下拉打开后,下面的 EVENTS/CATERING 与 RESERVE TODAY 仍够得着 */
@@ -169,7 +171,9 @@ html{overflow-anchor:none}
 body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
 /* 菜品图注:菜名一行、价格另起一行,避免「Ramen」「(Dry)」单独掉到第二行 */
 .featured-dish figcaption{flex-direction:column;align-items:flex-start;gap:2px}
-/* 一排两张时,奇数张的最后一张占满整行(横向卡片),不留空格 */
-.featured-dish:last-child:nth-child(odd){grid-column:1 / -1}
-.featured-dish:last-child:nth-child(odd) .featured-photo{aspect-ratio:2/1}
+/* 相册:手机两列时,标了 wide-sm 的窄图也占整行(否则单独一张会留空格) */
+.gallery-tile.wide-sm{grid-column:span 2;height:270px}
+/* 一排两张时,奇数张的最后一张占满整行:左边同样大小的方图,右边菜名+价格(不留空格,也不把图拉成横条) */
+.featured-dish:last-child:nth-child(odd){grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
+.featured-dish:last-child:nth-child(odd) figcaption{margin-top:0}
 }

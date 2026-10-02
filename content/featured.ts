@@ -4,12 +4,12 @@
 //  · customers' Google Maps photos, cropped + lightly corrected (2026-10-01) → dish-*.webp
 //    Each guest photo is tied to one menu entry (see content/photo-sources.json and docs/design-references.md);
 //    replace them with the restaurant's own shots when available.
-// A photo is only shown on the item it depicts; `label` is for one photo that fits two menu entries with the same price.
+// A photo is only shown on the item it depicts; `label` is for one photo that fits two menu entries with the same price, and for the bento trio (the menu's letter codes "I." / "D." read as stray characters under a photo).
 type Feat = {itemId:string; img:string; badge?:string; label?:string; alt?:string};
 const bentoTrio = (shrimp:string,katsu:string,sashimi:string):Feat[] => [
-  {itemId:shrimp, img:'/images/dish-bento-shrimp-teriyaki.webp', alt:'Shrimp teriyaki bento box with sushi rolls, rice and shumai'},
+  {itemId:shrimp, img:'/images/dish-bento-shrimp-teriyaki.webp', label:'Shrimp Teriyaki Bento Box', alt:'Shrimp teriyaki bento box with sushi rolls, rice and shumai'},
   {itemId:katsu, img:'/images/dish-bento-katsu.webp', label:'Katsu Bento Box', alt:'Katsu bento box with rice, California roll and shumai'},
-  {itemId:sashimi, img:'/images/dish-bento-sashimi.webp', alt:'Sashimi bento box with tuna, salmon and white fish sashimi, rice, California rolls and fried chicken'},
+  {itemId:sashimi, img:'/images/dish-bento-sashimi.webp', label:'Sashimi Bento Box', alt:'Sashimi bento box with tuna, salmon and white fish sashimi, rice, California rolls and fried chicken'},
 ];
 const ricePair = (teri:string,katsu:string,gyu:string):Feat[] => [
   {itemId:teri, img:'/images/dish-chicken-teriyaki.webp', alt:'Grilled chicken teriyaki over white rice with broccoli'},
@@ -29,8 +29,8 @@ export const featured: Record<string, Feat[]> = {
   'dinner--appetizers': [
     {itemId:'dinner-0-5',  img:'/images/dish-takoyaki.webp', alt:'Takoyaki with Kewpie mayo and bonito flakes'},
     {itemId:'dinner-0-7',  img:'/images/dish-gyoza.webp', alt:'Pan fried pork gyoza with dipping sauce'},
-    {itemId:'dinner-0-14', img:'/images/dish-vegetable-gyoza.webp', alt:'Pan fried vegetable gyoza on a bamboo leaf'},
-    {itemId:'dinner-0-6',  img:'/images/dish-shumai.webp', alt:'Fried shrimp shumai'},
+    {itemId:'dinner-0-14', img:'/images/dish-vegetable-gyoza.webp', alt:'Six pan fried vegetable gyoza on a bamboo leaf'},
+    {itemId:'dinner-0-6',  img:'/images/dish-shumai.webp', alt:'Six fried shrimp shumai on a stoneware plate'},
     {itemId:'dinner-0-13', img:'/images/dish-ika-yaki.webp', alt:'Grilled whole squid with teriyaki glaze and a lemon wedge'},
     {itemId:'dinner-0-1',  img:'/images/dish-edamame.webp', alt:'A bowl of steamed edamame'},
     {itemId:'dinner-0-8',  img:'/images/dish-karaage.webp', alt:'Karaage fried chicken with sesame seeds and spicy mayo dip'},
@@ -50,7 +50,7 @@ export const featured: Record<string, Feat[]> = {
   'happy-hour--appetizers': [
     {itemId:'happy-hour-0-2', img:'/images/dish-edamame.webp', alt:'A bowl of steamed edamame'},
     {itemId:'happy-hour-0-5', img:'/images/dish-gyoza.webp', alt:'Pan fried pork gyoza with dipping sauce'},
-    {itemId:'happy-hour-0-3', img:'/images/dish-shumai.webp', alt:'Fried shrimp shumai'},
+    {itemId:'happy-hour-0-3', img:'/images/dish-shumai.webp', alt:'Six fried shrimp shumai on a stoneware plate'},
   ],
   'lunch--sushi-bar': [
     {itemId:'lunch-0-1', img:'/images/dish-lunch-sashimi.webp', alt:'Sashimi plate with sushi rice, tuna tartare, salmon, yellowtail and tuna'},

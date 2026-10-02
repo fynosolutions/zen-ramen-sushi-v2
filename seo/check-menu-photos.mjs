@@ -37,7 +37,7 @@ if (mode === 'render') {
         await p.waitForTimeout(600);
         const r = await p.evaluate(()=>({imgs:[...document.querySelectorAll('.featured-dish img')].filter(i=>!i.closest('[hidden]')).map(i=>({src:i.getAttribute('src'),ok:i.complete&&i.naturalWidth>=1000})), caps:[...document.querySelectorAll('.featured-dish')].filter(d=>!d.closest('[hidden]')).map(d=>d.querySelector('figcaption strong')).map(e=>e.textContent), sw:document.documentElement.scrollWidth, iw:innerWidth}));
         const guest = r.imgs.filter(i=>i.src.includes('dish-')); ok(guest.length>=want, `${name} ${tab}: 菜品透明图 ${guest.length} 张(<${want})`); ok(r.imgs.every(i=>i.ok), `${name} ${tab}: 有图没加载成功`); ok(r.sw<=r.iw, `${name} ${tab}: 横向溢出`);
-        if (tab==='Lunch') ok(r.caps.includes('Katsu Bento Box') && r.caps.includes('I. Shrimp Teriyaki') && r.caps.includes('D. Sashimi (5 pcs)') && r.caps.includes('Gyu Don') && r.caps.includes('Salmon Lunch — Sushi') && r.caps.includes('Eel Lunch — Sushi'), `${name} Lunch: 图注不对 ${r.caps.join(',')}`);
+        if (tab==='Lunch') ok(r.caps.includes('Katsu Bento Box') && r.caps.includes('Shrimp Teriyaki Bento Box') && r.caps.includes('Sashimi Bento Box') && r.caps.includes('Gyu Don') && r.caps.includes('Salmon Lunch — Sushi') && r.caps.includes('Eel Lunch — Sushi'), `${name} Lunch: 图注不对 ${r.caps.join(',')}`);
       }
       await ctx.close();
     }

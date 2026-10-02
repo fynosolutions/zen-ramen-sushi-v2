@@ -10,7 +10,7 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **转化/CTA（2026-10-01）**：所有「ORDER ONLINE」都指 `content/site.ts` 的 `site.order`（Toast 直订，店家不付第三方佣金）；链接加 `data-cta="位置-动作"` 就会被 `components/CtaTracker.tsx` 记进 GA4（cta_click/click_to_call/get_directions/order_click/reserve_click）；营业状态在 `lib/open-status.ts`（按纽约时间、按常规营业时间，不含节假日）；验收 `GATES-cta.md`，`node seo/check-cta.mjs <mode>` 可对本地或线上（`CTA_BASE=网址`）跑。
 
-**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=网址` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 3 的倍数**（一排排满）。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
+**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=网址` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 3 的倍数**（一排排满）。手机两列时奇数张的最后一张自动变成「左图右字」的整行。**相册也要排满**：电脑 3 列（宽图占 2 格）、手机 2 列，窄图落单时在 `content/media.ts` 给它加 `wideSm:true`（手机上占整行）。进相册的照片桌面色相要和现有木桌一致（≈34°，量法见 `docs/menu-dish-images.md`）；菜单透明图统一用 `python3 scripts/fit-dish.py 输入 输出` 摆进画布。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
 
 **链接/按钮审计（2026-10-02）**：`node seo/check-links.mjs`（`CTA_BASE=网址` 测线上）逐条核对「按钮文字→去向」规则、内部链接可开、`#` 锚点落在对的菜单页签与区块、外部网址只许出现 `VERIFIED` 清单里的（Toast/Resy/外卖三平台/Google/IG，需在真实浏览器核对，curl 会被 Cloudflare 拦）、页签/下拉/地图/视频/相册/表单按钮真的做它写的事。**新增或改任何外部网址，要先在真实浏览器打开核对，再加进 `VERIFIED`。** 菜单 `.food-section` 不要用 `content-visibility:auto`（估高不准会让锚点落偏几千像素）。验收 `GATES-links.md`。
 

@@ -4,11 +4,9 @@ export const gallery = [
  {src:'/images/shot-hero-noodle-lift.webp',alt:'Chopsticks lifting thick noodles from a bowl of grilled chicken noodle soup',label:'NOODLES',wide:false},
  {src:'/images/shot-long-table.webp',alt:'A long communal table set for a group in the Zen dining room',label:'THE SPACE',wide:false},
  {src:'/images/shot-shared-table.webp',alt:'Ramen, sushi rolls and an iced drink shared across one table',label:'AT THE TABLE',wide:false},
- // 以下四张来自店家早先自己的拍摄(Google Drive 4.13–8.18),只裁切+提亮+调暖,不生成。成组插在中间:宽/窄/窄/宽,电脑(3 列)和手机(2 列)都排满
+ // 以下两张来自店家早先自己的拍摄(Google Drive 4.13–8.18),只裁切+提亮+把桌面色相对齐现有木桌(琥珀 ≈34°),不生成。电脑 3 列:宽+窄排满一行;手机 2 列:素拉面那张也占整行(wideSm),不留空格。三轮独立审稿后只留这两张——其余旧拍摄的灰桌面/虚焦融不进现有相册,只做菜单抠图的参考。
  {src:'/images/archive-table-spread.webp',alt:'A full table seen from above: ramen, yaki udon, sushi rolls, gyoza and karaage',label:'THE SPREAD',wide:true},
- {src:'/images/archive-vegetable-ramen.webp',alt:'Vegetable ramen with glazed tofu, bok choy and greens, seen from above',label:'VEGGIE RAMEN',wide:false},
- {src:'/images/archive-karaage.webp',alt:'Karaage fried chicken with sesame seeds and a spicy mayo dip, seen from above',label:'SMALL PLATES',wide:false},
- {src:'/images/archive-sushi-platter.webp',alt:'A sushi and sashimi platter with an orchid',label:'FROM THE SUSHI BAR',wide:true},
+ {src:'/images/archive-vegetable-ramen.webp',alt:'Vegetable ramen with glazed tofu, bok choy and greens, seen from above',label:'VEGGIE RAMEN',wide:false,wideSm:true},
  {src:'/images/shot-sashimi-box.webp',alt:'A wooden box of salmon, tuna and yellowtail sashimi with sushi rolls',label:'SUSHI & SASHIMI',wide:true},
  {src:'/images/shot-hh-martini.webp',alt:'A pink martini on the wooden bar',label:'HAPPY HOUR',wide:false},
  {src:'/images/shot-gallery-lantern.webp',alt:'A paper lantern and hanging banners in the dining room',label:'THE DETAILS',wide:false},

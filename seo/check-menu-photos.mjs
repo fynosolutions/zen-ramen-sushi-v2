@@ -18,7 +18,7 @@ if (mode === 'data') {
     }
   }
   for (const p of src.photos) { ok(guestUsed.has(p.file), `${p.file}: 台账里有但没被使用`); ok(!!p.depicts && !!p.googleTag, `${p.file}: 台账缺 depicts/googleTag`); }
-  ok(guestUsed.size >= 15, `菜品透明图只用了 ${guestUsed.size} 张(<15)`);
+  ok(guestUsed.size >= 18, `菜品透明图只用了 ${guestUsed.size} 张(<18)`);
   console.log(`  featured 分区 ${Object.keys(featured).length} 个,菜品透明图 ${guestUsed.size} 张`); done('MENU-PHOTOS-DATA');
 }
 if (mode === 'render') {
@@ -30,9 +30,9 @@ if (mode === 'render') {
     for (const [name,opt] of [['desktop',{viewport:{width:1440,height:900}}],['phone',{...devices['iPhone 13']}]]) {
       const ctx = await b.newContext(opt); await ctx.addInitScript(()=>{try{sessionStorage.setItem('zen-intro-v2','1')}catch{}}); const p = await ctx.newPage();
       await p.goto(BASE+'/menu/',{waitUntil:'networkidle'});
-      for (const [tab, want, sections] of [['Lunch',6,['lunch--bento-box','lunch--rice-dishes','lunch--sushi-bar']],['Dinner',14,['dinner--appetizers','dinner--sushi-entree','dinner--bento-box','dinner--rice-dishes','dinner--ramen-noodles']]]) {
+      for (const [tab, want, sections] of [['Lunch',6,['lunch--bento-box','lunch--rice-dishes','lunch--sushi-bar']],['Dinner',17,['dinner--appetizers','dinner--sushi-entree','dinner--bento-box','dinner--rice-dishes','dinner--ramen-noodles']]]) {
         await p.getByRole('tab',{name:tab}).click(); await p.waitForTimeout(400);
-        for (const s of sections) { const loc = p.locator(`#${s} .featured-dish img`); const n = await loc.count(); ok(n>0, `${name} ${tab} ${s}: 没有配图`); for (let i=0;i<n;i++){ await loc.nth(i).scrollIntoViewIfNeeded(); await p.waitForTimeout(350); } }
+        for (const s of sections) { const loc = p.locator(`#${s} .featured-dish img`); const n = await loc.count(); ok(n>0, `${name} ${tab} ${s}: 没有配图`); for (let i=0;i<n;i++){ await loc.nth(i).evaluate(e=>e.scrollIntoView({block:'center'})); await p.waitForTimeout(350); /* 图在悬浮时 Playwright 的「元素稳定」检查会超时,直接用 DOM 滚动 */ } }
         await p.waitForTimeout(600);
         const r = await p.evaluate(()=>({imgs:[...document.querySelectorAll('.featured-dish img')].filter(i=>!i.closest('[hidden]')).map(i=>({src:i.getAttribute('src'),ok:i.complete&&i.naturalWidth>=1000})), caps:[...document.querySelectorAll('.featured-dish')].filter(d=>!d.closest('[hidden]')).map(d=>d.querySelector('figcaption strong')).map(e=>e.textContent), sw:document.documentElement.scrollWidth, iw:innerWidth}));
         const guest = r.imgs.filter(i=>i.src.includes('dish-')); ok(guest.length>=want, `${name} ${tab}: 菜品透明图 ${guest.length} 张(<${want})`); ok(r.imgs.every(i=>i.ok), `${name} ${tab}: 有图没加载成功`); ok(r.sw<=r.iw, `${name} ${tab}: 横向溢出`);

@@ -16,9 +16,11 @@ const ricePair = (teri:string,katsu:string,gyu:string):Feat[] => [
   {itemId:gyu, img:'/images/dish-gyu-don.webp', alt:'Marinated sliced beef with bell peppers and onions over rice'},
 ];
 export const featured: Record<string, Feat[]> = {
+  // 拉面三碗:都是俯拍黑碗透明图——Tonkotsu、Chicken Yuzu 来自 09-22 店内实拍(只抠背景),Vegetables Ramen 来自顾客照片参考
   'dinner--ramen-noodles': [
-    {itemId:'dinner-13-2',  img:'/images/shot-dish-tonkotsu.webp'},
-    {itemId:'dinner-13-16', img:'/images/shot-dish-chicken-yuzu.webp'},
+    {itemId:'dinner-13-2',  img:'/images/dish-tonkotsu.webp', alt:'Tonkotsu ramen with braised pork belly, soft eggs, corn and arugula in a black bowl'},
+    {itemId:'dinner-13-16', img:'/images/dish-chicken-yuzu.webp', alt:'Grilled chicken yuzu ramen with soft eggs, lime and bok choy in a black bowl'},
+    {itemId:'dinner-13-11', img:'/images/dish-vegetable-ramen.webp', alt:'Vegetables ramen with glazed tofu, shiitake, bok choy and spinach in a black bowl'},
   ],
   'dinner--appetizers': [
     {itemId:'dinner-0-5',  img:'/images/dish-takoyaki.webp', alt:'Takoyaki with Kewpie mayo and bonito flakes'},

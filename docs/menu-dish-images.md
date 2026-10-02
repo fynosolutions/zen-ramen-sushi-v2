@@ -1,6 +1,6 @@
 # 菜单菜品透明图：怎么来的、prompt 是什么（2026-10-02）
 
-菜单页 featured 区的 18 张 `public/images/dish-*.webp`（15 道原有 + 10-02 补的拉面三碗），不是 AI 凭空画的菜，也不是直接用顾客照片：
+菜单页 featured 区的 19 张 `public/images/dish-*.webp`（15 道原有 + 10-02 补的拉面三碗 + Bento 的刺身便当），不是 AI 凭空画的菜，也不是直接用顾客照片：
 **每张都以同一道菜的一张真实顾客照片（Google Maps）为参考，用 gpt-image-2.5「编辑」生成**，要求「同一道菜，只提升拍摄质量」，输出真透明背景。生成后由毛逐张对照真实参考审过（2026-10-02）。
 
 ## 通用 prompt（每张都用，后面接一句菜的描述）
@@ -31,13 +31,14 @@ DISH: <该菜在参考图里的样子，一句话，见下>
 - edamame：steamed edamame pods in a small dark brown ceramic bowl with a pour spout.
 - zen-don：chirashi-style rice bowl: assorted sashimi (tuna, yellowtail, white fish, salmon), sweet egg omelet, crab stick, shredded carrot, pickled ginger and wasabi over sushi rice, in a dark speckled blue bowl.
 - salmon-don：salmon don: chunks of salmon sashimi with bonito flakes, pickled ginger, seaweed salad and mixed greens over rice, in a dark speckled blue bowl.
+- bento-sashimi（10-02，参考=毛提供的 Google 照片）：与通用 prompt 相同，但相机句改为「CAMERA (change from the reference): re-photograph the box from a higher position, a high three-quarter overhead view looking down at about 60 degrees…」，末尾加「IGNORE any user-interface overlay, button, icon or map thumbnail in the reference」；DISH：a Japanese sashimi bento box with a red-orange lacquer inside and a black base, divided into compartments: sashimi (tuna, salmon, white fish) with shiso leaf, shredded carrot, cucumber and an orchid garnish (left); a sesame-sprinkled sushi rice mound (top middle); a small compartment of pale yellow pickled salad (centre); a cluster of exactly six California roll pieces (top right); exactly four pieces of fried chicken karaage (bottom right).（⚠️ 模型没守住「四块鸡」，成图有 6 块，比原图可见的多）
 - salmon-lover：salmon set on a long black slate-style tray: salmon sashimi slices, salmon nigiri, and a spicy salmon roll cut into pieces.
 - vegetable-ramen（10-02 补，参考=顾客照片，Google 误标为 Miso Soup）：a vegetable ramen in a black round bowl, seen from above: glazed tofu cubes with a red-brown glaze, whole shiitake mushrooms, baby bok choy, spinach leaves, dark kikurage wood-ear strips and noodles, and micro-green sprouts.
 - tonkotsu、chicken-yuzu（10-02，参考=店里 09-22 自己的实拍，只抠背景统一风格）：tonkotsu ramen in a black ceramic bowl, seen from above: two slices of braised pork belly, two halved soft-boiled eggs, corn, arugula and chopped scallions, kikurage and noodles in broth. / grilled chicken yuzu ramen in a black ceramic bowl, seen from above: sliced grilled chicken breast, two halved soft-boiled eggs, a lime slice, bok choy and scallions in a clear light broth.（这三碗 FRAMING 句改为 bowl 版）
 
 ## 一个分区只有 2 张图时补第三张「不同形式」的（毛 10-02）
 - 拉面：补 Vegetables Ramen（素拉面，参考顾客照片）；并把 Tonkotsu / Chicken Yuzu 的店内实拍也做成同款俯拍黑碗透明图，三碗风格统一。
-- Bento Box：**没找到**。Google 上 130+ 张里没有干净的 Sushi / Sashimi 便当单品照（只有 3 张同一张大桌面的多菜便当，盒子被裁掉、旁边混着别的菜，对不上菜单上的某一条）。需要店里拍一个 C. Sushi 或 D. Sashimi 便当。
+- Bento Box：Google 上没有干净的单品照，**毛 10-02 自己给了一张刺身便当照片**，补成第三张（挂在 D. Sashimi 上——照片里是刺身+饭团+加州卷+炸鸡，没有握寿司；若想挂 C. Sushi 告诉我）。视角从低角度侧拍改成高位 3/4 俯视（和另外两个便当一致），截图里的界面图标/地图缩略图先用 OpenCV 去掉。
 
 ## 参数与成本
 gpt-image-2.5-sunburst（质量优先档）· 编辑接口 + `background=transparent` · `-q high` · 1024×1024 · 15 张 ≈ $1.28，重做 5 张 ≈ $0.43。

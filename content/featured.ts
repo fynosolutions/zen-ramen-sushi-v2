@@ -6,9 +6,10 @@
 //    replace them with the restaurant's own shots when available.
 // A photo is only shown on the item it depicts; `label` is for one photo that fits two menu entries with the same price.
 type Feat = {itemId:string; img:string; badge?:string; label?:string; alt?:string};
-const bentoPair = (shrimp:string,katsu:string):Feat[] => [
+const bentoTrio = (shrimp:string,katsu:string,sashimi:string):Feat[] => [
   {itemId:shrimp, img:'/images/dish-bento-shrimp-teriyaki.webp', alt:'Shrimp teriyaki bento box with sushi rolls, rice and shumai'},
   {itemId:katsu, img:'/images/dish-bento-katsu.webp', label:'Katsu Bento Box', alt:'Katsu bento box with rice, California roll and shumai'},
+  {itemId:sashimi, img:'/images/dish-bento-sashimi.webp', alt:'Sashimi bento box with tuna, salmon and white fish sashimi, rice, California rolls and fried chicken'},
 ];
 const ricePair = (teri:string,katsu:string,gyu:string):Feat[] => [
   {itemId:teri, img:'/images/dish-chicken-teriyaki.webp', alt:'Grilled chicken teriyaki over white rice with broccoli'},
@@ -35,9 +36,9 @@ export const featured: Record<string, Feat[]> = {
     {itemId:'dinner-7-5', img:'/images/dish-salmon-don.webp', alt:'Salmon don with bonito flakes and greens'},
     {itemId:'dinner-7-7', img:'/images/dish-salmon-lover.webp', alt:'Salmon sushi, sashimi and a spicy salmon roll on a black tray'},
   ],
-  'dinner--bento-box': bentoPair('dinner-10-8','dinner-10-4'),
+  'dinner--bento-box': bentoTrio('dinner-10-8','dinner-10-4','dinner-10-3'),
   'dinner--rice-dishes': ricePair('dinner-11-2','dinner-11-5','dinner-11-4'),
-  'lunch--bento-box': bentoPair('lunch-2-8','lunch-2-4'),
+  'lunch--bento-box': bentoTrio('lunch-2-8','lunch-2-4','lunch-2-3'),
   'lunch--rice-dishes': ricePair('lunch-1-2','lunch-1-5','lunch-1-4'),
   'lunch--sushi-bar': [
     {itemId:'lunch-0-1', img:'/images/dish-lunch-sashimi.webp', alt:'Sashimi plate with sushi rice, tuna tartare, salmon, yellowtail and tuna'},

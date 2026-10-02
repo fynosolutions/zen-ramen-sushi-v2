@@ -74,7 +74,8 @@
     {
       "file": "dish-gyoza.webp",
       "items": [
-        "dinner-0-7"
+        "dinner-0-7",
+        "happy-hour-0-5"
       ],
       "depicts": "Pan fried pork gyoza (6)",
       "googleTag": "Food & drink",
@@ -92,7 +93,8 @@
     {
       "file": "dish-shumai.webp",
       "items": [
-        "dinner-0-6"
+        "dinner-0-6",
+        "happy-hour-0-3"
       ],
       "depicts": "Fried shrimp shumai",
       "googleTag": "Food & drink",
@@ -110,7 +112,8 @@
     {
       "file": "dish-edamame.webp",
       "items": [
-        "dinner-0-1"
+        "dinner-0-1",
+        "happy-hour-0-2"
       ],
       "depicts": "Reg. Edamame",
       "googleTag": "Reg Edamame",
@@ -162,15 +165,6 @@
       "reference": "Restaurant shoot 2026-09-22"
     },
     {
-      "file": "dish-vegetable-ramen.webp",
-      "items": [
-        "dinner-13-11"
-      ],
-      "depicts": "Vegetables Ramen (glazed tofu, shiitake, bok choy, spinach, kikurage, sprouts)",
-      "googleTag": "Miso Soup (Google's tag is wrong: the photo shows vegetable ramen)",
-      "reference": "Google Maps customer photo"
-    },
-    {
       "file": "dish-bento-sashimi.webp",
       "items": [
         "lunch-2-3",
@@ -179,6 +173,87 @@
       "depicts": "Sashimi bento (tuna, salmon and white-fish sashimi with shiso, carrot, cucumber and orchid; sesame rice ball; pickled salad; California rolls; fried chicken). Shown on D. Sashimi (the photo has sashimi, not nigiri). Camera raised from low side view to a high three-quarter view.",
       "googleTag": "n/a (photo supplied by Jaye from Google Maps, 2026-10-02)",
       "reference": "Google Maps customer photo, supplied by Jaye 2026-10-02"
+    },
+    {
+      "file": "dish-vegetables-ramen.webp",
+      "items": [
+        "dinner-13-11"
+      ],
+      "depicts": "Vegetables Ramen (glazed tofu, bok choy, spinach, shiitake, kikurage, sprouts)",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 5.11, DSC07861.JPG)"
+    },
+    {
+      "file": "dish-spicy-beef-ramen.webp",
+      "items": [
+        "dinner-13-5"
+      ],
+      "depicts": "Spicy Beef Ramen (chashu beef, arugula, shredded red hot pepper, corn; spicy orange broth). Bowl rim completed.",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 6.23, DSC08565.JPG)"
+    },
+    {
+      "file": "dish-tomato-seafood-ramen.webp",
+      "items": [
+        "dinner-13-13"
+      ],
+      "depicts": "Tomato Seafood Ramen (red tomato broth, shrimp, squid, scallops, plain bean sprouts, wakame; no red pepper threads/takana, so not a \"Spicy\" variant). Ladle removed. Name inferred from the menu description — confirm with the restaurant.",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 5.11, DSC07852.JPG)"
+    },
+    {
+      "file": "dish-chicken-yaki-udon.webp",
+      "items": [
+        "dinner-13-21"
+      ],
+      "depicts": "Chicken Yaki Udon (Dry). Camera raised from side view.",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 5.11, DSC07906.JPG)"
+    },
+    {
+      "file": "dish-karaage.webp",
+      "items": [
+        "dinner-0-8"
+      ],
+      "depicts": "Karaage with Sesame Seed, spicy mayo dip",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 4.13, DSC07710.JPG)"
+    },
+    {
+      "file": "dish-crispy-wings.webp",
+      "items": [
+        "dinner-0-10"
+      ],
+      "depicts": "Crispy Wings on lettuce with jalapeño",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 7.21, DSC08614.JPG)"
+    },
+    {
+      "file": "dish-69-shrimp.webp",
+      "items": [
+        "dinner-0-11"
+      ],
+      "depicts": "69 Shrimp (5 pcs): five fried shrimp pops on sticks",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 7.21, DSC08612.JPG)"
+    },
+    {
+      "file": "dish-salmon-lunch.webp",
+      "items": [
+        "lunch-0-5"
+      ],
+      "depicts": "Salmon Lunch — Sushi: 4 salmon nigiri + 1 salmon roll (6 pcs)",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 4.13, DSC07730.JPG)"
+    },
+    {
+      "file": "dish-eel-lunch.webp",
+      "items": [
+        "lunch-0-9"
+      ],
+      "depicts": "Eel Lunch — Sushi: 4 eel nigiri + 1 eel roll (6 pcs)",
+      "googleTag": "n/a (restaurant photo)",
+      "reference": "Restaurant's own earlier shoot (Google Drive 'Zen Ramen & Sushi', folder 4.13, DSC07732.JPG)"
     }
   ]
 }

@@ -1,6 +1,6 @@
 # 菜单菜品透明图：怎么来的、prompt 是什么（2026-10-02）
 
-菜单页 featured 区的 19 张 `public/images/dish-*.webp`（15 道原有 + 10-02 补的拉面三碗 + Bento 的刺身便当），不是 AI 凭空画的菜，也不是直接用顾客照片：
+菜单页 featured 区的 27 张 `public/images/dish-*.webp`（15 道原有 + 10-02 补的拉面三碗 + Bento 的刺身便当），不是 AI 凭空画的菜，也不是直接用顾客照片：
 **每张都以同一道菜的一张真实顾客照片（Google Maps）为参考，用 gpt-image-2.5「编辑」生成**，要求「同一道菜，只提升拍摄质量」，输出真透明背景。生成后由毛逐张对照真实参考审过（2026-10-02）。
 
 ## 通用 prompt（每张都用，后面接一句菜的描述）
@@ -46,3 +46,13 @@ gpt-image-2.5-sunburst（质量优先档）· 编辑接口 + `background=transpa
 
 ## 验收
 `node seo/check-menu-photos.mjs data|render` · `node seo/check-menu-motion.mjs`（动效）。
+
+
+## 2026-10-02 补:店家自己的旧拍摄(Google Drive)
+Google Drive「Zen Ramen & Sushi」(5 次拍摄 4.13–8.18,594 张照片 + 315 条视频,Sony A7R5,店家自己请人拍的 → 无版权顾虑)。全部看过,精选 63 张存在飞书 `024 Zen Ramen Penn/图片/1002 店家旧拍摄精选(Google Drive)`(token `E2iVfFs0Ql9FSqdfSsuc1C5jnHc`)与 `fyno-proposals/clients/zenramen-midtown/drive-shoot-picks-2026-10-02/`(含 README 索引、每张的 Drive 原片链接、全量缩略总览)。
+- **菜单透明图(同一套 prompt,参考=店家自己的照片)新增 8 张 + 替换 1 张**:Spicy Beef Ramen、Tomato Seafood Ramen(去掉了碗里的木勺)、Chicken Yaki Udon(改成正俯拍,和一排俯拍拉面碗统一)、Karaage、Crispy Wings、69 Shrimp、Salmon Lunch — Sushi、Eel Lunch — Sushi;Vegetables Ramen 由「顾客照片参考」换成「店家照片参考」(`dish-vegetables-ramen.webp`,旧 `dish-vegetable-ramen.webp` 已删)。
+- **相册加 4 张场景图** `archive-*.webp`(整桌俯拍 THE SPREAD / 素拉面俯拍 VEGGIE RAMEN / 唐扬俯拍 SMALL PLATES / 寿司刺身拼盘 FROM THE SUSHI BAR):只裁切 + 提亮 + **把灰色桌面调成暖木色**(对低饱和像素乘 R×1.20、B×0.66,对有颜色的食物只轻微调暖),与现有木桌暖调统一,不生成。成组插在相册中间,顺序 宽/窄/窄/宽,电脑 3 列与手机 2 列都排满(窄图必须成对出现,否则手机上会空一格)。试过又弃用的:炒乌冬(上半截是虚的砖墙)、鸡翅(过饱和、被裁)、便当(黑盒子占一半)、心形卷特写(发虚)。
+- **一排必须排满**:每个有配图的分区,图的张数必须是 3 的倍数(`check-menu-photos.mjs data` 强制)。Rainbow / Crazy Yellowtail / Sweetheart 三个卷的透明图已做好但**没上线**(各自分区只有 1 张,会留一大块空白);等同分区再凑 2 张能对上菜名的卷再上。
+- Tomato Seafood Ramen 的菜名是按菜单描述推断的(红汤、普通豆芽、无辣椒丝),待店里确认。
+- **统一大小(独立审稿后)**:透明图不再按「长边 84%」,而是按**外接框面积占画布 60%、长边不超过 90%**缩放——长盘子(煎饺、鸡翅、便当)不再显得比圆碗小一圈。重新处理要从原始 1024 PNG 做(母版在 `fyno-proposals/clients/zenramen-midtown/menu-dish-cutouts-2026-10-01/png/` 与本次会话的生成目录),不要拿 webp 二次缩放。
+- 蔬菜煎饺绿色过艳:只对绿色占优的像素降饱和 22%。

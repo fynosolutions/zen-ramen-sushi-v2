@@ -17,11 +17,14 @@ const ricePair = (teri:string,katsu:string,gyu:string):Feat[] => [
   {itemId:gyu, img:'/images/dish-gyu-don.webp', alt:'Marinated sliced beef with bell peppers and onions over rice'},
 ];
 export const featured: Record<string, Feat[]> = {
-  // 拉面三碗:都是俯拍黑碗透明图——Tonkotsu、Chicken Yuzu 来自 09-22 店内实拍(只抠背景),Vegetables Ramen 来自顾客照片参考
+  // 拉面:俯拍黑碗透明图。Tonkotsu / Chicken Yuzu 来自 09-22 店内实拍;其余来自店家早先自己的拍摄(Google Drive 4.13–8.18)
   'dinner--ramen-noodles': [
     {itemId:'dinner-13-2',  img:'/images/dish-tonkotsu.webp', alt:'Tonkotsu ramen with braised pork belly, soft eggs, corn and arugula in a black bowl'},
     {itemId:'dinner-13-16', img:'/images/dish-chicken-yuzu.webp', alt:'Grilled chicken yuzu ramen with soft eggs, lime and bok choy in a black bowl'},
-    {itemId:'dinner-13-11', img:'/images/dish-vegetable-ramen.webp', alt:'Vegetables ramen with glazed tofu, shiitake, bok choy and spinach in a black bowl'},
+    {itemId:'dinner-13-11', img:'/images/dish-vegetables-ramen.webp', alt:'Vegetables ramen with glazed tofu, shiitake, bok choy and spinach in a black bowl'},
+    {itemId:'dinner-13-5',  img:'/images/dish-spicy-beef-ramen.webp', alt:'Spicy beef ramen with roasted chashu beef, arugula and shredded red pepper'},
+    {itemId:'dinner-13-13', img:'/images/dish-tomato-seafood-ramen.webp', alt:'Tomato seafood ramen with shrimp, squid, scallops and bean sprouts'},
+    {itemId:'dinner-13-21', img:'/images/dish-chicken-yaki-udon.webp', alt:'Chicken yaki udon with bell pepper, onion and broccoli'},
   ],
   'dinner--appetizers': [
     {itemId:'dinner-0-5',  img:'/images/dish-takoyaki.webp', alt:'Takoyaki with Kewpie mayo and bonito flakes'},
@@ -30,6 +33,9 @@ export const featured: Record<string, Feat[]> = {
     {itemId:'dinner-0-6',  img:'/images/dish-shumai.webp', alt:'Fried shrimp shumai'},
     {itemId:'dinner-0-13', img:'/images/dish-ika-yaki.webp', alt:'Grilled whole squid with teriyaki glaze and a lemon wedge'},
     {itemId:'dinner-0-1',  img:'/images/dish-edamame.webp', alt:'A bowl of steamed edamame'},
+    {itemId:'dinner-0-8',  img:'/images/dish-karaage.webp', alt:'Karaage fried chicken with sesame seeds and spicy mayo dip'},
+    {itemId:'dinner-0-10', img:'/images/dish-crispy-wings.webp', alt:'Crispy chicken wings on lettuce with jalapeño'},
+    {itemId:'dinner-0-11', img:'/images/dish-69-shrimp.webp', alt:'Five deep fried shrimp pops on lettuce'},
   ],
   'dinner--sushi-entree': [
     {itemId:'dinner-7-4', img:'/images/dish-zen-don.webp', alt:'Assorted fish over sushi rice'},
@@ -40,7 +46,15 @@ export const featured: Record<string, Feat[]> = {
   'dinner--rice-dishes': ricePair('dinner-11-2','dinner-11-5','dinner-11-4'),
   'lunch--bento-box': bentoTrio('lunch-2-8','lunch-2-4','lunch-2-3'),
   'lunch--rice-dishes': ricePair('lunch-1-2','lunch-1-5','lunch-1-4'),
+  // Happy Hour 的同名小食沿用晚市那三张(同一道菜;HH 份量店里未另行确认)
+  'happy-hour--appetizers': [
+    {itemId:'happy-hour-0-2', img:'/images/dish-edamame.webp', alt:'A bowl of steamed edamame'},
+    {itemId:'happy-hour-0-5', img:'/images/dish-gyoza.webp', alt:'Pan fried pork gyoza with dipping sauce'},
+    {itemId:'happy-hour-0-3', img:'/images/dish-shumai.webp', alt:'Fried shrimp shumai'},
+  ],
   'lunch--sushi-bar': [
     {itemId:'lunch-0-1', img:'/images/dish-lunch-sashimi.webp', alt:'Sashimi plate with sushi rice, tuna tartare, salmon, yellowtail and tuna'},
+    {itemId:'lunch-0-5', img:'/images/dish-salmon-lunch.webp', alt:'Salmon lunch: four salmon nigiri and a salmon roll'},
+    {itemId:'lunch-0-9', img:'/images/dish-eel-lunch.webp', alt:'Eel lunch: four eel nigiri and an eel roll'},
   ],
 };

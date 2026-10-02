@@ -72,11 +72,12 @@ try {
     done('CTA-HERO-DESKTOP');
   }
   if (mode === 'hero-mobile') {
-    for (const [w,h,needReserve] of [[390,844,true],[360,740,true],[390,664,false]]) {   // 390×664 = 真 iPhone 13 Safari 可视高度,只强制 ORDER
+    for (const [w,h,needReserve] of [[390,844,false],[360,740,false],[390,664,false]]) {   // 390×664 = 真 iPhone 13 Safari 可视高度,只强制 ORDER
       const ctx = await b.newContext({...devices['iPhone 13'],viewport:{width:w,height:h}}); await skipIntro(ctx); const p = await ctx.newPage();
       await p.goto(BASE+'/',{waitUntil:'networkidle'}); await p.waitForTimeout(600);
-      const r = await p.evaluate(() => { const bar=document.querySelector('.mobile-actionbar').getBoundingClientRect(); const img=document.querySelector('.hero-photo img').getBoundingClientRect(); const o=document.querySelector('.hero [data-cta="hero-order"]').getBoundingClientRect(); const rs=document.querySelector('.hero [data-cta="hero-reserve"]').getBoundingClientRect(); const top=Math.max(img.top,0), bot=Math.min(img.bottom,bar.top); return {barTop:bar.top,imgVisible:Math.max(0,bot-top),orderBottom:o.bottom,orderTop:o.top,reserveBottom:rs.bottom,orderH:o.height}; });
-      ok(r.imgVisible>=140,`${w}x${h}: 首屏能看到的菜品照片只有 ${Math.round(r.imgVisible)}px(<140)`);
+      const r = await p.evaluate(() => { const bar=document.querySelector('.mobile-actionbar').getBoundingClientRect(); const img=document.querySelector('.hero-photo img').getBoundingClientRect(); const o=document.querySelector('.hero [data-cta="hero-order"]').getBoundingClientRect(); const rs=document.querySelector('.hero [data-cta="hero-reserve"]').getBoundingClientRect(); /* 手机上 hero 的 RESERVE 已隐藏(底部栏有) */ const top=Math.max(img.top,0), bot=Math.min(img.bottom,bar.top); return {barTop:bar.top,imgVisible:Math.max(0,bot-top),orderBottom:o.bottom,orderTop:o.top,reserveBottom:rs.bottom,orderH:o.height}; });
+      ok(r.imgVisible>=180,`${w}x${h}: 首屏能看到的菜品照片只有 ${Math.round(r.imgVisible)}px(<180)`);
+      const barReserve = await p.evaluate(()=>{const a=document.querySelector('.mobile-actionbar [data-cta="bar-reserve"]');const r=a.getBoundingClientRect();return r.height>=44&&r.bottom<=innerHeight+1&&/resy\.com/.test(a.href);}); ok(barReserve,`${w}x${h}: 首屏底部栏没有可点的 RESERVE`);
       ok(r.orderBottom<=r.barTop,`${w}x${h}: ORDER ONLINE 被底栏挡住(bottom ${Math.round(r.orderBottom)} > 底栏 ${Math.round(r.barTop)})`);
       if(needReserve) ok(r.reserveBottom<=r.barTop,`${w}x${h}: RESERVE 被底栏挡住`);
       ok(r.orderH>=44,`${w}x${h}: ORDER 按钮高度 <44px`);

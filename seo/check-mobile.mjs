@@ -21,7 +21,8 @@ const settle = (p,ms=350) => p.waitForTimeout(ms);
 // 慢慢滚到底,触发懒加载
 const scrollAll = async p => { const h = await p.evaluate(()=>document.documentElement.scrollHeight), vh = await p.evaluate(()=>innerHeight); for (let y=0;y<h;y+=Math.round(vh*0.8)) { await p.evaluate(y=>window.scrollTo(0,y),y); await p.waitForTimeout(60); } await p.evaluate(()=>window.scrollTo(0,0)); await p.waitForTimeout(300); };
 // 横向溢出:文档宽度,以及没被「可横滑容器」裁住却超出屏幕的元素
-const overflow = p => p.evaluate(()=>{ const iw=innerWidth, bad=[]; const clipped=e=>{ for(let a=e.parentElement;a&&a!==document.body;a=a.parentElement){const o=getComputedStyle(a).overflowX; if(o==='auto'||o==='scroll'||o==='hidden'||o==='clip') return true;} return false; };
+/* 屏幕宽度用 screen.width(设备本身的宽度),不用 innerWidth:手机模式下内容一旦超宽,浏览器会把 innerWidth 跟着撑大,两边一比永远「没溢出」(2026-10-02:360 宽超出 6px 没被拦住,是另一条测试发现的) */
+const overflow = p => p.evaluate(()=>{ const iw=Math.min(innerWidth, screen.width||innerWidth), bad=[]; const clipped=e=>{ for(let a=e.parentElement;a&&a!==document.body;a=a.parentElement){const o=getComputedStyle(a).overflowX; if(o==='auto'||o==='scroll'||o==='hidden'||o==='clip') return true;} return false; };
   for(const e of document.querySelectorAll('body *')){ const cs=getComputedStyle(e); if(cs.display==='none'||cs.visibility==='hidden'||e.closest('[hidden]')) continue; const r=e.getBoundingClientRect(); if(r.width<=0||r.height<=0) continue; if(r.right>iw+1&&!clipped(e)&&getComputedStyle(e).position!=='fixed'){ bad.push((e.className||e.tagName).toString().slice(0,40)+':'+Math.round(r.right)); if(bad.length>=3) break; } }
   return {sw:document.documentElement.scrollWidth,iw,bad}; });
 // 可见图片:加载成功、不糊(原图宽 ≥ 显示宽)、有 alt

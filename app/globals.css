@@ -223,3 +223,17 @@ button[aria-expanded="true"] .ico-down{transform:rotate(180deg)}
 /* 首页「Something for every craving.」标题和下面的按钮贴在一起 */
 .menu-preview .section-actions{margin-top:22px}
 }
+
+/* ===== 手机截图冷审第 2 轮后的修正 2026-10-02 ===== */
+/* 电话号码永远不拆行(法律页里「(646)」和「870-7509」被拆成两行) */
+a[href^="tel:"]{white-space:nowrap}
+@media(max-width:650px){
+/* Happy Hour 的 $6.49 旁边那句说明被挤成四行 → 放到价格下面 */
+.hh-price{flex-direction:column;align-items:flex-start;gap:4px}
+/* 车站页的信息卡:两列时「miles」「PM」单独掉一行 → 手机上一列 */
+.scene-facts{grid-template-columns:1fr;gap:14px}
+/* 最小字号:手机上不低于 11px(原来有 8–10px 的) */
+/* 首屏那行小标题(.h1-kicker)不在内:它是一行不换行的大写字,调到 11px 在 360 宽的手机上会超出屏幕 6px(测试拦下来的) */
+.ig-plays,.ig-link,.hero-stamp span,.footer-bottom,.gallery-caption,.map-district,.map-switch button{font-size:11px}
+.featured-badge,.map-guide-caption{font-size:10px}
+}

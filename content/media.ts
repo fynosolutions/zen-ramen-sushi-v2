@@ -1,7 +1,7 @@
 export const gallery = [
  {src:'/images/shot-gallery-ramen-wide.webp',alt:'Grilled chicken ramen with a soft egg, bok choy and lime',label:'RAMEN',wide:true},
  {src:'/images/shot-gallery-sushi-plate.webp',alt:'A seared special roll with spicy mayo, eel sauce and an orchid',label:'SUSHI',wide:false},
- {src:'/images/shot-hero-noodle-lift.webp',alt:'Chopsticks lifting thick noodles from a bowl of grilled chicken noodle soup',label:'NOODLES',wide:false},
+ {src:'/images/shot-hero-noodle-chopsticks.webp',alt:'Chopsticks lifting thick noodles from a bowl of grilled chicken noodle soup',label:'NOODLES',wide:false},
  {src:'/images/shot-long-table.webp',alt:'A long communal table set for a group in the Zen dining room',label:'THE SPACE',wide:false},
  {src:'/images/shot-shared-table.webp',alt:'Ramen, sushi rolls and an iced drink shared across one table',label:'AT THE TABLE',wide:false},
  // 以下两张来自店家早先自己的拍摄(Google Drive 4.13–8.18),只裁切+提亮+把桌面色相对齐现有木桌(琥珀 ≈34°),不生成。电脑 3 列:宽+窄排满一行;手机 2 列:素拉面那张也占整行(wideSm),不留空格。三轮独立审稿后只留这两张——其余旧拍摄的灰桌面/虚焦融不进现有相册,只做菜单抠图的参考。

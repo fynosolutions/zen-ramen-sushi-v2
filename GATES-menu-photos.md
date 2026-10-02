@@ -12,7 +12,7 @@ Scope: 午市/晚市菜单页的 19 张菜品图 = 以真实顾客照片为参�
 - [x] M2: 渲染对:电脑与手机上,午市页有 ≥7 张、晚市页有 ≥18 张图真的显示(已加载、宽度≥1000)、图注正确(Katsu Bento Box / I. Shrimp Teriyaki / D. Sashimi (5 pcs) / Gyu Don)、无横向溢出
   CHECK: node seo/check-menu-photos.mjs render
   EXPECT: MENU-PHOTOS-RENDER PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=5588494784dbd6f435505b27e4ce51b53b8d0e43f395d46a395b598d958890a5; output-bytes=493
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=534b2089f6166a6aee9dad380aef3665bcc96fada1eb5de2df493492bfc4b619; output-bytes=493
 
 - [x] M3: 全站图片亮度闸通过(平均亮度≥100、近黑≤18%)
   CHECK: npm run photos 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>console.log(s.includes('PHOTO GATE PASS')?'MENU PHOTO GATE PASS':'PHOTO GATE FAIL\n'+s))"
@@ -34,3 +34,5 @@ Scope: 午市/晚市菜单页的 19 张菜品图 = 以真实顾客照片为参�
 
 - [x] M7: 上线后回读:线上菜单页菜品图与动效检查通过(渲染+动效),肉眼看午市/晚市几排
   EVIDENCE: 2026-10-02 对线上跑 check-menu-motion.mjs=PASS(悬浮只在可见时、移上放大 7%、不盖图注、版面不跳、减少动态效果全停、触屏无悬停、ORDER ONLINE 不被挡);负向对照:线上旧版 FAIL;注意「减少动态效果」另有全局 !important 兜底,单去掉本规则的包裹不会变红
+
+<!-- 2026-10-02 PR #8 合并后线上复测:render PASS(午市≥7/晚市≥18,图注含 D. Sashimi (5 pcs))、motion PASS;午市 Bento 三张(I. Shrimp Teriyaki / Katsu Bento Box / D. Sashimi (5 pcs))肉眼复核。 -->

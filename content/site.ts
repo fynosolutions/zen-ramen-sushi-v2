@@ -4,6 +4,7 @@ export const site = {
   reserve: 'https://resy.com/cities/new-york-ny/venues/zen-ramen-and-sushi',
   order: 'https://www.toasttab.com/local/order/zen-ramen-sushi-takeout-150-w-36th-street',   // 直订(Toast):店家不付第三方平台佣金,所有「ORDER ONLINE」都指这里
   directions: 'https://www.google.com/maps/dir/?api=1&destination=Zen+Ramen+%26+Sushi+150+W+36th+St+New+York+NY+10018',
+  reviews: 'https://www.google.com/maps?cid=2710011137368693845',   // 店家的 Google 地图主页(评分与评论);cid=0x259be4c56c369c55 的十进制,2026-10-02 实测打开 Zen Ramen & Sushi 地点页
   map: 'https://maps.google.com/maps?q=Zen%20Ramen%20%26%20Sushi%2C%20150%20W%2036th%20St%2C%20New%20York%20NY%2010018&t=&z=15&ie=UTF8&iwloc=B&output=embed',
   delivery: [
     {name:'ORDER DIRECT',href:'https://www.toasttab.com/local/order/zen-ramen-sushi-takeout-150-w-36th-street'},

@@ -42,7 +42,7 @@ Scope: 把「订餐/订位/打电话/导航」做成全站显眼、可测量的 
 - [x] C8: 不拖慢:JS+CSS 总量 ≤ 改前基线 843,358 B 的 105%
   CHECK: node seo/check-cta.mjs perf
   EXPECT: CTA-PERF PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=41231e0ec63af8a684eac5b6a66251c2e6117544c334158bb9bd2c9b5c6532fc; output-bytes=63
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-sushi-v2; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=af1bce52d5c2a88bdafd36f5713c92fce6e73aff66bc08c691870d7f7c19382d; output-bytes=63
 
 - [x] C9: 旧有 SEO 验收门全部仍绿(301 映射/标题描述/alt/钱页)
   CHECK: npm run seo 2>&1 | node -e "let s='';process.stdin.on('data',d=>s+=d).on('end',()=>{const ok=['MAPPING PASS','META PASS','ALT PASS','PAGES PASS'].every(k=>s.includes(k));console.log(ok?'SEO GATES PASS':'SEO GATES FAIL\n'+s)})"

@@ -10,6 +10,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **转化/CTA（2026-10-01）**：所有「ORDER ONLINE」都指 `content/site.ts` 的 `site.order`（Toast 直订，店家不付第三方佣金）；链接加 `data-cta="位置-动作"` 就会被 `components/CtaTracker.tsx` 记进 GA4（cta_click/click_to_call/get_directions/order_click/reserve_click）；营业状态在 `lib/open-status.ts`（按纽约时间、按常规营业时间，不含节假日）；验收 `GATES-cta.md`，`node seo/check-cta.mjs <mode>` 可对本地或线上（`CTA_BASE=网址`）跑。
 
+**链接/按钮审计（2026-10-02）**：`node seo/check-links.mjs`（`CTA_BASE=网址` 测线上）逐条核对「按钮文字→去向」规则、内部链接可开、`#` 锚点落在对的菜单页签与区块、外部网址只许出现 `VERIFIED` 清单里的（Toast/Resy/外卖三平台/Google/IG，需在真实浏览器核对，curl 会被 Cloudflare 拦）、页签/下拉/地图/视频/相册/表单按钮真的做它写的事。**新增或改任何外部网址，要先在真实浏览器打开核对，再加进 `VERIFIED`。** 菜单 `.food-section` 不要用 `content-visibility:auto`（估高不准会让锚点落偏几千像素）。验收 `GATES-links.md`。
+
 **协作**：`main` 已上锁（2026-09-28）——非管理员只能走 PR，需 1 个批准 + CI `build-and-seo` 绿灯；管理员（jayemaoFYNO、mingzhoujin）可直推。设计同事 wzh152 按 `CONTRIBUTING.md` 走 PR。
 
 ## 红线（违反 = 事故）

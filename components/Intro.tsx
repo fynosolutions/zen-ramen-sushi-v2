@@ -1,4 +1,5 @@
 'use client';
+import Ico from '@/components/Ico';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
@@ -48,7 +49,7 @@ export default function Intro() {
   }, [active]);
   if (!active) return null;
   return <div ref={root} className="intro" role="dialog" aria-modal="true" aria-label="Welcome to Zen Ramen and Sushi">
-    <button className="intro-skip" onClick={() => finish.current()}>SKIP INTRO ↗</button>
+    <button className="intro-skip" onClick={() => finish.current()}>SKIP INTRO <Ico n="ne"/></button>
     <div className="intro-brand"><img src="/brand/logo.jpg" alt="Zen Ramen and Sushi" width="240" height="240" /><div className="intro-tiles" aria-hidden="true">{Array.from({length:48},(_,i)=><span className="intro-tile" key={i}/>)}</div></div>
     <p className="intro-caption">AUTHENTIC RAMEN & SUSHI.</p><span className="intro-loading" role="status">LOADING</span>
   </div>;

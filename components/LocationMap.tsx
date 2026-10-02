@@ -1,4 +1,5 @@
 'use client';
+import Ico from '@/components/Ico';
 
 import {useState} from 'react';
 import {site} from '@/content/site';
@@ -65,6 +66,6 @@ export default function LocationMap(){
           <span className="map-guide-caption">AREA GUIDE · NOT TO SCALE</span>
         </div>}
     </div>
-    <a href={site.directions} className="map-note" target="_blank" rel="noopener noreferrer">SEE YOU ON 36TH STREET <span aria-hidden="true">↗</span></a>
+    <a href={site.directions} className="map-note" target="_blank" rel="noopener noreferrer">SEE YOU ON 36TH STREET <span aria-hidden="true"><Ico n="ne"/></span></a>
   </div>;
 }

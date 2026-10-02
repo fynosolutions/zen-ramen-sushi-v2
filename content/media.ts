@@ -13,5 +13,7 @@ export const gallery = [
  {src:'/images/shot-dining-room-bright.webp',alt:'A bright dining room with a large shared table by the windows',label:'THE DINING ROOM',wide:true},
 ];
 // 靳晓宇 0925 横版混剪(毛 09-26 过审),720p H.264 Main L4.0 faststart;换片务必换文件名
-export const homeFilm = {src:'/video/zen-film-0925.mp4',poster:'/video/zen-film-0925.webp',title:'A look inside Zen Ramen & Sushi'};
+/* srcMobile:手机专用的轻量版(把 16:9 居中裁成手机上实际显示的 4:5,576×720、约 650kbps、5.4MB;原片 13MB)。换片时两个文件都要换:
+   ffmpeg -i 原片.mp4 -vf crop=576:720 -c:v libx264 -profile:v main -level 3.1 -preset slow -crf 27 -maxrate 900k -bufsize 1800k -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart 原片-m.mp4 */
+export const homeFilm = {src:'/video/zen-film-0925.mp4',srcMobile:'/video/zen-film-0925-m.mp4',poster:'/video/zen-film-0925.webp',title:'A look inside Zen Ramen & Sushi'};
 export const galleryVideo: {src:string;poster:string;title:string}|null = homeFilm;

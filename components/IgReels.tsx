@@ -1,4 +1,5 @@
 'use client';
+import Ico from '@/components/Ico';
 import { useEffect, useRef, useState } from 'react';
 import { igHandle, igReels, type Reel } from '@/content/ig';
 import { Arrow } from '@/components/Shared';
@@ -25,7 +26,7 @@ function Tile({reel}:{reel:Reel}){
         <source src={`/ig/${reel.id}.mp4`} type="video/mp4"/>
       </video>
       <button className="ig-play" onClick={toggle} aria-label={playing?`Pause: ${reel.label}`:`Play: ${reel.label}`} data-playing={playing||undefined}>
-        <span aria-hidden="true">{playing ? '❙❙' : '▶'}</span>
+        <span aria-hidden="true">{playing ? <Ico n="pause"/> : <Ico n="play"/>}</span>
       </button>
       {plays && <span className="ig-plays" aria-label={`${plays} plays on Instagram`}>{plays}</span>}
     </div>

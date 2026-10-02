@@ -34,7 +34,8 @@ const RULES = [
   [/^FOLLOW ALONG/i, h=>h==='https://www.instagram.com/zenramen_sushi/'], [/^WATCH ON INSTAGRAM/i, h=>IG_REEL.test(h)],
   [/^SEE THE FULL HAPPY HOUR MENU|^…and \d+ more on the full menu/i, h=>h==='/menu/#happy-hour'],
   [/^lunch menu$/i, h=>h==='/menu/#lunch'],
-  [/^↗ Dinner\b/, h=>h==='/menu/#dinner'], [/^↗ Lunch\b/, h=>h==='/menu/#lunch'], [/^↗ Happy Hour\b/, h=>h==='/menu/#happy-hour'],
+  /* 首页三张菜单卡(整张卡是一个链接,文字=标题+副标题;箭头现在是 SVG 图标,不再是文字) */
+  [/^Dinner Ramen, sushi/, h=>h==='/menu/#dinner'], [/^Lunch Monday/, h=>h==='/menu/#lunch'], [/^Happy Hour 4–8 PM · Appetizers/, h=>h==='/menu/#happy-hour'],
   [/^(HAPPY HOUR\b|Happy Hour\b|SEE THE DEAL|daily happy hour|happy hour \()/, h=>h==='/happy-hour/'],
   [/^(EVENTS\/CATERING|Events & Catering|PLAN YOUR EVENT|Let us know ahead|tell us ahead)/i, h=>h==='/events-catering/'],
   [/^(MENU|Menu|EXPLORE THE MENU|SEE THE MENU|VIEW THE FULL MENU)\b/, h=>h==='/menu/'],

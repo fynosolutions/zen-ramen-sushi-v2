@@ -83,6 +83,9 @@ try {
         for (const id of ids) { const g = await p.evaluate(id=>{ const tiles=[...document.querySelectorAll('#'+id+' .featured-dish')]; const cont=document.querySelector('#'+id+' .featured-dishes').getBoundingClientRect(); const rows={}; for(const t of tiles){const r=t.getBoundingClientRect(); const k=Math.round(r.top); (rows[k]=rows[k]||[]).push(r.width);} const gaps=Object.values(rows).filter(ws=>ws.reduce((a,b)=>a+b,0)<cont.width*0.9).length; const caps=tiles.map(t=>{const s=t.querySelector('figcaption strong'); const lh=parseFloat(getComputedStyle(s).lineHeight)||18; return Math.round(s.getBoundingClientRect().height/lh);}); const ph=tiles.map(t=>t.querySelector('.featured-photo').getBoundingClientRect()); const odd=ph.filter(r=>Math.abs(r.width-r.height)>2||Math.abs(r.width-ph[0].width)>2).length; return {n:tiles.length,gaps,odd,maxLines:Math.max(...caps)}; },id);
           ok(g.gaps===0,`${tab} #${id}: 配图有 ${g.gaps} 排没排满(留空格)`); ok(g.odd===0,`${tab} #${id}: 有 ${g.odd} 张配图不是同样大小的方图`); ok(g.maxLines<=2,`${tab} #${id}: 图注超过 2 行`); } }
       await p.getByRole('tab',{name:'Dinner'}).tap(); await settle(p,300);
+      /* 招牌卡(分区只有 1 张配图):手机上整行 2:1 大图、菜名与价格在图下面、菜名不超过 2 行 */
+      for (const id of ['dinner--sushi-rolls','dinner--special-roll','dinner--chef-special-rolls']) { const c = await p.evaluate(id=>{ const d=document.querySelector('#'+id+' .featured-dishes.solo'); if(!d) return null; const ph=d.querySelector('.featured-photo').getBoundingClientRect(), cap=d.querySelector('figcaption').getBoundingClientRect(), box=d.getBoundingClientRect(), st=d.querySelector('figcaption strong'); const lh=parseFloat(getComputedStyle(st).lineHeight)||20; return {ratio:ph.width/ph.height, full:ph.width/box.width, below:cap.top>=ph.bottom-1, lines:Math.round(st.getBoundingClientRect().height/lh)}; },id);
+        ok(!!c,`#${id}: 没有招牌卡`); if(c){ ok(Math.abs(c.ratio-2)<0.1&&c.full>0.95,`#${id}: 招牌卡的图不是整行 2:1(比例 ${c.ratio.toFixed(2)},占宽 ${c.full.toFixed(2)})`); ok(c.below,`#${id}: 招牌卡的字没在图下面`); ok(c.lines<=2,`#${id}: 招牌卡菜名超过 2 行`); } }
       for (const hash of ['dinner--ramen-noodles','dinner--bento-box','lunch--bento-box','lunch--rice-dishes','happy-hour--sushi-rolls']) { await p.goto('about:blank'); await p.goto(BASE+'/menu/#'+hash,{waitUntil:'networkidle'}); await landed(p,hash,`直接打开 /menu/#${hash}`); if(hash==='lunch--bento-box') await shot(p,'08-menu-lunch-bento'); }
       await c.close(); }
     // 相册大图
@@ -105,15 +108,24 @@ try {
       const m = await tile.evaluate(t=>{const i=t.querySelector('img'),cs=getComputedStyle(i);return {hover:matchMedia('(hover:hover)').matches,scale:parseFloat(cs.scale),rest:parseFloat(getComputedStyle(t).getPropertyValue('--rest')||'1'),anims:i.getAnimations().length,anim:cs.animationName};});
       ok(!m.hover,'这个手机配置不是触屏(hover:hover 为真)'); ok(Math.abs(m.scale-m.rest)<0.01,'触屏上出现了悬停放大'); ok(m.anims>=1&&m.anim.includes('dish-float'),`触屏上看得见的菜品没在悬浮(动画 ${m.anims})`);
       await tile.locator('.featured-photo').tap(); await settle(p,400); ok(Math.abs(await tile.evaluate(t=>parseFloat(getComputedStyle(t.querySelector('img')).scale))-m.rest)<0.01+0.0,'点按菜品图后留下了放大状态(触屏不该有悬停残留)');
-      await p.goto(BASE+'/',{waitUntil:'networkidle'}); await p.locator('.home-film').evaluate(e=>e.scrollIntoView({block:'center'})); await settle(p,500);
-      ok(await p.evaluate(()=>document.querySelector('.home-film video').paused),'手机上视频不该自动播放(省流量)'); await p.getByRole('button',{name:/PLAY THE FILM|WATCH WITH SOUND/}).tap(); await settle(p,2200);
-      ok(await p.evaluate(()=>{const v=document.querySelector('.home-film video');return !v.paused&&!v.muted&&v.currentTime>0.3&&!v.error;}),'手机点「看视频」后没有带声音播放');
+      /* 首页视频:滑到之前不下载(不拖慢页面)→ 滑到眼前自动静音播放、用的是手机轻量版 → 点按钮后带声音播 */
+      { const mp4 = []; p.on('request', r => { if (/\.mp4(\?|$)/.test(r.url())) mp4.push(r.url()); });
+        await p.goto(BASE+'/',{waitUntil:'load'}); await settle(p,1200);
+        const top = await p.evaluate(()=>document.querySelector('.home-film').getBoundingClientRect().top/innerHeight);
+        if (top > 0.75) ok(mp4.length===0,`视频还没滑到就开始下载了(${mp4.length} 个请求),会拖慢页面`);
+        await p.locator('.home-film').evaluate(e=>e.scrollIntoView({block:'center'}));
+        await p.waitForFunction(()=>{const v=document.querySelector('.home-film video');return !v.paused&&v.currentTime>0.25;},null,{timeout:8000}).catch(()=>{});
+        const a = await p.evaluate(()=>{const v=document.querySelector('.home-film video');return {playing:!v.paused&&v.currentTime>0.25&&!v.error,muted:v.muted,src:v.currentSrc,w:innerWidth};});
+        ok(a.playing&&a.muted,`手机滑到视频时没有自动静音播放(playing=${a.playing} muted=${a.muted})`); ok(a.w>650||/-m\.mp4$/.test(a.src),`手机没有用轻量版视频(${a.src.split('/').pop()})`);
+        await p.getByRole('button',{name:/WATCH WITH SOUND|PLAY THE FILM/}).tap(); await settle(p,1500);
+        ok(await p.evaluate(()=>{const v=document.querySelector('.home-film video');return !v.paused&&!v.muted&&v.currentTime>0.3&&!v.error;}),'手机点「看视频」后没有带声音播放');
+      }
       // 页头不抖(慢速下滚过阈值)
       await p.goto(BASE+'/menu/',{waitUntil:'networkidle'}); await p.evaluate(()=>{window.__s=[];let last=document.documentElement.hasAttribute('data-scrolled');new MutationObserver(()=>{const v=document.documentElement.hasAttribute('data-scrolled');if(v!==last){window.__s.push(v);last=v;}}).observe(document.documentElement,{attributes:true,attributeFilter:['data-scrolled']});window.__y=[];});
       for(let i=0;i<30;i++){ await p.evaluate(()=>{window.scrollBy(0,7);window.__y.push(scrollY);}); await p.waitForTimeout(60); } await settle(p,500);
       const hs = await p.evaluate(()=>({sw:window.__s.length,y:window.__y})); let back=0; for(let i=1;i<hs.y.length;i++) if(hs.y[i]<hs.y[i-1]-2) back++; ok(hs.sw<=1,`手机页头状态切换了 ${hs.sw} 次(抖动)`); ok(back===0,`手机向下滚时 scrollY 被拨回 ${back} 次`);
       await c.close(); }
-    { const [c,p] = await mk({reducedMotion:'reduce'}); await p.goto(BASE+'/menu/',{waitUntil:'networkidle'}); const t = p.locator('#dinner--appetizers .featured-dish').first(); await t.evaluate(e=>e.scrollIntoView({block:'center'})); await settle(p,700);
+    { const [c,p] = await mk({reducedMotion:'reduce'}); await p.goto(BASE+'/',{waitUntil:'load'}); await p.locator('.home-film').evaluate(e=>e.scrollIntoView({block:'center'})); await settle(p,1800); ok(await p.evaluate(()=>document.querySelector('.home-film video').paused),'开了「减少动态效果」视频还在自动播'); await p.goto(BASE+'/menu/',{waitUntil:'networkidle'}); const t = p.locator('#dinner--appetizers .featured-dish').first(); await t.evaluate(e=>e.scrollIntoView({block:'center'})); await settle(p,700);
       ok(await t.evaluate(t=>t.querySelector('img').getAnimations().length)===0,'开了「减少动态效果」手机上菜品图仍在动'); await p.goto(BASE+'/',{waitUntil:'networkidle'}); ok(await p.locator('.intro').count()===0,'开了「减少动态效果」仍有开场动画'); await c.close(); }
     { const [c,p] = await mk(); await p.goto(BASE+'/',{waitUntil:'domcontentloaded'}); await p.waitForTimeout(500); const hadIntro = await p.locator('.intro').count();
       if (hadIntro) { await p.locator('.intro-skip').tap(); await p.waitForTimeout(400); }

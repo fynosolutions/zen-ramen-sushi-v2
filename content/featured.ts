@@ -37,6 +37,10 @@ export const featured: Record<string, Feat[]> = {
     {itemId:'dinner-0-10', img:'/images/dish-crispy-wings.webp', alt:'Crispy chicken wings on lettuce with jalapeño'},
     {itemId:'dinner-0-11', img:'/images/dish-69-shrimp.webp', alt:'Five deep fried shrimp pops on lettuce'},
   ],
+  /* 招牌卡:分区只有 1 张配图 → 横向大图 + 右侧菜名/说明/价格(图用 fit-dish.py --wide 摆放) */
+  'dinner--sushi-rolls': [{itemId:'dinner-4-7', img:'/images/dish-rainbow-roll.webp', label:'Rainbow Roll', alt:'Rainbow roll topped with tuna, salmon, yellowtail and white fish on a long white plate'}],
+  'dinner--special-roll': [{itemId:'dinner-5-0', img:'/images/dish-crazy-yellowtail-roll.webp', alt:'Crazy Yellowtail Roll topped with yellowtail, jalapeño slices and chili sauce'}],
+  'dinner--chef-special-rolls': [{itemId:'dinner-6-18', img:'/images/dish-sweetheart-roll.webp', alt:'Sweetheart Roll: heart-shaped pieces wrapped in tuna with salmon, avocado and tobiko'}],
   'dinner--sushi-entree': [
     {itemId:'dinner-7-4', img:'/images/dish-zen-don.webp', alt:'Assorted fish over sushi rice'},
     {itemId:'dinner-7-5', img:'/images/dish-salmon-don.webp', alt:'Salmon don with bonito flakes and greens'},

@@ -13,7 +13,8 @@
     "host-configs": "node scripts/gen-host-configs.mjs",
     "photos": "node scripts/photo-gate.mjs",
     "links": "node seo/check-links.mjs",
-    "mobile": "node seo/check-mobile.mjs"
+    "mobile": "node seo/check-mobile.mjs",
+    "device-safe": "node seo/check-device-safe.mjs"
   },
   "dependencies": {
     "next": "^16.3.5",

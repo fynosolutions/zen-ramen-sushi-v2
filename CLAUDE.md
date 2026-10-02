@@ -10,7 +10,13 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **转化/CTA（2026-10-01）**：所有「ORDER ONLINE」都指 `content/site.ts` 的 `site.order`（Toast 直订，店家不付第三方佣金）；链接加 `data-cta="位置-动作"` 就会被 `components/CtaTracker.tsx` 记进 GA4（cta_click/click_to_call/get_directions/order_click/reserve_click）；营业状态在 `lib/open-status.ts`（按纽约时间、按常规营业时间，不含节假日）；验收 `GATES-cta.md`，`node seo/check-cta.mjs <mode>` 可对本地或线上（`CTA_BASE=网址`）跑。
 
-**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=网址` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 3 的倍数**（一排排满）。手机两列时奇数张的最后一张自动变成「左图右字」的整行。**相册也要排满**：电脑 3 列（宽图占 2 格）、手机 2 列，窄图落单时在 `content/media.ts` 给它加 `wideSm:true`（手机上占整行）。进相册的照片桌面色相要和现有木桌一致（≈34°，量法见 `docs/menu-dish-images.md`）；菜单透明图统一用 `python3 scripts/fit-dish.py 输入 输出` 摆进画布。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
+**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=网址` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 1 张（招牌卡）或 3 的倍数**（一排排满）。手机两列时奇数张的最后一张自动变成「左图右字」的整行。**相册也要排满**：电脑 3 列（宽图占 2 格）、手机 2 列，窄图落单时在 `content/media.ts` 给它加 `wideSm:true`（手机上占整行）。进相册的照片桌面色相要和现有木桌一致（≈34°，量法见 `docs/menu-dish-images.md`）；菜单透明图统一用 `python3 scripts/fit-dish.py 输入 输出` 摆进画布。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
+
+**真机才会出的问题（2026-10-02 毛 iPhone 截图）**：本机的手机测试是「电脑引擎 + 手机屏幕尺寸」的模拟，**测不出真机系统的行为**；这台 Mac 没有 iOS 模拟器也没有安卓模拟器。已知三类，都改成了不依赖真机就能查的规则，`node seo/check-device-safe.mjs`（`npm run device-safe`）：①**不许用符号字符当图标**（↗ ✳ ★ ▶ ☰ ⌄ 在 iPhone/安卓上会变彩色 emoji 或缺字方块）→ 一律用 `components/Ico.tsx` 的内联 SVG（`<Ico n="ne|right|left|down|spark|check|menu|play|pause|star"/>`），CSS 里要图标用 mask；②**每个按钮都要有明确文字颜色**（iPhone 上没写颜色的按钮是系统蓝，手机导航「MENU」曾变蓝）→ `globals.css` 开头有 `button{color:inherit}`；③**iPhone 不给没在播的视频预加载数据** → `load()` 后直接 `play()`，不要等 `loadeddata`。新发现的真机问题照这个路子：先想「能不能写成不靠真机的规则」，再补进这个检查。
+
+**首页视频（2026-10-02 毛定）**：电脑和手机都是滑到眼前才静音循环播；`preload="none"` + 等 `window load` 之后才开始盯 + 手机用轻量版 `homeFilm.srcMobile`（4:5 居中裁切，5.4MB；原片 13MB，换片两个都要换，命令在 `content/media.ts`）。省流量/2G/减少动态效果/iPhone 省电模式 → 只有封面和播放按钮。`check-mobile.mjs` 会查「没滑到不下载、滑到自动播、用的是轻量版、点按钮有声音」。
+
+**菜单招牌卡（2026-10-02）**：分区只有 1 张配图时（三个卷分区）不放孤零零一个方格，自动变成横向大图 + 右侧菜名/说明/价格（手机：整行大图、字在下、不重复说明）。图用 `python3 scripts/fit-dish.py 输入 输出 --wide`。每个分区的配图张数只能是 **1 张或 3 的倍数**。等店里确认其余卷的菜名后可以升级成一排 3 张。
 
 **链接/按钮审计（2026-10-02）**：`node seo/check-links.mjs`（`CTA_BASE=网址` 测线上）逐条核对「按钮文字→去向」规则、内部链接可开、`#` 锚点落在对的菜单页签与区块、外部网址只许出现 `VERIFIED` 清单里的（Toast/Resy/外卖三平台/Google/IG，需在真实浏览器核对，curl 会被 Cloudflare 拦）、页签/下拉/地图/视频/相册/表单按钮真的做它写的事。**新增或改任何外部网址，要先在真实浏览器打开核对，再加进 `VERIFIED`。** 菜单 `.food-section` 不要用 `content-visibility:auto`（估高不准会让锚点落偏几千像素）。验收 `GATES-links.md`。
 

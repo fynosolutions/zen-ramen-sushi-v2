@@ -4,7 +4,8 @@
 
 Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自然流量、546+ 排名词，**新站上线是一次迁移，不是一次发布**。
 
-- 线上（我们的临时架子）：https://zen-ramen.vercel.app · Fyno 的 Vercel team，push main 即自动部署
+- 线上（预览站）：https://zen-ramen.vercel.app · Fyno 的 Vercel team，push main 即自动部署
+- **正式上线放客户自己的 GoDaddy cPanel 主机**（毛 2026-09-27 拍板，不用 Vercel 当正式站）；`seo/CUTOVER-CHECKLIST.md` 里 Vercel 的步骤已过时、待按 GoDaddy 重写
 - 客户的正式域名：zenramensushiny.com（**仍指向旧站，尚未切换**）
 - 本地预览：`npm run preview` → 127.0.0.1:3001（先 `npm run build`）
 
@@ -22,9 +23,25 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **协作**：`main` 已上锁（2026-09-28）——非管理员只能走 PR，需 1 个批准 + CI `build-and-seo` 绿灯；管理员（jayemaoFYNO、mingzhoujin）可直推。设计同事 wzh152 按 `CONTRIBUTING.md` 走 PR。
 
+## 毛的要求（本项目，也是做别的餐厅站的标准）
+- 网站是生意工具：首屏订餐/订位/电话/导航/评论都能一步点到；对比旧站后直接优化。
+- **菜品图必须和实物几乎一样**；真照片只当参考，生成透明背景展示图；动效轻微（悬浮、大小不一、移上放大），不改结构、不挡文字和下单。
+- 图可以多，但不能让人视觉疲劳：配图分区 1 张（招牌卡）或 3 的倍数；加不进现有审美的图宁可不加。
+- 首页要有动态元素（视频），手机也自动播，但不能拖慢页面。
+- 手机和电脑同一标准；iPhone、安卓都看；截图给毛看（`phone-check` skill）；毛用真 iPhone 终验。
+- 每个按钮的文字与去向要一致。设计同事走 PR，不碰命名/SEO/菜单文字。
+- 通用打法与踩坑全集 → memory `ref_restaurant_website_playbook`。
+
+## 这次踩的坑（本仓专属；通用的在 playbook）
+- 件数以菜单为准：「(6 pcs)」的图上就是 6 个（顾客照片常是吃剩的）；同分区三张同一机位（`docs/menu-dish-images.md` 末尾「定稿规则」）。
+- 旧站 Toast 链接是 404、旧站按钮文字与去向对不上 → `check-links.mjs` 的 `VERIFIED` 清单。
+- 手机检查本身会骗人：溢出要拿 `screen.width` 比；探针要自检；改字号后在 360 宽重跑（`.h1-kicker` 调到 11px 曾超出 6px，已保持 10px）。
+- 真机才出的三类问题（符号变 emoji / 按钮系统蓝 / iPhone 视频不预加载）→ `check-device-safe.mjs`。
+- 本机跑整套手机检查约 10–12 分钟，后台命令超时要给足；检查脚本别并发抢端口。
+
 ## 红线（违反 = 事故）
 
-**域名和邮箱是客户的，Vercel 是我们的。** 切换只改 A 和 CNAME 两条记录；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**。完整方案与回滚：`seo/GODADDY-PLAN.md`、`seo/DNS-PLAN.md`、`seo/CUTOVER-CHECKLIST.md`。
+**域名和邮箱是客户的，Vercel 只是我们的预览站。** 切换只改 A 和 CNAME 两条记录；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**。完整方案与回滚：`seo/GODADDY-PLAN.md`、`seo/DNS-PLAN.md`、`seo/CUTOVER-CHECKLIST.md`。
 
 **菜品文案与配图只写菜单里真有的东西。** 每一样食材、价格、卷名都要能在 `content/menus.json` 找到出处——曾凭空写出三种 happy hour 不供应的寿司卷和一个不存在的 $5 档位。写之前先查，别凭印象。
 
@@ -34,10 +51,10 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 **菜单单品图（2026-10-02）**：缺单品图的菜用 `dish-*.webp`——以真实顾客照片为参考、gpt-image-2.5 重拍成透明背景（「同一道菜只改拍摄质量」），prompt 与对应关系见 `docs/menu-dish-images.md`、`content/photo-sources.json`；一张图只挂在它拍的那道菜上，`node seo/check-menu-photos.mjs data|render` 验收；轻微动效（悬浮/移上放大 7%）在 globals.css 末尾「菜品图动效」，`node seo/check-menu-motion.mjs` 验收。Google 的菜名标签有错，以照片内容对菜单描述为准。
 
 `public/images/shot-*.webp` 全部取自飞书云盘 `024 Zen Ramen Penn/图片/0924新图/正常高亮`（47 张过亮度闸；同目录 `较暗` 放其余 93 张，不选用）。原片没进仓，重出图从飞书下原片再裁。
-**菜单精选卡只放能对上菜单条目的实拍**：Tonkotsu（dinner-13-2）、Grill Chicken Yuzu Ramen（dinner-13-16）。其余菜没拍到、或拍了但对不上具体条目（炙烤卷、刺身木盒、粉色马天尼、分层饮品）→ 只当场景图用、alt 不写菜名。Rainbow 卷全组虚焦（焦点在后面的酒），已撤下精选卡。
+**一张图只挂在它拍的那道菜上**（台账 `content/photo-sources.json` 强制）；对不上具体菜单条目的实拍（炙烤卷、刺身木盒、粉色马天尼、分层饮品）→ 只当场景图用、alt 不写菜名。Rainbow/Crazy Yellowtail/Sweetheart 三个卷现在用店家旧拍摄做成透明图，以「招牌卡」上线。
 **台账与出图铁律**：`docs/design-references.md`；换图仍要换文件名。
 **亮度闸（毛 2026-09-24 定）**：这组实拍整体欠曝、废片多。选图只用原片平均亮度 ≥85 且近黑像素 ≤18% 的（140 张里 47 张过），出图再统一提亮到 ≈118；上线前跑 `npm run photos`，任何图平均亮度 <100 就红。已用毛指出的暗图做过反向验证（全红）。
-**视频**：原片 61 条在飞书 `视频/0924 新视频/{横屏,竖屏}`，官网横版混剪（40–50s）由剪辑同事出；到货后放 `public/` 并填 `content/media.ts` 的 `galleryVideo`，编码按 memory `ref_web_video_mobile_contract`。
+**视频**：原片 61 条在飞书 `视频/0924 新视频/{横屏,竖屏}`；官网横版混剪（66 秒，靳晓宇剪，已上线）= `content/media.ts` 的 `homeFilm`/`galleryVideo`，编码与手机轻量版见 memory `ref_web_video_mobile_contract`。换片两个文件（`zen-film-*.mp4` 与 `-m.mp4`）都要换，并换文件名。
 
 `public/ig/*.mp4` 是 @zenramen_sushi 公开 reels 的自托管副本（已去黑边与片头水印、转 H.264 Main L4.0 yuv420p faststart）。新增一条 = 在 `content/ig.ts` 加一行，视频与封面放进 `public/ig/`。
 
@@ -67,7 +84,7 @@ Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress �
 
 ## 已知坑
 
-**Safari 播视频强制要求服务器支持 HTTP Range。** `scripts/serve.mjs` 已补 206 响应与生产对齐；`preload="none"` 的 video 在 Safari 上要先显式 `load()` 再 `play()`，否则永远 readyState=0。
+**Safari 播视频强制要求服务器支持 HTTP Range。** `scripts/serve.mjs` 已补 206 响应与生产对齐；`preload="none"` 的 video 在 Safari 上要先显式 `load()`、**然后立刻 `play()`**（不要等 `loadeddata`，iPhone 不为没在播的视频预加载，会永远等不到）。
 
 **`content-visibility` 的 `contain-intrinsic-size` 用单值会连宽度一起约束**，在 768px 撑出横向溢出。只约束高度用 `contain-intrinsic-block-size`。
 
@@ -78,4 +95,6 @@ Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress �
 1. ~~Delegate Access 授权~~ —— 2026-09-23 已接受。但实测 **GoDaddy 的 API 令牌不认委托授权**（授权后读客户域名仍 403），切换日改 DNS 走网页端，详见 `seo/GODADDY-PLAN.md`
 2. ~~Google Search Console~~ —— 2026-09-23 已自助验证（WordPress 后台加 meta 标签），资源在 jaye.mao 名下。~~GA4~~ —— 已建在 Fyno Restaurants 账号(401363907)下，ID `G-JZD3SQCWMP`，已接进 Vercel 生产环境变量并线上生效。建号步骤与坑见 memory `ref_ga4_property_setup`（跨项目通用，以后给别的店建 GA4 直接抄）
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
-4. ~~客户实拍照片~~ —— 2026-09-24 已全站替换；**官网横版视频**待剪辑同事交付
+4. ~~客户实拍照片~~ —— 2026-09-24 已全站替换；~~官网横版视频~~ —— 已上线
+5. **店里要确认**：其余寿司卷的菜名（凑满每个卷分区一排 3 张）；烧卖/素煎饺是否每份 6 个；Tomato Seafood Ramen 命名
+6. **正式切换**：新日期、GoDaddy cPanel 部署与证书先备（见 `seo/GODADDY-PLAN.md`）；2026-09-30 原定日已过

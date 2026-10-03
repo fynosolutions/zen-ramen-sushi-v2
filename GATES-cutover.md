@@ -1,6 +1,6 @@
 # Gates: 域名切换 · 计划阶段（2026-09-27）
 
-OWNS: seo/CUTOVER-CHECKLIST.md, GATES-cutover.md
+OWNS: seo/CUTOVER-CHECKLIST.md, GATES-cutover.md, scripts/build-for-host.mjs, scripts/apache-local.mjs, scripts/gen-host-configs.mjs, seo/dns-check.mjs, seo/check-cutover.mjs, seo/check-portability.mjs
 
 Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范围/SEO判据/平台同步/权限/切换日流程/回滚),且计划里引用的现状全部与实物一致。只计划,不执行切换。
 
@@ -36,3 +36,67 @@ Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范�
 
 - [x] P7: 权限实测 —— GoDaddy 委托账号能看到并编辑该域名 DNS
   EVIDENCE: 2026-09-27 01:5x ET Orca 实测: sso.godaddy.com/access → Celina Lin「Access now」→ dcc.godaddy.com/control/portfolio/zenramensushiny.com/settings?tab=dns 列出 A/NS/CNAME/MX/TXT/SRV 共 3 页记录,每行带 Edit/Delete;未做任何修改。登录邮箱码从 jaye.mao Gmail(gmail-tools/token_jaye.json)自取
+
+## 计划阶段补强（2026-10-03：放 GoDaddy 主机所需的工具与证据，全部在本机真 Apache 上跑过）
+
+- [x] P8: 一键构建可用:带统计编号与「允许收录」开关构建,生成 .htaccess(含 https/www 规则、旧网址跳转、缓存头)放进 out/,自检统计与索引开关
+  CHECK: node scripts/build-for-host.mjs
+  EXPECT: BUILD-FOR-HOST PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=0dc8b3247610234bf8f53edfe503fb00325470eb3f6010510e44a7f1b3dc1fb6; output-bytes=1544
+
+- [x] P9: 本机真 Apache 全套彩排通过(113 条旧网址跳转、同网址页面、65 条故意 404、整站级跳转、统计/索引/规范网址、sitemap/robots、两个视频分段播放、图片缓存头、压缩、隐藏文件不对外)
+  CHECK: sh -c 'node scripts/apache-local.mjs start out 8911 >/dev/null && node seo/check-cutover.mjs --host zenramensushiny.com --ip 127.0.0.1 --http-port 8911 --no-tls'
+  EXPECT: CUTOVER-CHECK PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=402eee8858a5cb92a8f02f23550f2eae5d64d111411bf942f0d06a1349b99109; output-bytes=1364
+
+- [x] P10: 旧网址行为在真 Apache 上与 vercel.json 一致(含 65 条故意 404)
+  CHECK: node seo/check-portability.mjs
+  EXPECT: PORTABILITY PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=4724931fb16bc52d90380c67291aa18711bd3ed946a04acc150ee3837236d690; output-bytes=82
+
+- [x] P11: 检查能报红 ①:漏传 .htaccess(最容易出的事故)时彩排必须失败
+  CHECK: sh -c 'mv out/.htaccess /tmp/zen-h.bak && node scripts/apache-local.mjs stop 8911 >/dev/null; node scripts/apache-local.mjs start out 8911 >/dev/null; node seo/check-cutover.mjs --host zenramensushiny.com --ip 127.0.0.1 --http-port 8911 --no-tls >/tmp/zen-neg.log 2>&1; r=$?; mv /tmp/zen-h.bak out/.htaccess; node scripts/apache-local.mjs stop 8911 >/dev/null; if [ $r -ne 0 ]; then echo NEGATIVE-CONTROL RED; else echo NEGATIVE-CONTROL STAYED-GREEN; fi'
+  EXPECT: NEGATIVE-CONTROL RED
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=4f6c6d672427a5e5cd90309eececae55c48dda180ebd51d6e2603571ef161e19; output-bytes=21
+
+- [x] P12: 检查能报红 ②:邮箱记录被改时 DNS 比对必须失败
+  CHECK: sh -c 'cp seo/baseline-T-1/dns-snapshot.json /tmp/zen-snap-neg.json && sed -i.bak "s/mx1.titan.email/mx1.evil.example/" /tmp/zen-snap-neg.json && if node seo/dns-check.mjs compare /tmp/zen-snap-neg.json >/dev/null 2>&1; then echo DNS-NEGATIVE STAYED-GREEN; else echo DNS-NEGATIVE RED; fi'
+  EXPECT: DNS-NEGATIVE RED
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=9c98234d238b7cc58160f1bc078d2eeae629f3d28d1ef884e2090788956c677e; output-bytes=17
+
+## 执行阶段（切换前的 6 项门 + 切换后验收；**全绿才许切**。周日 10-04 只彩排，不切）
+
+- [ ] E1: 老板书面同意买 GoDaddy cPanel 主机(Deluxe)并付款;记下谁、何时、多少钱
+  EVIDENCE: pending
+
+- [ ] E2: 毛已重置 GoDaddy 登录密码,agent 能登录并进入该域名的 DNS 编辑页(只读)
+  EVIDENCE: pending
+
+- [ ] E3: 根域 A 与 www 的生效等待时间已降到 600 秒并实测
+  CHECK: node seo/dns-check.mjs ttl --max 600
+  EXPECT: DNS-TTL PASS
+  EVIDENCE: pending
+
+- [x] E4: 买主机之后、切换之前,DNS 与基线快照逐条一致(开通向导没改任何记录)
+  CHECK: node seo/dns-check.mjs compare seo/baseline-T-1/dns-snapshot.json
+  EXPECT: DNS-COMPARE PASS
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=a0fc10c93b2a7b8c25c2cea02480dfe5cca38c3c84275a0a6dc7be74c6bcafaa; output-bytes=55
+
+- [ ] E5: 证书同时覆盖根域和 www、证书链完整、剩余 ≥60 天(用主机地址测:HOST_IP=主机地址)
+  CHECK: sh -c '[ -n "$HOST_IP" ] && node seo/check-cutover.mjs --host zenramensushiny.com --ip "$HOST_IP" --only-cert'
+  EXPECT: CERT-CHECK PASS
+  EVIDENCE: pending
+
+- [ ] E6: 用主机地址彩排全过(HOST_IP=主机地址;不动线上域名)
+  CHECK: sh -c '[ -n "$HOST_IP" ] && node seo/check-cutover.mjs --host zenramensushiny.com --ip "$HOST_IP"'
+  EXPECT: CUTOVER-CHECK PASS
+  EVIDENCE: pending
+
+- [ ] E7: 切换后线上正式域名全套验收通过(切换日才勾)
+  CHECK: node seo/check-cutover.mjs --host zenramensushiny.com
+  EXPECT: CUTOVER-CHECK PASS
+  EVIDENCE: pending
+
+- [ ] E8: 切换后邮箱与其余记录没变:`node seo/dns-check.mjs compare --flipped` PASS(只有根域 A 变化)+ 测试邮件到店里邮箱能收到(切换日才勾)
+  EVIDENCE: pending
+

@@ -10,11 +10,28 @@ const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 // ---- Apache (.htaccess) —— GoDaddy cPanel/Linux 主机、多数虚拟主机 ----
 let ht = `# 由 scripts/gen-host-configs.mjs 自动生成,勿手改。真相源: vercel.json
 # 适用: Apache (GoDaddy cPanel/Linux Hosting、多数虚拟主机)
-Options -MultiViews
 RewriteEngine On
 
-# 静态站:目录下的 index.html 直接服务
+# 静态站:目录下的 index.html 直接服务;不开目录列表
 DirectoryIndex index.html
+Options -Indexes
+
+# .htaccess 本身不对外提供(Apache 全局配置通常已挡,这里再保险一次)
+<IfModule mod_authz_core.c>
+  <FilesMatch "^\\.ht">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+
+# --- 整站级(2026-10-03):只对正式域名生效,本地/预览域名不受影响 ---
+# ① http → https(旧站发过 HSTS,浏览器只认 https);再加一个 X-Forwarded-Proto 判断,防止前面有代理做 TLS 时造成死循环
+# ② www → 不带 www(旧站口径),一步跳到 https 根域
+RewriteCond %{HTTP_HOST} ^(www\\.)?zenramensushiny\\.com(:[0-9]+)?$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
+RewriteRule ^ https://zenramensushiny.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\\.zenramensushiny\\.com(:[0-9]+)?$ [NC]
+RewriteRule ^ https://zenramensushiny.com%{REQUEST_URI} [R=301,L]
 
 # 统一带尾斜杠(与 Next.js trailingSlash:true 一致)
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -32,7 +49,22 @@ for(const r of plain){
   const src = r.source.replace(/^\//,'').replace(/\/$/,'');
   ht += `RewriteRule ^${esc(src)}/?$ ${r.destination} [R=301,L,NE]\n`;
 }
-ht += `\n# 自定义 404\nErrorDocument 404 /404.html\n`;
+ht += `\n# 自定义 404
+ErrorDocument 404 /404.html
+
+# --- 缓存与压缩(对齐 Vercel 的行为;2026-10-03) ---
+# 图片/视频/页面:每次回源校验(没变就回 304),这样设计同事「同名替换图片」后客人马上看到新图;_next/static 里的文件名带哈希,可以放心长期缓存
+<IfModule mod_headers.c>
+  <FilesMatch "\\.(html|webp|jpe?g|png|svg|ico|mp4|txt|xml)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\\.(js|css|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>\n`;
 fs.writeFileSync(path.join(out,'.htaccess'), ht);
 
 // ---- IIS (web.config) —— GoDaddy Plesk/Windows 主机 ----

@@ -10,7 +10,8 @@ for(const p of old){
   const [code,loc]=r.split('|');
   if(exists(p)){ if(code==='200')ok++; else bad.push(`${p} 应200实为${code}`); continue; }
   const rule=v.redirects.find(x=>!x.has&&x.source===p.replace(/\/$/,'')+'/');
-  if(!rule){bad.push(`${p} vercel无规则`);continue;}
+  /* 2026-09-27 起是「分层承接」:近 3 个月 0 点击的旧页故意不跳转、让它 404(vercel.json 里本来就没有规则)——Apache 上也必须是 404,不能是 200 或跳去首页 */
+  if(!rule){ if(code==='404')ok++; else bad.push(`${p} 应故意 404,实为 ${code}`); continue; }
   if(code!=='301'){bad.push(`${p} 应301实为${code}`);continue;}
   const got=loc.replace(BASE,'');
   if(got!==rule.destination){bad.push(`${p} 目标不符: ${got} ≠ ${rule.destination}`);continue;}

@@ -39,6 +39,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 真机才出的三类问题（符号变 emoji / 按钮系统蓝 / iPhone 视频不预加载）→ `check-device-safe.mjs`。
 - 本机跑整套手机检查约 10–12 分钟，后台命令超时要给足；检查脚本别并发抢端口。
 
+**切换到 GoDaddy 的工具（2026-10-03）**：`node scripts/build-for-host.mjs`（一键构建+放 `.htaccess`+自检+`--upload` 上传，**不要直接 `npm run build` 后传 `out/`**）· `node scripts/apache-local.mjs start out 8911`（本机起真 Apache 试跑）· `node seo/dns-check.mjs snapshot|compare|ttl`（DNS 快照/比对/等待时间，直接问 GoDaddy 权威服务器）· `node seo/check-cutover.mjs --host zenramensushiny.com [--ip 主机地址] [--only-cert]`（彩排与切换后全套验收）。流程、6 项门、回滚都在 `seo/CUTOVER-CHECKLIST.md`，门在 `GATES-cutover.md`「执行阶段」。**切换日 = 6 项门全绿后的周二或周三 10:00 ET，周日 10-04 只彩排。**
+
 ## 红线（违反 = 事故）
 
 **域名和邮箱是客户的，Vercel 只是我们的预览站。** 切换只改 A 和 CNAME 两条记录；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**。完整方案与回滚：`seo/GODADDY-PLAN.md`、`seo/DNS-PLAN.md`、`seo/CUTOVER-CHECKLIST.md`。

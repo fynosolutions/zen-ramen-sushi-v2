@@ -76,6 +76,17 @@
 6. 通知旧站线 session（`restaurant-e7`）：切换后旧站后台改走 WordPress.com 地址、对旧站的 SEO 改动全部作废，停止投入
 7. 跑 `GATES-cutover.md` 的 T-1 门，全绿才进 T
 
+## 5b. GA4 与「构建时开关」（2026-10-03 加；放 GoDaddy 手动上传时必做）
+
+`NEXT_PUBLIC_GA4_ID`（统计）和 `NEXT_PUBLIC_SITE_INDEXABLE`（放开索引）都是**构建时写进页面**的，现在只配在 Vercel 上。在本机手动构建、上传 GoDaddy 时漏带，站会**没有统计、还带 noindex，且不报错**。
+
+1. 构建命令固定：`NEXT_PUBLIC_GA4_ID=G-JZD3SQCWMP NEXT_PUBLIC_SITE_INDEXABLE=true npm run build`
+2. 上传前：`node seo/check-ga4.mjs`（查 `out/`，6 页都要有 `G-JZD3SQCWMP`、没有别的统计编号、没有 noindex）
+3. 上传后：`GA_BASE=https://zenramensushiny.com node seo/check-ga4.mjs` 必须 PASS；再在 GA4「实时」里亲手点一次电话、ORDER ONLINE、导航，确认 `click_to_call` / `order_click` / `get_directions` 进来
+4. GA4 属性已按「旧站不再使用」处理：旧站上的 `GT-MJJQ9P6Z`、`AW-17990718317` 来源不明、不是我们的，切换后随旧站消失，不迁移
+5. 切换日在 GA4 里记一条备注；预览站（zen-ramen.vercel.app）期间的访问在同一属性里，看数时按主机名 = zenramensushiny.com 筛
+6. 切换后 1–2 天，事件出现在 GA4 事件列表，再把 `order_click`、`click_to_call`、`get_directions` 标成关键事件
+
 ## 6. 切换日 T（2026-09-30 周三 10:00 ET，约 30 分钟，agent 执行）
 
 | 步 | 动作 | 验证 |
@@ -136,4 +147,4 @@ GoDaddy 把两条记录改回原值：A `@` = **192.0.78.24** 和 **192.0.78.25*
 
 - 邮箱：SPF 只包含 titan、没包含 Microsoft 365（从 Outlook 发出的信可能进垃圾箱）——**切换前就存在的问题，不是这次引起的**，这次也不碰；另行告知老板
 - cytd / Rankpilot 供应商处置（毛：之后再说）
-- GA4 转化事件（询盘、电话点击）
+- ~~GA4 转化事件~~ → 已并入 §5b（10-03）

@@ -47,17 +47,24 @@ if (has('only-cert')) { console.log(fails.length ? `\nCERT-CHECK FAIL x${fails.l
 // 2 http→https、www→根域
 console.log('② 整站级跳转');
 {
-  const a = await req(`${origin('http', HOST)}/menu/?x=1`, { head: true, noXfp: true }); log(a.code === 301 && a.loc === `https://${HOST}/menu/?x=1`, 'http 根域 → https 根域(带路径与参数)', `${a.code} → ${a.loc}`);
-  const b = await req(`${origin('http', WWW)}/menu/`, { head: true, noXfp: true }); log(b.code === 301 && b.loc === `https://${HOST}/menu/`, 'http www → https 根域(一步到位)', `${b.code} → ${b.loc}`);
-  const c = await req(`${NOTLS ? origin('http', WWW) : origin('https', WWW)}/menu/`, { head: true }); log(c.code === 301 && c.loc === `https://${HOST}/menu/`, 'https www → https 根域', `${c.code} → ${c.loc}`);
+  // 永久跳转 301(Apache)和 308(Vercel)都算对;http www 在 Vercel 上是两跳(先 https www,再根域),只要最终落在 https 根域、不超过 2 跳就行
+  const perm = c => c === 301 || c === 308;
+  const a = await req(`${origin('http', HOST)}/menu/?x=1`, { head: true, noXfp: true }); log(perm(a.code) && a.loc === `https://${HOST}/menu/?x=1`, 'http 根域 → https 根域(带路径与参数)', `${a.code} → ${a.loc}`);
+  if (NOTLS) { const b = await req(`${origin('http', WWW)}/menu/`, { head: true, noXfp: true }); log(perm(b.code) && b.loc === `https://${HOST}/menu/`, 'http www → https 根域(本机试跑:一步到位)', `${b.code} → ${b.loc}`); }
+  else { const r = await pexec('curl', [...baseArgs, '-o', '/dev/null', '-L', '--max-redirs', '4', '-w', '%{url_effective}|%{num_redirects}|%{http_code}', `${origin('http', WWW)}/menu/`]).then(x => x.stdout.split('|'), () => ['', '9', '0']);
+    log(r[0] === `https://${HOST}/menu/` && +r[1] <= 2 && r[2] === '200', 'http www → 最终落在 https 根域(≤2 跳)', `${r[1]} 跳 → ${r[0]} ${r[2]}`); }
+  const c = await req(`${NOTLS ? origin('http', WWW) : origin('https', WWW)}/menu/`, { head: true }); log(perm(c.code) && c.loc === `https://${HOST}/menu/`, 'https www → https 根域', `${c.code} → ${c.loc}`);
   const d = await req(`${ROOT}/menu/`, { head: true }); log(d.code === 200, '根域直接访问 /menu/ → 200(没有死循环)', `${d.code} ${d.loc}`);
 }
 // 3 旧网址跳转
 console.log('③ 旧网址跳转');
 const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const plain = v.redirects.filter(r => !r.has), query = v.redirects.filter(r => r.has);
-const jobs = [...plain.map(r => ({ u: ROOT + r.source, dest: r.destination, name: r.source })), ...query.map(r => ({ u: `${ROOT}${r.source}?${r.has[0].key}=${r.has[0].value}`, dest: r.destination, name: `${r.source}?${r.has[0].key}=${r.has[0].value}` }))];
-const res = await pool(jobs, 8, async j => ({ j, r: await req(j.u, { head: true }) })); const badR = res.filter(({ j, r }) => !((r.code === 301 || r.code === 308) && path(r.loc) === j.dest));
-log(badR.length === 0, `${jobs.length} 条旧网址 → 301 且去向正确`, badR.slice(0, 3).map(({ j, r }) => `${j.name}→${r.code} ${path(r.loc)}`).join(' | '));
+const jobs = [...plain.map(r => ({ u: ROOT + r.source, dest: r.destination, name: r.source, q: '' })), ...query.map(r => ({ u: `${ROOT}${r.source}?${r.has[0].key}=${r.has[0].value}`, dest: r.destination, name: `${r.source}?${r.has[0].key}=${r.has[0].value}`, q: `${r.has[0].key}=${r.has[0].value}` }))];
+// 去向比较:路径和 #锚点必须一致;查询参数要么和目标一致,要么是「把原请求的参数带过去了」(Vercel 的做法,页面忽略它;Apache 版规则会去掉参数)——两种都算对
+const parts = u => { const [pq, hash = ''] = u.split('#'); const [pth, qs = ''] = pq.split('?'); return { pth, qs, hash }; };
+const sameDest = (loc, j) => { const a = parts(path(loc)), b = parts(j.dest); return a.pth === b.pth && a.hash === b.hash && (a.qs === b.qs || (b.qs === '' && a.qs === j.q)); };
+const res = await pool(jobs, 8, async j => ({ j, r: await req(j.u, { head: true }) })); const badR = res.filter(({ j, r }) => !((r.code === 301 || r.code === 308) && sameDest(r.loc, j)));
+log(badR.length === 0, `${jobs.length} 条旧网址 → 永久跳转(301/308)且去向正确`, badR.slice(0, 3).map(({ j, r }) => `${j.name}→${r.code} ${path(r.loc)}`).join(' | '));
 // 4 同网址页面 + 故意 404
 const old = fs.readFileSync('seo/old-urls-2026-09-20.txt', 'utf8').trim().split('\n').map(u => u.replace('https://zenramensushiny.com', ''));
 const exists = p => p === '/' || fs.existsSync('out' + p.replace(/\/$/, '') + '/index.html');

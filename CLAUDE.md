@@ -4,14 +4,14 @@
 
 Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自然流量、546+ 排名词，**新站上线是一次迁移，不是一次发布**。
 
-- 线上（预览站）：https://zen-ramen.vercel.app · Fyno 的 Vercel team，push main 即自动部署
-- **正式上线放客户自己的 GoDaddy cPanel 主机**（毛 2026-09-27 拍板，不用 Vercel 当正式站）；`seo/CUTOVER-CHECKLIST.md` 里 Vercel 的步骤已过时、待按 GoDaddy 重写
+- **线上（正式）：https://zenramensushiny.com**（2026-10-05 约 16:05 ET 起由 Vercel 提供；Fyno Solutions 团队，Pro，项目 zen-ramen）。**push main = 直接发布给真客人**，合并任何 PR 都按正式发布对待。`zen-ramen.vercel.app` 仍是同一个生产部署（去留待毛决定，见 `seo/CUTOVER-CHECKLIST.md` §10）
+- **托管与域名**：网站全部 deploy 在 Vercel；**GoDaddy 只当域名注册商/DNS**（毛 2026-10-05 改回；9/27 曾定放 GoDaddy cPanel 主机，现为备用方案，见 `seo/CUTOVER-CHECKLIST.md` 附录 A）。切换总计划与回滚：`seo/CUTOVER-CHECKLIST.md`；验收账本 `GATES-cutover.md`（Vercel 路线 V1–V11）与 `GATES-cutover-godaddy-alt.md`（备用路线）
 - 客户的正式域名：zenramensushiny.com（**仍指向旧站，尚未切换**）
 - 本地预览：`npm run preview` → 127.0.0.1:3001（先 `npm run build`）
 
 **转化/CTA（2026-10-01）**：所有「ORDER ONLINE」都指 `content/site.ts` 的 `site.order`（Toast 直订，店家不付第三方佣金）；链接加 `data-cta="位置-动作"` 就会被 `components/CtaTracker.tsx` 记进 GA4（cta_click/click_to_call/get_directions/order_click/reserve_click）；营业状态在 `lib/open-status.ts`（按纽约时间、按常规营业时间，不含节假日）；验收 `GATES-cta.md`，`node seo/check-cta.mjs <mode>` 可对本地或线上（`CTA_BASE=网址`）跑。
 
-**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=网址` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 1 张（招牌卡）或 3 的倍数**（一排排满）。手机两列时奇数张的最后一张自动变成「左图右字」的整行。**相册也要排满**：电脑 3 列（宽图占 2 格）、手机 2 列，窄图落单时在 `content/media.ts` 给它加 `wideSm:true`（手机上占整行）。进相册的照片桌面色相要和现有木桌一致（≈34°，量法见 `docs/menu-dish-images.md`）；菜单透明图统一用 `python3 scripts/fit-dish.py 输入 输出` 摆进画布。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
+**手机版验证（2026-10-02）**：`node seo/check-mobile.mjs`（`CTA_BASE=https://zenramensushiny.com` 测线上，`ONLY=iPhone` 只跑一种配置）用 iPhone WebKit / Pixel Chromium / 360 / 320 四种配置跑全站：图片全加载且不糊、无横向溢出、展开导航/下拉/页签/分类/地图/相册/表单、锚点不被粘性栏盖住、触屏无悬停放大、视频点按播放、页头不抖。**每个有配图的菜单分区，图的张数必须是 1 张（招牌卡）或 3 的倍数**（一排排满）。手机两列时奇数张的最后一张自动变成「左图右字」的整行。**相册也要排满**：电脑 3 列（宽图占 2 格）、手机 2 列，窄图落单时在 `content/media.ts` 给它加 `wideSm:true`（手机上占整行）。进相册的照片桌面色相要和现有木桌一致（≈34°，量法见 `docs/menu-dish-images.md`）；菜单透明图统一用 `python3 scripts/fit-dish.py 输入 输出` 摆进画布。店家旧拍摄的精选图在飞书 `图片/1002 店家旧拍摄精选(Google Drive)`。验收 `GATES-mobile.md`。
 
 **真机才会出的问题（2026-10-02 毛 iPhone 截图）**：本机的手机测试是「电脑引擎 + 手机屏幕尺寸」的模拟，**测不出真机系统的行为**；这台 Mac 没有 iOS 模拟器也没有安卓模拟器。已知三类，都改成了不依赖真机就能查的规则，`node seo/check-device-safe.mjs`（`npm run device-safe`）：①**不许用符号字符当图标**（↗ ✳ ★ ▶ ☰ ⌄ 在 iPhone/安卓上会变彩色 emoji 或缺字方块）→ 一律用 `components/Ico.tsx` 的内联 SVG（`<Ico n="ne|right|left|down|spark|check|menu|play|pause|star"/>`），CSS 里要图标用 mask；②**每个按钮都要有明确文字颜色**（iPhone 上没写颜色的按钮是系统蓝，手机导航「MENU」曾变蓝）→ `globals.css` 开头有 `button{color:inherit}`；③**iPhone 不给没在播的视频预加载数据** → `load()` 后直接 `play()`，不要等 `loadeddata`。**给毛看的手机截图页用 `phone-check` skill**(`node ~/.claude/skills/phone-check/scripts/phone_check.mjs https://zen-ramen.vercel.app/ --session zen-intro-v2=1 --out <目录>`,出 iPhone|安卓并排的 report.html + 冷审拼图),和本仓的 `check-mobile.mjs`(查交互)两个都跑。新发现的真机问题照这个路子：先想「能不能写成不靠真机的规则」，再补进这个检查。
 
@@ -19,7 +19,7 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **菜单招牌卡（2026-10-02）**：分区只有 1 张配图时（三个卷分区）不放孤零零一个方格，自动变成横向大图 + 右侧菜名/说明/价格（手机：整行大图、字在下、不重复说明）。图用 `python3 scripts/fit-dish.py 输入 输出 --wide`。每个分区的配图张数只能是 **1 张或 3 的倍数**。等店里确认其余卷的菜名后可以升级成一排 3 张。
 
-**链接/按钮审计（2026-10-02）**：`node seo/check-links.mjs`（`CTA_BASE=网址` 测线上）逐条核对「按钮文字→去向」规则、内部链接可开、`#` 锚点落在对的菜单页签与区块、外部网址只许出现 `VERIFIED` 清单里的（Toast/Resy/外卖三平台/Google/IG，需在真实浏览器核对，curl 会被 Cloudflare 拦）、页签/下拉/地图/视频/相册/表单按钮真的做它写的事。**新增或改任何外部网址，要先在真实浏览器打开核对，再加进 `VERIFIED`。** 菜单 `.food-section` 不要用 `content-visibility:auto`（估高不准会让锚点落偏几千像素）。验收 `GATES-links.md`。
+**链接/按钮审计（2026-10-02）**：`node seo/check-links.mjs`（`CTA_BASE=https://zenramensushiny.com` 测线上）逐条核对「按钮文字→去向」规则、内部链接可开、`#` 锚点落在对的菜单页签与区块、外部网址只许出现 `VERIFIED` 清单里的（Toast/Resy/外卖三平台/Google/IG，需在真实浏览器核对，curl 会被 Cloudflare 拦）、页签/下拉/地图/视频/相册/表单按钮真的做它写的事。**新增或改任何外部网址，要先在真实浏览器打开核对，再加进 `VERIFIED`。** 菜单 `.food-section` 不要用 `content-visibility:auto`（估高不准会让锚点落偏几千像素）。验收 `GATES-links.md`。
 
 **协作**：`main` 已上锁（2026-09-28）——非管理员只能走 PR，需 1 个批准 + CI `build-and-seo` 绿灯；管理员（jayemaoFYNO、mingzhoujin）可直推。设计同事 wzh152 按 `CONTRIBUTING.md` 走 PR。
 
@@ -39,11 +39,11 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 真机才出的三类问题（符号变 emoji / 按钮系统蓝 / iPhone 视频不预加载）→ `check-device-safe.mjs`。
 - 本机跑整套手机检查约 10–12 分钟，后台命令超时要给足；检查脚本别并发抢端口。
 
-**切换到 GoDaddy 的工具（2026-10-03）**：`node scripts/build-for-host.mjs`（一键构建+放 `.htaccess`+自检+`--upload` 上传，**不要直接 `npm run build` 后传 `out/`**）· `node scripts/apache-local.mjs start out 8911`（本机起真 Apache 试跑）· `node seo/dns-check.mjs snapshot|compare|ttl`（DNS 快照/比对/等待时间，直接问 GoDaddy 权威服务器）· `node seo/check-cutover.mjs --host zenramensushiny.com [--ip 主机地址] [--only-cert]`（彩排与切换后全套验收）。流程、6 项门、回滚都在 `seo/CUTOVER-CHECKLIST.md`，门在 `GATES-cutover.md`「执行阶段」。**切换日 = 6 项门全绿后的周二或周三 10:00 ET，周日 10-04 只彩排。**
+**切换/托管相关工具（2026-10-03 起）**：`node seo/check-cutover.mjs --host zenramensushiny.com [--ip 入口地址] [--only-cert]`（全套验收；Vercel 口径：永久跳转 301/308 都算、http www 允许两跳、带参数的跳转可保留原参数）· `node seo/dns-check.mjs snapshot|compare [--flipped]|ttl`（DNS 快照/比对/等待时间，直接问 GoDaddy 权威服务器；只比对固定名单里的记录名，新增名字如 `_vercel` 看不到）· `node seo/check-ga4.mjs`。**备用方案（搬到 GoDaddy 主机）的工具**：`node scripts/build-for-host.mjs`（一键构建+放 `.htaccess`+自检+`--upload` 上传）· `node scripts/apache-local.mjs start out 8911`（本机起真 Apache 试跑）。**线上检查的地址从此用 `CTA_BASE=https://zenramensushiny.com`**（不再用 zen-ramen.vercel.app）。
 
 ## 红线（违反 = 事故）
 
-**域名和邮箱是客户的，Vercel 只是我们的预览站。** 切换只改 A 和 CNAME 两条记录；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**。完整方案与回滚：`seo/GODADDY-PLAN.md`、`seo/DNS-PLAN.md`、`seo/CUTOVER-CHECKLIST.md`。
+**域名和邮箱是客户的；网站托管在我们的 Vercel 账号下。** 切换只改了根域 A 记录（192.0.78.24/25 → 216.150.1.1 + 216.150.16.1），www 的 CNAME 本来就指向根域；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**（Vercel 界面会推荐「改用 Vercel 域名服务器」，不要点）。回滚（头 48 小时，到 2026-11-15 旧站证书到期为止）：A 改回 192.0.78.24 + 192.0.78.25。完整方案：`seo/CUTOVER-CHECKLIST.md`、`seo/DNS-PLAN.md`。网站挂在 Fyno 的账号下，要跟老板说清谁托管、怎么拿走——这个站是静态导出，可随时搬 Apache（附录 A）。
 
 **菜品文案与配图只写菜单里真有的东西。** 每一样食材、价格、卷名都要能在 `content/menus.json` 找到出处——曾凭空写出三种 happy hour 不供应的寿司卷和一个不存在的 $5 档位。写之前先查，别凭印象。
 
@@ -99,4 +99,4 @@ Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress �
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
 4. ~~客户实拍照片~~ —— 2026-09-24 已全站替换；~~官网横版视频~~ —— 已上线
 5. **店里要确认**：其余寿司卷的菜名（凑满每个卷分区一排 3 张）；烧卖/素煎饺是否每份 6 个；Tomato Seafood Ramen 命名
-6. **正式切换**：新日期、GoDaddy cPanel 部署与证书先备（见 `seo/GODADDY-PLAN.md`）；2026-09-30 原定日已过
+6. ~~正式切换~~ —— **2026-10-05 已完成**（Vercel；待办见 `seo/CUTOVER-CHECKLIST.md` §10：GSC/Bing/平台链接/测试邮件/真 iPhone、头一周每天读点击、vercel.app 去留）

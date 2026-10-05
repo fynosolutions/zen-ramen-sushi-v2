@@ -1,15 +1,13 @@
 # 域名切换总计划（zenramensushiny.com → 新站）
 
-> **本文件是切换的唯一总计划**（2026-09-27 重写；**2026-10-03 按「放老板的 GoDaddy cPanel 主机」整体重写 §5–§7、§9–§10**，Vercel 步骤已删）。`DNS-PLAN.md`、`GODADDY-PLAN.md` 是背景资料。
-> 验收账本：`GATES-cutover.md`（仓库根目录；**「执行阶段」6 项门全绿才许切**）。
-> 🔀 2026-09-27 毛拍板：新站放老板自己的 GoDaddy cPanel 主机，不用 Vercel（Vercel 只留作预览站）。
-> 📅 **2026-10-03 毛拍板：周日（10-04）只做彩排，不切；切换日 = 6 项门全绿后的周二或周三 10:00 ET**（独立审稿结论：前置条件一天内赶不完、新站没在 GoDaddy 服务器上跑过、回滚依赖现在登不进的账号）。
-> 状态：**计划阶段，未执行任何切换动作。** 老板已看过新站并同意切换（2026-09-27）；**付款/买主机尚未取得老板同意**。
-> 工具（2026-10-03 新增，全部在仓库里）：`scripts/build-for-host.mjs`（一键构建+放跳转规则+自检+上传）· `scripts/apache-local.mjs`（本机起真 Apache 试跑）· `seo/dns-check.mjs`（DNS 快照/比对/等待时间）· `seo/check-cutover.mjs`（彩排与切换后全套验收）· `seo/check-ga4.mjs`。
+> **本文件是切换的唯一总计划。** 2026-09-27 首版；2026-10-03 曾按「放老板的 GoDaddy cPanel 主机」重写（该方案现收进**附录 A**，备用、未启用）；**2026-10-05 毛改回：网站全部 deploy 在 Vercel，GoDaddy 只当域名注册商/DNS**，本文 §5–§7、§9、§10 按实际执行改写。`DNS-PLAN.md`、`GODADDY-PLAN.md` 是背景资料。
+> 验收账本：`GATES-cutover.md`（Vercel 路线的「执行阶段」V1–V10）；GoDaddy 备用路线的门在 `GATES-cutover-godaddy-alt.md`。
+> ✅ **状态：2026-10-05 约 16:05 ET 已切换到 Vercel**（由 website-0c 会话执行，线上验收通过：`node seo/check-cutover.mjs --host zenramensushiny.com` 全 PASS）。**切换后的待办见 §10。**
+> 工具（都在仓库里）：`seo/check-cutover.mjs`（全套验收，已按 Vercel 口径：永久跳转 301/308 都算、http www 允许两跳、带参数的跳转可保留原参数）· `seo/dns-check.mjs`（DNS 快照/比对/等待时间）· `seo/check-ga4.mjs`；备用路线工具 `scripts/build-for-host.mjs`、`scripts/apache-local.mjs`。
 
 ## 0. 这次切换到底改了什么
 
-域名不变、邮箱不变、注册商不变。**只把"这个域名的网页由谁来提供"从旧的 WordPress.com 换到老板自己的 GoDaddy 主机（cPanel）。**
+域名不变、邮箱不变、注册商不变。**只把"这个域名的网页由谁来提供"从旧的 WordPress.com 换到 Vercel（Fyno Solutions 团队，Pro）。域名仍注册、解析在老板的 GoDaddy 账号。**
 所以：
 - 外面所有写着 `zenramensushiny.com` 的地方（Google 商家、Yelp、IG 简介、广告）**不用改，自动指到新站**。
 - 但**网站里面的页面变了**（旧站 179 个已知网址 → 新站 10 个收录页面），Google 要重新抓一遍、重新评估。**跳转（301）就是告诉 Google「旧页搬到了这里」**，这是整次切换里唯一决定 SEO 得失的东西。
@@ -19,8 +17,7 @@
 | 系统 | 用途 | 状态 | 实测证据 |
 |---|---|---|---|
 | GoDaddy（客户 Celina Lin 账号，Delegate Access） | 改 A + CNAME 两条 | ✅ | 以 jaye.mao 登录 → Access now → 看到该域名全部 DNS 记录并有编辑按钮。登录要 6 位邮箱码，发到 jaye.mao 邮箱，本机脚本可自取 |
-| Vercel（Fyno 团队，项目 zen-ramen） | 只当预览站（noindex，规范网址已指向正式域名） | ✅ | `vercel project ls` 可见 zen-ramen |
-| GoDaddy cPanel 主机（Deluxe，客户账号内购买） | 放新站、装证书、SFTP 上传 | ❌ 未买 | **等老板书面同意付款**（§5 P0）；买完才能做 §5 P5–P8 |
+| Vercel（Fyno 团队，项目 zen-ramen） | 正式托管：绑域名、证书、环境变量、部署 | ✅ | `vercel project ls` 可见 zen-ramen，最新生产地址 = zenramensushiny.com |
 | Google Search Console（网址前缀资源，jaye.mao） | 看数据、提交 sitemap、请求收录 | ✅ | 能读近 3 个月报表。新站已带旧站两段验证标签，切换后不会失效 |
 | GA4 `G-JZD3SQCWMP` | 看新站访问 | ✅ | 已在线上生效 |
 | Google 商家（管理员） | 核对网址字段 | ✅ | 网址字段 = `http://zenramensushiny.com/`（首页，不用改） |
@@ -32,11 +29,11 @@
 | 类别 | 数量 | 怎么处理 | 真相源 |
 |---|---|---|---|
 | **同网址保留**：首页、`/menu/`、`/happy-hour/`、`/about/` 等 | 5 个旧网址 | 新站同一网址直接是新页面，不跳 | `out/` 构建产物 |
-| **旧页 → 新页 301**：有真实点击的博客、菜单单品页（`/zrm-menu-item/*`）、菜单分类、旧的关于/联系页 | 110 条 | 各自跳到最相关的新页（拉面文章 → 菜单拉面区；catering 单品 → 活动包场页） | `vercel.json`（由 `seo/build-redirects.mjs` 生成） |
+| **旧页 → 新页 永久跳转（Vercel 实际返回 308）**：有真实点击的博客、菜单单品页（`/zrm-menu-item/*`）、菜单分类、旧的关于/联系页 | 110 条 | 各自跳到最相关的新页（拉面文章 → 菜单拉面区；catering 单品 → 活动包场页） | `vercel.json`（由 `seo/build-redirects.mjs` 生成） |
 | **带参数的旧菜单链接**：`/zrm-menu/?menu=catering` 等 | 3 条规则 | 按参数跳到 catering / 午餐 | `vercel.json` 里带 `has` 的规则 |
 | **故意不留（404）**：近 3 个月 0 点击的 AI 薄博客、写错城市的文章 | 65 条 | 不跳。全部收口到首页会被 Google 判"软 404"，反而伤新站 | `seo/redirect-map-report.tsv` |
-| **整站级**：`http://` → `https://`、`www.` → 不带 www | 2 条规则 | 写在 `.htaccess` 里（`scripts/gen-host-configs.mjs` 生成，只对 zenramensushiny.com 生效）；本机真 Apache 与彩排都逐条验过 | `seo/check-cutover.mjs` |
-| **临时地址**：`zen-ramen.vercel.app` | 1 | 保持 noindex + 规范网址指向正式域名（已是现状），Google 不会把它当成第二份站；不需要跳转 | 页面 `<meta robots>` |
+| **整站级**：`http://` → `https://`、`www.` → 不带 www | 自动 | Vercel 绑域名时自动做：http→https 为 308，www→根域为 301（项目域名设置里的跳转）；2026-10-05 线上实测 | `seo/check-cutover.mjs` |
+| **临时地址**：`zen-ramen.vercel.app` | 1 | **待毛决定**（§10）：现在它与正式域名是同一个生产部署，也是 `index, follow`（规范网址已指向正式域名）；稳妥做法是设成 308 跳转到正式域名，或单独给这个主机加 `X-Robots-Tag: noindex` | 页面 `<meta robots>`、项目域名设置 |
 
 **点击保全**：按 GSC 近 3 个月逐页点击算，旧站逐页点击合计 3,056 次里 **3,048 次（99.7%）有着落**，只丢写错城市的 8 次。
 数据来源：`seo/gsc-clicks-3m-2026-09-27.json`（GSC「网页」表导出）；门：`npm run seo` 的 MAPPING。
@@ -68,7 +65,92 @@
 | Yelp / TripAdvisor / IG 简介 / Resy / 外卖平台 | 预计不改（都填域名首页） | T 当天逐个点一次，记录结果 | T |
 | 旧站 WordPress.com | 保留不删 | 留作回滚；**不删、不取消连接域名**；订阅 2026-12-16 到期前再决定续不续 | T+45 之后 |
 
-## 5. 准备与彩排（P 日，切换前任何一天；**不动线上域名**）
+## 5. 切换前的准备（Vercel 路线；2026-10-05 已全部做完）
+
+| 步 | 动作 | 验证 |
+|---|---|---|
+| 1 | Vercel 项目 zen-ramen 添加 `zenramensushiny.com` 与 `www.zenramensushiny.com`（www 设为 301 跳到根域）；GoDaddy 里**只新增**验证记录 `_vercel` TXT 完成认领 | 项目域名 `verified: true` |
+| 2 | **提前预签证书**：`vercel certs issue zenramensushiny.com www.zenramensushiny.com --challenge-only --scope fynosolutions` + GoDaddy **只新增** `_acme-challenge` TXT。旧站发过 HSTS（1 年）：没有合格证书就不许改 A | `vercel certs ls` 有这张（根域+www，90 天，自动续期） |
+| 3 | 生产环境变量 `NEXT_PUBLIC_GA4_ID`、`NEXT_PUBLIC_SITE_INDEXABLE=true`（**构建时写进页面**，改了必须重新部署才生效），重新部署 | `node seo/check-ga4.mjs`；线上 `index, follow` |
+| 4 | GoDaddy：根域 A 与 www 的等待时间 3600 → **600 秒**，只改时间不改值 | `node seo/dns-check.mjs ttl --max 600`（只卡根域 A；www 的 CNAME 指向根域、回滚不用动它） |
+| 5 | 存 DNS 快照 `seo/baseline-T-1/dns-snapshot.json`（与 9/27 手抄存档逐条一致） | `node seo/dns-check.mjs compare` |
+| 6 | **彩排**（不动线上域名）：`node seo/check-cutover.mjs --host zenramensushiny.com --ip 216.150.1.1` | 证书/跳转/视频/统计/速度全 PASS |
+
+## 6. 切换日 T（2026-10-05 约 16:05 ET，周一，已执行）
+
+| 步 | 动作 | 验证 |
+|---|---|---|
+| 1 | GoDaddy DNS：根域 **A 记录**把 192.0.78.24 与 192.0.78.25 **两条换成** Vercel 推荐的 **216.150.1.1 + 216.150.16.1**（备选 76.76.21.21）。**新旧不能并存**（否则一半客人看到旧站）。www 的 CNAME 本来就指向根域，不动 | `dig` 回读；ns19/ns20 与 8.8.8.8、1.1.1.1、9.9.9.9 逐步一致（等待时间 600 秒内） |
+| 2 | 🔴 **不碰**：NS、全部 MX（outlook + titan）、全部 TXT、autodiscover / email / lyncdiscover / msoid / sip / pay / _domainconnect / SRV。**也不要点 Vercel 界面里「改用 Vercel 域名服务器」的推荐**（会当场断邮箱） | `node seo/dns-check.mjs compare --flipped` 必须 PASS（只允许根域 A 变化） |
+| 3 | `node seo/check-cutover.mjs --host zenramensushiny.com` | CUTOVER-CHECK PASS（2026-10-05 线上实测通过） |
+| 4 | `GA_BASE=https://zenramensushiny.com node seo/check-ga4.mjs`；GA4「实时」里亲手点电话、ORDER ONLINE、导航 | PASS；`click_to_call` / `order_click` / `get_directions` 进来 |
+| 5 | GSC：提交新 sitemap + 旧网址 sitemap；4 个主页面「请求编入索引」；开 Bing Webmaster（从 GSC 导入）并提交 sitemap | 显示「已提交」/已验证 |
+| 6 | 按 §4 逐个点各平台链接（Google 商家、Yelp、TripAdvisor、IG 简介、Resy、外卖平台） | 都打开新站 |
+| 7 | 发一封测试邮件到店里邮箱 | 能收到 |
+| 8 | 毛用真 iPhone 打开一次（图标、MENU 颜色、视频自动播） | 毛确认 |
+
+（5–8 为人工项，状态见 `GATES-cutover.md` V6–V8；执行记录以账本证据为准。）
+
+## 7. 回滚（头 48 小时可用；第 7 天起不再回滚，改成向前修）
+
+**什么时候回滚**：切换后 48 小时内出现 https 报错（根域或 www 任一）、`dns-check compare --flipped` 发现邮箱/TXT/NS 任何一条变了、旧网址跳转低于 100%、首页打不开 → **立即回滚，不在原地修**。第 7 天起 Google 已重抓，回滚只会重开一次 2–4 周的评估。
+**怎么回滚**：GoDaddy DNS 把根域 A 改回**两条**：**192.0.78.24** 和 **192.0.78.25**；www 的 CNAME 保持 **zenramensushiny.com.**（本来就没动）。旧站一直原封不动在 WordPress.com 上，改回即恢复；Vercel 上绑的域名与证书可以留着。约 10 分钟生效（A 的等待时间 600 秒）。
+**⚠️ 时效与 HSTS**：旧站证书有效到 **2026-11-15**（2026-10-03 实测）——此前回滚即时可用；**此后回滚会有 https 报错，最长约 1 天**。另外新站（Vercel）对回头客发的是 **HSTS 2 年**（`max-age=63072000`，2026-10-05 实测）：访客浏览器见过新站后，回滚目标也必须有合格的 https，否则对他们整站打不开。所以**回滚窗口实际到 2026-11-15 为止，第 7 天起就不建议再用**。WordPress.com 后台**什么都不改**（保持域名连接与主域名、不设私密），否则回滚通道会断。
+
+## 8. 切换前 DNS 全量存档（2026-09-27 在 GoDaddy 面板实读；2026-10-03 又用 `seo/dns-check.mjs` 直接问 GoDaddy 权威服务器存了机器快照 `seo/baseline-T-1/dns-snapshot.json`，23 条记录与下表逐条一致）
+
+| 类型 | 名称 | 值 | 切换时 |
+|---|---|---|---|
+| A | @ | 192.0.78.24 | **已换成** 216.150.1.1（2026-10-05）|
+| A | @ | 192.0.78.25 | **已换成** 216.150.16.1（2026-10-05）|
+| CNAME | www | zenramensushiny.com. | **不改**（本来就指根域；等待时间仍 3600）|
+| NS | @ | ns19 / ns20.domaincontrol.com. | 不碰 |
+| MX | @ | zenramensushiny-com.mail.protection.outlook.com.（0） | 不碰 |
+| MX | @ | mx1.titan.email.（10）· mx2.titan.email.（20） | 不碰 |
+| TXT | @ | NETORGFT13749143.onmicrosoft.com | 不碰 |
+| TXT | @ | v=spf1 include:spf.titan.email ~all | 不碰 |
+| TXT | _activator_template | template applied | 不碰 |
+| CNAME | autodiscover / email / lyncdiscover / msoid / sip / pay / _domainconnect | （Microsoft 365 / GoDaddy 各项） | 不碰 |
+| SRV | _sip._tls / _sipfederationtls._tcp | lync | 不碰 |
+
+## 9. 已拍板
+
+| # | 决定 |
+|---|---|
+| D1 | **T = 2026-10-05（周一）约 16:05 ET，已执行**（原定 9/30 周三 10:00；10-04 周日只彩排的安排被取代） |
+| D2 | 出事（打不开 / 跳转大面积出错 / https 报错 / 邮箱记录被改）agent **可直接回滚**，事后立即告知毛（§7） |
+| D3 | 开 Bing Webmaster Tools（T 当天，jaye.mao，从 GSC 导入） |
+| D4 | T 后 4 周，每周一推毛飞书三行报告（本周点击 / 对比基线 / 正常还是要处理）；**头一周每天读一次 GSC 点击**，不等周报 |
+| D5 | **网站托管在 Vercel（Fyno Solutions 团队，Pro）；GoDaddy 只当域名注册商/DNS**（毛 2026-10-05）。不买 GoDaddy 主机 |
+| — | 旧站保留多久、cytd 停约：之后再谈（≥T+45，排名稳定后） |
+
+## 10. T 之后
+
+**已做/在做**：切换已完成；线上全套验收 PASS；邮箱记录未变。**待办与风险**（按先后）：
+
+| 项 | 谁 | 说明 |
+|---|---|---|
+| 完成 §6 的 5–8 | agent + 毛 | GSC 提交 sitemap/请求收录、Bing、各平台链接、测试邮件、真 iPhone 终验 |
+| **头一周每天读 GSC 点击** | agent | 首页 GSC 日点击**连续 2 天低于基线日均（约 31）的一半**就当天查原因；每周一再跑 `node seo/check-cutover.mjs --host zenramensushiny.com` + 读 GSC 周点击，对照 §3，连续 4 周报毛 |
+| **`zen-ramen.vercel.app` 的去留（待毛决定）** | 毛拍板 | 现在它是同一个生产部署、`index, follow`，规范网址指向正式域名。建议设成 308 跳转到正式域名（一次性，Vercel 项目域名设置）；跳转后旧检查里的 `CTA_BASE=https://zen-ramen.vercel.app` 要改成 `https://zenramensushiny.com` |
+| 清理 `_acme-challenge` TXT | agent | 办证书时临时加的，无害；Vercel 续期走 HTTP 验证，不需要它 |
+| **推送 main = 直接发布给真客人** | 全员 | 合并任何 PR 都按正式发布对待；设计同事合并前先看预览 |
+| **回滚窗口** | — | 头 48 小时可回滚，第 7 天起只向前修；2026-11-15 旧站证书到期后回滚会 https 报错（§7） |
+| **谁托管、怎么拿走** | 毛告诉老板 | 网站挂在 Fyno 的 Vercel 账号下（付费团队，商用没问题）。老板之前的诉求是「不给老板换新的部署地方」——要说清楚谁托管、谁付钱、以后交还怎么搬（附录 A 备用方案 + `node scripts/build-for-host.mjs`） |
+| T+28 | agent | 撤掉旧网址 sitemap；根域 A 的等待时间调回 1 小时（www 的 CNAME 一直是 3600，没动过） |
+| T+45 之后 | 毛 | 旧站去留、cytd 停约（须在排名连续两周不掉之后）；WordPress.com 订阅 2026-12-16 到期前决定续不续 |
+
+## 不在本次范围
+
+- 邮箱：SPF 只包含 titan、没包含 Microsoft 365（从 Outlook 发出的信可能进垃圾箱）——**切换前就存在的问题，不是这次引起的**，这次也不碰；另行告知老板
+- cytd / Rankpilot 供应商处置（毛：之后再说）
+- ~~GA4 转化事件~~ → 已并入 §5b（10-03）
+
+## 附录 A. 备用方案：搬到老板自己的 GoDaddy 主机（2026-10-03 写，**未启用**）
+
+> 2026-10-05 毛改回 Vercel 托管。本附录保留，用于以后「Fyno 不再托管、网站要交还老板」时搬家：网站是静态导出，`node scripts/build-for-host.mjs` 一键构建+放跳转规则+上传，`node scripts/apache-local.mjs` 在本机真 Apache 上试跑，`seo/check-cutover.mjs --ip 主机地址` 彩排。
+
+### A.1 准备与彩排（P 日；**不动线上域名**）
 
 主机买完、文件传完、证书装好后，用「把域名临时指到主机地址」的办法把新站从头到尾测一遍——这是整个计划里最重要的一步，因为新站只在 Vercel 上测过，**从没在 GoDaddy 服务器上跑过**。
 
@@ -88,11 +170,11 @@
 
 **今后每次更新网站**（不再是 push 自动上线）：`HOST_SSH=… node scripts/build-for-host.mjs --upload --apply`，再 `GA_BASE=https://zenramensushiny.com node seo/check-ga4.mjs`。**别直接 `npm run build` 然后传 `out/`**：缺两个开关会没有统计、还带 noindex，且不报错。
 
-## 5b. 构建时开关（为什么必须用脚本）
+### A.2 构建时开关（为什么必须用脚本）
 
 `NEXT_PUBLIC_GA4_ID`（统计）与 `NEXT_PUBLIC_SITE_INDEXABLE`（放开索引）都是**构建时写进页面**的，原来只配在 Vercel 上。`scripts/build-for-host.mjs` 已固定带上 `NEXT_PUBLIC_GA4_ID=G-JZD3SQCWMP NEXT_PUBLIC_SITE_INDEXABLE=true`，并跑 `seo/check-ga4.mjs`（6 页都要有 `G-JZD3SQCWMP`、没有别的统计编号、没有 noindex）。GA4 属性已按「旧站不再使用」处理：旧站上的 `GT-MJJQ9P6Z`、`AW-17990718317` 来源不明、不是我们的，切换后随旧站消失，不迁移。切换后 1–2 天，事件出现在 GA4 事件列表，再把 `order_click`、`click_to_call`、`get_directions` 标成关键事件；看数时按主机名 = zenramensushiny.com 筛（预览站访问在同一属性里）。
 
-## 6. 切换日 T（6 项门全绿后的周二或周三 10:00 ET，约 30 分钟，agent 执行）
+### A.3 切换日（6 项门全绿后；备用方案）
 
 **6 项门（缺一项就不切，改约下一个工作日；周日 13:00 ET 前的彩排也按这个判）**：
 ① 老板书面同意并已买主机 ② 能登录 GoDaddy 并进得去域名设置页 ③ 等待时间已实测 ≤600 秒 ④ 用主机地址彩排全过（P8） ⑤ 新 DNS 快照已存且与基线一致 ⑥ 证书同时覆盖根域和 www 且链完整（P7）。对应 `GATES-cutover.md` 的「执行阶段」。
@@ -110,50 +192,9 @@
 | 9 | 发一封测试邮件到店里邮箱 | 能收到（证明邮箱没受影响） |
 | 10 | 毛用真 iPhone 打开一次（图标、MENU 颜色、视频自动播） | 毛确认 |
 
-## 7. 回滚（任何异常，10 分钟内）
+### A.4 回滚（备用方案）
 
 **什么时候回滚**：切换后 48 小时内，出现 https 报错（根域或 www 任一）、`dns-check compare --flipped` 发现邮箱/TXT/NS 任何一条变了、旧网址跳转低于 100%、首页打不开 → **立即回滚，不在原地修**（旧站对回头客有 HSTS，https 报错 = 对他们整站打不开，每分钟都在丢单）。第 7 天起不再回滚、改成向前修（Google 已重抓，回滚只会重开一次 2–4 周的评估）。
 
 **怎么回滚**：GoDaddy DNS 里把根域 A 记录改回**两条**：**192.0.78.24** 和 **192.0.78.25**；www 的 CNAME 保持 **zenramensushiny.com.**。旧站一直原封不动在 WordPress.com 上，改回即恢复。主机和证书可以留着，不影响。回滚靠「等待时间已降到 600 秒」（门③）和「账号能登录」（门②）——这两项没做到就**不切**。
 **时效**：旧站现有 https 证书有效到 **2026-11-15**（2026-10-03 实测）——此前回滚即时可用；此后 WordPress.com 需重新签证书，回滚可能有最长约 1 天 https 报错。WordPress.com 后台**什么都不改**（保持域名连接与主域名、不设私密），否则回滚通道会断。
-
-## 8. 切换前 DNS 全量存档（2026-09-27 在 GoDaddy 面板实读；2026-10-03 又用 `seo/dns-check.mjs` 直接问 GoDaddy 权威服务器存了机器快照 `seo/baseline-T-1/dns-snapshot.json`，23 条记录与下表逐条一致）
-
-| 类型 | 名称 | 值 | 切换时 |
-|---|---|---|---|
-| A | @ | 192.0.78.24 | **换成** GoDaddy 主机地址（两条合并成一条）|
-| A | @ | 192.0.78.25 | **删**（并入上一条）|
-| CNAME | www | zenramensushiny.com. | **不改**（本来就指根域）|
-| NS | @ | ns19 / ns20.domaincontrol.com. | 不碰 |
-| MX | @ | zenramensushiny-com.mail.protection.outlook.com.（0） | 不碰 |
-| MX | @ | mx1.titan.email.（10）· mx2.titan.email.（20） | 不碰 |
-| TXT | @ | NETORGFT13749143.onmicrosoft.com | 不碰 |
-| TXT | @ | v=spf1 include:spf.titan.email ~all | 不碰 |
-| TXT | _activator_template | template applied | 不碰 |
-| CNAME | autodiscover / email / lyncdiscover / msoid / sip / pay / _domainconnect | （Microsoft 365 / GoDaddy 各项） | 不碰 |
-| SRV | _sip._tls / _sipfederationtls._tcp | lync | 不碰 |
-
-## 9. 已拍板
-
-| # | 决定 |
-|---|---|
-| D1 | ~~T = 2026-09-30 周三 10:00 ET~~ **2026-10-03 毛改：10-04（周日）只彩排；T = 6 项门全绿后的周二或周三 10:00 ET** |
-| D2 | 出事（打不开 / 跳转大面积出错 / https 报错 / 邮箱记录被改）agent **可直接回滚**，事后立即告知毛（§7） |
-| D3 | 开 Bing Webmaster Tools（T 当天，jaye.mao，从 GSC 导入） |
-| D4 | T 后 4 周，每周一推毛飞书三行报告（本周点击 / 对比基线 / 正常还是要处理）；**头一周每天读一次 GSC 点击**，不等周报 |
-| D5 | 新站放老板的 GoDaddy cPanel（Deluxe）；未经老板书面同意不下单 |
-| — | 旧站保留多久、cytd 停约：之后再谈（≥T+45，排名稳定后） |
-
-## 10. T 之后
-
-- 头一周：每天读 GSC 点击；首页 GSC 日点击**连续 2 天低于基线日均（约 31）的一半**就当天查原因（阈值待 T-1 用 28 天数据校准）。每周一跑 `node seo/check-cutover.mjs --host zenramensushiny.com` + 读 GSC 每周点击，对照 §3，结果报毛（连续 4 周）
-- **T+2 到 T+7：把证书交给 AutoSSL 自动续期**（手装的 Let's Encrypt 证书 90 天到期）：低峰时段 cPanel → SSL/TLS → Manage SSL Sites → Uninstall 手装证书，**马上** SSL/TLS Status → 勾根域和 www → Run AutoSSL；约 1 分钟空档，之后用 `--only-cert` 验证。**日历提醒**：签证书日 +60 天（未交接则必须手动续）
-- T+28：撤掉旧网址 sitemap；把等待时间调回 1 小时
-- T+45 之后：旧站去留、cytd 停约（须在排名连续两周不掉之后）；WordPress.com 订阅 2026-12-16 到期前决定续不续
-- 设计同事：「合并 PR ≠ 上线」，线上更新要 agent 重新构建+上传
-
-## 不在本次范围
-
-- 邮箱：SPF 只包含 titan、没包含 Microsoft 365（从 Outlook 发出的信可能进垃圾箱）——**切换前就存在的问题，不是这次引起的**，这次也不碰；另行告知老板
-- cytd / Rankpilot 供应商处置（毛：之后再说）
-- ~~GA4 转化事件~~ → 已并入 §5b（10-03）

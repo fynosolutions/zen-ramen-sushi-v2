@@ -30,7 +30,7 @@ Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范�
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=f9294980f18d4806ec89918b26aa827ebb8f964940c5b537d3e67f9244a54a93; output-bytes=12
 
 - [x] P6: 新站线上已带旧站两段 GSC 验证标签(切换后 Search Console 不失效)
-  CHECK: node -e "fetch('https://zen-ramen.vercel.app/?g='+Date.now()).then(r=>r.text()).then(h=>{const n=(h.match(/google-site-verification/g)||[]).length;console.log(n>=2?'VERIFY TAGS LIVE':'VERIFY TAGS MISSING '+n)})"
+  CHECK: node -e "fetch('https://zenramensushiny.com/?g='+Date.now()).then(r=>r.text()).then(h=>{const n=(h.match(/google-site-verification/g)||[]).length;console.log(n>=2?'VERIFY TAGS LIVE':'VERIFY TAGS MISSING '+n)})"
   EXPECT: VERIFY TAGS LIVE
   EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=50a32f428a84c55d092b2b551185696d02a9ce66c6cb4a04e0b00eaa098a0552; output-bytes=17
 
@@ -42,7 +42,7 @@ Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范�
 - [x] P8: 一键构建可用:带统计编号与「允许收录」开关构建,生成 .htaccess(含 https/www 规则、旧网址跳转、缓存头)放进 out/,自检统计与索引开关
   CHECK: node scripts/build-for-host.mjs
   EXPECT: BUILD-FOR-HOST PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=bbd4bf4750085a4fefae3e40e6292147831a6e5543fddd39b803a5a5ee45f058; output-bytes=1751
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=2de3ef10389ecbdd9a6da1b38b8166b426dcd7bb12bfd19dddb233dd5130ca56; output-bytes=1541
 
 - [x] P9: 本机真 Apache 全套彩排通过(113 条旧网址跳转、同网址页面、65 条故意 404、整站级跳转、统计/索引/规范网址、sitemap/robots、两个视频分段播放、图片缓存头、压缩、隐藏文件不对外)
   CHECK: sh -c 'node scripts/apache-local.mjs start out 8911 >/dev/null && node seo/check-cutover.mjs --host zenramensushiny.com --ip 127.0.0.1 --http-port 8911 --no-tls'
@@ -84,7 +84,7 @@ Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范�
 - [x] V4: 线上全套验收通过(整站级跳转、113 条旧网址永久跳转、同网址页面、65 条故意 404、统计/索引/规范网址、sitemap/robots、视频分段播放、缓存、压缩、速度)
   CHECK: node seo/check-cutover.mjs --host zenramensushiny.com
   EXPECT: CUTOVER-CHECK PASS
-  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=19379099b7002f8cf4ab422d7d5d992ddd597657898be7126c070b38183ac2d4; output-bytes=2040
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=352d7180d48666d9dd8a722ec57ea31586fccc8ff833a539f836d61bed01ebfe; output-bytes=2040
 
 - [x] V5: 线上统计编号正确、没有 noindex
   CHECK: GA_BASE=https://zenramensushiny.com node seo/check-ga4.mjs
@@ -103,8 +103,10 @@ Scope: 一份可执行的切换总计划 —— 覆盖毛问的六块(跳转范�
 - [ ] V9: 毛用真 iPhone 打开正式域名确认(图标、MENU 颜色、视频自动播)(人工)
   EVIDENCE: pending
 
-- [ ] V10: `zen-ramen.vercel.app` 的去留已由毛决定并执行(设成跳转到正式域名,或单独加 noindex),旧检查里的 CTA_BASE 已改指正式域名(人工)
-  EVIDENCE: pending
+- [x] V10: `zen-ramen.vercel.app` 已设成 308 跳转到正式域名(逐页带路径和参数),且仓库里的线上检查口径已改指正式域名(2026-10-05 由 website-0c 在 Vercel 设置里做、毛「按推荐走」)
+  CHECK: node -e "(async()=>{const t=['/','/menu/','/zrm-menu/?menu=lunch'];let bad=0;for(const p of t){const r=await fetch('https://zen-ramen.vercel.app'+p,{redirect:'manual'});const l=r.headers.get('location');if(r.status!==308||l!=='https://zenramensushiny.com'+p)bad++;}console.log(bad===0?'VERCEL-APP REDIRECT OK':'VERCEL-APP REDIRECT BAD '+bad)})()"
+  EXPECT: VERCEL-APP REDIRECT OK
+  EVIDENCE: exit=0; shell=/bin/sh; cwd=/Users/apple/Desktop/Orca/zen-ramen-cutover; path=b23d0ac203a6/32 entries; EXPECT=matched; output-sha256=24f2d8c9501d63bd78e795638a3073c561c905df3aa986301759914d92f1fa02; output-bytes=23
 
 - [ ] V11: 头 7 天(到 2026-10-12)每天读 GSC 点击,没有触发止损线(任何一周 <130 次,或首页从 Google 消失);之后每周一报毛,共 4 周(人工)
   EVIDENCE: pending

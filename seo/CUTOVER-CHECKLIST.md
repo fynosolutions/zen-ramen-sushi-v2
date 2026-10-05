@@ -33,7 +33,7 @@
 | **带参数的旧菜单链接**：`/zrm-menu/?menu=catering` 等 | 3 条规则 | 按参数跳到 catering / 午餐 | `vercel.json` 里带 `has` 的规则 |
 | **故意不留（404）**：近 3 个月 0 点击的 AI 薄博客、写错城市的文章 | 65 条 | 不跳。全部收口到首页会被 Google 判"软 404"，反而伤新站 | `seo/redirect-map-report.tsv` |
 | **整站级**：`http://` → `https://`、`www.` → 不带 www | 自动 | Vercel 绑域名时自动做：http→https 为 308，www→根域为 301（项目域名设置里的跳转）；2026-10-05 线上实测 | `seo/check-cutover.mjs` |
-| **临时地址**：`zen-ramen.vercel.app` | 1 | **待毛决定**（§10）：现在它与正式域名是同一个生产部署，也是 `index, follow`（规范网址已指向正式域名）；稳妥做法是设成 308 跳转到正式域名，或单独给这个主机加 `X-Robots-Tag: noindex` | 页面 `<meta robots>`、项目域名设置 |
+| **临时地址**：`zen-ramen.vercel.app` | 1 | **已设成 308 跳转到正式域名**（2026-10-05，website-0c 在 Vercel 项目域名设置里做，毛「按推荐走」；逐页带路径和参数，线上回读通过）。此前它与正式域名是同一个生产部署、也是 `index, follow` | `curl -sI https://zen-ramen.vercel.app/menu/`（V10） |
 
 **点击保全**：按 GSC 近 3 个月逐页点击算，旧站逐页点击合计 3,056 次里 **3,048 次（99.7%）有着落**，只丢写错城市的 8 次。
 数据来源：`seo/gsc-clicks-3m-2026-09-27.json`（GSC「网页」表导出）；门：`npm run seo` 的 MAPPING。
@@ -132,7 +132,7 @@
 |---|---|---|
 | 完成 §6 的 5–8 | agent + 毛 | GSC 提交 sitemap/请求收录、Bing、各平台链接、测试邮件、真 iPhone 终验 |
 | **头一周每天读 GSC 点击** | agent | 首页 GSC 日点击**连续 2 天低于基线日均（约 31）的一半**就当天查原因；每周一再跑 `node seo/check-cutover.mjs --host zenramensushiny.com` + 读 GSC 周点击，对照 §3，连续 4 周报毛 |
-| **`zen-ramen.vercel.app` 的去留（待毛决定）** | 毛拍板 | 现在它是同一个生产部署、`index, follow`，规范网址指向正式域名。建议设成 308 跳转到正式域名（一次性，Vercel 项目域名设置）；跳转后旧检查里的 `CTA_BASE=https://zen-ramen.vercel.app` 要改成 `https://zenramensushiny.com` |
+| ~~`zen-ramen.vercel.app` 的去留~~ ✅ 已做 | — | 2026-10-05 已设成 308 跳转到正式域名；仓库文档与检查口径已改：线上检查一律 `CTA_BASE=https://zenramensushiny.com`（vercel.app 会跳转，不再用它测）。历史验收账本里的旧证据行保留原样，那是当时的记录 |
 | 清理 `_acme-challenge` TXT | agent | 办证书时临时加的，无害；Vercel 续期走 HTTP 验证，不需要它 |
 | **推送 main = 直接发布给真客人** | 全员 | 合并任何 PR 都按正式发布对待；设计同事合并前先看预览 |
 | **回滚窗口** | — | 头 48 小时可回滚，第 7 天起只向前修；2026-11-15 旧站证书到期后回滚会 https 报错（§7） |

@@ -2,7 +2,7 @@
 
 不用装任何软件，全部在 GitHub 网页上完成。
 
-- 预览网站：https://zen-ramen.vercel.app
+- 正式网站：https://zenramensushiny.com（`main` 合并后约 1 分钟线上更新，**等于直接发布给真客人**，合并前再看一遍；旧的 zen-ramen.vercel.app 已自动跳转到这里）
 - `main` = 正式版本，**已上锁**：只能通过 Pull Request（PR）修改。
 
 ## 东西都在哪

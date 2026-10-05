@@ -4,7 +4,7 @@
 
 Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自然流量、546+ 排名词，**新站上线是一次迁移，不是一次发布**。
 
-- **线上（正式）：https://zenramensushiny.com**（2026-10-05 约 16:05 ET 起由 Vercel 提供；Fyno Solutions 团队，Pro，项目 zen-ramen）。**push main = 直接发布给真客人**，合并任何 PR 都按正式发布对待。`zen-ramen.vercel.app` 仍是同一个生产部署（去留待毛决定，见 `seo/CUTOVER-CHECKLIST.md` §10）
+- **线上（正式）：https://zenramensushiny.com**（2026-10-05 约 16:05 ET 起由 Vercel 提供；Fyno Solutions 团队，Pro，项目 zen-ramen）。**push main = 直接发布给真客人**，合并任何 PR 都按正式发布对待。`zen-ramen.vercel.app` 已在 Vercel 项目域名设置里设成 308 跳转到正式域名（2026-10-05）；**线上检查一律用 `CTA_BASE=https://zenramensushiny.com`，不再用 vercel.app**
 - **托管与域名**：网站全部 deploy 在 Vercel；**GoDaddy 只当域名注册商/DNS**（毛 2026-10-05 改回；9/27 曾定放 GoDaddy cPanel 主机，现为备用方案，见 `seo/CUTOVER-CHECKLIST.md` 附录 A）。切换总计划与回滚：`seo/CUTOVER-CHECKLIST.md`；验收账本 `GATES-cutover.md`（Vercel 路线 V1–V11）与 `GATES-cutover-godaddy-alt.md`（备用路线）
 - 客户的正式域名：zenramensushiny.com（**仍指向旧站，尚未切换**）
 - 本地预览：`npm run preview` → 127.0.0.1:3001（先 `npm run build`）
@@ -99,4 +99,4 @@ Restaurant 仓有个 session（`restaurant-e7`）同时在做旧站 WordPress �
 3. **SEO 供应商四问**（是谁/月费/到期/cytd.ai 上 45 篇内容归属）—— 停约与切换不能同期
 4. ~~客户实拍照片~~ —— 2026-09-24 已全站替换；~~官网横版视频~~ —— 已上线
 5. **店里要确认**：其余寿司卷的菜名（凑满每个卷分区一排 3 张）；烧卖/素煎饺是否每份 6 个；Tomato Seafood Ramen 命名
-6. ~~正式切换~~ —— **2026-10-05 已完成**（Vercel；待办见 `seo/CUTOVER-CHECKLIST.md` §10：GSC/Bing/平台链接/测试邮件/真 iPhone、头一周每天读点击、vercel.app 去留）
+6. ~~正式切换~~ —— **2026-10-05 已完成**（Vercel；待办见 `seo/CUTOVER-CHECKLIST.md` §10：GSC/Bing/平台链接/测试邮件/真 iPhone、头一周每天读点击；vercel.app 已 308 跳转到正式域名）

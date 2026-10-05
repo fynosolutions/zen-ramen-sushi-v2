@@ -143,7 +143,7 @@ try {
     for (const id of ids) await fill(id, id==='email'?'test@example.com':id==='phone'?'6465550101':id==='guests'?'12':id==='date'?today:id==='time'?'12:00':'Test');
     await p.getByRole('button',{name:'OPEN EMAIL APP'}).click(); await p.waitForTimeout(500);
     const nav = await p.evaluate(()=>window.__nav||[]); const mail = nav.find(u=>u.startsWith('mailto:'));
-    ok(!!mail && mail.startsWith('mailto:'+site.cateringEmail+'?'), `表单没有把邮件发往 ${site.cateringEmail}(得到 ${mail||'无'})`); ok(!!mail && /subject=Event%20inquiry/.test(mail), '邮件主题不是 Event inquiry');
+    ok(!!mail && mail.startsWith('mailto:'+site.cateringEmail+'?'), `表单没有把邮件发往 ${site.cateringEmail}(得到 ${mail||'无'})`); ok(!!mail && /subject=Event%20inquiry/.test(mail), '邮件主题不是 Event inquiry'); ok(!!mail && new URL(mail).searchParams.get('cc')===site.cateringCc, `表单没有抄送 ${site.cateringCc}`);
     // D9 404 页
     const r404 = await fetch(BASE+'/this-page-does-not-exist/'); ok(r404.status===404, `不存在的网址返回 ${r404.status}(应 404)`); ok(/href="\/"/.test(await r404.text()), '404 页没有回首页的按钮');
     await ctx.close(); }

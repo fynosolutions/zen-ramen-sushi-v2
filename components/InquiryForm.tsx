@@ -27,7 +27,7 @@ export default function InquiryForm(){
   setErrors(next);
   if(Object.keys(next).length){document.getElementById('inquiry-'+Object.keys(next)[0])?.focus();return;}
   setBusy(true);setPrepared(true);
-  const href=`mailto:${site.cateringEmail}?subject=${encodeURIComponent('Event inquiry — '+values.type)}&body=${encodeURIComponent(body())}`;
+  const href=`mailto:${site.cateringEmail}?cc=${site.cateringCc}&subject=${encodeURIComponent('Event inquiry — '+values.type)}&body=${encodeURIComponent(body())}`;
   if(href.length<7500)window.location.href=href;
   window.setTimeout(()=>setBusy(false),1200);
  };

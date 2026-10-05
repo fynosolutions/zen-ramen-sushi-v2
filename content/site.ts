@@ -1,6 +1,6 @@
 export const site = {
   name: 'ZEN RAMEN & SUSHI', address: '150 W 36th St, New York, NY 10018', phone: '(646) 870-7509', phoneHref: 'tel:+16468707509',
-  email: 'info@zenramensushiny.com', cateringEmail: 'info@zenramensushiny.com', timezone: 'America/New_York',
+  email: 'info@zenramensushiny.com', cateringEmail: 'info@zenramensushiny.com', cateringCc: 'jaye.mao@fynosolutions.com', timezone: 'America/New_York',
   reserve: 'https://resy.com/cities/new-york-ny/venues/zen-ramen-and-sushi',
   order: 'https://www.toasttab.com/local/order/zen-ramen-sushi-takeout-150-w-36th-street',   // 直订(Toast):店家不付第三方平台佣金,所有「ORDER ONLINE」都指这里
   directions: 'https://www.google.com/maps/dir/?api=1&destination=Zen+Ramen+%26+Sushi+150+W+36th+St+New+York+NY+10018',

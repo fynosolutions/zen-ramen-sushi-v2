@@ -3,7 +3,7 @@
 //   node seo/dns-check.mjs snapshot [文件]            存一份快照(默认 seo/baseline-T-1/dns-snapshot.json)
 //   node seo/dns-check.mjs compare  [文件]            与快照逐条比对:必须一字不差(买主机后、切换前用)
 //   node seo/dns-check.mjs compare  [文件] --flipped  切换后用:只允许 根域 A 与 www 的记录变化,其余(NS/MX/TXT/邮箱相关)必须不变
-//   node seo/dns-check.mjs ttl [--max 600]            看「根域 A / www」的生效等待时间,超过 --max 就失败(切换前要降到 600 秒)
+//   node seo/dns-check.mjs ttl [--max 600] [--all]    看「根域 A / www」的生效等待时间;根域 A 超过 --max 就失败(切换前要降到 600 秒;--all 连 www 一起要求)
 // 数据全是公开 DNS 信息,不含任何密码。
 import fs from 'fs'; import {spawnSync} from 'child_process';
 const [cmd = 'compare', ...rest] = process.argv.slice(2); const flag = f => rest.includes(f);
@@ -19,7 +19,8 @@ const vals = rec => Object.fromEntries(Object.entries(rec).map(([k, v]) => [k, v
 if (cmd === 'snapshot') { const snap = { when: new Date().toISOString(), ns: NS, records: take() }; fs.mkdirSync(file.replace(/\/[^/]+$/, ''), { recursive: true }); fs.writeFileSync(file, JSON.stringify(snap, null, 1));
   const n = Object.values(snap.records).reduce((s, v) => s + v.length, 0); console.log(`已存快照 ${file}:${n} 条记录(${snap.when})`); process.exit(0); }
 if (cmd === 'ttl') { const max = +(rest[rest.indexOf('--max') + 1] || 600); const rows = [['@','A'],['www','CNAME'],['www','A']].flatMap(([n, t]) => q(n, t).map(x => ({ n, t, ...x })));
-  rows.forEach(r => console.log(`  ${r.n} ${r.t} ${r.value} 等待时间 ${r.ttl} 秒`)); const bad = rows.filter(r => r.ttl > max); console.log(bad.length ? `DNS-TTL FAIL(${bad.length} 条超过 ${max} 秒)` : `DNS-TTL PASS(全部 ≤ ${max} 秒)`); process.exit(bad.length ? 1 : 0); }
+  // 回滚只需要改根域 A(www 的 CNAME 指向根域、不用动),所以只有根域 A 必须 ≤ max;www 记录只提示,加 --all 才一起要求
+  rows.forEach(r => console.log(`  ${r.n} ${r.t} ${r.value} 等待时间 ${r.ttl} 秒${r.n === 'www' && !flag('--all') ? '(仅提示)' : ''}`)); const bad = rows.filter(r => r.ttl > max && (r.n === '@' || flag('--all'))); console.log(bad.length ? `DNS-TTL FAIL(${bad.length} 条超过 ${max} 秒)` : `DNS-TTL PASS(全部 ≤ ${max} 秒)`); process.exit(bad.length ? 1 : 0); }
 if (cmd === 'compare') { if (!fs.existsSync(file)) { console.error('没有快照: ' + file); process.exit(2); } const snap = JSON.parse(fs.readFileSync(file, 'utf8')); const a = vals(snap.records), b = vals(take()); const flipOK = k => flag('--flipped') && (k === '@ A' || k === 'www CNAME' || k === 'www A');
   const diffs = []; for (const k of Object.keys(a)) if (JSON.stringify(a[k]) !== JSON.stringify(b[k]) && !flipOK(k) && k !== '@ SOA') diffs.push(`${k}\n      快照: ${a[k].join(' | ') || '(无)'}\n      现在: ${b[k].join(' | ') || '(无)'}`);
   if (JSON.stringify(a['@ SOA']) !== JSON.stringify(b['@ SOA'])) console.log(`  (提示)SOA 序号变了:${a['@ SOA'][0]?.split(' ')[2]} → ${b['@ SOA'][0]?.split(' ')[2]},说明这段时间有人改过记录(降等待时间、加验证记录、或主机向导改了)——下面逐条比对会告诉你改的是不是不该动的`);

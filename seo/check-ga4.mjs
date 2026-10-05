@@ -9,6 +9,7 @@ for (const p of pages) {
   const ids = [...new Set(h.match(/G-[A-Z0-9]{8,12}/g) || [])];
   if (!ids.includes(ID)) fail.push(`${p}: 没有 ${ID}`);
   if (ids.some(i => i !== ID)) fail.push(`${p}: 出现别的统计编号 ${ids.filter(i => i !== ID)}`);
+  for (const t of ['GT-MJJQ9P6Z', 'AW-17990718317', 'XUW55TSpfP5vV7RUmbuTfA', 'bzrcdn.openai.com/sdk/oaiq.min.js']) if (!h.includes(t)) fail.push(`${p}: 缺旧站带过来的统计/广告代码 ${t}`);   // 店家 GA4、Google Ads 转化、OpenAI 广告像素:2026-10-05 切换时漏过一次
   if (/<meta name="robots" content="[^"]*noindex/i.test(h)) fail.push(`${p}: 还是 noindex(NEXT_PUBLIC_SITE_INDEXABLE 没带)`);
 }
 console.log(fail.length ? `GA4-CHECK FAIL (${BASE || OUT}):\n  ` + fail.join('\n  ') : `GA4-CHECK PASS (${BASE || OUT}) ${pages.length} 页`);

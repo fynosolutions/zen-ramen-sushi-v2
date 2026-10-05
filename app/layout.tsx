@@ -21,7 +21,13 @@ function Analytics(){
     <script dangerouslySetInnerHTML={{__html:
       `if(!/^(localhost|127\\.0\\.0\\.1)$/.test(location.hostname)){` +   // 本地预览不计数,避免误报
       `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}` +
-      `gtag('js',new Date());gtag('config','${id}',{anonymize_ip:true});}`
+      `gtag('js',new Date());gtag('config','${id}',{anonymize_ip:true});` +
+      // 旧站 Google Site Kit 里店家自己的 GA4(G-W5EJN9PQ8X,经 Google 标签 GT-MJJQ9P6Z)与 Google Ads 转化编号:切换时漏带,2026-10-05 补回
+      `gtag('config','GT-MJJQ9P6Z');gtag('config','AW-17990718317');` +
+      // OpenAI 广告转化像素(旧站 WPCode 里的原文)
+      `window.oaiq=window.oaiq||function(){(window.oaiq.q=window.oaiq.q||[]).push(arguments)};` +
+      `oaiq('init',{pixelId:'XUW55TSpfP5vV7RUmbuTfA'});oaiq('track','page_viewed');` +
+      `var o=document.createElement('script');o.async=true;o.src='https://bzrcdn.openai.com/sdk/oaiq.min.js';document.head.appendChild(o);}`
     }}/>
   </>;
 }

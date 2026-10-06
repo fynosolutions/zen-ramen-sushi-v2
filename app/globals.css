@@ -244,3 +244,38 @@ a[href^="tel:"]{white-space:nowrap}
 /* 标题折行时左右平衡,不留「Square」「together.」这种单词孤行(电脑版不动) */
 h1,h2{text-wrap:balance}
 }
+
+/* ── 文章页 / 文章目录 / 地址页 / 午市套餐页(2026-10-06,旧站 SEO 积累承接)──
+   沿用「场景页」的正文样式(.scene-body),这里只补文章特有的:长标题、表格、引用、列表、图片、目录卡片 */
+.journal-heading{padding-bottom:34px}.journal-heading h1{font-size:clamp(34px,4.6vw,60px);line-height:1.08;letter-spacing:-.035em;max-width:980px;text-wrap:balance}.journal-heading .eyebrow a{text-decoration:none}
+.journal-meta{font-size:13px;color:var(--muted);margin:0}.journal-meta span+span::before{content:'· '}
+.journal-hero{width:100%;height:auto;max-height:560px;object-fit:cover;margin-bottom:44px;aspect-ratio:2/1}
+.journal-body h2{scroll-margin-top:calc(var(--header-h) + 20px);text-wrap:balance}.journal-body h3{font-size:21px;margin:28px 0 10px;scroll-margin-top:calc(var(--header-h) + 20px);text-wrap:balance}.journal-body h4{font-size:17px;margin:22px 0 8px}
+.journal-body ul,.journal-body ol{padding-left:22px;margin:0 0 18px}.journal-body li{font-size:15px;line-height:1.85;color:#494a44;margin-bottom:6px}
+.journal-body a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px;overflow-wrap:anywhere}.journal-body a:hover{color:var(--red)}
+.journal-body blockquote{margin:24px 0;padding:14px 22px;border-left:3px solid var(--red);background:#f7f6f0}.journal-body blockquote p{margin:0}
+.journal-body figure{margin:28px 0}.journal-body img{max-width:100%;height:auto;display:block}.journal-body figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+.table-scroll{overflow-x:auto;margin:22px 0;border:1px solid var(--line);-webkit-overflow-scrolling:touch}.table-scroll table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}.table-scroll th,.table-scroll td{padding:10px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;line-height:1.55}.table-scroll th{background:#f7f6f0;font-size:12px;letter-spacing:.06em}.table-scroll tr:last-child td{border-bottom:0}
+.journal-visit{max-width:760px;margin-top:48px;padding:28px;border:1px solid var(--line);background:#f7f6f0}.journal-visit h2{font-size:26px;margin:0 0 12px}.journal-visit p{font-size:15px;line-height:1.85;color:#494a44}.journal-visit p a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.journal-more{max-width:760px;margin-top:40px}.journal-more h2{font-size:22px;margin:0 0 12px}.journal-more ul{list-style:none;padding:0;margin:0 0 18px}.journal-more li{border-bottom:1px solid var(--line)}.journal-more li a{display:block;padding:13px 0;text-decoration:none;font-weight:700;font-size:15px;line-height:1.4}.journal-more li a:hover{color:var(--red)}
+.journal-index h2{font-size:30px;margin:0 0 20px}.journal-index h2:not(:first-child){margin-top:54px}
+.journal-cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.journal-cards a{display:block;text-decoration:none}.journal-cards img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:50% 30%;margin-bottom:14px}.journal-cards strong{display:block;font-size:17px;line-height:1.3;margin-bottom:8px;text-wrap:balance}.journal-cards span{display:block;font-size:13px;line-height:1.65;color:var(--muted)}.journal-cards a:hover strong{color:var(--red)}
+.journal-list{list-style:none;padding:0;margin:0 0 30px}.journal-list li{display:flex;justify-content:space-between;gap:20px;align-items:baseline;border-bottom:1px solid var(--line);padding:13px 0}.journal-list a{text-decoration:none;font-weight:700;font-size:15px;line-height:1.4}.journal-list a:hover{color:var(--red)}.journal-list time{font-size:12px;color:var(--muted);white-space:nowrap}
+.location-title{font-size:inherit;margin:0}.location-body{margin-top:50px}.location-body p a,.lunch-page .scene-body p a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.lunch-section{margin-top:46px}.lunch-section h2{font-size:30px;margin:0 0 10px}.lunch-note{font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 6px;max-width:760px}
+.lunch-items{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}.lunch-items li{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;border-bottom:1px solid var(--line);padding:14px 0}.lunch-items strong{display:block;font-size:16px;line-height:1.35}.lunch-items li div span{display:block;font-size:13px;line-height:1.6;color:var(--muted);margin-top:4px}
+.lunch-price{display:flex;gap:18px;margin:0;white-space:nowrap;font-weight:800;font-size:15px}.lunch-price small{display:block;font-size:10px;letter-spacing:.1em;color:var(--muted);font-weight:800}
+.lunch-page>.scene-body:last-child{margin-top:40px}
+@media(max-width:900px){.journal-cards{grid-template-columns:repeat(2,1fr)}.lunch-items{grid-template-columns:1fr}}
+/* 主标题里的小标签(PageHeading labelInHeading):长相与标题上方的 .eyebrow 一样 */
+.page-heading h1 .h1-label{display:block;font-family:var(--font);font-size:12px;line-height:1.5;letter-spacing:.14em;font-weight:800;margin-bottom:22px}
+@media(max-width:650px){.page-heading h1 .h1-label{font-size:11px;margin-bottom:17px}}   /* 实测:与其他页「小标签→大标题」的间距对齐 */
+.about-more h2:not(:first-child){margin-top:44px}
+/* 首页「关于」区块加了第二段文字后红色块变高:图片跟着长到同高(原来两边底部对齐) */
+.about-image{max-height:760px}
+/* 页尾链接从 6 个变 9 个:电脑上分两列,不再是一长条 */
+@media(min-width:1001px){.footer-links{grid-template-columns:1fr 1fr;column-gap:30px}}
+@media(max-width:650px){.journal-heading h1{font-size:32px}.journal-body h2{font-size:22px;margin:28px 0 12px}.journal-body h3{font-size:18px}.journal-visit h2{font-size:22px}.journal-meta span{display:block}.journal-meta span+span::before{content:none}
+.journal-visit .scene-ctas .button,.lunch-page .scene-ctas .button,.location-body .scene-ctas .button{width:100%;justify-content:space-between}
+/* 表格在手机上不横滑:每行堆成一张卡,列名(data-label)当小标题 */
+.table-scroll{overflow:visible;border:0}.table-scroll table{min-width:0;display:block}.table-scroll thead{display:none}.table-scroll tbody{display:block}.table-scroll tr{display:block;border:1px solid var(--line);margin-bottom:12px;padding:6px 0}.table-scroll td{display:block;border:0;padding:7px 14px}.table-scroll td:first-child{font-weight:800}.table-scroll td[data-label]:not(:first-child)::before{content:attr(data-label);display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-bottom:2px}.journal-hero{margin-bottom:28px;aspect-ratio:3/2}.journal-cards{grid-template-columns:1fr}.journal-list li{flex-direction:column;gap:4px}.journal-visit{padding:20px}.lunch-items li{gap:14px}.lunch-price{gap:12px}.lunch-price small{font-size:11px}.journal-list time{font-size:12px}.table-scroll table{font-size:13px}.table-scroll th{font-size:11px}}

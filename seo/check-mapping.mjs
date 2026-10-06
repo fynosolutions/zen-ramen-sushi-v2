@@ -5,7 +5,9 @@ const WRONG = /gainesville|dahlonega|greenville|noblesville/i;
 const exists = p => p==='/' || fs.existsSync('out'+p.replace(/\/$/,'')+'/index.html');
 const isBlog = p => /^\/\d{4}\/\d{2}\/\d{2}\//.test(p);
 // 策略:有排名(etv>=1)且非错城市的必须有去处;其余故意下线(404)
-const mustKeep = p => !isBlog(p) || (clicksOf(p) >= 1 && !WRONG.test(p));
+// 2026-10-06:有点击或有排名词的文章已原网址搬回新站(content/journal.json),这些也必须在
+const restored = new Set(JSON.parse(fs.readFileSync('content/journal.json','utf8')).posts.map(x=>x.path));
+const mustKeep = p => !isBlog(p) || restored.has(p.replace(/\/$/,'')+'/') || (clicksOf(p) >= 1 && !WRONG.test(p));
 let fail=0, kept=0, retired=0, savedClicks=0, lostClicks=0, wrongCityClicks=0;
 for(const p of old){
   const rule = v.redirects.find(r=>!r.has && r.source===p.replace(/\/$/,'')+'/');

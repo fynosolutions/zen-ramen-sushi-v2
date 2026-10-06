@@ -8,9 +8,11 @@ for(const p of pages){
   const t=(h.match(/<title>([^<]*)<\/title>/)||[])[1]||'';
   const d=(h.match(/<meta name="description" content="([^"]*)"/)||[])[1]||'';
   if(!t){console.log('无title:',p);fail++;}
-  if(t.length>60){console.log(`title ${t.length}字符:`,p,'|',t);fail++;}
+  // 旧站搬来的文章(日期式网址):标题和描述逐字沿用 Google 已收录的原文,所以不卡长度;是否与旧站一致由 check-journal.mjs 验
+  const legacy=/out\/\d{4}\/\d{2}\/\d{2}\//.test(p);
+  if(!legacy && t.length>60){console.log(`title ${t.length}字符:`,p,'|',t);fail++;}
   if(!d){console.log('无description:',p);fail++;}
-  if(d.length>160){console.log(`desc ${d.length}字符:`,p);fail++;}
+  if(!legacy && d.length>160){console.log(`desc ${d.length}字符:`,p);fail++;}
   if(titles[t]){console.log('title重复:',t,'@',p,'与',titles[t]);fail++;} titles[t]=p;
   if(d && descs[d]){console.log('desc重复:',p,'与',descs[d]);fail++;} if(d)descs[d]=p;
 }

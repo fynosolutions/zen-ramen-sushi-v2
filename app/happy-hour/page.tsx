@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Happy Hour · $6.49 Rolls Daily',
   description: 'Happy hour in Midtown every day 4–8 PM: sushi rolls and appetizers at $6.49, plus sake, beer and cocktails. 150 W 36th St, near Penn Station.',
   alternates: { canonical: '/happy-hour/' },
-  openGraph: { title: 'Happy Hour at ZEN RAMEN & SUSHI', description: 'Every day 4–8 PM. Sushi rolls from $6.49.', url: '/happy-hour/' },
+  openGraph: { title: 'Happy Hour at ZEN RAMEN & SUSHI', description: 'Every day 4–8 PM. Sushi rolls from $6.49.', url: '/happy-hour/', siteName: 'Zen Ramen & Sushi', type: 'website', locale: 'en_US', images: [{ url: '/images/shot-og.webp', width: 1200, height: 630, alt: 'Ramen and sushi at Zen Ramen & Sushi in Midtown Manhattan' }] },
 };
 
 const rolls = ['California', 'Spicy Tuna (Crunch)', 'Spicy Salmon (Crunch)', 'Avocado', 'Salmon Mango', 'Sweet Potato', 'Eel Cucumber', 'Shrimp Tempura', 'Yellow Tail Scallion', 'Tuna Mango'];

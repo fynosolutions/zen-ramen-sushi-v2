@@ -42,11 +42,6 @@
       "permanent": true
     },
     {
-      "source": "/contact/",
-      "destination": "/events-catering/",
-      "permanent": true
-    },
-    {
       "source": "/news/",
       "destination": "/blog/",
       "permanent": true
@@ -252,6 +247,86 @@
       "permanent": true
     },
     {
+      "source": "/contact/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/uorder-menu/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/fire-mountain-roll/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/karaage-w-sesame-seed/",
+      "destination": "/menu/#dinner--appetizers",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/m16/",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/mango-rosemary-tea/",
+      "destination": "/menu/#dinner--sake",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/mojito/",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/roll-combo-d/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/salmon-don/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/salmon-mango-roll/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/sapporo/",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/sashimi-lunch/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/sushi-lunch/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/teriyaki-chicken-lunch/",
+      "destination": "/lunch-specials/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/teriyaki-salmon/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-type/happy-hour-4-8pm/",
+      "destination": "/happy-hour/",
+      "permanent": true
+    },
+    {
       "source": "/uorder-menu/",
       "destination": "/menu/",
       "permanent": true
@@ -259,6 +334,41 @@
     {
       "source": "/sushi/",
       "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-type/happy-hour-4-8pm/",
+      "destination": "/happy-hour/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-item/(.*)",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-menu-type/(.*)",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-category/(.*)",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/zrm-tag/(.*)",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/menu-item/(.*)",
+      "destination": "/menu/",
       "permanent": true
     },
     {

@@ -31,7 +31,7 @@ def curl(url, auth=False, binary=False):
     return out if binary else out.decode('utf-8', 'replace')
 
 def clicks():
-    gs = [json.load(open(os.path.join(ROOT, f))) for f in ('seo/gsc-clicks-2026-09-23.json', 'seo/gsc-clicks-3m-2026-09-27.json')]
+    gs = [json.load(open(os.path.join(ROOT, f))) for f in ('seo/gsc-clicks-2026-09-23.json', 'seo/gsc-clicks-3m-2026-09-27.json', 'seo/gsc-clicks-16m-2026-10-06.json')]
     keys = set(k for g in gs for k in g)
     return {k: (max(g.get(k, {}).get('clicks', 0) for g in gs), max(g.get(k, {}).get('imp', 0) for g in gs)) for k in keys}
 

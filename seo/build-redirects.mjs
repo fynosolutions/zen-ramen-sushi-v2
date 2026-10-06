@@ -26,6 +26,8 @@ const structural = {
   // 旧文章目录现在是真页面 /blog/,同类入口都指过去
   '/lunch-specials-2/':'/lunch-specials/', '/zen-ramen-contact/':'/location/', '/main-course/':'/menu/',
   '/news/':'/blog/', '/zen-ramen-sushi-blog/':'/blog/',
+  // 2026-10-06 16 个月数据带出来的老入口:不写在这里会落到兜底的 /about/(上线后线上验收抓到 /uorder-menu/ 被带偏)
+  '/uorder-menu/':'/menu/', '/contact/':'/location/', '/zrm-menu-item/sushi-lunch/':'/lunch-specials/', '/zrm-menu-item/sashimi-lunch/':'/lunch-specials/',
 };
 // 不在旧网址清单里、但有外链或旧站上能打开的零散入口(2026-10-06 用外链数据与旧站实测补)
 const LEGACY = [

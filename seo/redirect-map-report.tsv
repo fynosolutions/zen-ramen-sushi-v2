@@ -182,8 +182,8 @@
 /2026/09/24/edamame-at-a-japanese-restaurant-the-perfect-start/	PAGE	(同URL保留)
 /2026/09/25/tofu-in-japanese-food-ramen-and-sushi-guide/	PAGE	(同URL保留)
 /2026/09/30/dashi-broth-the-invisible-foundation-of-japanese-cooking/	PAGE	(同URL保留)
-/contact/	301	/about/
-/uorder-menu/	301	/about/
+/contact/	301	/location/
+/uorder-menu/	301	/menu/
 /zrm-menu-item/fire-mountain-roll/	301	/menu/#dinner--sushi-rolls
 /zrm-menu-item/karaage-w-sesame-seed/	301	/menu/#dinner--appetizers
 /zrm-menu-item/m16/	301	/menu/
@@ -193,8 +193,8 @@
 /zrm-menu-item/salmon-don/	301	/menu/#dinner--sushi-rolls
 /zrm-menu-item/salmon-mango-roll/	301	/menu/#dinner--sushi-rolls
 /zrm-menu-item/sapporo/	301	/menu/
-/zrm-menu-item/sashimi-lunch/	301	/menu/#dinner--sushi-rolls
-/zrm-menu-item/sushi-lunch/	301	/menu/#dinner--sushi-rolls
+/zrm-menu-item/sashimi-lunch/	301	/lunch-specials/
+/zrm-menu-item/sushi-lunch/	301	/lunch-specials/
 /zrm-menu-item/teriyaki-chicken-lunch/	301	/lunch-specials/
 /zrm-menu-item/teriyaki-salmon/	301	/menu/#dinner--sushi-rolls
 /zrm-menu-type/happy-hour-4-8pm/	301	/happy-hour/

@@ -248,12 +248,12 @@
     },
     {
       "source": "/contact/",
-      "destination": "/about/",
+      "destination": "/location/",
       "permanent": true
     },
     {
       "source": "/uorder-menu/",
-      "destination": "/about/",
+      "destination": "/menu/",
       "permanent": true
     },
     {
@@ -303,12 +303,12 @@
     },
     {
       "source": "/zrm-menu-item/sashimi-lunch/",
-      "destination": "/menu/#dinner--sushi-rolls",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {
       "source": "/zrm-menu-item/sushi-lunch/",
-      "destination": "/menu/#dinner--sushi-rolls",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {

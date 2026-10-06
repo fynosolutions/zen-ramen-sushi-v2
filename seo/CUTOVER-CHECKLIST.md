@@ -75,6 +75,7 @@
 | 4 | GoDaddy：根域 A 与 www 的等待时间 3600 → **600 秒**，只改时间不改值 | `node seo/dns-check.mjs ttl --max 600`（只卡根域 A；www 的 CNAME 指向根域、回滚不用动它） |
 | 5 | 存 DNS 快照 `seo/baseline-T-1/dns-snapshot.json`（与 9/27 手抄存档逐条一致） | `node seo/dns-check.mjs compare` |
 | 6 | **彩排**（不动线上域名）：`node seo/check-cutover.mjs --host zenramensushiny.com --ip 216.150.1.1` | 证书/跳转/视频/统计/速度全 PASS |
+| 7 | **旧站第三方脚本清点**（024 当时漏做，切换当天才补）：用真浏览器打开旧站 3 个页面，列出实际发往外部的统计/广告请求与编号（GA4 的 `tid`、`GT-`、`AW-`、各广告像素），逐条定「搬 / 不搬 / 问客户」；WordPress 装了 Google Site Kit 时用管理员接口读它的设置。024 漏了三段：店家自己的 GA4（`GT-MJJQ9P6Z`）、Google Ads 转化（`AW-17990718317`）、OpenAI 广告像素，2026-10-05 补回（PR #22） | `node seo/check-ga4.mjs` 逐个检查这几段；新旧站外发请求对比 |
 
 ## 6. 切换日 T（2026-10-05 约 16:05 ET，周一，已执行）
 

@@ -41,6 +41,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 
 **切换/托管相关工具（2026-10-03 起）**：`node seo/check-cutover.mjs --host zenramensushiny.com [--ip 入口地址] [--only-cert]`（全套验收；Vercel 口径：永久跳转 301/308 都算、http www 允许两跳、带参数的跳转可保留原参数）· `node seo/dns-check.mjs snapshot|compare [--flipped]|ttl`（DNS 快照/比对/等待时间，直接问 GoDaddy 权威服务器；只比对固定名单里的记录名，新增名字如 `_vercel` 看不到）· `node seo/check-ga4.mjs`。**备用方案（搬到 GoDaddy 主机）的工具**：`node scripts/build-for-host.mjs`（一键构建+放 `.htaccess`+自检+`--upload` 上传）· `node scripts/apache-local.mjs start out 8911`（本机起真 Apache 试跑）。**线上检查的地址从此用 `CTA_BASE=https://zenramensushiny.com`**（不再用 zen-ramen.vercel.app）。
 
+**统计/广告代码与询单邮箱（2026-10-05 切换当天补记）**：`app/layout.tsx` 里除了我们自己的 GA4（`G-JZD3SQCWMP`，构建变量 `NEXT_PUBLIC_GA4_ID`），还注入了旧站带过来的三段：店家自己的 GA4（经 Google 标签 `GT-MJJQ9P6Z`）、Google Ads 转化 `AW-17990718317`、OpenAI 广告转化像素。这三段**切换时漏带过一次**（旧站在 WordPress 的 Google Site Kit / WPCode 里），当天补回（PR #22）；`node seo/check-ga4.mjs` 现在会逐个检查，丢了报红。**别删**，要改先问毛（广告在用这些转化）。活动/宴请询单表单：`content/site.ts` 的 `cateringEmail` = `info@`、`cateringCc` = `jaye.mao@fynosolutions.com`，页面只显示 `info@`，是 `mailto:` 型（不自动发送）。`catering@` 实测收不到外面来信（Microsoft 退信 `550 5.1.10 RecipientNotFound`，2026-10-05），修好之前别改回去；`check-links.mjs` 会断言收件人与抄送。
+
 ## 红线（违反 = 事故）
 
 **域名和邮箱是客户的；网站托管在我们的 Vercel 账号下。** 切换只改了根域 A 记录（192.0.78.24/25 → 216.150.1.1 + 216.150.16.1），www 的 CNAME 本来就指向根域；`zenramensushiny.com` 的 MX/TXT 上挂着客户在用的 Microsoft 365 + titan 邮箱，**改 nameserver 会当场中断收信**（Vercel 界面会推荐「改用 Vercel 域名服务器」，不要点）。回滚（头 48 小时，到 2026-11-15 旧站证书到期为止）：A 改回 192.0.78.24 + 192.0.78.25。完整方案：`seo/CUTOVER-CHECKLIST.md`、`seo/DNS-PLAN.md`。网站挂在 Fyno 的账号下，要跟老板说清谁托管、怎么拿走——这个站是静态导出，可随时搬 Apache（附录 A）。

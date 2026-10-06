@@ -5,7 +5,7 @@
 // 用法: node seo/check-keywords.mjs    (先 npm run build)
 import fs from 'fs';
 const rk = JSON.parse(fs.readFileSync('seo/ranked-before-2026-09-20.json', 'utf8')).tasks[0].result[0].items;
-const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const rules = new Map(v.redirects.filter(r => !r.has).map(r => [r.source, r.destination]));
+const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const rules = new Map(v.redirects.filter(r => !r.has).reverse().map(r => [r.source, r.destination]));   /* 同一个 source 出现两次时线上是「先出现的生效」,倒序建表让先出现的覆盖后出现的(2026-10-06:/uorder-menu/ 本地过、线上被前一条带去 /about/) */
 const file = p => { const q = p.split('#')[0]; return 'out' + (q === '/' ? '' : q.replace(/\/$/, '')) + '/index.html'; };
 const dest = p => { const q = p.endsWith('/') ? p : p + '/'; if (fs.existsSync(file(q))) return q; const toRe = src => new RegExp('^' + src.replace(/:\w+\(([^)]+)\)/g, '($1)').replace(/:\w+/g, '[^/]+') + '$'); const wild = [...rules].find(([s]) => /[:(*]/.test(s) && toRe(s).test(q)); return rules.get(q) || (wild && wild[1]) || null; };
 const cache = new Map(); const pageText = p => { if (!cache.has(p)) { const h = fs.existsSync(file(p)) ? fs.readFileSync(file(p), 'utf8') : ''; const t = (h.match(/<title>([^<]*)/) || [])[1] || '', d = (h.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';

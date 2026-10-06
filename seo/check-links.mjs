@@ -34,6 +34,10 @@ const RULES = [
   [/^FOLLOW ALONG/i, h=>h==='https://www.instagram.com/zenramen_sushi/'], [/^WATCH ON INSTAGRAM/i, h=>IG_REEL.test(h)],
   [/^SEE THE FULL HAPPY HOUR MENU|^…and \d+ more on the full menu/i, h=>h==='/menu/#happy-hour'],
   [/^lunch menu$/i, h=>h==='/menu/#lunch'],
+  /* 2026-10-06 新增的三页(午市套餐 / 地址 / 文章目录)及其入口 */
+  [/^(Lunch Specials\b|lunch specials( menu)?$)/i, h=>h==='/lunch-specials/'], [/^FULL LUNCH MENU/, h=>h==='/menu/#lunch'],
+  [/^location (&|and) hours$|^Location & Hours\b/i, h=>h==='/location/'], [/^(Journal\b|ALL GUIDES|ZEN JOURNAL)/, h=>h==='/blog/'],
+  [/^near Penn Station$/, h=>h==='/near-penn-station/'], [/^near Madison Square Garden$/, h=>h==='/near-madison-square-garden/'], [/^happy hour$/i, h=>h==='/happy-hour/'],
   /* 首页三张菜单卡(整张卡是一个链接,文字=标题+副标题;箭头现在是 SVG 图标,不再是文字) */
   [/^Dinner Ramen, sushi/, h=>h==='/menu/#dinner'], [/^Lunch Monday/, h=>h==='/menu/#lunch'], [/^Happy Hour 4–8 PM · Appetizers/, h=>h==='/menu/#happy-hour'],
   [/^(HAPPY HOUR\b|Happy Hour\b|SEE THE DEAL|daily happy hour|happy hour \()/, h=>h==='/happy-hour/'],
@@ -44,7 +48,9 @@ const RULES = [
   [/^ZEN RAMEN & SUSHI$/, h=>h==='/'],
 ];
 const label = r => (r.text || r.aria || '').replace(/\s*↗\s*$/,'').trim();
-const paths = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/'];
+const paths = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/','/lunch-specials/','/location/','/blog/'];
+// 文章目录页上的文章链接:文字=文章标题,去向必须是 content/journal.json 里那篇文章自己的网址(文章页本身的链接由 check-journal.mjs 验)
+const journal = new Map(JSON.parse((await import('fs')).readFileSync('content/journal.json','utf8')).posts.map(p=>[p.path,p.title]));
 const b = await chromium.launch(); const skipIntro = c => c.addInitScript(()=>{try{sessionStorage.setItem('zen-intro-v2','1')}catch{}});
 const seen = new Map(), anchors = [];
 try {
@@ -67,6 +73,7 @@ try {
     else if (!/^(mailto:|tel:|#)/.test(h)) internals.add(h.split('#')[0]);
     if (r.inNav) { const m = h.match(/^#(\w[\w-]*)--[\w-]+$/); ok(!!m && (`panel-${m[1]}`===r.panel), `${r.page} 分类导航「${l}」指向 ${h},但它在 ${r.panel||'?'} 里(菜单页签对不上)`); continue; }
     if (r.panel && /^VIEW ORIGINAL PDF|^View the original/i.test(l)) { ok(h===`/menus/${r.panel.replace('panel-','')}.pdf`, `${r.page} 「${l}」在 ${r.panel} 里却指向 ${h}`); continue; }
+    if (journal.has(h)) { ok(l.includes(journal.get(h)), `${r.page} 文章链接文字「${l.slice(0,50)}」与去向 ${h} 的标题不符`); continue; }
     const rule = RULES.find(([re]) => re.test(l));
     if (!rule) { unmatched.add(`${l} → ${h}`); continue; }
     const key = `${l} → ${h}`; if (seen.has(key)) continue; seen.set(key, rule);

@@ -76,9 +76,22 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 
 `seo/gsc-clicks-2026-09-23.json` 是 Search Console 的**真实点击**，逐 URL。DataForSEO 的 etv 和 SE Ranking 的估算都高估约一个数量级——实测有页面 etv 180 而真实点击为 0。**任何"这页值不值得保"的判断以 GSC 为准**，估算工具只用于看趋势。Search Console 资源已验证在 jaye.mao@fynosolutions.com 名下，可直接登 search.google.com/search-console 查。
 
-## 跳转的真相源是 vercel.json（分层承接，不是全量 301）
+## 旧站的 SEO 积累怎么接（2026-10-06 定版：有积累的网址，同网址保住或跳到对等页）
 
-旧 URL 清单（153 条存档 + GSC 里有点击但不在清单的）共 179 条，`vercel.json` 只 301 承接**近 3 个月有真实点击**的 114 条；零点击的薄内容和写错城市的文章（Gainesville/Noblesville 等，供应商弄错的）故意不跳转、让它自然 404——全量收口到几个锚点会被 Google 判"软 404"，伤新站更多。`seo/sources.mjs` 是旧 URL 与点击数据的唯一入口（两份 GSC 导出取较大值；**2026-09-27 实测 09-23 那份窗口太短，漏了 49 个有点击的页面**——重算映射前先从 GSC 重新导出近 3 个月「网页」表），`seo/build-redirects.mjs` 是生成器，`seo/check-mapping.mjs` 是验收门。
+毛的要求：「新网站应该能接住旧网站所有的 SEO 积累，不应该有 drop」。一个旧网址有没有积累看四样：Google 真实点击、近 3 个月曝光 ≥100、9-20 排名存档里有词、有外链。验收账本 `GATES-seo-equity.md`（本地 12 门）与 `GATES-seo-equity-live.md`（上线后）。
+
+- **旧文章原网址原样保留，不跳转**：有积累的 86 篇在 `content/journal.json`，由 `scripts/import-journal.py` 从旧站导入（标题与描述逐字沿用 Google 收录的原文；30 篇共用站点默认描述的换成正文开头；正文清洗、图片转 webp 放 `public/images/journal/`）。路由 `app/[year]/[month]/[day]/[slug]/`，目录页 `/blog/`。切换当天曾把它们 301 到菜单锚点——Google 不把「文章→菜单页」当等价内容，这个做法已废。
+- **仍然故意 404 的只有两类**：写错城市的文章（Gainesville / Noblesville / Greenville / Dahlonega，讲的是别处同名店）和旧站自己已删的（名单 = `journal.json` 的 `notOnOldSite`）。没有积累的薄文章照旧 404。
+- **新增的同网址/对等页面**：`/location/`（旧站同网址）、`/lunch-specials/`（旧 `/lunch-specials-2/` 301 过来；菜名价格全读 `menus.json`）。旧的联系页、主菜页、标签/分类/作者归档、日期归档、分页、RSS 的去向都在 `seo/build-redirects.mjs` 里（`structural` 与 `LEGACY`）。
+- **接不住的已知缺口**：`/wp-content/…`、`/wp-json/`、`/wp-login.php` 这类路径在 Vercel 上被平台防护直接 403（`x-vercel-mitigated: deny`），跳转规则轮不到执行，所以旧站的菜单 PDF 直链和被盗链的 logo 没法承接；三条都没有 Google 点击。别再往 vercel.json 里加 `/wp-content/` 的跳转。
+- **三个验收脚本**：`seo/check-equity.mjs`（逐网址：有积累的都被接住；有积累的文章必须同网址）· `seo/check-journal.mjs --source <旧站备份.json>`（逐篇，并与 9-23 的独立备份比内容，备份在 `~/Desktop/CC-Max-2026/restaurant/zen-024-backups/`）· `seo/check-keywords.mjs`（旧页面文字里有的排名词，新落点正文里还在；旧页面文字基线 `seo/old-page-text-2026-10-06.json`）。三个都有负向对照门。
+- **改了文章或页面后**：`node scripts/build-sitemap.mjs`（sitemap 是生成的，别手改）→ `node seo/build-redirects.mjs` → 重新构建 → 跑账本。本地验收一律带 `NEXT_PUBLIC_SITE_INDEXABLE=true` 构建。
+- ⚠️ **对线上跑检查要慢**：10-06 我一天内对线上并发跑了几十轮检查，触发了 Vercel 的自动防护，全站对不带浏览器的请求返回 403 约一小时（真人浏览器多等一两秒、Google 实时测试不受影响）。`check-equity` / `check-journal` 的线上模式已改成每请求间隔 600ms；上线后的整套验收只跑一遍，不要并行、不要连跑。
+- 排名对比的两份基线：`seo/ranked-before-2026-09-20.json`、`seo/ranked-after-2026-10-06.json`（后者虽是 10-06 拉的，但数据源各词最后更新在 10-01 之前，等于第二份切换前基线；真正的影响要 2–4 周后再拉）。
+
+## 跳转的真相源是 vercel.json
+
+旧 URL 清单（153 条存档 + GSC 里有点击但不在清单的）共 179 条。`seo/sources.mjs` 是旧 URL 与点击数据的唯一入口（两份 GSC 导出取较大值；**2026-09-27 实测 09-23 那份窗口太短，漏了 49 个有点击的页面**——重算映射前先从 GSC 重新导出近 3 个月「网页」表），`seo/build-redirects.mjs` 是生成器（新站上有同网址页面的自动不生成跳转），`seo/check-mapping.mjs` 是验收门。
 
 `npm run host-configs` 从 vercel.json 生成 Apache/IIS/Netlify/nginx 四份等效配置——真 Apache 实测 156/156 与 Vercel 行为一致，所以这个站搬去任何主机都不丢跳转。改跳转只改 vercel.json 的生成逻辑，然后重新生成，别手改产物。
 

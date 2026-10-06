@@ -26,7 +26,7 @@
           "value": "lunch-specials"
         }
       ],
-      "destination": "/menu/#lunch",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "source": "/news/",
-      "destination": "/about/",
+      "destination": "/blog/",
       "permanent": true
     },
     {
@@ -58,7 +58,7 @@
     },
     {
       "source": "/lunch-specials-2/",
-      "destination": "/menu/#lunch",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {
@@ -78,57 +78,22 @@
     },
     {
       "source": "/main-course/",
-      "destination": "/about/",
+      "destination": "/menu/",
       "permanent": true
     },
     {
       "source": "/zen-ramen-sushi-blog/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2023/09/20/from-traditional-to-trendy-a-beginners-guide-to-ramen/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2023/12/15/key-ingredients-preparation-for-sushi/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2024/03/21/why-sushi-is-so-popular-in-new-york-city/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2024/04/10/nycs-gyoza-little-pockets-big-flavors/",
-      "destination": "/menu/#dinner--appetizers",
-      "permanent": true
-    },
-    {
-      "source": "/2024/05/20/in-the-heart-of-perfect-lunch-bento-boxes-in-manhattan/",
-      "destination": "/menu/#lunch",
-      "permanent": true
-    },
-    {
-      "source": "/2024/12/10/zen-ramen-sushi-second-floor-now-open-in-midtown/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/01/15/affordable-sushi-lunch-special-happy-hour-in-midtown-manhattan/",
-      "destination": "/menu/#dinner--sushi-rolls",
+      "destination": "/blog/",
       "permanent": true
     },
     {
       "source": "/zen-ramen-contact/",
-      "destination": "/menu/#dinner--ramen-noodles",
+      "destination": "/location/",
       "permanent": true
     },
     {
       "source": "/contact-theme/",
-      "destination": "/events-catering/",
+      "destination": "/location/",
       "permanent": true
     },
     {
@@ -138,72 +103,7 @@
     },
     {
       "source": "/location-theme/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/location/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/19/sushi-101-understanding-nigiri-sashimi-and-maki-rolls/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/22/sushi-rice-101-why-perfect-rice-makes-or-breaks-sushi/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/23/10-essential-ramen-toppings-that-transform-your-bowl/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/24/nigiri-vs-sashimi-vs-maki-understanding-sushi-styles/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/25/how-to-eat-ramen-like-a-local-japanese-dining-etiquette/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/26/fresh-sushi-fish-selection-safety-quality-guide/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/28/wasabi-and-ginger-essential-sushi-condiments-explained/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/05/31/ramen-noodles-thickness-texture-traditional-prep/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/02/dashi-broth-the-umami-foundation-of-japanese-ramen/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/04/spicy-ramen-how-chili-oil-and-heat-transform-bowls/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/05/sake-and-sushi-the-perfect-pairing-guide/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/06/the-science-behind-perfect-ramen-eggs-ajitsuke-tamago/",
-      "destination": "/menu/#dinner--ramen-noodles",
+      "destination": "/location/",
       "permanent": true
     },
     {
@@ -217,248 +117,8 @@
       "permanent": true
     },
     {
-      "source": "/2026/06/09/sushi-bar-etiquette-what-to-know-at-the-counter/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/10/tsukemen-the-dipping-ramen-style-you-need-to-try/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/11/nori-seaweed-the-ingredient-that-makes-sushi-work/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/12/ramen-menu-guide-first-timers-complete-walkthrough/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/14/menma-the-bamboo-shoot-that-makes-ramen-complete/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/15/sushi-grade-fish-explained-what-the-term-really-means/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/17/green-tea-and-japanese-dining-traditional-pairings/",
-      "destination": "/menu/#dinner--sake",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/18/tonkotsu-vs-shoyu-ramen-the-ultimate-broth-guide/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/19/sushi-date-night-guide-perfect-ramen-pairings-to-share/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/20/sushi-etiquette-101-eat-nigiri-sashimi-maki-right/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/21/sushi-grade-fish-fresh-vs-frozen-truth-revealed/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/24/ramen-pairing-guide-appetizers-drinks-that-work/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/25/ramen-bowl-components-every-element-explained/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/26/how-to-order-sushi-beginners-guide-from-nigiri-to-maki/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/06/27/authentic-ramen-broth-how-we-craft-ours-from-scratch/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
       "source": "/about-us/",
       "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/04/blog-best-ramen-midtown-manhattan/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/07/blog-ramen-101-types-how-to-order/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/blog/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/14/what-makes-authentic-japanese-ramen-a-real-guide/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/19/japanese-restaurant-dining-tips-a-locals-complete-guide/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/21/why-zen-ramen-and-sushi-is-the-best-japanese-restaurant/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/22/how-to-order-ramen-like-a-pro-beginners-guide/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/23/tonkotsu-vs-shoyu-vs-miso-which-ramen-broth-wins/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/26/authentic-ramen-vs-instant-noodles-the-real-difference/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/27/sushi-roll-craftsmanship-how-japanese-chefs-work/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/27/best-sushi-rolls-for-beginners-what-to-order-first/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/07/30/japanese-restaurant-date-night-why-its-perfect/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/01/5-japanese-dining-etiquette-tips-for-first-time-guests/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/02/why-ramen-is-the-ultimate-comfort-food-for-any-season/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/04/nyc-restaurant-week-guide-what-to-try-at-zen-ramen-sushi/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/05/history-of-ramen-from-japan-to-americas-bowls/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/06/japanese-food-beyond-sushi-best-dishes-to-try/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/11/group-dining-at-a-japanese-restaurant-top-tips/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/13/health-benefits-of-japanese-food-ramen-and-sushi/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/14/sushi-101-nigiri-vs-sashimi-vs-maki-explained/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/15/japanese-hospitality-restaurant-the-zen-ramen-experience/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/16/japanese-food-bucket-list-summer-2026-edition/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/22/tonkotsu-vs-miso-vs-shoyu-ramen-the-broth-guide/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/24/10-japanese-food-terms-every-ramen-and-sushi-fan-should-know/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/25/sushi-rice-the-secret-weapon-of-every-great-sushi-chef/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/27/how-to-read-a-japanese-restaurant-menu-like-a-local/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/28/history-of-ramen-from-chinese-noodles-to-japans-soul-food/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/29/chashu-pork-the-braised-topping-that-transforms-ramen/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/08/31/what-is-umami-and-why-japanese-food-is-so-delicious/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/2026/09/02/best-ramen-toppings-ranked-nori-to-bamboo-shoots/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/09/02/5-signs-youve-found-a-truly-authentic-ramen-restaurant/",
-      "destination": "/menu/#dinner--ramen-noodles",
-      "permanent": true
-    },
-    {
-      "source": "/2026/09/03/sushi-drink-pairing-sake-green-tea-more/",
-      "destination": "/menu/#dinner--sushi-rolls",
-      "permanent": true
-    },
-    {
-      "source": "/2026/09/05/fresh-sushi-fish-how-quality-defines-every-bite/",
-      "destination": "/menu/#dinner--sushi-rolls",
       "permanent": true
     },
     {
@@ -483,7 +143,7 @@
     },
     {
       "source": "/tag/zen-ramen-and-sushi/",
-      "destination": "/menu/#dinner--ramen-noodles",
+      "destination": "/blog/",
       "permanent": true
     },
     {
@@ -518,12 +178,12 @@
     },
     {
       "source": "/zrm-menu-item/eel-lunch/",
-      "destination": "/menu/#lunch",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {
       "source": "/zrm-category/bento-box/",
-      "destination": "/menu/#lunch",
+      "destination": "/lunch-specials/",
       "permanent": true
     },
     {
@@ -558,7 +218,7 @@
     },
     {
       "source": "/tag/ramen-ingredients/",
-      "destination": "/menu/#dinner--ramen-noodles",
+      "destination": "/blog/",
       "permanent": true
     },
     {
@@ -589,6 +249,61 @@
     {
       "source": "/zrm-menu-item/sashimi-7-pcs-bento-dinner/",
       "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/uorder-menu/",
+      "destination": "/menu/",
+      "permanent": true
+    },
+    {
+      "source": "/sushi/",
+      "destination": "/menu/#dinner--sushi-rolls",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/page/:n(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/page/:n(\\d+)/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/blog/",
       "permanent": true
     }
   ]

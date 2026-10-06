@@ -87,6 +87,7 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 - **三个验收脚本**：`seo/check-equity.mjs`（逐网址：有积累的都被接住；有积累的文章必须同网址）· `seo/check-journal.mjs --source <旧站备份.json>`（逐篇，并与 9-23 的独立备份比内容，备份在 `~/Desktop/CC-Max-2026/restaurant/zen-024-backups/`）· `seo/check-keywords.mjs`（旧页面文字里有的排名词，新落点正文里还在；旧页面文字基线 `seo/old-page-text-2026-10-06.json`）。三个都有负向对照门。
 - **改了文章或页面后**：`node scripts/build-sitemap.mjs`（sitemap 是生成的，别手改）→ `node seo/build-redirects.mjs` → 重新构建 → 跑账本。本地验收一律带 `NEXT_PUBLIC_SITE_INDEXABLE=true` 构建。
 - ⚠️ **对线上跑检查要慢**：10-06 我一天内对线上并发跑了几十轮检查，触发了 Vercel 的自动防护，全站对不带浏览器的请求返回 403 约一小时（真人浏览器多等一两秒、Google 实时测试不受影响）。`check-equity` / `check-journal` 的线上模式已改成每请求间隔 600ms；上线后的整套验收只跑一遍，不要并行、不要连跑。
+- **vercel.json 里的通配跳转用 `(.*)`，不用 `:path*`**：本站 `trailingSlash:true`，`/tag/:path*` 在线上匹配不到带尾斜杠的 `/tag/xxx/`（10-06 上线后验收抓到，本地模拟过了、线上 404）。本地的 `check-equity` 只是近似模拟 Vercel 的匹配，**以上线后 `GATES-seo-equity-live.md` 的线上结果为准**。`check-cutover.mjs` 对通配规则用样例网址验（`PATTERN_SAMPLES`），加新通配规则时补一条样例。
 - 排名对比的两份基线：`seo/ranked-before-2026-09-20.json`、`seo/ranked-after-2026-10-06.json`（后者虽是 10-06 拉的，但数据源各词最后更新在 10-01 之前，等于第二份切换前基线；真正的影响要 2–4 周后再拉）。
 
 ## 跳转的真相源是 vercel.json

@@ -7,7 +7,7 @@ import fs from 'fs';
 const rk = JSON.parse(fs.readFileSync('seo/ranked-before-2026-09-20.json', 'utf8')).tasks[0].result[0].items;
 const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const rules = new Map(v.redirects.filter(r => !r.has).map(r => [r.source, r.destination]));
 const file = p => { const q = p.split('#')[0]; return 'out' + (q === '/' ? '' : q.replace(/\/$/, '')) + '/index.html'; };
-const dest = p => { const q = p.endsWith('/') ? p : p + '/'; if (fs.existsSync(file(q))) return q; const wild = [...rules].find(([s]) => s.endsWith('/:path*') && q.startsWith(s.slice(0, -7))); return rules.get(q) || (wild && wild[1]) || null; };
+const dest = p => { const q = p.endsWith('/') ? p : p + '/'; if (fs.existsSync(file(q))) return q; const toRe = src => new RegExp('^' + src.replace(/:\w+\(([^)]+)\)/g, '($1)').replace(/:\w+/g, '[^/]+') + '$'); const wild = [...rules].find(([s]) => /[:(*]/.test(s) && toRe(s).test(q)); return rules.get(q) || (wild && wild[1]) || null; };
 const cache = new Map(); const pageText = p => { if (!cache.has(p)) { const h = fs.existsSync(file(p)) ? fs.readFileSync(file(p), 'utf8') : ''; const t = (h.match(/<title>([^<]*)/) || [])[1] || '', d = (h.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
   const main = (h.match(/<main[^>]*>([\s\S]*)<\/main>/) || [,''])[1];   // 只算标题、描述和正文区;导航和页尾里碰巧有的词不算(冷审指出)
   cache.set(p, (t + ' ' + d + ' ' + main.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ')).toLowerCase().replace(/&amp;/g, ' and ').replace(/&[a-z#0-9]+;/g, ' ').replace(/[^a-z0-9$ ]+/g, ' ')); } return cache.get(p); };

@@ -262,17 +262,17 @@
       "permanent": true
     },
     {
-      "source": "/tag/:path*",
+      "source": "/tag/(.*)",
       "destination": "/blog/",
       "permanent": true
     },
     {
-      "source": "/category/:path*",
+      "source": "/category/(.*)",
       "destination": "/blog/",
       "permanent": true
     },
     {
-      "source": "/author/:path*",
+      "source": "/author/(.*)",
       "destination": "/blog/",
       "permanent": true
     },

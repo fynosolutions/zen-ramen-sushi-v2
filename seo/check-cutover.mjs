@@ -58,8 +58,10 @@ console.log('② 整站级跳转');
 }
 // 3 旧网址跳转
 console.log('③ 旧网址跳转');
-const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const plain = v.redirects.filter(r => !r.has), query = v.redirects.filter(r => r.has);
-const jobs = [...plain.map(r => ({ u: ROOT + r.source, dest: r.destination, name: r.source, q: '' })), ...query.map(r => ({ u: `${ROOT}${r.source}?${r.has[0].key}=${r.has[0].value}`, dest: r.destination, name: `${r.source}?${r.has[0].key}=${r.has[0].value}`, q: `${r.has[0].key}=${r.has[0].value}` }))];
+// 带通配/正则的规则(/tag/(.*)、/:year(\\d{4})/ 之类)不能把规则本身当网址去请求:每条给一个样例网址(2026-10-06;/tag/ 的样例是真实的旧标签页,有排名词)
+const PATTERN_SAMPLES = [['/tag/real-ramen-vs-instant/', '/blog/'], ['/category/ramen/', '/blog/'], ['/author/zenramensushi/', '/blog/'], ['/2026/06/', '/blog/'], ['/2026/', '/blog/'], ['/page/2/', '/blog/'], ['/blog/page/2/', '/blog/']];
+const v = JSON.parse(fs.readFileSync('vercel.json', 'utf8')); const isPattern = r => /[:(*]/.test(r.source); const plain = v.redirects.filter(r => !r.has && !isPattern(r)), query = v.redirects.filter(r => r.has);
+const jobs = [...plain.map(r => ({ u: ROOT + r.source, dest: r.destination, name: r.source, q: '' })), ...PATTERN_SAMPLES.map(([src, dest]) => ({ u: ROOT + src, dest, name: src + '(通配规则样例)', q: '' })), ...query.map(r => ({ u: `${ROOT}${r.source}?${r.has[0].key}=${r.has[0].value}`, dest: r.destination, name: `${r.source}?${r.has[0].key}=${r.has[0].value}`, q: `${r.has[0].key}=${r.has[0].value}` }))];
 // 去向比较:路径和 #锚点必须一致;查询参数要么和目标一致,要么是「把原请求的参数带过去了」(Vercel 的做法,页面忽略它;Apache 版规则会去掉参数)——两种都算对
 const parts = u => { const [pq, hash = ''] = u.split('#'); const [pth, qs = ''] = pq.split('?'); return { pth, qs, hash }; };
 const sameDest = (loc, j) => { const a = parts(path(loc)), b = parts(j.dest); return a.pth === b.pth && a.hash === b.hash && (a.qs === b.qs || (b.qs === '' && a.qs === j.q)); };

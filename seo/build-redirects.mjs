@@ -33,6 +33,9 @@ const LEGACY = [
   ['/sushi/', '/menu/#dinner--sushi-rolls'],                          // 旧站 200,供应商站有链接
   // ⚠️ /wp-content/…、/wp-json/、/wp-login.php 这类路径在 Vercel 上会被平台防护直接 403(响应头 x-vercel-mitigated: deny),跳转规则轮不到执行(2026-10-06 实测)。
   //    所以旧站的菜单 PDF 直链、被盗链的 logo 没法在这里承接;三条都没有 Google 点击,记为已知缺口,别再加回来
+  // 2026-10-06 用 Search Console 16 个月数据补:旧菜单插件的单品/分类/标签页(257 个单品页里 14 次点击)→ 菜单页;有点击的单品页上面已按品类逐条指到菜单锚点,这里兜住其余的
+  ['/zrm-menu-type/happy-hour-4-8pm/', '/happy-hour/'], ['/about-2/', '/about/'],
+  ['/zrm-menu-item/(.*)', '/menu/'], ['/zrm-menu-type/(.*)', '/menu/'], ['/zrm-category/(.*)', '/menu/'], ['/zrm-tag/(.*)', '/menu/'], ['/menu-item/(.*)', '/menu/'],
   ['/tag/(.*)', '/blog/'], ['/category/(.*)', '/blog/'], ['/author/(.*)', '/blog/'],   // 用 (.*) 不用 :path*:后者在线上匹配不到带尾斜杠的 /tag/xxx/(2026-10-06 上线后实测 404)
   ['/:year(\\d{4})/:month(\\d{2})/', '/blog/'], ['/:year(\\d{4})/', '/blog/'], ['/page/:n(\\d+)/', '/blog/'], ['/blog/page/:n(\\d+)/', '/blog/'], ['/feed/', '/blog/'], ['/comments/feed/', '/blog/'],   // 日期归档、分页、RSS(旧站有,新站没有对应物)→ 文章目录
    // 旧站的标签/分类/作者归档页(清单外的也一并)→ 文章目录

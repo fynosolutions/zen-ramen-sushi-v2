@@ -80,7 +80,7 @@ node ~/.claude/skills/unlazy/scripts/gate-check.mjs --reverify GATES.md
 
 毛的要求：「新网站应该能接住旧网站所有的 SEO 积累，不应该有 drop」。一个旧网址有没有积累看四样：Google 真实点击、近 3 个月曝光 ≥100、9-20 排名存档里有词、有外链。验收账本 `GATES-seo-equity.md`（本地 12 门）与 `GATES-seo-equity-live.md`（上线后）。
 
-- **旧文章原网址原样保留，不跳转**：有积累的 101 篇在 `content/journal.json`（10-06 先按近 3 个月数据搬 86 篇，同日用 Search Console API 的 16 个月全量 `seo/gsc-clicks-16m-2026-10-06.json` 再补 15 篇；旧菜单插件的 `/zrm-menu-item/` 等单品页兜底跳 `/menu/`），由 `scripts/import-journal.py` 从旧站导入（标题与描述逐字沿用 Google 收录的原文；30 篇共用站点默认描述的换成正文开头；正文清洗、图片转 webp 放 `public/images/journal/`）。路由 `app/[year]/[month]/[day]/[slug]/`，目录页 `/blog/`。切换当天曾把它们 301 到菜单锚点——Google 不把「文章→菜单页」当等价内容，这个做法已废。
+- **旧文章原网址原样保留，不跳转**：旧站全部已发布文章 142 篇（146 篇里只去掉 4 篇写错城市的；名单快照 `seo/old-posts-all-2026-10-06.json`）在 `content/journal.json`（10-06 先按近 3 个月数据搬 86 篇，同日用 Search Console API 的 16 个月全量 `seo/gsc-clicks-16m-2026-10-06.json` 再补 15 篇；旧菜单插件的 `/zrm-menu-item/` 等单品页兜底跳 `/menu/`），由 `scripts/import-journal.py` 从旧站导入（标题与描述逐字沿用 Google 收录的原文；30 篇共用站点默认描述的换成正文开头；正文清洗、图片转 webp 放 `public/images/journal/`）。路由 `app/[year]/[month]/[day]/[slug]/`，目录页 `/blog/`。切换当天曾把它们 301 到菜单锚点——Google 不把「文章→菜单页」当等价内容，这个做法已废。
 - **仍然故意 404 的只有两类**：写错城市的文章（Gainesville / Noblesville / Greenville / Dahlonega，讲的是别处同名店）和旧站自己已删的（名单 = `journal.json` 的 `notOnOldSite`）。没有积累的薄文章照旧 404。
 - **新增的同网址/对等页面**：`/location/`（旧站同网址）、`/lunch-specials/`（旧 `/lunch-specials-2/` 301 过来；菜名价格全读 `menus.json`）。旧的联系页、主菜页、标签/分类/作者归档、日期归档、分页、RSS 的去向都在 `seo/build-redirects.mjs` 里（`structural` 与 `LEGACY`）。
 - **接不住的已知缺口**：`/wp-content/…`、`/wp-json/`、`/wp-login.php` 这类路径在 Vercel 上被平台防护直接 403（`x-vercel-mitigated: deny`），跳转规则轮不到执行，所以旧站的菜单 PDF 直链和被盗链的 logo 没法承接；三条都没有 Google 点击。别再往 vercel.json 里加 `/wp-content/` 的跳转。

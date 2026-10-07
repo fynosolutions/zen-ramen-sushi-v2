@@ -387,6 +387,16 @@
       "permanent": true
     },
     {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/feed/",
+      "destination": "/:year/:month/:day/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/",
+      "destination": "/blog/",
+      "permanent": true
+    },
+    {
       "source": "/:year(\\d{4})/:month(\\d{2})/",
       "destination": "/blog/",
       "permanent": true

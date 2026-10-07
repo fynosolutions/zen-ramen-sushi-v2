@@ -152,7 +152,11 @@ def main():
     ranked = set(re.sub(r'^https?://[^/]+', '', it['ranked_serp_element']['serp_item']['url']).rstrip('/') + '/' for it in rk)
     for k in ranked: cl.setdefault(k, (0, 0))
     # 曝光 ≥100(近 3 个月)也算:有曝光说明 Google 在给它排名,只是还没人点;低于 100 的视为没有积累
-    want = sorted([k for k, (c, i) in cl.items() if re.match(r'^/\d{4}/\d{2}/\d{2}/[^/#]+/$', k) and (c >= 1 or k in ranked or i >= MIN_IMPRESSIONS) and not WRONG_CITY.search(k)], key=lambda k: (-cl[k][0], -cl[k][1]))
+    # 2026-10-06 再放宽:旧站上所有已发布的文章都搬(名单 = 当天从旧站后台接口取的 146 篇快照)。原因:新站自己的统计里看到访客在访问没有 Google 点击的文章
+    # (来自社媒、直接链接等,Search Console 看不到);客户目标是一点都不掉。写错城市的 4 篇仍不要
+    allposts = set(json.load(open(os.path.join(ROOT, 'seo/old-posts-all-2026-10-06.json'))))
+    for k in allposts: cl.setdefault(k, (0, 0))
+    want = sorted([k for k, (c, i) in cl.items() if re.match(r'^/\d{4}/\d{2}/\d{2}/[^/#]+/$', k) and (c >= 1 or k in ranked or i >= MIN_IMPRESSIONS or k in allposts) and not WRONG_CITY.search(k)], key=lambda k: (-cl[k][0], -cl[k][1]))
     posts, missing = [], []
     for p in want:
         slug = p.strip('/').split('/')[-1]

@@ -39,6 +39,8 @@ const LEGACY = [
   ['/zrm-menu-type/happy-hour-4-8pm/', '/happy-hour/'], ['/about-2/', '/about/'],
   ['/zrm-menu-item/(.*)', '/menu/'], ['/zrm-menu-type/(.*)', '/menu/'], ['/zrm-category/(.*)', '/menu/'], ['/zrm-tag/(.*)', '/menu/'], ['/menu-item/(.*)', '/menu/'],
   ['/tag/(.*)', '/blog/'], ['/category/(.*)', '/blog/'], ['/author/(.*)', '/blog/'],   // 用 (.*) 不用 :path*:后者在线上匹配不到带尾斜杠的 /tag/xxx/(2026-10-06 上线后实测 404)
+  // 2026-10-06 从新站统计里看到访客撞到的两类:文章自己的订阅地址(…/feed/)→ 回文章本身;按天的归档页 → 文章目录
+  ['/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug/feed/', '/:year/:month/:day/:slug/'], ['/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/', '/blog/'],
   ['/:year(\\d{4})/:month(\\d{2})/', '/blog/'], ['/:year(\\d{4})/', '/blog/'], ['/page/:n(\\d+)/', '/blog/'], ['/blog/page/:n(\\d+)/', '/blog/'], ['/feed/', '/blog/'], ['/comments/feed/', '/blog/'],   // 日期归档、分页、RSS(旧站有,新站没有对应物)→ 文章目录
    // 旧站的标签/分类/作者归档页(清单外的也一并)→ 文章目录
 ];

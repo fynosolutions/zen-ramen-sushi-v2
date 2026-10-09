@@ -190,6 +190,30 @@
               "page": 2
             },
             "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-15",
+            "name": "Golden Crispy Corn",
+            "cashCents": 899,
+            "cardCents": 935,
+            "description": "Crispy fried sweet corn tossed with spicy salt and pepper.",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-08-24)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-16",
+            "name": "Tokyo Veggie Crunch",
+            "cashCents": 1299,
+            "cardCents": 1350,
+            "description": "Thai basil, broccoli, sweet potato, zucchini and French fries tossed with spicy garlic, salt and pepper seasoning.",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-08-24)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
           }
         ]
       },

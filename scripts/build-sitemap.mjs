@@ -2,7 +2,7 @@
 // 顺序即重要性;文章带 lastmod(旧站的最后修改时间),固定页面不带(没有可信的修改时间就不写)。
 import fs from 'fs';
 const ROOT = 'https://zenramensushiny.com';
-const pages = ['/', '/menu/', '/happy-hour/', '/lunch-specials/', '/location/', '/near-penn-station/', '/near-madison-square-garden/', '/events-catering/', '/zrm-menu/', '/about/', '/gallery/', '/blog/', '/privacy-policy/', '/terms-conditions/'];
+const pages = ['/', '/menu/', '/happy-hour/', '/lunch-specials/', '/location/', '/near-penn-station/', '/near-madison-square-garden/', '/events-catering/', '/about/', '/gallery/', '/blog/', '/privacy-policy/', '/terms-conditions/'];
 const posts = JSON.parse(fs.readFileSync('content/journal.json', 'utf8')).posts.sort((a, b) => b.clicks - a.clicks);
 const missing = pages.filter(p => !fs.existsSync('app' + (p === '/' ? '/page.tsx' : p + 'page.tsx')));
 if (missing.length) { console.error('SITEMAP FAIL 这些页面在 app/ 里不存在:', missing.join(' ')); process.exit(1); }

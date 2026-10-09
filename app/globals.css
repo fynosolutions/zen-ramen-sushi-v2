@@ -286,3 +286,14 @@ h1,h2{text-wrap:balance}
 .cmenu-desc{margin:8px 0 0;font-size:14px;line-height:1.6;color:var(--muted)}.cmenu-tags{margin:8px 0 0;display:flex;gap:6px}.cmenu-tags span{font-size:11px;letter-spacing:.08em;border:1px solid currentColor;border-radius:99px;padding:2px 8px}
 @media(max-width:900px){.cmenu-items{grid-template-columns:repeat(2,1fr);gap:20px}}@media(max-width:560px){.cmenu-items{grid-template-columns:1fr}}
 @media(max-width:560px){.menu-tabs button{flex:1 1 auto;justify-content:center;padding:17px 6px;font-size:15px;letter-spacing:-.03em}}
+.pm{padding-bottom:80px}.pm-tabs{display:flex;gap:0;border-bottom:2px solid var(--ink);position:sticky;top:var(--header-h);background:var(--paper);z-index:20;overflow-x:auto;scrollbar-width:none}.pm-tabs::-webkit-scrollbar{display:none}
+.pm-tabs button{background:transparent;border:0;font-family:var(--display);font-size:20px;font-weight:900;letter-spacing:-.03em;padding:16px 22px;color:var(--muted);white-space:nowrap}.pm-tabs button[aria-selected=true]{background:var(--ink);color:var(--paper)}
+.pm-note{margin:18px 0 0;font-size:14px;color:var(--muted)}.pm-note a{color:var(--ink);text-decoration:underline}
+.pm-chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 6px;scrollbar-width:none;position:sticky;top:calc(var(--header-h) + 58px);background:var(--paper);z-index:15}.pm-chips::-webkit-scrollbar{display:none}
+.pm-chips button{flex:none;background:transparent;border:1px solid var(--ink);color:var(--ink);font-size:13px;padding:7px 13px;border-radius:99px;white-space:nowrap}
+.pm-section{margin-top:34px;scroll-margin-top:calc(var(--header-h) + 120px)}.pm-section h2{font-size:28px;margin:0 0 6px}
+.pm-items{list-style:none;padding:0;margin:14px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:18px 40px}
+.pm-items li{display:flex;gap:16px;align-items:flex-start}.pm-items img,.pm-noimg{flex:none;width:132px;height:99px;object-fit:cover;border-radius:6px;background:#f2ede6;display:block}
+.pm-body{min-width:0}.pm-body strong{display:block;font-size:17px;line-height:1.3}.pm-prices{margin:5px 0 0;display:flex;flex-wrap:wrap;gap:2px 14px;font-size:14px}.pm-prices b{font-weight:600}.pm-prices small{color:var(--muted);margin-left:5px;font-size:12px}
+.pm-desc{margin:6px 0 0;font-size:13px;line-height:1.55;color:var(--muted)}
+@media(max-width:900px){.pm-items{grid-template-columns:1fr}}@media(max-width:560px){.pm-tabs button{font-size:16px;padding:14px 14px}.pm-items img,.pm-noimg{width:104px;height:78px}.pm-chips{top:calc(var(--header-h) + 50px)}}

@@ -1,24 +1,21 @@
 import type { Metadata } from 'next';
-import Link from '@/components/StaticLink';
+import PhotoMenu from '@/components/PhotoMenu';
 import { Arrow, PageHeading } from '@/components/Shared';
 import { site } from '@/content/site';
-import { CateringSections } from '@/components/CateringMenu';
 
-// 宴会带图菜单(2026-10-09):旧站 /zrm-menu/ 就是这份(店里宴会二维码扫出来的页面),切换时被跳到堂食菜单页,店家指出不对。
-// 内容 = 旧站该页原样复刻(菜名/价格/说明/配图),数据在 content/catering.json;图在 public/images/catering/。
+// 带图菜单(2026-10-09):旧站 /zrm-menu/ 是店里二维码的落地页(二维码 = /zrm-menu/?menu=dinner-menu)。切换时被跳到文字菜单页,店家指出扫码看到的不是原来带图的。
+// 原样复刻旧页四个菜单,二维码网址不变。旧页在 Google 里没有流量(GSC 16 个月无记录),按二维码落地页处理:不收录、不进 sitemap。
 export const metadata: Metadata = {
-  title: 'Catering Menu',
-  description: 'Catering menu with photos: party platters, entrée trays, sides, individual bento meals and drinks for offices and events in Midtown Manhattan.',
+  title: 'Menu with Photos',
+  description: 'Dinner, lunch, happy hour and catering menus with a photo for every dish at Zen Ramen & Sushi, 150 W 36th St, Midtown Manhattan.',
   alternates: { canonical: '/zrm-menu/' },
+  robots: { index: false, follow: true },
 };
 
-export default function CateringMenu(){
+export default function PhotoMenuPage(){
   return <main id="main">
-    <PageHeading label="CATERING MENU" title="Catering menu" description="Party platters, trays, bento meals and drinks from Zen Ramen & Sushi, 150 W 36th St. To order, email us." />
-    <section className="container cmenu">
-      <div className="scene-ctas"><a className="button button-red" href={'mailto:'+site.cateringEmail} data-cta="catering-menu-email">EMAIL TO ORDER <Arrow /></a><Link className="button button-dark" href="/events-catering/">EVENTS &amp; CATERING <Arrow /></Link><Link className="text-link" href="/menu/">DINE-IN MENU <Arrow /></Link></div>
-      <CateringSections />
-      <p className="lunch-note">Prices shown are the starting price for each item. Email <a href={'mailto:'+site.cateringEmail}>{site.cateringEmail}</a> for sizes, quantities and availability.</p>
-    </section>
+    <PageHeading label="ZEN RAMEN & SUSHI MENU" title="Menu with photos" description="Every dish with its photo — dinner, lunch, happy hour and catering. 150 W 36th St, Midtown Manhattan." />
+    <div className="menu-top-cta container"><a className="button button-red" href={site.order} data-cta="pm-order" target="_blank" rel="noopener noreferrer">ORDER ONLINE <Arrow/></a><a className="text-link" href={site.reserve} data-cta="pm-reserve" target="_blank" rel="noopener noreferrer">RESERVE A TABLE <Arrow/></a><a className="text-link" href={site.phoneHref} data-cta="pm-call">CALL {site.phone}</a></div>
+    <PhotoMenu cateringEmail={site.cateringEmail} />
   </main>;
 }

@@ -118,7 +118,7 @@
     },
     {
       "source": "/zrm-menu/",
-      "destination": "/menu/",
+      "destination": "/about/",
       "permanent": true
     },
     {

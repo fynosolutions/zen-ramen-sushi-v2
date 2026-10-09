@@ -1,0 +1,400 @@
+{
+  "source": "旧站 WordPress /zrm-menu/(宴会菜单)2026-10-09 原样复刻",
+  "sections": [
+    {
+      "id": "sides-and-salads",
+      "title": "Sides & Salads",
+      "note": null,
+      "items": [
+        {
+          "id": "edamame-tray",
+          "name": "Edamame Tray",
+          "price": "$48",
+          "label": "Serves 10+",
+          "description": "Steamed young soybeans lightly seasoned with sea salt. A simple, healthy appetizer perfect for sharing",
+          "tags": [
+            "VEGETARIAN"
+          ],
+          "image": "catering-edamame-tray.webp",
+          "imageSize": [
+            720,
+            538
+          ]
+        },
+        {
+          "id": "kani-salad",
+          "name": "Kani Salad",
+          "price": "$48",
+          "label": "Serves 10+",
+          "description": "Fresh shredded crab stick and cucumber tossed with Japanese mayo and topped with sesame seeds",
+          "tags": [],
+          "image": "catering-kani-salad.webp",
+          "imageSize": [
+            720,
+            539
+          ]
+        },
+        {
+          "id": "pork-gyoza",
+          "name": "Pork Gyoza",
+          "price": "$10",
+          "label": "Serves 2+",
+          "description": "Pan-fried pork gyoza (6 pieces)",
+          "tags": [],
+          "image": "catering-pork-gyoza.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "steamed-buns",
+          "name": "Steamed Buns",
+          "price": "$8",
+          "label": "/ Piece",
+          "description": "Soft steamed buns with your choice of grilled chicken or braised pork belly, topped with romaine lettuce, seaweed salad, scallions, and Kewpie mayo",
+          "tags": [],
+          "image": "catering-steamed-buns.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "vegetable-gyoza",
+          "name": "Vegetable Gyoza",
+          "price": "$11",
+          "label": "Serves 2+",
+          "description": "Pan-fried vegetable gyoza (6 pieces)",
+          "tags": [
+            "VEGETARIAN"
+          ],
+          "image": "catering-vegetable-gyoza.webp",
+          "imageSize": [
+            720,
+            517
+          ]
+        },
+        {
+          "id": "vegetable-harumaki-tray",
+          "name": "Vegetable Harumaki Tray",
+          "price": "$30",
+          "label": "Serves 10+",
+          "description": "Golden crispy vegetable spring rolls with a savory vegetable filling, served with a light soy-based dipping sauce",
+          "tags": [
+            "VEGETARIAN"
+          ],
+          "image": "catering-vegetable-harumaki-tray.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        }
+      ]
+    },
+    {
+      "id": "entree-trays",
+      "title": "Entrée Trays",
+      "note": null,
+      "items": [
+        {
+          "id": "curry-tray",
+          "name": "Curry Tray",
+          "price": "$58",
+          "label": "Serves 5+",
+          "description": "Japanese curry with potatoes, carrots, and onions. Served with your choice of protein and white or brown rice",
+          "tags": [],
+          "image": "catering-curry-tray.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "teriyaki-tray",
+          "name": "Teriyaki Tray",
+          "price": "$50",
+          "label": "Serves 5+",
+          "description": "Your choice of chicken, shrimp, or salmon glazed with our signature teriyaki sauce. Served with steamed broccoli and your choice of rice.",
+          "tags": [],
+          "image": "catering-teriyaki-tray.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        }
+      ]
+    },
+    {
+      "id": "party-platters",
+      "title": "Party Platters",
+      "note": null,
+      "items": [
+        {
+          "id": "chef-s-special-roll-platter",
+          "name": "Chef's Special Roll Platter",
+          "price": "$58",
+          "label": "Serves 4+",
+          "description": "A selection of Zen Ramen's signature specialty sushi rolls, featuring premium ingredients and chef-crafted combinations. Perfect for celebrations, office events, and parties",
+          "tags": [],
+          "image": "catering-chef-s-special-roll-platter.webp",
+          "imageSize": [
+            720,
+            480
+          ]
+        },
+        {
+          "id": "classic-roll-platter",
+          "name": "Classic Roll platter",
+          "price": "$48",
+          "label": "Serves 6+",
+          "description": "A selection of customer-favorite classic sushi rolls. Perfect for office lunches, meetings, and casual gatherings. Each roll contains 6 pieces.",
+          "tags": [
+            "POPULAR"
+          ],
+          "image": "catering-classic-roll-platter.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "crispy-favorites-platter",
+          "name": "Crispy Favorites Platter",
+          "price": "$72",
+          "label": "Serves 10+",
+          "description": "A selection of Zen Ramen's most popular crispy appetizers. Perfect for sharing at meetings, parties, and office gatherings",
+          "tags": [],
+          "image": "catering-crispy-favorites-platter.webp",
+          "imageSize": [
+            720,
+            576
+          ]
+        },
+        {
+          "id": "sushi-sashimi-platter",
+          "name": "Sushi & Sashimi Platter",
+          "price": "$88",
+          "label": "Serves 5+",
+          "description": "An assortment of fresh premium sushi and sashimi, expertly sliced and beautifully arranged.",
+          "tags": [],
+          "image": "catering-sushi-sashimi-platter.webp",
+          "imageSize": [
+            720,
+            720
+          ]
+        },
+        {
+          "id": "vegetarian-style-sushi-platter",
+          "name": "Vegetarian Style Sushi Platter",
+          "price": "$68",
+          "label": "Serves 5+",
+          "description": "An assortment of fresh vegetable sushi and rolls, featuring avocado, cucumber, asparagus, oshinko and other seasonal vegetarian favorites. Served with soy sauce, pickled ginger, and wasabi",
+          "tags": [
+            "VEGETARIAN"
+          ],
+          "image": "catering-vegetarian-style-sushi-platter.webp",
+          "imageSize": [
+            720,
+            521
+          ]
+        }
+      ]
+    },
+    {
+      "id": "individual-meals",
+      "title": "Individual Meals",
+      "note": "Individually packaged for easy serving. Minimum order of 5 per item.",
+      "items": [
+        {
+          "id": "chicken-katsu-bento",
+          "name": "Chicken Katsu Bento",
+          "price": "$18",
+          "label": "/ Person",
+          "description": "Crispy chicken katsu, California roll, shrimp shumai, vegetable harumaki, white rice, and tonkatsu sauce",
+          "tags": [],
+          "image": "catering-chicken-katsu-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "gyu-don",
+          "name": "Gyu Don",
+          "price": "$18",
+          "label": "/ Person",
+          "description": "Marinated sliced beef with bell peppers and onions over white rice",
+          "tags": [],
+          "image": "catering-gyu-don.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "pork-katsu-bento",
+          "name": "Pork Katsu Bento",
+          "price": "$18",
+          "label": "/ Person",
+          "description": "Crispy pork katsu, California roll, shrimp shumai, vegetable harumaki, white rice, and tonkatsu sauce",
+          "tags": [],
+          "image": "catering-pork-katsu-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "sashimi-7-pcs-bento",
+          "name": "Sashimi (7 pcs) Bento",
+          "price": "$23",
+          "label": "/ Person",
+          "description": "Assorted sashimi (7 pcs), California roll, shrimp shumai, vegetable harumaki, and white rice",
+          "tags": [],
+          "image": "catering-sashimi-7-pcs-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "shrimp-tempura-bento",
+          "name": "Shrimp Tempura Bento",
+          "price": "$24",
+          "label": "/ Person",
+          "description": "Crispy shrimp tempura, California roll, shrimp shumai, vegetable harumaki, white rice, and tempura dipping sauce",
+          "tags": [],
+          "image": "catering-shrimp-tempura-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "shrimp-teriyaki-bento",
+          "name": "Shrimp Teriyaki Bento",
+          "price": "$24",
+          "label": "/ Person",
+          "description": "Grilled teriyaki shrimp, California roll, shrimp shumai, vegetable harumaki, sautéed vegetables, and white rice",
+          "tags": [],
+          "image": "catering-shrimp-teriyaki-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "sushi-7-pcs-bento",
+          "name": "Sushi (7 pcs) Bento",
+          "price": "$23",
+          "label": "/ Person",
+          "description": "Assorted sushi (7 pcs), California roll, shrimp shumai, and vegetable harumaki",
+          "tags": [],
+          "image": "catering-sushi-7-pcs-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "teriyaki-chicken-bento",
+          "name": "Teriyaki Chicken Bento",
+          "price": "$18",
+          "label": "/ Person",
+          "description": "Teriyaki chicken, California roll, shrimp shumai, vegetable harumaki, broccoli, and white rice",
+          "tags": [],
+          "image": "catering-teriyaki-chicken-bento.webp",
+          "imageSize": [
+            720,
+            530
+          ]
+        },
+        {
+          "id": "teriyaki-salmon-bento",
+          "name": "Teriyaki Salmon Bento",
+          "price": "$24",
+          "label": "/ Person",
+          "description": "Teriyaki salmon, California roll, shrimp shumai, vegetable harumaki, broccoli, and white rice",
+          "tags": [],
+          "image": "catering-teriyaki-salmon-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "unagi-don",
+          "name": "Unagi Don",
+          "price": "$23",
+          "label": "/ Person",
+          "description": "7 pcs smoked eel over sushi rice with pickles and greens",
+          "tags": [],
+          "image": "catering-unagi-don.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "vegetable-tempura-bento",
+          "name": "Vegetable Tempura Bento",
+          "price": "$17",
+          "label": "/ Person",
+          "description": "Crispy vegetable tempura, California roll, shrimp shumai, vegetable harumaki, white rice, and tempura dipping sauce",
+          "tags": [
+            "VEGETARIAN"
+          ],
+          "image": "catering-vegetable-tempura-bento.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beverage",
+      "title": "Beverage",
+      "note": "Minimum order of 5 per item.",
+      "items": [
+        {
+          "id": "assorted-individual-sodas",
+          "name": "Assorted Individual Sodas",
+          "price": "$3",
+          "label": "/ Person",
+          "description": "Individual sodas",
+          "tags": [],
+          "image": "catering-assorted-individual-sodas.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "bottled-water",
+          "name": "Bottled Water",
+          "price": "$2.5",
+          "label": "/ Person",
+          "description": "Individual bottled Poland Spring",
+          "tags": [],
+          "image": "catering-bottled-water.webp",
+          "imageSize": [
+            720,
+            540
+          ]
+        },
+        {
+          "id": "individual-iced-tea",
+          "name": "Individual Iced Tea",
+          "price": "$4",
+          "label": "/ Person",
+          "description": "Individual iced tea",
+          "tags": [],
+          "image": null,
+          "imageSize": null
+        }
+      ]
+    }
+  ]
+}

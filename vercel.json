@@ -11,18 +11,6 @@
         {
           "type": "query",
           "key": "menu",
-          "value": "catering"
-        }
-      ],
-      "destination": "/events-catering/",
-      "permanent": true
-    },
-    {
-      "source": "/zrm-menu/",
-      "has": [
-        {
-          "type": "query",
-          "key": "menu",
           "value": "lunch-specials"
         }
       ],
@@ -113,11 +101,6 @@
     },
     {
       "source": "/about-us/",
-      "destination": "/about/",
-      "permanent": true
-    },
-    {
-      "source": "/zrm-menu/",
       "destination": "/about/",
       "permanent": true
     },

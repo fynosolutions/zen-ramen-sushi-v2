@@ -41,7 +41,7 @@ const RULES = [
   /* 首页三张菜单卡(整张卡是一个链接,文字=标题+副标题;箭头现在是 SVG 图标,不再是文字) */
   [/^Dinner Ramen, sushi/, h=>h==='/menu/#dinner'], [/^Lunch Monday/, h=>h==='/menu/#lunch'], [/^Happy Hour 4–8 PM · Appetizers/, h=>h==='/menu/#happy-hour'],
   [/^(HAPPY HOUR\b|Happy Hour\b|SEE THE DEAL|daily happy hour|happy hour \()/, h=>h==='/happy-hour/'],
-  [/^(SEE THE CATERING MENU)/, h=>h==='/zrm-menu/'], [/^EMAIL TO ORDER/, h=>h==='mailto:'+site.cateringEmail], [/^(DINE-IN MENU)/, h=>h==='/menu/'],
+  [/^(SEE THE CATERING MENU)/, h=>h==='/zrm-menu/'], [/^OPEN FULL PAGE/, h=>h==='/zrm-menu/'], [/^EMAIL TO ORDER/, h=>h==='mailto:'+site.cateringEmail], [/^(DINE-IN MENU)/, h=>h==='/menu/'],
   [/^(EVENTS\/CATERING|Events & Catering|PLAN YOUR EVENT|Let us know ahead|tell us ahead)/i, h=>h==='/events-catering/'],
   [/^(MENU|Menu|EXPLORE THE MENU|SEE THE MENU|VIEW THE FULL MENU)\b/, h=>h==='/menu/'],
   [/^(ABOUT|GET TO KNOW US)/i, h=>h==='/about/'], [/^(EXPLORE THE GALLERY|Gallery)/i, h=>h==='/gallery/'],

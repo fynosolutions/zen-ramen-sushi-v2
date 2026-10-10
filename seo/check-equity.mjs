@@ -46,7 +46,7 @@ if (BASE) for (const g of gone) { let st = 0; try { const { execFileSync } = awa
 for (const p of restored) { const r = res.find(x => x.k === p); if (r && r.kind !== 'SAME') fails.push(`${p} 应是同网址页面,实际 ${r.kind}`); }
 // 指定去向的旧页
 const FIXED = [['/lunch-specials-2/', '/lunch-specials/'], ['/location/', '/location/'], ['/zen-ramen-contact/', '/location/'], ['/main-course/', '/menu/'], ['/blog/', '/blog/'], ['/news/', '/blog/'], ['/zen-ramen-sushi-blog/', '/blog/'],
-  ['/about-us/', '/about/'], ['/drinks/', '/menu/#dinner--sake'], ['/desserts/', '/menu/#dinner--dessert'], ['/appetizers/', '/menu/#dinner--appetizers'], ['/zrm-menu/', '/menu/'], ['/uorder-menu/', '/menu/'], ['/sushi/', '/menu/#dinner--sushi-rolls'],
+  ['/about-us/', '/about/'], ['/drinks/', '/menu/#dinner--sake'], ['/desserts/', '/menu/#dinner--dessert'], ['/appetizers/', '/menu/#dinner--appetizers'], ['/uorder-menu/', '/menu/'], ['/sushi/', '/menu/#dinner--sushi-rolls'],
   ['/contact-theme/', '/location/'], ['/location-theme/', '/location/'], ['/zrm-category/bento-box/', '/lunch-specials/'], ['/tag/zen-ramen-and-sushi/', '/blog/'], ['/2026/06/', '/blog/'], ['/page/2/', '/blog/'], ['/feed/', '/blog/'],
   ['/favicon.ico', '/favicon.ico'], ['/apple-touch-icon.png', '/apple-touch-icon.png']];
 // 已知缺口(不在判据内,见 seo/build-redirects.mjs 里的说明):旧站 /wp-content/ 下的菜单 PDF 直链与被盗链的 logo——Vercel 平台对这类路径直接 403,跳转接不住;三条都没有 Google 点击

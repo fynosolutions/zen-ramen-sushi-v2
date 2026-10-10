@@ -96,7 +96,7 @@
     },
     {
       "source": "/privacy-policies-3/",
-      "destination": "/about/",
+      "destination": "/privacy-policy/",
       "permanent": true
     },
     {

@@ -22,6 +22,7 @@ const structural = {
   '/aboutus/':'/about/', '/contact-theme/':'/location/', '/location-theme/':'/location/',   // 旧联系/地址类页面 → 地址页(之前分别指宴会页、关于页,不对等)
   '/full-width-theme/':'/about/', '/error-404-page/':'/about/',
   '/zrm-category/bento-box/':'/lunch-specials/',
+  '/privacy-policies-3/':'/privacy-policy/',   // 2026-10-10:旧隐私政策页原先落到兜底的关于页,不对等
   // 2026-10-06 SEO 积累承接:午市套餐有了独立页;旧联系页/主菜页原先被关键词规则带偏(联系页→拉面菜单、主菜页→关于),改到对的页;
   // 旧文章目录现在是真页面 /blog/,同类入口都指过去
   '/lunch-specials-2/':'/lunch-specials/', '/zen-ramen-contact/':'/location/', '/main-course/':'/menu/',

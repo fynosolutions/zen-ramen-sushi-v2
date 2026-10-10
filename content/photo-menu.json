@@ -592,6 +592,10 @@
      "imageSize": [
       588,
       358
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -614,6 +618,10 @@
      "imageSize": [
       616,
       378
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -674,6 +682,10 @@
      "imageSize": [
       640,
       480
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -694,6 +706,10 @@
      "imageSize": [
       640,
       480
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -714,6 +730,10 @@
      "imageSize": [
       550,
       376
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -754,6 +774,10 @@
      "imageSize": [
       640,
       406
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -776,6 +800,10 @@
      "imageSize": [
       622,
       380
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -796,6 +824,10 @@
      "imageSize": [
       630,
       388
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -818,6 +850,10 @@
      "imageSize": [
       640,
       356
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -838,6 +874,10 @@
      "imageSize": [
       602,
       382
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -860,6 +900,10 @@
      "imageSize": [
       640,
       367
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -966,6 +1010,10 @@
      "imageSize": [
       590,
       382
+     ],
+     "groups": [
+      0,
+      1
      ]
     },
     {
@@ -988,6 +1036,10 @@
      "imageSize": [
       622,
       364
+     ],
+     "groups": [
+      0,
+      1
      ]
     }
    ]
@@ -2245,7 +2297,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Pork Katsu Bento",
@@ -2265,7 +2318,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Sashimi 7 pcs Bento",
@@ -2285,7 +2339,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Change to brown rice +$1.00 extra (based on cash price) Substitutions politely declined. Any changes will be min. +$3.00 (based on cash price) & up"
     },
     {
      "name": "Shrimp Tempura Bento",
@@ -2305,7 +2360,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Shrimp Teriyaki Bento",
@@ -2325,7 +2381,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Sushi 7pcs Bento",
@@ -2365,7 +2422,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Teriyaki Salmon Bento",
@@ -2385,7 +2443,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Change to brown rice +$1.00 extra (based on cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Vegetable Tempura Bento",
@@ -2405,7 +2464,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     }
    ]
   },
@@ -2532,7 +2592,8 @@
      "imageSize": [
       614,
       374
-     ]
+     ],
+     "detail": "7 pcs smoked eel over sushi rice with pickles and greens"
     }
    ]
   },
@@ -3373,7 +3434,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Refreshing Ginjo aroma with a rounded flavor and a clean finish that pairs well with Japanese dishes. Junmai Daiginjo 300ml"
     },
     {
      "name": "Hana Lychee",
@@ -3393,7 +3455,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Captivating lychee aromatics and sweet, full-bodied palate of lychee, yellow peach and lemon-lime. Flavored Sake 375ml"
     },
     {
      "name": "Hana White Peach",
@@ -3413,7 +3476,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Delightful aromas and flavors of just-ripe, white peaches in cream with a sweet, full-bodied palate. Flavored Sake 375ml"
     },
     {
      "name": "Hot Sake",
@@ -3444,7 +3508,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Mild aromatics, full-to-medium body and slightly dry. Easy and enjoyable to drink. Junmai Ginjo 300ml"
     },
     {
      "name": "Kiku Masamune Silver",
@@ -3464,7 +3529,8 @@
      "imageSize": [
       640,
       640
-     ]
+     ],
+     "detail": "Semi-dry with a lush floral and fruity aroma and flavor, a refreshing character and a crisp fruity finish. Sparkling Sake 300ml"
     },
     {
      "name": "Kubota",
@@ -3484,7 +3550,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Has an elegant nose with notes of pear and melon, with a harmonious acidity and pleasant mouthfeel. Junmai Daiginjo. 300ml"
     },
     {
      "name": "Nihonsakari “Sakari” Yuzu",
@@ -3504,7 +3571,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "The refined umami and moderate sweetness of yuzu creates a delightfully rounded harmony."
     },
     {
      "name": "Sho Chiku Bai Nigori",
@@ -3524,7 +3592,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Fruity aromas and flavors of ripe banana, vanilla, melon, strawberry, and creamy sweet rice custard. Junmai 375ml"
     },
     {
      "name": "Sho Chiku Bai Organic",
@@ -3544,7 +3613,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Rich and savory with comforting aromas and the flavors of corn flakes, banana bread, nuts and mild spices. Junmai 300ml"
     },
     {
      "name": "Suigei “Drunken Whale”",
@@ -3564,7 +3634,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "A reserved aroma, gentle rice notes, perfect acidity and a fine finish combine to create a unique flavor. Tokubetsu Junmai 300ml"
     },
     {
      "name": "Tengumai 50",
@@ -3584,7 +3655,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "A reserved aroma, gentle rice notes, perfect acidity and a fine finish combine to create a unique flavor. Junmai Daiginjo 300ml"
     },
     {
      "name": "Umakara Migaki Hachiwari",
@@ -3604,7 +3676,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Stronger personality and boldness of umami that can be enjoyed at a variety of temperatures. Junmai 300ml"
     }
    ]
   },
@@ -5286,6 +5359,9 @@
      "imageSize": [
       640,
       480
+     ],
+     "groups": [
+      2
      ]
     },
     {
@@ -5308,6 +5384,9 @@
      "imageSize": [
       640,
       480
+     ],
+     "groups": [
+      2
      ]
     },
     {
@@ -5330,7 +5409,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Eel Cucumber Roll",
@@ -5352,7 +5435,11 @@
      "imageSize": [
       640,
       365
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Eel Roll",
@@ -5374,7 +5461,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Mango & Avocado Roll",
@@ -5396,7 +5487,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Mixed Vegetable Roll",
@@ -5418,7 +5513,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Cucumber Roll",
@@ -5440,7 +5539,11 @@
      "imageSize": [
       640,
       359
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Mango Roll",
@@ -5462,7 +5565,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Roll",
@@ -5484,7 +5591,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Shrimp Cucumber Roll",
@@ -5506,7 +5617,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Shrimp Tempura Roll",
@@ -5528,7 +5643,11 @@
      "imageSize": [
       640,
       380
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy California Roll",
@@ -5550,7 +5669,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Salmon (crunch) Roll",
@@ -5572,7 +5695,11 @@
      "imageSize": [
       640,
       347
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Tuna (crunch) Roll",
@@ -5594,7 +5721,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy White Tuna (Crunch) Roll",
@@ -5616,7 +5747,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Yellowtail (Crunch) Roll",
@@ -5638,7 +5773,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Sweet Potato (Tempura) Roll",
@@ -5660,7 +5799,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tempura Purple Yam Roll",
@@ -5682,7 +5825,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna & Cucumber Roll",
@@ -5704,7 +5851,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna Mango Roll",
@@ -5726,7 +5877,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna Roll",
@@ -5748,7 +5903,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "White Tuna & Mango Roll",
@@ -5770,7 +5929,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Yellowtail Jalapeno Roll",
@@ -5792,7 +5955,11 @@
      "imageSize": [
       640,
       368
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Yellowtail Scallion Roll",
@@ -5814,7 +5981,11 @@
      "imageSize": [
       640,
       379
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     }
    ]
   },
@@ -6485,7 +6656,11 @@
      "imageSize": [
       640,
       427
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Alaska Roll",
@@ -6505,7 +6680,11 @@
      "imageSize": [
       612,
       376
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Avocado & Cucumber Roll",
@@ -6525,7 +6704,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Avocado Roll",
@@ -6545,7 +6728,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Boston Roll",
@@ -6565,7 +6749,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "California Roll",
@@ -6585,7 +6770,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Cucumber Roll",
@@ -6605,7 +6794,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Eel Avocado Roll",
@@ -6625,7 +6818,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Eel Cucumber Roll",
@@ -6645,7 +6842,11 @@
      "imageSize": [
       640,
       365
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Eel Roll",
@@ -6665,7 +6866,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with Miso Soup or Salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Mango & Avocado Roll",
@@ -6685,7 +6890,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Mixed Vegetable Roll",
@@ -6705,7 +6914,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Philadelphia",
@@ -6725,7 +6938,11 @@
      "imageSize": [
       640,
       363
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Avocado Roll",
@@ -6745,7 +6962,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Cucumber Roll",
@@ -6765,7 +6986,11 @@
      "imageSize": [
       640,
       359
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Mango Roll",
@@ -6785,7 +7010,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Salmon Roll",
@@ -6805,7 +7034,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Shrimp & Avocado Roll",
@@ -6825,7 +7058,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Shrimp Cucumber Roll",
@@ -6845,7 +7082,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Shrimp Tempura Roll",
@@ -6865,7 +7106,11 @@
      "imageSize": [
       640,
       380
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy California Roll",
@@ -6885,7 +7130,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Crunch Kani",
@@ -6905,7 +7154,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Salmon (crunch) Roll",
@@ -6925,7 +7178,11 @@
      "imageSize": [
       640,
       347
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Tuna (crunch) Roll",
@@ -6945,7 +7202,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy White Tuna (Crunch) Roll",
@@ -6965,7 +7226,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Spicy Yellowtail (Crunch) Roll",
@@ -6985,7 +7250,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Sweet Potato (Tempura) Roll",
@@ -7005,7 +7274,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tempura Purple Yam Roll",
@@ -7025,7 +7298,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna & Cucumber Roll",
@@ -7045,7 +7322,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna Avocado Roll",
@@ -7065,7 +7346,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna Mango Roll",
@@ -7085,7 +7370,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Tuna Roll",
@@ -7105,7 +7394,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "White Tuna & Avocado Roll",
@@ -7125,7 +7418,11 @@
      "imageSize": [
       640,
       427
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "White Tuna Cucumber Roll",
@@ -7145,7 +7442,11 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Yellowtail Jalapeno Roll",
@@ -7165,7 +7466,11 @@
      "imageSize": [
       640,
       368
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     },
     {
      "name": "Yellowtail Scallion Roll",
@@ -7185,7 +7490,11 @@
      "imageSize": [
       640,
       379
-     ]
+     ],
+     "groups": [
+      2
+     ],
+     "detail": "Served with miso soup or salad 2 Rolls: $10.99 CASH $11.43 CARD 3 Rolls: $12.99 CASH $13.51 CARD Hand roll, brown rice, or soy paper will be an extra $1.00 per roll (based on cash price) Substitutions politely declined. Any changes will be a minimum of $3.00 (based on cash price) and up"
     }
    ]
   },
@@ -7212,7 +7521,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "4 pieces of sushi or sashimi & 1 eel roll Sushi: $16.99 CASH $17.67 CARD Sashimi: $18.99 CASH $19.75 CARD"
     },
     {
      "name": "Salmon Lunch",
@@ -7232,7 +7542,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "4 pieces of sushi or sashimi & 1 salmon roll Sushi: $15.99 CASH $16.63 CARD Sashimi: $16.99 CASH $17.67 CARD"
     },
     {
      "name": "Sashimi Lunch",
@@ -7272,7 +7583,8 @@
      "imageSize": [
       634,
       376
-     ]
+     ],
+     "detail": "3 pieces of sushi, 4 pieces of sashimi & 1 California roll Miso soup, salad, or edamame No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Sushi Lunch",
@@ -7292,7 +7604,8 @@
      "imageSize": [
       604,
       378
-     ]
+     ],
+     "detail": "5 pieces of sushi & 1 California roll Miso soup, salad, or edamame No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Tuna Lunch",
@@ -7312,7 +7625,8 @@
      "imageSize": [
       486,
       362
-     ]
+     ],
+     "detail": "4 pieces of sushi or sashimi & 1 tuna roll Miso soup, salad, or edamame No substitutions. Modifications start at $3.00 (cash price) Sushi: $16.99 CASH $17.67 CARD Sashimi: $18.99 CASH $19.75 CARD"
     },
     {
      "name": "White Tuna Lunch",
@@ -7332,7 +7646,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "4 pieces of sushi or sashimi & 1 white tuna roll Sushi: $15.99 CASH $16.63 CARD Sashimi: $16.99 CASH $17.67 CARD"
     },
     {
      "name": "Yellowtail Lunch",
@@ -7352,7 +7667,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "4 pieces of sushi or sashimi & 1 yellowtail roll Sushi: $16.99 CASH $17.67 CARD Sashimi: $17.99 CASH $18.71 CARD"
     }
    ]
   },
@@ -7379,7 +7695,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Pork Katsu Lunch Bento",
@@ -7399,7 +7716,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Sashimi 5 pcs Bento",
@@ -7419,7 +7737,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Shrimp Tempura Bento",
@@ -7439,7 +7758,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Shrimp Teriyaki Lunch Bento",
@@ -7459,7 +7779,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Sushi 5 pcs Bento",
@@ -7479,7 +7800,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Teriyaki Chicken Bento",
@@ -7499,7 +7821,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Teriyaki Salmon Bento",
@@ -7519,7 +7842,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Change to brown rice +$1.00 extra (based on cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Vegetable Tempura Lunch Bento",
@@ -7539,7 +7863,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     }
    ]
   },
@@ -7566,7 +7891,8 @@
      "imageSize": [
       612,
       350
-     ]
+     ],
+     "detail": "Grilled chicken breast over white rice Served with salad, miso soup, or edamame Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Gyu Don",
@@ -7606,7 +7932,8 @@
      "imageSize": [
       640,
       427
-     ]
+     ],
+     "detail": "Choice of pork or chicken katsu over white rice Served with salad, miso soup, or edamame Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Katsu",
@@ -7646,7 +7973,8 @@
      "imageSize": [
       638,
       394
-     ]
+     ],
+     "detail": "Grilled shrimp or salmon over white rice Served with salad, miso soup, or edamame Upgrade to brown rice +$1.00 (cash price) No substitutions. Modifications start at $3.00 (cash price)"
     },
     {
      "name": "Unagi Don",
@@ -7666,7 +7994,8 @@
      "imageSize": [
       614,
       374
-     ]
+     ],
+     "detail": "5 pcs smoked eel over sushi rice with pickles and greens"
     }
    ]
   },
@@ -7693,7 +8022,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Refreshing Ginjo aroma with a rounded flavor and a clean finish that pairs well with Japanese dishes. Junmai Daiginjo 300ml"
     },
     {
      "name": "Hana Lychee",
@@ -7713,7 +8043,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Captivating lychee aromatics and sweet, full-bodied palate of lychee, yellow peach and lemon-lime. Flavored Sake 375ml"
     },
     {
      "name": "Hana White Peach",
@@ -7733,7 +8064,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Delightful aromas and flavors of just-ripe, white peaches in cream with a sweet, full-bodied palate. Flavored Sake 375ml"
     },
     {
      "name": "Hot Sake",
@@ -7764,7 +8096,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Mild aromatics, full-to-medium body and slightly dry. Easy and enjoyable to drink. Junmai Ginjo 300ml"
     },
     {
      "name": "Kiku Masamune Silver",
@@ -7784,7 +8117,8 @@
      "imageSize": [
       640,
       640
-     ]
+     ],
+     "detail": "Semi-dry with a lush floral and fruity aroma and flavor, a refreshing character and a crisp fruity finish. Sparkling Sake 300ml"
     },
     {
      "name": "Kubota",
@@ -7804,7 +8138,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Has an elegant nose with notes of pear and melon, with a harmonious acidity and pleasant mouthfeel. Junmai Daiginjo. 300ml"
     },
     {
      "name": "Nihonsakari “Sakari” Yuzu",
@@ -7824,7 +8159,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "The refined umami and moderate sweetness of yuzu creates a delightfully rounded harmony."
     },
     {
      "name": "Sho Chiku Bai Nigori",
@@ -7844,7 +8180,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Fruity aromas and flavors of ripe banana, vanilla, melon, strawberry, and creamy sweet rice custard. Junmai 375ml"
     },
     {
      "name": "Sho Chiku Bai Organic",
@@ -7864,7 +8201,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Rich and savory with comforting aromas and the flavors of corn flakes, banana bread, nuts and mild spices. Junmai 300ml"
     },
     {
      "name": "Suigei “Drunken Whale”",
@@ -7884,7 +8222,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "A reserved aroma, gentle rice notes, perfect acidity and a fine finish combine to create a unique flavor. Tokubetsu Junmai 300ml"
     },
     {
      "name": "Tengumai 50",
@@ -7904,7 +8243,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "A reserved aroma, gentle rice notes, perfect acidity and a fine finish combine to create a unique flavor. Junmai Daiginjo 300ml"
     },
     {
      "name": "Umakara Migaki Hachiwari",
@@ -7924,7 +8264,8 @@
      "imageSize": [
       640,
       480
-     ]
+     ],
+     "detail": "Stronger personality and boldness of umami that can be enjoyed at a variety of temperatures. Junmai 300ml"
     }
    ]
   },

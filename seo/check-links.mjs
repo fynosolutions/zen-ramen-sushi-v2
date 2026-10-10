@@ -13,6 +13,8 @@ const VERIFIED = {
   [site.reserve]:    'Resy「Zen Ramen & Sushi」订位页,Midtown',
   [site.directions]: 'Google 地图路线,终点 Zen Ramen & Sushi, 150 W 36th St, New York, NY 10018',
   [site.reviews]:    'Google 地图地点页「Zen Ramen & Sushi」(cid=0x259be4c56c369c55,评分与评论)',
+  [site.writeReview]: 'Google「写评价」入口,place id ChIJwWtKCKxZwokRVZw2bMXkmyU,2026-10-10 真浏览器实测落到 Zen Ramen & Sushi, 150 W 36th St',
+  [site.yelp]:       'Yelp「Zen Ramen & Sushi」150 W 36th street(2026-10-10 真浏览器读到店名与地址)',
   'https://www.ubereats.com/store/zen-ramen-%26-sushi-midtown-west/B4a3zZiTTaemuC9tPhqbLQ': 'Uber Eats「Zen Ramen & Sushi」150 W 36th St',
   'https://www.doordash.com/store/zen-ramen-sushi-new-york-64843/111425951/':                'DoorDash「Zen Ramen Sushi」150 West 36th Street(页面结构化数据)',
   'https://www.grubhub.com/restaurant/zen-ramen-and-sushi-150-w-36th-st-new-york/327291':   'Grubhub「Zen Ramen and Sushi」150 W 36th St',
@@ -22,7 +24,7 @@ const PHONE = 'tel:+16468707509', IG_REEL = /^https:\/\/www\.instagram\.com\/zen
 // 「文字 → 去向」规则:按顺序匹配,第一条命中即判定
 const RULES = [
   [/^SKIP TO CONTENT$/i, h=>h==='#main'],
-  [/Google reviews/i, h=>h===site.reviews],
+  [/Google reviews/i, h=>h===site.reviews], [/^Write a Google review/i, h=>h===site.writeReview], [/^Find us on Yelp/i, h=>h===site.yelp],
   [/GET DIRECTIONS|SEE YOU ON 36TH|^150 W 36th St$/i, h=>h===site.directions],
   [/^UBER EATS/i, h=>h.includes('ubereats.com/store/zen-ramen')],
   [/^DOORDASH/i, h=>h.includes('doordash.com/store/zen-ramen')],

@@ -19,7 +19,11 @@
           "imageSize": [
             720,
             538
-          ]
+          ],
+          "groups": [
+            3
+          ],
+          "perPerson": "$4.80 / person"
         },
         {
           "id": "kani-salad",
@@ -32,7 +36,11 @@
           "imageSize": [
             720,
             539
-          ]
+          ],
+          "groups": [
+            3
+          ],
+          "perPerson": "$4.80 / person"
         },
         {
           "id": "pork-gyoza",
@@ -45,7 +53,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            4
+          ],
+          "perPerson": "$5 / person"
         },
         {
           "id": "steamed-buns",
@@ -58,7 +70,12 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            5,
+            6
+          ],
+          "detail": "Soft steamed buns with your choice of grilled chicken or braised pork belly, topped with romaine lettuce, seaweed salad, scallions, and Kewpie mayo. Starting at 5 servings."
         },
         {
           "id": "vegetable-gyoza",
@@ -73,7 +90,11 @@
           "imageSize": [
             720,
             517
-          ]
+          ],
+          "groups": [
+            7
+          ],
+          "perPerson": "$5.50 / person"
         },
         {
           "id": "vegetable-harumaki-tray",
@@ -88,7 +109,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            8
+          ],
+          "perPerson": "$3.00 / person"
         }
       ]
     },
@@ -108,7 +133,13 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            9,
+            10,
+            11
+          ],
+          "perPerson": "$11.5 / person"
         },
         {
           "id": "teriyaki-tray",
@@ -121,7 +152,13 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            12,
+            13,
+            14
+          ],
+          "perPerson": "$10 / person"
         }
       ]
     },
@@ -141,7 +178,13 @@
           "imageSize": [
             720,
             480
-          ]
+          ],
+          "groups": [
+            15,
+            16
+          ],
+          "detail": "A selection of Zen Ramen's signature specialty sushi rolls, featuring premium ingredients and chef-crafted combinations. Perfect for celebrations, office events, and parties. Each roll contains 8 pieces.",
+          "perPerson": "$14.50 / person"
         },
         {
           "id": "classic-roll-platter",
@@ -156,7 +199,12 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            17,
+            18
+          ],
+          "perPerson": "$8.00 / person"
         },
         {
           "id": "crispy-favorites-platter",
@@ -169,7 +217,12 @@
           "imageSize": [
             720,
             576
-          ]
+          ],
+          "groups": [
+            19,
+            20
+          ],
+          "perPerson": "$7.20 / person"
         },
         {
           "id": "sushi-sashimi-platter",
@@ -182,7 +235,13 @@
           "imageSize": [
             720,
             720
-          ]
+          ],
+          "groups": [
+            21,
+            22
+          ],
+          "detail": "An assortment of fresh premium sushi and sashimi, expertly sliced and beautifully arranged. Each platter includes an equal mix of sushi and sashimi: 20 pcs = 10 sushi + 10 sashimi, 40 pcs = 20 sushi + 20 sashimi, 60 pcs = 30 sushi + 30 sashimi, and 80 pcs = 40 sushi + 40 sashimi.",
+          "perPerson": "$17.60 / person"
         },
         {
           "id": "vegetarian-style-sushi-platter",
@@ -197,7 +256,11 @@
           "imageSize": [
             720,
             521
-          ]
+          ],
+          "groups": [
+            23
+          ],
+          "perPerson": "$12.80 / person"
         }
       ]
     },
@@ -217,7 +280,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            24
+          ],
+          "detail": "Crispy chicken katsu, California roll, shrimp shumai, vegetable harumaki, white rice, and tonkatsu sauce. Starting at 5 servings."
         },
         {
           "id": "gyu-don",
@@ -230,7 +297,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            24
+          ],
+          "detail": "Marinated sliced beef with bell peppers and onions over white rice. Starting at 5 servings."
         },
         {
           "id": "pork-katsu-bento",
@@ -243,7 +314,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            24
+          ],
+          "detail": "Crispy pork katsu, California roll, shrimp shumai, vegetable harumaki, white rice, and tonkatsu sauce. Starting at 5 servings."
         },
         {
           "id": "sashimi-7-pcs-bento",
@@ -256,7 +331,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            25
+          ],
+          "detail": "Assorted sashimi (7 pcs), California roll, shrimp shumai, vegetable harumaki, and white rice. Starting at 5 servings."
         },
         {
           "id": "shrimp-tempura-bento",
@@ -269,7 +348,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            26
+          ],
+          "detail": "Crispy shrimp tempura, California roll, shrimp shumai, vegetable harumaki, white rice, and tempura dipping sauce. Starting at 5 servings."
         },
         {
           "id": "shrimp-teriyaki-bento",
@@ -282,7 +365,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            26
+          ],
+          "detail": "Grilled teriyaki shrimp, California roll, shrimp shumai, vegetable harumaki, sautéed vegetables, and white rice. Starting at 5 servings."
         },
         {
           "id": "sushi-7-pcs-bento",
@@ -295,7 +382,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            25
+          ],
+          "detail": "Assorted sushi (7 pcs), California roll, shrimp shumai, and vegetable harumaki. Starting at 5 servings."
         },
         {
           "id": "teriyaki-chicken-bento",
@@ -308,7 +399,11 @@
           "imageSize": [
             720,
             530
-          ]
+          ],
+          "groups": [
+            24
+          ],
+          "detail": "Teriyaki chicken, California roll, shrimp shumai, vegetable harumaki, broccoli, and white rice. Starting at 5 servings."
         },
         {
           "id": "teriyaki-salmon-bento",
@@ -321,7 +416,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            27
+          ],
+          "detail": "Teriyaki salmon, California roll, shrimp shumai, vegetable harumaki, broccoli, and white rice. Starting at 5 servings."
         },
         {
           "id": "unagi-don",
@@ -334,7 +433,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            28
+          ],
+          "detail": "7 pcs smoked eel over sushi rice with pickles and greens. Starting at 5 servings."
         },
         {
           "id": "vegetable-tempura-bento",
@@ -349,7 +452,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            29
+          ],
+          "detail": "Crispy vegetable tempura, California roll, shrimp shumai, vegetable harumaki, white rice, and tempura dipping sauce. Starting at 5 servings."
         }
       ]
     },
@@ -369,7 +476,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            30
+          ],
+          "detail": "Individual sodas. Starting at 5 servings."
         },
         {
           "id": "bottled-water",
@@ -382,7 +493,11 @@
           "imageSize": [
             720,
             540
-          ]
+          ],
+          "groups": [
+            31
+          ],
+          "detail": "Individual bottled Poland Spring. Starting at 5 servings."
         },
         {
           "id": "individual-iced-tea",
@@ -392,7 +507,11 @@
           "description": "Individual iced tea",
           "tags": [],
           "image": null,
-          "imageSize": null
+          "imageSize": null,
+          "groups": [
+            32
+          ],
+          "detail": "Individual iced tea. Starting at 5 servings."
         }
       ]
     }

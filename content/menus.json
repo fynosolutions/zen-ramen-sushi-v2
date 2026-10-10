@@ -214,6 +214,18 @@
               "page": 1
             },
             "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-0-17",
+            "name": "Vegetable Harumaki",
+            "cashCents": 699,
+            "cardCents": 727,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
           }
         ]
       },
@@ -329,6 +341,18 @@
             "source": {
               "file": "ZEN NOODLE DINNER MENU-01.pdf",
               "page": 2
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-1-9",
+            "name": "Spicy Rice",
+            "cashCents": 1299,
+            "cardCents": 1351,
+            "description": "Spicy tuna topped with jalapeño, eel sauce and spicy mayo.",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
             },
             "reviewStatus": "visually-transcribed"
           }
@@ -3171,6 +3195,109 @@
         ]
       },
       {
+        "id": "bubble-tea",
+        "title": "Bubble Tea",
+        "notes": [],
+        "items": [
+          {
+            "id": "dinner-bubble-tea-0",
+            "name": "Green Grape & Pomelo Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-1",
+            "name": "Kumquat Lemon Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-2",
+            "name": "Lychee Apple Rose Flavored Beverage",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-3",
+            "name": "Mango Rosemary Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-4",
+            "name": "Passion Fruit Rosemary Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-5",
+            "name": "Peach Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-6",
+            "name": "Shine Muscat & Green Grape Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "dinner-bubble-tea-7",
+            "name": "Strawberry Cherry Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
         "id": "japanese-drinks",
         "title": "Japanese Drinks",
         "notes": [],
@@ -4415,6 +4542,109 @@
             "description": "Japanese citrus. Japanese sparkling cocktail.",
             "source": {
               "file": "ZEN NOODLE Lunch II takeout-2023-04-01.pdf",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          }
+        ]
+      },
+      {
+        "id": "bubble-tea",
+        "title": "Bubble Tea",
+        "notes": [],
+        "items": [
+          {
+            "id": "lunch-bubble-tea-0",
+            "name": "Green Grape & Pomelo Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-1",
+            "name": "Kumquat Lemon Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-2",
+            "name": "Lychee Apple Rose Flavored Beverage",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-3",
+            "name": "Mango Rosemary Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-4",
+            "name": "Passion Fruit Rosemary Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-5",
+            "name": "Peach Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-6",
+            "name": "Shine Muscat & Green Grape Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
+              "page": 1
+            },
+            "reviewStatus": "visually-transcribed"
+          },
+          {
+            "id": "lunch-bubble-tea-7",
+            "name": "Strawberry Cherry Tea",
+            "cashCents": 799,
+            "cardCents": 799,
+            "description": "",
+            "source": {
+              "file": "旧站 WordPress 菜单后台 zrm_menu_item (2026-10-10 对照补齐)",
               "page": 1
             },
             "reviewStatus": "visually-transcribed"

@@ -5352,7 +5352,7 @@
         "title": "Sake",
         "notes": [
           "Sake prices are listed as a single price in the supplied menu.",
-          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+          "Items marked “Happy Hour selection” are $6.49 cash / $6.75 card during happy hour. Other drinks are at their regular price."
         ],
         "items": [
           {
@@ -5529,7 +5529,7 @@
         "id": "beer",
         "title": "Beer",
         "notes": [
-          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+          "Items marked “Happy Hour selection” are $6.49 cash / $6.75 card during happy hour. Other drinks are at their regular price."
         ],
         "items": [
           {
@@ -5547,8 +5547,8 @@
           {
             "id": "happy-hour-beer-1",
             "name": "Echigo Stout",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Niigata, Japan.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5586,8 +5586,8 @@
           {
             "id": "happy-hour-beer-4",
             "name": "Orion",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Okinawa, Japan.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5601,8 +5601,8 @@
           {
             "id": "happy-hour-beer-5",
             "name": "Sapporo",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5616,8 +5616,8 @@
           {
             "id": "happy-hour-beer-6",
             "name": "Kirin Ichiban",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5631,8 +5631,8 @@
           {
             "id": "happy-hour-beer-7",
             "name": "Kirin Light",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5646,8 +5646,8 @@
           {
             "id": "happy-hour-beer-8",
             "name": "Heineken",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5661,8 +5661,8 @@
           {
             "id": "happy-hour-beer-9",
             "name": "Stella Artois",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5691,14 +5691,14 @@
         "id": "wine",
         "title": "Wine",
         "notes": [
-          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+          "Items marked “Happy Hour selection” are $6.49 cash / $6.75 card during happy hour. Other drinks are at their regular price."
         ],
         "items": [
           {
             "id": "happy-hour-wine-0",
             "name": "Chardonnay",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "White.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5712,8 +5712,8 @@
           {
             "id": "happy-hour-wine-1",
             "name": "Pinot Grigio",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "White.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5727,8 +5727,8 @@
           {
             "id": "happy-hour-wine-2",
             "name": "Cabernet",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Red.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5742,8 +5742,8 @@
           {
             "id": "happy-hour-wine-3",
             "name": "Pinot Noir",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Red.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5757,8 +5757,8 @@
           {
             "id": "happy-hour-wine-4",
             "name": "White Zinfandel",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Rosé.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5772,8 +5772,8 @@
           {
             "id": "happy-hour-wine-5",
             "name": "Plum Wine",
-            "cashCents": 900,
-            "cardCents": 936,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Umeshu.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5790,14 +5790,14 @@
         "id": "cocktails",
         "title": "Cocktails",
         "notes": [
-          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+          "Items marked “Happy Hour selection” are $6.49 cash / $6.75 card during happy hour. Other drinks are at their regular price."
         ],
         "items": [
           {
             "id": "happy-hour-cocktails-0",
             "name": "Cosmopolitan",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5811,8 +5811,8 @@
           {
             "id": "happy-hour-cocktails-1",
             "name": "Rum Coke",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5826,8 +5826,8 @@
           {
             "id": "happy-hour-cocktails-2",
             "name": "Mango Sunrise",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5841,8 +5841,8 @@
           {
             "id": "happy-hour-cocktails-3",
             "name": "Long Island Ice Tea",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5856,8 +5856,8 @@
           {
             "id": "happy-hour-cocktails-4",
             "name": "Tokyo Ice Tea",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5871,8 +5871,8 @@
           {
             "id": "happy-hour-cocktails-5",
             "name": "Yuzu Matcha Aid",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5886,8 +5886,8 @@
           {
             "id": "happy-hour-cocktails-6",
             "name": "Martini",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Lychee / Mango / Pineapple.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5901,8 +5901,8 @@
           {
             "id": "happy-hour-cocktails-7",
             "name": "Margarita",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Lychee / Mango / Pineapple.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5916,8 +5916,8 @@
           {
             "id": "happy-hour-cocktails-8",
             "name": "Mojito",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Lychee / Mango / Pineapple.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5931,8 +5931,8 @@
           {
             "id": "happy-hour-cocktails-9",
             "name": "Vodka Juice",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Soda / Orange / Cranberry.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5949,14 +5949,14 @@
         "id": "chu-hi",
         "title": "Chu-Hi",
         "notes": [
-          "Items marked “Happy Hour selection” are printed in red in the supplied menu. Prices shown are exactly as listed."
+          "Items marked “Happy Hour selection” are $6.49 cash / $6.75 card during happy hour. Other drinks are at their regular price."
         ],
         "items": [
           {
             "id": "happy-hour-chu-hi-0",
             "name": "Yuzu",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Japanese sparkling cocktail.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5970,8 +5970,8 @@
           {
             "id": "happy-hour-chu-hi-1",
             "name": "White Peach",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Japanese sparkling cocktail.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -5985,8 +5985,8 @@
           {
             "id": "happy-hour-chu-hi-2",
             "name": "Lychee",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Japanese sparkling cocktail.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -6000,8 +6000,8 @@
           {
             "id": "happy-hour-chu-hi-3",
             "name": "Kyoho Grape",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Japanese grapes. Japanese sparkling cocktail.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",
@@ -6015,8 +6015,8 @@
           {
             "id": "happy-hour-chu-hi-4",
             "name": "Kabosu",
-            "cashCents": 1000,
-            "cardCents": 1040,
+            "cashCents": 649,
+            "cardCents": 675,
             "description": "Japanese citrus. Japanese sparkling cocktail.",
             "source": {
               "file": "zen noodle happy hour menu final print-02.pdf",

@@ -4,8 +4,8 @@ import { site } from '@/content/site';
 import { Arrow, PageHeading } from '@/components/Shared';
 
 export const metadata: Metadata = {
-  title: 'Near Madison Square Garden',
-  description: 'Eating before a game or concert at MSG? We are a 6-minute walk away — fast service, ramen, sushi and a daily 4–8 PM happy hour.',
+  title: 'Japanese Food Near MSG',
+  description: 'Japanese food near Madison Square Garden: a 6-minute walk to ramen, sushi and a daily 4–8 PM happy hour, before a game or concert.',
   alternates: { canonical: '/near-madison-square-garden/' },
 };
 

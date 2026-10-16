@@ -26,7 +26,7 @@ function Analytics(){
       `gtag('config','GT-MJJQ9P6Z');gtag('config','AW-17990718317');` +
       // OpenAI 广告转化像素(旧站 WPCode 里的原文)
       `window.oaiq=window.oaiq||function(){(window.oaiq.q=window.oaiq.q||[]).push(arguments)};` +
-      `oaiq('init',{pixelId:'XUW55TSpfP5vV7RUmbuTfA'});oaiq('measure','page_viewed');` +
+      `oaiq('init',{pixelId:'XUW55TSpfP5vV7RUmbuTfA'});oaiq('measure','page_viewed',{type:'contents'});` +
       `var o=document.createElement('script');o.async=true;o.src='https://bzrcdn.openai.com/sdk/oaiq.min.js';document.head.appendChild(o);}`
     }}/>
   </>;

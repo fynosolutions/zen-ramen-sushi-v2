@@ -17,7 +17,7 @@
     "device-safe": "node seo/check-device-safe.mjs"
   },
   "dependencies": {
-    "next": "^16.3.5",
+    "next": "^16.4.2",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "gsap": "^3.15.0",
@@ -31,7 +31,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.3.5",
+    "eslint-config-next": "^16.4.2",
     "@playwright/test": "^1.63.0"
   }
 }

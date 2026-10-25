@@ -33,6 +33,7 @@ const structural = {
 // 不在旧网址清单里、但有外链或旧站上能打开的零散入口(2026-10-06 用外链数据与旧站实测补)
 const LEGACY = [
   ['/uorder-menu/', '/menu/'],                                        // 2 个外部域名链到它(旧站上已是 404)
+  ['/2026/07/26/authentic-ramen-vs-instant-noodles/', '/2026/07/26/authentic-ramen-vs-instant-noodles-the-real-difference/'],   // 2026-10-24 旧站短网址会跳到完整文章,新站原先 404
   ['/sushi/', '/menu/#dinner--sushi-rolls'],                          // 旧站 200,供应商站有链接
   // ⚠️ /wp-content/…、/wp-json/、/wp-login.php 这类路径在 Vercel 上会被平台防护直接 403(响应头 x-vercel-mitigated: deny),跳转规则轮不到执行(2026-10-06 实测)。
   //    所以旧站的菜单 PDF 直链、被盗链的 logo 没法在这里承接;三条都没有 Google 点击,记为已知缺口,别再加回来

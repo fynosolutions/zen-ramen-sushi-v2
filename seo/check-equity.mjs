@@ -42,7 +42,7 @@ const same = res.filter(r => r.kind === 'SAME'), moved = res.filter(r => r.kind 
 for (const r of rest) { const allowed = WRONG.test(r.k) || gone.has(r.k) || PLATFORM.test(r.k); if (!allowed) fails.push(`${r.k} (点击${r.c} 排名词${r.kw} 外链${r.bl}) 没有被接住: ${r.kind} ${r.final}`); }
 for (const r of moved) { if ((r.final.split('#')[0] || '/') === '/' && r.k !== '/') fails.push(`${r.k} 被跳到首页`); if (isPost(r.k) && !WRONG.test(r.k) && !gone.has(r.k)) fails.push(`${r.k} 是有积累的文章(点击${r.c} 曝光${r.im} 排名词${r.kw}),却被跳转到 ${r.final}(应原网址保留)`); }
 // 「旧站已删」的豁免名单是导入脚本自己写的:对线上验收时到旧站现查一遍,确实 404 才认(旧站限流或连不上 = 不认)
-if (BASE) for (const g of gone) { let st = 0; try { const { execFileSync } = await import('child_process'); st = +execFileSync('curl', ['-s', '-o', '/dev/null', '-m', '30', '-w', '%{http_code}', '--resolve', 'zenramensushiny.com:443:192.0.78.24', 'https://zenramensushiny.com' + g], { encoding: 'utf8' }); } catch {} if (st !== 404) fails.push(`${g} 被当作「旧站已删」放行,但旧站现在返回 ${st}(不是 404)`); }
+if (BASE) for (const g of gone) { let st = 0; try { const { execFileSync } = await import('child_process'); st = +execFileSync('curl', ['-s', '-k', '-o', '/dev/null', '-m', '30', '-w', '%{http_code}', '--resolve', 'zenramensushiny.com:443:192.0.78.24', 'https://zenramensushiny.com' + g], { encoding: 'utf8' }); } catch {} if (st !== 404) fails.push(`${g} 被当作「旧站已删」放行,但旧站现在返回 ${st}(不是 404)`); }
 for (const p of restored) { const r = res.find(x => x.k === p); if (r && r.kind !== 'SAME') fails.push(`${p} 应是同网址页面,实际 ${r.kind}`); }
 // 指定去向的旧页
 const FIXED = [['/lunch-specials-2/', '/lunch-specials/'], ['/location/', '/location/'], ['/zen-ramen-contact/', '/location/'], ['/main-course/', '/menu/'], ['/blog/', '/blog/'], ['/news/', '/blog/'], ['/zen-ramen-sushi-blog/', '/blog/'],

@@ -234,7 +234,7 @@
     },
     {
       "type": "paragraph",
-      "text": "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. We test the site with automated accessibility tools and fix the issues we find."
+      "text": "We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1, Level AA. Every time the site is updated, it is tested automatically against these guidelines. We have also checked the main pages using a keyboard alone, and we fix the issues we find."
     },
     {
       "type": "heading",
@@ -246,11 +246,15 @@
     },
     {
       "type": "bullet",
-      "text": "Each page has a “Skip to content” link for keyboard users."
+      "text": "Menus, menu tabs, the photo gallery and our event form can be used with a keyboard alone, and each page has a “Skip to content” link."
     },
     {
       "type": "bullet",
       "text": "Text colors are checked against their backgrounds for readable contrast."
+    },
+    {
+      "type": "bullet",
+      "text": "The homepage video and the scrolling text banner have a pause button."
     },
     {
       "type": "bullet",

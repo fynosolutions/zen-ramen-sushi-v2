@@ -8,7 +8,8 @@ import { homeFilm as film } from '@/content/media';
    省流量模式 / 2G / 系统「减少动态效果」/ iPhone 省电模式(系统会拒绝自动播)→ 只显示封面 + 播放按钮。详见 memory ref_web_video_mobile_contract */
 export default function HomeFilm(){
   const v = useRef<HTMLVideoElement>(null);
-  const [state, setState] = useState<'idle'|'ambient'|'sound'>('idle');
+  const [state, setState] = useState<'idle'|'ambient'|'paused'|'sound'>('idle');
+  const held = useRef(false);   /* 访客自己按了暂停:滑出再滑回也不再自动播 */
   const start = (withSound:boolean) => {
     const el = v.current; if(!el) return;
     el.muted = !withSound;
@@ -25,20 +26,26 @@ export default function HomeFilm(){
     let io: IntersectionObserver | undefined;
     const arm = () => {
       io = new IntersectionObserver(([e])=>{
-        if(e.isIntersecting){ if(el.paused && el.muted) start(false); } else if(el.muted) el.pause();
+        if(e.isIntersecting){ if(el.paused && el.muted && !held.current) start(false); } else if(el.muted) el.pause();
       },{threshold:.4});
       io.observe(el);
     };
     if(document.readyState === 'complete') arm(); else window.addEventListener('load', arm, {once:true});
     return ()=>{ window.removeEventListener('load', arm); io?.disconnect(); };
   },[]);
+  /* 无障碍(WCAG 2.2.2,2026-10-29):自动循环播的视频必须能暂停 */
+  const toggle = () => { const el = v.current; if(!el) return;
+    if(state==='ambient'){ held.current = true; el.pause(); setState('paused'); } else { held.current = false; start(false); } };
   return <section className="home-film" aria-label={film.title}>
     <video ref={v} muted loop playsInline preload="none" poster={film.poster} width="1280" height="720" controls={state==='sound'} aria-label={film.title}>
       <source src={film.src} type="video/mp4"/>
     </video>
     {state!=='sound' && <div className="home-film-overlay">
       <p className="home-film-caption"><span className="red-dot"/>INSIDE ZEN · 150 W 36TH ST</p>
-      <button className="home-film-play" onClick={()=>start(true)}><span aria-hidden="true"><Ico n="play"/></span> {state==='ambient'?'WATCH WITH SOUND':'PLAY THE FILM'}</button>
+      <div className="home-film-actions">
+        {(state==='ambient'||state==='paused') && <button className="home-film-pause" onClick={toggle}><span aria-hidden="true"><Ico n={state==='ambient'?'pause':'play'}/></span> {state==='ambient'?'PAUSE':'RESUME'}</button>}
+        <button className="home-film-play" onClick={()=>start(true)}><span aria-hidden="true"><Ico n="play"/></span> {state==='idle'?'PLAY THE FILM':'WATCH WITH SOUND'}</button>
+      </div>
     </div>}
   </section>;
 }

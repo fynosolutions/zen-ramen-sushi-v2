@@ -112,7 +112,7 @@ main[tabindex="-1"]:focus{outline:none}
 .cta-band-inner{max-width:1440px;width:87%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band .eyebrow{color:#ffffffcc;margin-bottom:12px}
 .cta-band h2{font-size:clamp(30px,3.4vw,52px);margin:0 0 12px;color:#fff;max-width:640px}
-.cta-band-note{margin:0;font-size:14px;color:#ffffffe0}
+.cta-band-note{margin:0;font-size:14px;color:#fff}
 .cta-band-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:14px 20px;max-width:580px}
 .button-ghost{background:transparent;border-color:#fff;color:#fff}
 .button-ghost:hover{background:#ffffff22}
@@ -300,3 +300,18 @@ h1,h2{text-wrap:balance}
 .pm-more{margin-top:8px;background:transparent;border:0;border-bottom:1px solid var(--ink);color:var(--ink);padding:0 0 2px;font-size:11px;font-weight:700;letter-spacing:.1em;display:inline-flex;align-items:center;gap:6px}.pm-more[aria-expanded=true] svg{transform:rotate(180deg)}
 .pm-opts{margin-top:10px;padding:12px 14px;background:#f5f1ea;border-radius:6px}.pm-opts .pm-desc{margin:0 0 8px}.pm-group+.pm-group{margin-top:12px}.pm-group p{margin:0 0 4px;font-size:13px}.pm-group p small{color:var(--muted);margin-left:8px;font-size:12px}
 .pm-group ul{list-style:none;margin:0;padding:0}.pm-group li{display:flex;justify-content:space-between;gap:12px;font-size:13px;line-height:1.5;padding:3px 0;border-top:1px solid rgba(0,0,0,.07)}.pm-group li small{color:var(--muted);white-space:nowrap;font-size:12px}
+/* 无障碍(2026-10-29):键盘 Tab 到的元素不许被粘性栏盖住——顶部页头(菜单页再加页签/分类条≈120px)、手机底部 CALL/ORDER/RESERVE 条(≈68px)。
+   只加在可聚焦元素上,不用 html 的 scroll-padding:那会叠加到菜单锚点(.food-section/.pm-section 的 scroll-margin)上,让锚点落偏。视频获得焦点时用和全站一样的红框(浏览器默认是 1px 淡蓝) */
+:is(a,button,input,select,textarea,video,summary,[tabindex]){scroll-margin-top:calc(var(--header-h) + 16px)}
+body:has(.menu-tabs,.pm-tabs) :is(a,button,input,select,textarea,video,summary,[tabindex]){scroll-margin-top:calc(var(--header-h) + 128px)}
+@media(max-width:650px){:is(a,button,input,select,textarea,video,summary,[tabindex]){scroll-margin-bottom:88px}}
+video:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.home-film-actions{display:flex;flex-wrap:wrap;gap:10px;pointer-events:auto}
+.home-film-pause{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:16px 20px;border:1px solid #ffffffb0;background:#0006;color:#fff;font-size:12px;font-weight:900;letter-spacing:.08em}
+.home-film-pause:hover{background:#000a}
+.home-film-pause .ico{width:1.1em;height:1.1em}
+.ticker{position:relative}.ticker[data-paused]>div{animation-play-state:paused}
+.ticker-pause{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:40px;height:40px;padding:0;border:1px solid #ffffffb0;background:var(--red);color:#fff}
+.ticker-pause .ico{width:14px;height:14px}.ticker-pause:hover{background:#b71b21}
+.ticker-pause:focus-visible{outline:3px solid #fff;outline-offset:-6px}  /* 红底上红框看不见,且字条 overflow:hidden 会裁掉外扩的框 */
+@media(prefers-reduced-motion:reduce){.ticker-pause{display:none}}

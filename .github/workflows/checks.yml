@@ -12,3 +12,5 @@ jobs:
       - run: npm run build
         env: { NEXT_TELEMETRY_DISABLED: 1 }
       - run: npm run seo   # 首页存在·153条301映射·标题/描述/alt·钱页字数 —— 任何一条坏 = 红灯
+      - run: npx playwright install --with-deps chromium
+      - run: npm run a11y   # 无障碍 WCAG 2.1 AA:15 页×电脑/手机 + 展开状态 + 视频/字条暂停键 + 键盘 —— 任何一条坏 = 红灯

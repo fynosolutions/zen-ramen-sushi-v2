@@ -10,18 +10,21 @@ type Item = { id:string; name:string; cashCents?:number|null; cardCents?:number|
 type Section = { id:string; title:string; notes?:string[]; items:Item[] };
 const lunch = (menus as unknown as {id:string;availability:string;pdf:string;notice:string;sections:Section[]}[]).find(m => m.id==='lunch')!;
 const money = (c:number) => '$'+(c/100).toFixed(2);
-const mains = lunch.sections.filter(s => s.id!=='extra-topping');
+// 起价只算午市主餐(2026-10-27):原来只排除加料,饮料($3.50 汽水)被算成「午市从 $3.50 起」。
+const FOOD = ['sushi-bar','rice-dishes','bento-box','lunch-roll'];
+const mains = lunch.sections.filter(s => FOOD.includes(s.id));
 const from = Math.min(...mains.flatMap(s => s.items.map(i => i.cashCents ?? Infinity)));
 
 export const metadata: Metadata = {
-  title: 'Lunch Specials',
-  description: `Weekday lunch specials in Midtown Manhattan: sushi sets, bento boxes, rice dishes and lunch rolls from ${money(from)}. ${lunch.availability.split(' · ').slice(0,2).join(', ')}.`,
+  // 标题带上 sushi(2026-10-27):「sushi lunch」近 28 天 616 次曝光、平均第 13 位,原标题只有 Lunch Specials
+  title: 'Sushi Lunch Specials in Midtown NYC',
+  description: `Sushi lunch specials near Penn Station in Midtown: sushi sets, bento boxes, rice dishes and lunch rolls from ${money(from)}. ${lunch.availability.split(' · ').slice(0,2).join(', ')}.`,
   alternates: { canonical: '/lunch-specials/' },
 };
 
 export default function LunchSpecials(){
   return <main id="main">
-    <PageHeading label={lunch.availability.split(' · ').slice(0,2).join(' · ').toUpperCase()} title="Lunch specials" description={`Sushi bar sets, bento boxes, rice dishes and lunch rolls from ${money(from)} (cash price), at 150 W 36th Street — five minutes from Penn Station.`} />
+    <PageHeading label={lunch.availability.split(' · ').slice(0,2).join(' · ').toUpperCase()} title="Sushi lunch specials" description={`Sushi bar sets, bento boxes, rice dishes and lunch rolls from ${money(from)} (cash price), at 150 W 36th Street — five minutes from Penn Station.`} />
     <section className="container scene-page lunch-page">
       <div className="scene-body">
         <h2>A full lunch in a Midtown lunch break</h2>

@@ -13,7 +13,7 @@ const PROFILES = [
   ['360×740·Chromium', chromium, touch(360,740)],
   ['320×568·Chromium', chromium, touch(320,568)],
 ];
-const PAGES = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/'];
+const PAGES = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/','/accessibility/'];
 const fail = []; let P = ''; const ok = (c,m) => { if(!c) fail.push(`[${P}] ${m}`); };
 const skip = c => c.addInitScript(()=>{try{sessionStorage.setItem('zen-intro-v2','1')}catch{}});
 const shot = async (p,name) => { if(SHOTS && P.startsWith('iPhone')) { fs.mkdirSync(SHOTS,{recursive:true}); await p.screenshot({path:`${SHOTS}/${name}.png`}); } };

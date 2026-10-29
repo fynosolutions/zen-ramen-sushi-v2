@@ -19,7 +19,7 @@ for (const [ch, where] of Object.entries(hits)) ok(false, `符号字符「${ch}�
 const PORT = 3000 + (process.pid % 900), BASE = process.env.CTA_BASE || `http://127.0.0.1:${PORT}`;
 const srv = process.env.CTA_BASE ? {kill(){}} : spawn('node',['scripts/serve.mjs'],{env:{...process.env,PORT:String(PORT)},stdio:'ignore'});
 for (let i=0;i<40;i++){ try{ if((await fetch(BASE+'/')).ok) break; }catch{} await new Promise(r=>setTimeout(r,250)); }
-const PAGES = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/'];
+const PAGES = ['/','/menu/','/about/','/gallery/','/happy-hour/','/events-catering/','/near-penn-station/','/near-madison-square-garden/','/privacy-policy/','/terms-conditions/','/accessibility/'];
 const b = await chromium.launch();
 try {
   for (const [name,opt] of [['desktop',{viewport:{width:1440,height:900}}],['phone',{...devices['Pixel 7']}]]) {

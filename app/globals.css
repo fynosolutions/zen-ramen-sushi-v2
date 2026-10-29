@@ -112,7 +112,7 @@ main[tabindex="-1"]:focus{outline:none}
 .cta-band-inner{max-width:1440px;width:87%;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px}
 .cta-band .eyebrow{color:#ffffffcc;margin-bottom:12px}
 .cta-band h2{font-size:clamp(30px,3.4vw,52px);margin:0 0 12px;color:#fff;max-width:640px}
-.cta-band-note{margin:0;font-size:14px;color:#ffffffe0}
+.cta-band-note{margin:0;font-size:14px;color:#fff}
 .cta-band-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:14px 20px;max-width:580px}
 .button-ghost{background:transparent;border-color:#fff;color:#fff}
 .button-ghost:hover{background:#ffffff22}

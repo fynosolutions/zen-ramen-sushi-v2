@@ -30,6 +30,7 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 首页要有动态元素（视频），手机也自动播，但不能拖慢页面。
 - 手机和电脑同一标准；iPhone、安卓都看；截图给毛看（`phone-check` skill）；毛用真 iPhone 终验。
 - 每个按钮的文字与去向要一致。设计同事走 PR，不碰命名/SEO/菜单文字。
+- **网站只写餐厅名（2026-10-29）**：任何页面、隐私/条款、JSON-LD、meta 都不写经营公司名（旧站带来的 MAXIM INTERNATIONAL GROUP INC 已从页脚删掉，PR #46），也不写老板姓名和私人联系方式；联系方式只用店的公开电话、地址、店邮箱。
 - 通用打法与踩坑全集 → memory `ref_restaurant_website_playbook`。
 
 ## 这次踩的坑（本仓专属；通用的在 playbook）

@@ -30,6 +30,7 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 首页要有动态元素（视频），手机也自动播，但不能拖慢页面。
 - 手机和电脑同一标准；iPhone、安卓都看；截图给毛看（`phone-check` skill）；毛用真 iPhone 终验。
 - 每个按钮的文字与去向要一致。设计同事走 PR，不碰命名/SEO/菜单文字。
+- **网站只写餐厅名（2026-10-29）**：任何页面、隐私/条款、JSON-LD、meta 都不写经营公司名（旧站带来的 MAXIM INTERNATIONAL GROUP INC 已从页脚删掉，PR #46），也不写老板姓名和私人联系方式；联系方式只用店的公开电话、地址、店邮箱。
 - 通用打法与踩坑全集 → memory `ref_restaurant_website_playbook`。
 
 ## 这次踩的坑（本仓专属；通用的在 playbook）
@@ -38,6 +39,8 @@ Fyno 给客户做的新官网。旧站（WordPress.com）每月约 1 万次自�
 - 手机检查本身会骗人：溢出要拿 `screen.width` 比；探针要自检；改字号后在 360 宽重跑（`.h1-kicker` 调到 11px 曾超出 6px，已保持 10px）。
 - 真机才出的三类问题（符号变 emoji / 按钮系统蓝 / iPhone 视频不预加载）→ `check-device-safe.mjs`。
 - 本机跑整套手机检查约 10–12 分钟，后台命令超时要给足；检查脚本别并发抢端口。
+
+**无障碍 / ADA（2026-10-29）**：目标 WCAG 2.1 AA。`npm run a11y`（`seo/check-a11y.mjs`，已进 CI）= axe 扫 15 页×电脑/手机 + 7 个展开状态（手机导航、菜单页签、相册大图、菜品选项、表单报错）+ 首页视频和红色滚动字条的暂停键 + 键盘（导航 Esc、页签方向键）；负向对照：对 10-29 合并前的线上跑是红的。axe 只能抓到三四成问题——**新增会自己动的东西（自动播视频、滚动字条、轮播）必须带暂停键**（WCAG 2.2.2），新增交互组件要自己用键盘 Tab 走一遍（焦点框看得见、不被粘性栏盖住：`globals.css` 末尾给可聚焦元素加了 `scroll-margin`，别改成 html 的 `scroll-padding`，会让菜单锚点落偏）。声明页 `/accessibility/`（文字在 `content/legal.json` 的 `accessibility`，只写已做到的事）。**不装 accessiBe 之类的小组件**：旧站装的那段代码没有有效订阅、从没显示过，毛 10-29 定不买（防不了诉讼，FTC 2025 年罚过 accessiBe）。菜品图的轻微浮动是毛要的动效，系统「减少动态效果」时关闭，未加暂停键（已知小风险）。
 
 **切换/托管相关工具（2026-10-03 起）**：`node seo/check-cutover.mjs --host zenramensushiny.com [--ip 入口地址] [--only-cert]`（全套验收；Vercel 口径：永久跳转 301/308 都算、http www 允许两跳、带参数的跳转可保留原参数）· `node seo/dns-check.mjs snapshot|compare [--flipped]|ttl`（DNS 快照/比对/等待时间，直接问 GoDaddy 权威服务器；只比对固定名单里的记录名，新增名字如 `_vercel` 看不到）· `node seo/check-ga4.mjs`。**备用方案（搬到 GoDaddy 主机）的工具**：`node scripts/build-for-host.mjs`（一键构建+放 `.htaccess`+自检+`--upload` 上传）· `node scripts/apache-local.mjs start out 8911`（本机起真 Apache 试跑）。**线上检查的地址从此用 `CTA_BASE=https://zenramensushiny.com`**（不再用 zen-ramen.vercel.app）。
 

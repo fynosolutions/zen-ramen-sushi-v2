@@ -4,7 +4,7 @@ import { site } from '@/content/site';
 import { Arrow } from '@/components/Shared';
 
 // 页尾 CTA 条:读完内容的人最该看到「下一步」。法律页与活动页(自带表单)不放。
-const HIDE = ['/privacy-policy/','/terms-conditions/','/events-catering/'];
+const HIDE = ['/privacy-policy/','/terms-conditions/','/accessibility/','/events-catering/'];
 export default function CtaBand(){
   const path = usePathname();
   if(HIDE.includes(path)) return null;

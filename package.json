@@ -14,7 +14,8 @@
     "photos": "node scripts/photo-gate.mjs",
     "links": "node seo/check-links.mjs",
     "mobile": "node seo/check-mobile.mjs",
-    "device-safe": "node seo/check-device-safe.mjs"
+    "device-safe": "node seo/check-device-safe.mjs",
+    "a11y": "node seo/check-a11y.mjs"
   },
   "dependencies": {
     "next": "^16.4.2",
@@ -30,6 +31,7 @@
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "axe-core": "^4.13.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.2",
     "@playwright/test": "^1.63.0"

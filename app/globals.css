@@ -315,3 +315,17 @@ video:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .ticker-pause .ico{width:14px;height:14px}.ticker-pause:hover{background:#b71b21}
 .ticker-pause:focus-visible{outline:3px solid #fff;outline-offset:-6px}  /* 红底上红框看不见,且字条 overflow:hidden 会裁掉外扩的框 */
 @media(prefers-reduced-motion:reduce){.ticker-pause{display:none}}
+/* 拉面碗鼠标(2026-11-18):只在有鼠标的电脑上;点击位置=筷子尖(3,3)。链接/按钮上碗冒热气;输入框保留文字光标。
+   点一下挑面的动画在 components/RamenCursor.tsx。换图要换文件名(-v2…)。 */
+@media(hover:hover) and (pointer:fine){
+html,body{cursor:url(/cursor/ramen-bowl-v1.svg) 3 3,url(/cursor/ramen-bowl-v1.png) 3 3,auto}
+:is(a[href],button,[role=button],[role=tab],label,summary,select,.ig-play,.form-feedback button){cursor:url(/cursor/ramen-bowl-hover-v1.svg) 3 3,url(/cursor/ramen-bowl-hover-v1.png) 3 3,pointer}
+:is(input:not([type=checkbox],[type=radio],[type=submit],[type=button],[type=range]),textarea,[contenteditable=true]){cursor:text}
+:is(button:disabled,[aria-disabled=true]){cursor:not-allowed}
+}
+.ramen-lift{position:fixed;left:0;top:0;width:32px;height:32px;z-index:2147483646;pointer-events:none;will-change:transform}
+.ramen-lift svg{display:block;overflow:visible}
+.ramen-lift path{fill:none;stroke-linecap:round;stroke-dasharray:1 2;stroke-dashoffset:1;animation:ramen-pull .75s cubic-bezier(.23,1,.32,1) both}
+.ramen-lift-sway{transform-origin:4px 4.4px;animation:ramen-sway .75s ease-in-out both}
+@keyframes ramen-pull{0%{stroke-dashoffset:1}32%{stroke-dashoffset:0}68%{stroke-dashoffset:0}100%{stroke-dashoffset:1}}
+@keyframes ramen-sway{0%,30%{transform:rotate(0)}44%{transform:rotate(7deg)}58%{transform:rotate(-4deg)}70%,100%{transform:rotate(0)}}

@@ -315,3 +315,17 @@ video:focus-visible{outline:3px solid var(--red);outline-offset:3px}
 .ticker-pause .ico{width:14px;height:14px}.ticker-pause:hover{background:#b71b21}
 .ticker-pause:focus-visible{outline:3px solid #fff;outline-offset:-6px}  /* 红底上红框看不见,且字条 overflow:hidden 会裁掉外扩的框 */
 @media(prefers-reduced-motion:reduce){.ticker-pause{display:none}}
+/* 小猫 logo 鼠标(2026-11-18):只在有鼠标的电脑上;点击位置=左上角小红点(3,3)。链接/按钮上小猫睁眼;输入框保留文字光标。
+   点一下伸爪的动画在 components/CatCursor.tsx。换图要换文件名(-v2…)。 */
+@media(hover:hover) and (pointer:fine){
+html,body{cursor:url(/cursor/zen-cat-v1.svg) 3 3,url(/cursor/zen-cat-v1.png) 3 3,auto}
+:is(a[href],button,[role=button],[role=tab],label,summary,select,.ig-play,.form-feedback button){cursor:url(/cursor/zen-cat-hover-v1.svg) 3 3,url(/cursor/zen-cat-hover-v1.png) 3 3,pointer}
+:is(input:not([type=checkbox],[type=radio],[type=submit],[type=button],[type=range]),textarea,[contenteditable=true]){cursor:text}
+:is(button:disabled,[aria-disabled=true]){cursor:not-allowed}
+}
+.cat-tap{position:fixed;left:0;top:0;width:32px;height:32px;z-index:2147483646;pointer-events:none;will-change:transform}
+.cat-tap svg{display:block;overflow:visible}
+.cat-tap-arm{transform-origin:14.5px 15.5px;animation:cat-reach .7s cubic-bezier(.23,1,.32,1) both}
+.cat-tap-ring{transform-origin:3px 3px;opacity:0;animation:cat-ring .7s ease-out both}
+@keyframes cat-reach{0%{transform:scale(.2) rotate(18deg);opacity:0}12%{opacity:1}34%{transform:scale(1.06) rotate(-2deg)}44%{transform:scale(.97) rotate(0)}56%,70%{transform:scale(1) rotate(0)}94%{opacity:1}100%{transform:scale(.2) rotate(14deg);opacity:0}}
+@keyframes cat-ring{0%,36%{opacity:0;transform:scale(.6)}42%{opacity:1}80%,100%{opacity:0;transform:scale(2.6)}}

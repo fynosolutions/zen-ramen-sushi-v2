@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 // 小猫 logo 鼠标(2026-11-18 毛要):平时是浏览器原生鼠标图(globals.css 末尾「小猫鼠标」,不卡不延迟);
 // 点一下 → 在鼠标图下面叠一只爪子,从猫头后面伸出去点一下左上角的小红点(点击位置),再缩回来(约 0.7 秒)。
 // 手机/触屏(2026-11-20 毛要):没有鼠标图,手指轻点(不是滑动)的位置右上方冒出整只小猫伸爪点一下;
-// 角落常驻一只半露头的小猫偶尔眨眼;第一次来的访客小猫先探出来说「Tap anywhere」,只说一次。
+// 右边缘中间常驻一只半露头的小猫偶尔眨眼(避开首屏和底部的点单按钮);第一次来的访客小猫先探出来说「Tap anywhere」,只说一次。
 // 输入框、视频、系统「减少动态效果」时都不出现。
 const HOT = 3;
 const SVG = `<svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
@@ -35,14 +35,7 @@ function mountTouch(){
   peek.className = 'cat-peek';
   peek.setAttribute('aria-hidden','true');
   peek.innerHTML = PEEK_SVG;
-  const place = () => {
-    const bar = document.querySelector<HTMLElement>('.mobile-actionbar');
-    const h = bar && getComputedStyle(bar).display !== 'none' ? bar.offsetHeight : 0;
-    peek.style.bottom = `${h + 14}px`;
-  };
-  place();
   document.body.appendChild(peek);
-  addEventListener('resize', place, {passive:true});
 
   let seen = false;
   try { seen = !!localStorage.getItem(HINT_KEY); } catch {}
@@ -90,7 +83,6 @@ function mountTouch(){
   addEventListener('pointercancel', cancel, {passive:true});
   return () => {
     removeEventListener('pointerdown', down); removeEventListener('pointerup', up); removeEventListener('pointercancel', cancel);
-    removeEventListener('resize', place);
     clearInterval(wait); clearInterval(blink); timers.forEach(clearTimeout);
     peek.remove(); fx?.remove();
   };

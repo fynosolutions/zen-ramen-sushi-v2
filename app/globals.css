@@ -331,10 +331,11 @@ html,body{cursor:url(/cursor/zen-cat-v1.svg) 3 3,url(/cursor/zen-cat-v1.png) 3 3
 @keyframes cat-ring{0%,36%{opacity:0;transform:scale(.6)}42%{opacity:1}80%,100%{opacity:0;transform:scale(2.6)}}
 /* 手机/触屏小猫(2026-11-20):轻点处冒整只小猫伸爪;右边缘中间半露头小猫偶尔眨眼;首次访客探出来提示一次。逻辑在 components/CatCursor.tsx */
 .cat-tap-touch{width:56px;height:56px}
-.cat-tap-touch .cat-tap-ring{transform-origin:4px 44px}
-.cat-touch-arm{transform-origin:24px 15px;animation:cat-reach .75s cubic-bezier(.23,1,.32,1) both}
-.cat-touch-body{animation:cat-pop .9s cubic-bezier(.23,1,.32,1) both}
-@keyframes cat-pop{0%{opacity:0;translate:4px -4px}18%,78%{opacity:1;translate:0 0}100%{opacity:0;translate:3px -3px}}
+.cat-tap-touch .cat-tap-ring{transform-origin:4px 8px;animation-duration:1.2s}
+.cat-touch-arm{transform-origin:26px 22px;animation:cat-reach-long 1.25s cubic-bezier(.23,1,.32,1) both}
+@keyframes cat-reach-long{0%{transform:scale(.2) rotate(-18deg);opacity:0}8%{opacity:1}20%{transform:scale(1.06) rotate(2deg)}27%{transform:scale(.97) rotate(0)}34%,80%{transform:scale(1) rotate(0)}96%{opacity:1}100%{transform:scale(.2) rotate(-14deg);opacity:0}}
+.cat-touch-body{animation:cat-pop 1.4s cubic-bezier(.23,1,.32,1) both}
+@keyframes cat-pop{0%{opacity:0;translate:4px 4px}12%,85%{opacity:1;translate:0 0}100%{opacity:0;translate:3px 3px}}
 .cat-peek{position:fixed;right:0;top:40%;z-index:55;pointer-events:none;display:flex;align-items:center;gap:8px;transform:translateX(110%);transition:transform .6s cubic-bezier(.23,1,.32,1)}
 .cat-peek svg{display:block;flex:none;filter:drop-shadow(0 2px 4px #0002)}
 .cat-peek.is-in{transform:translateX(calc(100% - 30px))}

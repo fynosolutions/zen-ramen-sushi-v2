@@ -347,3 +347,6 @@ html,body{cursor:url(/cursor/zen-cat-v1.svg) 3 3,url(/cursor/zen-cat-v1.png) 3 3
 .cat-eyes{transform-box:fill-box;transform-origin:center;transition:transform .08s}
 .cat-peek.is-blink .cat-eyes{transform:scaleY(.15)}
 @media(prefers-reduced-motion:reduce){.cat-peek{display:none}}
+/* 打开手机菜单或相册大图时锁住背后页面滚动(iPhone 不认 overscroll-behavior,只能锁根元素);scrollbar-gutter 留住滚动条位置,Windows 电脑上页面不左右跳(2026-11-23) */
+@media(max-width:1000px){html:has(.navigation.mobile-open){overflow:hidden}}
+html:has(dialog.lightbox[open]){overflow:hidden;scrollbar-gutter:stable}

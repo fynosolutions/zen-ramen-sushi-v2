@@ -5,7 +5,7 @@ import '@fontsource/nunito-sans/latin-800.css';
 import '@fontsource/nunito-sans/latin-900.css';
 import '@fontsource/zen-kaku-gothic-new/latin-700.css';
 import '@fontsource/zen-kaku-gothic-new/latin-900.css';
-import '@fontsource/zen-old-mincho/japanese-700.css';
+import '@fontsource/zen-old-mincho/700.css'; // 分片版(unicode-range):只下含「らーめん/いただきます」的那一片约 28KB;原 japanese-700 整包 1983KB(2026-11-23 Modern Web Guidance 审)
 import './globals.css';
 import Header from '@/components/Header';
 import { Footer, MobileActionBar } from '@/components/Shared';

@@ -25,6 +25,13 @@ export default function Header() {
     window.addEventListener('scroll', onScroll, {passive:true});
     return () => window.removeEventListener('scroll', onScroll);
   },[]);
+  useEffect(() => { // 手机菜单打开时,菜单以外的页面不能被键盘/读屏走到(2026-11-23);滚动锁在 globals.css
+    if(!mobile) return;
+    const others = Array.from(document.querySelectorAll<HTMLElement>('body > *:not(.header):not(script):not(next-route-announcer)'));
+    const before = others.map(el=>el.inert);
+    others.forEach(el=>{el.inert=true;});
+    return () => others.forEach((el,i)=>{el.inert=before[i];});
+  },[mobile]);
   const close = () => {setMobile(false);setDelivery(false);};
   const active = (path:string) => pathname === path ? 'page' as const : undefined;
   return <>
